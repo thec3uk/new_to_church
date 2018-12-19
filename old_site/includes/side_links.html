@@ -1,0 +1,32 @@
+<section class="slice_FixedSideLinks">
+  <div class="fixed-link-wrapper">
+    {% if not home_page %}
+    <a href="https://www.facebook.com/thec3uk/" target="_blank"><i class="icomoon-icon-facebook">&thinsp;</i></a>
+    <a href="https://twitter.com/the_c3church/" target="_blank"><i class="icomoon-icon-twitter">&thinsp;</i></a>
+    <a href="https://www.instagram.com/the_c3church/" target="_blank"><i class="icomoon-icon-instagram">&thinsp;</i></a>
+    <a href="/user/login.aspx">&thinsp;<i class="journey-icon-login">&thinsp;</i></a>
+    <a class="search-link">&thinsp;<i class="journey-icon-search">&thinsp;</i></a>
+    {% else %}
+    <a class="search-link"> <i class="journey-icon-search"> </i></a>
+    {% endif %}
+
+    <div class="search-overlay_fixed-link">
+      <span class="search-close_fixed-link">&nbsp;</span>
+      <module alt="Search" module_id="698293" type_id="12" />
+      <module alt="Search" module_id="698339" type_id="12" />
+      <module alt="Search" module_id="698307" type_id="12" />
+    </div>
+  </div>
+</section>
+
+<section class="slice_FixedSideLinks slice_FixedSideLinksMobile">
+  <div class="fixed-link-wrapper">
+    {% if home_page %}
+    &nbsp;
+    {% else %}
+    <a href="https://www.facebook.com/thec3uk/" target="_blank"><i class="icomoon-icon-facebook">&thinsp;</i></a>
+    <a href="https://twitter.com/the_c3church/" target="_blank"><i class="icomoon-icon-twitter">&thinsp;</i></a>
+    <a href="https://www.instagram.com/the_c3church/" target="_blank"><i class="icomoon-icon-instagram">&thinsp;</i></a>
+    {% endif %}
+  </div>
+</section>
