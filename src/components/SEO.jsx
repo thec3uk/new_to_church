@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
@@ -89,28 +89,29 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             <script type="application/ld+json">
               {JSON.stringify(schemaOrgJSONLD)}
             </script>
-
             {/* OpenGraph  */}
             <meta property="og:url" content={seo.url} />
             <meta property="og:type" content={article ? 'article' : null} />
             <meta property="og:title" content={seo.title} />
             <meta property="og:description" content={seo.description} />
             <meta property="og:image" content={seo.image} />
-
             {/* Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content={twitter} />
             <meta name="twitter:title" content={seo.title} />
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:image" content={seo.image} />
+            <meta charset="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=yes"
+            />
           </Helmet>
         </>
       );
     }}
   />
 );
-//   }
-// }
 
 export default SEO;
 
@@ -120,6 +121,7 @@ SEO.propTypes = {
   banner: PropTypes.string,
   pathname: PropTypes.string,
   article: PropTypes.bool,
+  index_page: PropTypes.bool,
 };
 
 SEO.defaultProps = {
@@ -128,6 +130,7 @@ SEO.defaultProps = {
   banner: null,
   pathname: null,
   article: false,
+  index_page: false,
 };
 
 const query = graphql`

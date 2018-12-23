@@ -1,7 +1,10 @@
-import BlogList from './BlogList';
 import Header from './Header';
-import PostList from './PostList';
 import SEO from './SEO';
 import TagsBlock from './TagsBlock';
+import Footer from './footer';
+import Nav from './nav';
+import Head from './head';
+import SideLinks from './side_links';
+import Hero from './hero';
 
-export { BlogList, Header, PostList, SEO, TagsBlock };
+export { Header, SEO, TagsBlock, Footer, Nav, Head, SideLinks, Hero };
