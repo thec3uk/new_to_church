@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 const Head = ({ index_page }) => (
-  <>
+  <Fragment>
     {index_page ? (
       <Helmet>
         <link
@@ -48,7 +48,7 @@ const Head = ({ index_page }) => (
       <script src="/Images/Content/4/Templates/49141/js/slicknav.V1.0.10.js" />
       <script defer src="/Images/Content/4/Templates/49141/js/script.js" />
     </Helmet>
-  </>
+  </Fragment>
 );
 
 export default Head;
