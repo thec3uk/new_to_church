@@ -22,7 +22,7 @@ def main():
             html = HTML(html=html_file.read())
             elem = html.find(selector, first=True)
             if elem:
-              elem_set.add(elem.html.replace('\t','').replace('\n',''))
+                elem_set.add(elem.html.replace('\t', '').replace('\n', ''))
     print('-------------')
     for item in elem_set:
         print(item)
