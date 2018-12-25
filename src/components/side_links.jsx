@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Search from './search';
 
 const SideLinks = ({ index_page }) => (
-  <>
+  <Fragment>
     <section className="slice_FixedSideLinks">
       <div className="fixed-link-wrapper">
         {!index_page ? (
-          <>
+          <Fragment>
             <a
               href="https://www.facebook.com/thec3uk/"
               target="_blank"
@@ -29,15 +29,11 @@ const SideLinks = ({ index_page }) => (
             >
               <i className="icomoon-icon-instagram">&thinsp;</i>
             </a>
-            <a href="/user/login.aspx">
-              &thinsp;
-              <i className="journey-icon-login">&thinsp;</i>
-            </a>
             <a className="search-link">
               &thinsp;
               <i className="journey-icon-search">&thinsp;</i>
             </a>
-          </>
+          </Fragment>
         ) : (
           <a className="search-link">
             {' '}
@@ -86,7 +82,7 @@ const SideLinks = ({ index_page }) => (
         {index_page ? (
           <div>&nbsp;</div>
         ) : (
-          <>
+          <Fragment>
             <a
               href="https://www.facebook.com/thec3uk/"
               target="_blank"
@@ -108,11 +104,11 @@ const SideLinks = ({ index_page }) => (
             >
               <i className="icomoon-icon-instagram">&thinsp;</i>
             </a>
-          </>
+          </Fragment>
         )}
       </div>
     </section>
-  </>
+  </Fragment>
 );
 
 export default SideLinks;

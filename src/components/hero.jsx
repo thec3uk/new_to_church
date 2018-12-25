@@ -1,13 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Hero = () => (
-  <section className="slice_BannerImage">
+const Hero = ({ title, imageUrl }) => (
+  <section
+    className="slice_BannerImage"
+    style={{
+      backgroundPosition: 'center top',
+      backgroundImage: `url(${imageUrl})`,
+    }}
+  >
     <div className="container">
-      <h1>&nbsp;</h1>
+      <h1>{title}</h1>
     </div>
-    <module alt="Custom Fields" module_id="698321" type_id="48" />
-    <module alt="Custom Fields" module_id="698340" type_id="48" />
   </section>
 );
 
 export default Hero;
+
+Hero.propTypes = {
+  title: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+};

@@ -18,3 +18,4 @@
 - [ ] Site search
 - [ ] Stripe integration for Giving page - use react/gatsby plugins
 - [ ] Slideshow content pull in
+- [ ] Card sizes/options (large, small, no image etc.)

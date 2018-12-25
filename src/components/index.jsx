@@ -6,5 +6,18 @@ import Nav from './nav';
 import Head from './head';
 import SideLinks from './side_links';
 import Hero from './hero';
+import Card from './card';
+import SideGallery from './side_gallery';
 
-export { Header, SEO, TagsBlock, Footer, Nav, Head, SideLinks, Hero };
+export {
+  SideGallery,
+  Header,
+  SEO,
+  TagsBlock,
+  Footer,
+  Nav,
+  Head,
+  SideLinks,
+  Hero,
+  Card,
+};
