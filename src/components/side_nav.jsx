@@ -14,7 +14,6 @@ ChildNav.propTypes = {
 };
 
 const SiblingNav = ({ title, slug, selected, children }) => {
-  console.log(children);
   return (
     <div className={selected ? 'group_nav_selected' : 'group_nav_sibling'}>
       <a href={slug}>{title}</a>
