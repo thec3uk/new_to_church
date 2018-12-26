@@ -8,8 +8,10 @@ import SideLinks from './side_links';
 import Hero from './hero';
 import Card from './card';
 import SideGallery from './side_gallery';
+import SideNav from './side_nav';
 
 export {
+  SideNav,
   SideGallery,
   Header,
   SEO,

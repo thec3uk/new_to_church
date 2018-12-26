@@ -44,6 +44,9 @@ const createRefNode = (
       }
     });
     nodeList = sortNodebySlug(nodeList, slugList);
+    if (nodeList === null) {
+      nodeList = [];
+    }
     createNodeField({
       node,
       name: `${detailKey}NodeList`,
@@ -63,6 +66,69 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
       node,
       name: 'slug',
       value: slug,
+    });
+
+    const slugPath = slug.split('/');
+    const depth = slugPath.length;
+    const parentSlug = slugPath.slice(0, depth - 2).join('/') + '/';
+    const parentNodes = getNodes().filter(
+      node =>
+        node.internal.type === 'MarkdownRemark' &&
+        node.fileAbsolutePath
+          .split(node.fields.sourceName)
+          .slice(1)[0]
+          .replace('index.md', '') === parentSlug
+    );
+    if (parentNodes.length == 1) {
+      const parentTitle = parentNodes[0].frontmatter.title;
+      createNodeField({
+        node,
+        name: 'parentNav',
+        value: { slug: parentSlug, title: parentTitle },
+      });
+    }
+    const nodes = getNodes().filter(
+      node =>
+        node.internal.type === 'MarkdownRemark' &&
+        node.fileAbsolutePath
+          .split(node.fields.sourceName)
+          .slice(1)[0]
+          .startsWith(parentSlug)
+    );
+    const getNav = (depthComp, slugComp) => {
+      var nav = nodes
+        .map(n => {
+          var nslug = n.fileAbsolutePath
+            .split(n.fields.sourceName)
+            .slice(1)[0]
+            .replace('index.md', '');
+          if (
+            nslug.startsWith(slugComp) &&
+            nslug.split('/').length === depthComp &&
+            nslug.endsWith('/')
+          ) {
+            return {
+              slug: nslug,
+              title: n.frontmatter.title,
+            };
+          }
+        })
+        .filter(n => n !== undefined);
+      if (nav === null) {
+        nav = [];
+      }
+      return nav;
+    };
+
+    createNodeField({
+      node,
+      name: 'siblingNav',
+      value: getNav(depth, parentSlug),
+    });
+    createNodeField({
+      node,
+      name: 'childNav',
+      value: getNav(depth + 1, slug),
     });
   }
   createRefNode(node, createNodeField, getNode, getNodes, 'cardList', 'card');

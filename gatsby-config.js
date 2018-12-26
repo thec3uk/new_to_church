@@ -5,6 +5,7 @@ module.exports = {
     ...config,
   },
   plugins: [
+    'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
@@ -39,12 +40,12 @@ module.exports = {
         labelFormat: `[filename]--[local]`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'config/typography.js',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-typography',
+    //   options: {
+    //     pathToConfigModule: 'config/typography.js',
+    //   },
+    // },
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     {

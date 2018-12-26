@@ -14,13 +14,16 @@ GalleryImage.propTypes = {
   url: PropTypes.string.isRequired,
 };
 
-const SideGallery = ({ images }) => (
-  <ul className="gallery_ul">
-    {images.map(({ id, url, slug }) => (
-      <GalleryImage key={id} image={url} url={slug} />
-    ))}
-  </ul>
-);
+const SideGallery = ({ images }) => {
+  images = images || [];
+  return (
+    <ul className="gallery_ul">
+      {images.map(({ id, url, slug }) => (
+        <GalleryImage key={id} image={url} url={slug} />
+      ))}
+    </ul>
+  );
+};
 
 export default SideGallery;
 

@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import {
+  SideNav,
   SideGallery,
   Head,
   SEO,
@@ -36,10 +37,15 @@ const ContentPage = ({ data }) => {
             />
           </div>
 
-          <module alt="System Page Content" module_id="698348" type_id="82" />
           <aside className="sidebar">
             <nav>
-              <module alt="Group Navigation" module_id="698349" type_id="14" />
+              <SideNav
+                currentSlug={page.fields.slug}
+                parent={page.fields.parentNav}
+                siblings={page.fields.siblingNav}
+              >
+                {page.fields.childNav}
+              </SideNav>
             </nav>
             <SideGallery images={page.fields.galleryImageNodeList} />
           </aside>
@@ -66,6 +72,7 @@ export const query = graphql`
         heroImage
       }
       fields {
+        slug
         cardNodeList {
           slug
           image
@@ -78,6 +85,18 @@ export const query = graphql`
           id
           slug
           url
+        }
+        parentNav {
+          slug
+          title
+        }
+        siblingNav {
+          title
+          slug
+        }
+        childNav {
+          title
+          slug
         }
       }
     }
