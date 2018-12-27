@@ -15,27 +15,27 @@ const Nav = ({ index_page }) => {
       <div className="nav-menu">
         <ul className="root_menu">
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/Groups/298265/New_to_Church.aspx">
+            <a className="menu_link" href="/newtochurch/">
               New to Church
             </a>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/Groups/292792/Next_Steps.aspx">
+            <a className="menu_link" href="/nextsteps/">
               Next Steps
             </a>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/Groups/293961/Outreach.aspx">
+            <a className="menu_link" href="/outreach/">
               Outreach
             </a>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/Groups/296428/Resources.aspx">
+            <a className="menu_link" href="/resources/">
               Resources
             </a>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/Groups/296427/Giving.aspx">
+            <a className="menu_link" href="/giving/">
               Giving
             </a>
           </li>
