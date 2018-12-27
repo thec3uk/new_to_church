@@ -95,7 +95,7 @@ const Footer = () => (
           </a>
           <a
             id="footer_copyright"
-            href="/User/Copyright.aspx"
+            href="/copyright"
             title="Copyright Statement"
             // onMouseOver="window.status='Copyright Statement';return true;"
             // onFocus="window.status='Copyright Statement';return true;"
@@ -106,7 +106,7 @@ const Footer = () => (
           </a>
           <a
             id="footer_tc"
-            href="/User/TermsAndConditions.aspx"
+            href="/terms"
             title="Terms and Conditions"
             // onMouseOver="window.status='Terms and Conditions';return true;"
             // onFocus="window.status='Terms and Conditions';return true;"
@@ -117,7 +117,7 @@ const Footer = () => (
           </a>
           <a
             id="footer_privacy"
-            href="/User/PrivacyPolicy.aspx"
+            href="/privacy"
             title="Privacy Policy"
             // onMouseOver="window.status='Privacy Policy';return true;"
             // onFocus="window.status='Privacy Policy';return true;"
@@ -128,7 +128,7 @@ const Footer = () => (
           </a>
           <a
             id="footer_help"
-            href="/User/Help.aspx"
+            href="/help"
             title="Help with using this site"
             // onMouseOver="window.status='Help with using this site';return true;"
             // onFocus="window.status='Help with using this site';return true;"

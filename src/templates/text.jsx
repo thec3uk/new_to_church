@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Head, Header, SideLinks, Footer } from '../components';
+import { graphql } from 'gatsby';
+import { SEO, Head, Nav, SideLinks, Footer } from '../components';
 
 const TextPage = ({ data }) => {
   const page = data.markdownRemark;
   return (
     <html lang="en" dir="ltr">
       <Head />
+      <SEO title={page.frontmatter.title} />
       <body>
-        <Header />
+        <header className="NonHomePage">
+          <Nav index_page={false} />
+        </header>
         <SideLinks />
 
         <section className="slice_system_page">
@@ -31,3 +35,14 @@ export default TextPage;
 TextPage.propTypes = {
   data: PropTypes.object,
 };
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`;

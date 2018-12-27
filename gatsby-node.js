@@ -140,6 +140,14 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
     'gallery',
     'galleryImage'
   );
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'pages' });
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    });
+  }
 };
 
 exports.createPages = ({ graphql, actions }) => {
