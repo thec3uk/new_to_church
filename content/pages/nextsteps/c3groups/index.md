@@ -7,6 +7,8 @@ card:
   cta: More Details
   image: /Images/Content/4/916428.jpeg
   description: We believe life change happens in the context of meaningful relationships. C3 Groups exist to make life-changing relationships relevant and accessible to you
+galleryImage:
+  url: /Images/Content/4/868600.jpg
 gallery:
   - /outreach/lookcambridge/communityhub/
   - /nextsteps/growthpath/
