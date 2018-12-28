@@ -5,6 +5,7 @@ module.exports = {
     ...config,
   },
   plugins: [
+    'gatsby-plugin-catch-links',
     'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',

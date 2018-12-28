@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Search from './search';
 
@@ -29,16 +30,16 @@ const SideLinks = ({ index_page }) => (
             >
               <i className="icomoon-icon-instagram">&thinsp;</i>
             </a>
-            <a className="search-link">
+            <Link className="search-link">
               &thinsp;
               <i className="journey-icon-search">&thinsp;</i>
-            </a>
+            </Link>
           </Fragment>
         ) : (
-          <a className="search-link">
+          <Link className="search-link">
             {' '}
             <i className="journey-icon-search">&thinsp;</i>
-          </a>
+          </Link>
         )}
 
         <div className="search-overlay_fixed-link">

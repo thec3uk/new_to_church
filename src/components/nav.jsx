@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Search from './search';
 
@@ -15,35 +16,35 @@ const Nav = ({ index_page }) => {
       <div className="nav-menu">
         <ul className="root_menu">
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/newtochurch/">
+            <Link className="menu_link" to="/newtochurch/">
               New to Church
-            </a>
+            </Link>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/nextsteps/">
+            <Link className="menu_link" to="/nextsteps/">
               Next Steps
-            </a>
+            </Link>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/outreach/">
+            <Link className="menu_link" to="/outreach/">
               Outreach
-            </a>
+            </Link>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/resources/">
+            <Link className="menu_link" to="/resources/">
               Resources
-            </a>
+            </Link>
           </li>
           <li className="menu_item menu_item_level_1">
-            <a className="menu_link" href="/giving/">
+            <Link className="menu_link" to="/giving/">
               Giving
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <div className="logo-container">
         <span className="logo-icon">
-          <a href="/">
+          <Link to="/">
             <img
               alt=""
               className="LogoWhite"
@@ -54,11 +55,11 @@ const Nav = ({ index_page }) => {
               className="LogoGrey"
               src="/Images/Content/4/Templates/49141/images/LogoGrey.png"
             />{' '}
-          </a>{' '}
+          </Link>{' '}
         </span>
       </div>
       <div className="logo-MyC3">
-        <a href="/MyC3">
+        <Link to="/MyC3">
           <img
             alt=""
             className="LogoMyC3White"
@@ -74,7 +75,7 @@ const Nav = ({ index_page }) => {
             className="LogoMyC3Red"
             src="/Images/Content/4/Templates/49141/images/LogoMyC3Red.png"
           />{' '}
-        </a>
+        </Link>
       </div>
     </section>
   );

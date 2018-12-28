@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const Card = ({ title, description, slug, image, cta }) => (
   <div>
     <div className="articleListImage">
-      <a href={slug}>
+      <Link to={slug}>
         <img src={image} alt={title} />
-      </a>
+      </Link>
     </div>
     <div className="articleListTitle">
-      <a href={slug}>{title}</a>
+      <Link to={slug}>{title}</Link>
     </div>
     <div className="articleListSummary">
       <span>{description}</span>
     </div>
     <div className="articleListLink">
-      <a href={slug}>{cta}</a>
+      <Link to={slug}>{cta}</Link>
     </div>
   </div>
 );

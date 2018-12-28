@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Footer = () => (
   <footer>
@@ -19,13 +20,13 @@ const Footer = () => (
               alt="Newsletter Signup"
             />
             <div>Sign up to the C3 Newsletter</div>
-            <a
+            <Link
               className="NewsLetterGO"
-              href="/Groups/308211/NewsLetterSignUp.aspx"
+              to="/Groups/308211/NewsLetterSignUp.aspx"
             >
               {' '}
               GO
-            </a>
+            </Link>
           </div>
 
           <div className="footer-column footer-column-1">
@@ -93,9 +94,9 @@ const Footer = () => (
           >
             Low Graphics
           </a>
-          <a
+          <Link
             id="footer_copyright"
-            href="/copyright"
+            to="/copyright"
             title="Copyright Statement"
             // onMouseOver="window.status='Copyright Statement';return true;"
             // onFocus="window.status='Copyright Statement';return true;"
@@ -103,10 +104,10 @@ const Footer = () => (
             // onBlur="window.status = '';"
           >
             Copyright
-          </a>
-          <a
+          </Link>
+          <Link
             id="footer_tc"
-            href="/terms"
+            to="/terms"
             title="Terms and Conditions"
             // onMouseOver="window.status='Terms and Conditions';return true;"
             // onFocus="window.status='Terms and Conditions';return true;"
@@ -114,10 +115,10 @@ const Footer = () => (
             // onBlur="window.status = '';"
           >
             T&amp;Cs
-          </a>
-          <a
+          </Link>
+          <Link
             id="footer_privacy"
-            href="/privacy"
+            to="/privacy"
             title="Privacy Policy"
             // onMouseOver="window.status='Privacy Policy';return true;"
             // onFocus="window.status='Privacy Policy';return true;"
@@ -125,10 +126,10 @@ const Footer = () => (
             // onBlur="window.status = '';"
           >
             Privacy
-          </a>
-          <a
+          </Link>
+          <Link
             id="footer_help"
-            href="/help"
+            to="/help"
             title="Help with using this site"
             // onMouseOver="window.status='Help with using this site';return true;"
             // onFocus="window.status='Help with using this site';return true;"
@@ -136,7 +137,7 @@ const Footer = () => (
             // onBlur="window.status = '';"
           >
             Help
-          </a>
+          </Link>
           <span id="footer_charity">Registered Charity 1132699</span>
         </div>
       </div>

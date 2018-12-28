@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const ChildNav = ({ title, slug }) => (
   <div className="group_nav_child">
-    <a href={slug}>{title}</a>
+    <Link to={slug}>{title}</Link>
   </div>
 );
 
@@ -16,7 +17,7 @@ ChildNav.propTypes = {
 const SiblingNav = ({ title, slug, selected, children }) => {
   return (
     <div className={selected ? 'group_nav_selected' : 'group_nav_sibling'}>
-      <a href={slug}>{title}</a>
+      <Link to={slug}>{title}</Link>
       {selected &&
         children.map(child => (
           <ChildNav key={child.slug} title={child.title} slug={child.slug} />
@@ -54,7 +55,7 @@ const SideNav = ({ currentSlug, parent, siblings, children }) => (
               <tr>
                 <td className="boxout_header_left">&#160;</td>
                 <td className="boxout_header_middle">
-                  <a href="/">The C3 Church</a>
+                  <Link to="/">The C3 Church</Link>
                 </td>
                 <td className="boxout_header_right">&#160;</td>
               </tr>
@@ -62,7 +63,7 @@ const SideNav = ({ currentSlug, parent, siblings, children }) => (
           </table>
           <div>
             <div className="group_nav_parent">
-              <a href={parent.slug}>{parent.title}</a>
+              <Link to={parent.slug}>{parent.title}</Link>
 
               {siblings.map(sibling => (
                 <SiblingNav

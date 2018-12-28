@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const Slide = ({ title, slideImage, url }) => (
   <li className="gallery_li">
-    <a href={url} target="_self">
+    <Link to={url}>
       <img src={slideImage} alt={title} title={title} />
-    </a>
+    </Link>
   </li>
 );
 
