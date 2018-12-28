@@ -23,6 +23,7 @@ const Index = ({ data }) => (
               src="https://s3.amazonaws.com/media.cthree.org/9d4cc8be-ba5f-483d-b41a-a285e1866a4c.mp4"
             />
             <track default kind="captions" />
+            <track kind="descriptions" />
           </video>
         </div>
         <div className="video-overlay">

@@ -4,21 +4,35 @@ import Helmet from 'react-helmet';
 
 const Head = ({ index_page }) => (
   <Fragment>
-    {index_page ? (
-      <Helmet>
-        <link
-          type="text/css"
-          rel="stylesheet"
-          href="/Images/Content/4/Templates/49141/css/bxslider.V4.2.5.css"
-        />
-        <script src="https://lightwidget.com/widgets/lightwidget.js" />
-        <script src="/Images/Content/4/Templates/49141/js/bxslider.V4.2.5.js" />
-      </Helmet>
-    ) : (
-      <div />
-    )}
     <Helmet>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="/Common/Styles/base.min.css?SV=V113T"
+      />
+      <script src="/jquery-and-plugins.min.js" />
+      <script
+        type="text/javascript"
+        src="/Common/Scripts/system.min.js?SV=V113T"
+      />
+      <script src="/Common/ThirdParty/swfobject.js" type="text/javascript" />
+      <link
+        href="/Common/ThirdParty/lightbox/css/lightbox.css"
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+      />
+      <script type="text/javascript">
+        {'$e(document).ready(ClearQSTokens);'}
+      </script>
+      <script
+        type="text/javascript"
+        src="/Modules/FrontPage/Search/SearchFunctions.js?SV=V113T"
+      />
+      <script type="text/javascript">{`
+          var strValidEmailRegex = "^[A-Za-z0-9!#$%&'*+/=?^_\`{|}~-]+(\\.[A-Za-z0-9!#$%&'*+/=?^_\`{|}~-]+)*\\@[\\w\\-]+(\\.[\\w\\-]+)*\\.[a-zA-Z]{2,}$";
+          var intMobileGroupID = 0;
+      `}</script>
       <link
         type="text/css"
         rel="stylesheet"
@@ -48,6 +62,19 @@ const Head = ({ index_page }) => (
       <script src="/Images/Content/4/Templates/49141/js/slicknav.V1.0.10.js" />
       <script defer src="/Images/Content/4/Templates/49141/js/script.js" />
     </Helmet>
+    {index_page ? (
+      <Helmet>
+        <link
+          type="text/css"
+          rel="stylesheet"
+          href="/Images/Content/4/Templates/49141/css/bxslider.V4.2.5.css"
+        />
+        <script src="https://lightwidget.com/widgets/lightwidget.js" />
+        <script src="/Images/Content/4/Templates/49141/js/bxslider.V4.2.5.js" />
+      </Helmet>
+    ) : (
+      <div />
+    )}
   </Fragment>
 );
 

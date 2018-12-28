@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
@@ -79,35 +79,35 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
         ];
       }
       return (
-        <>
-          <Helmet title={seo.title}>
-            <html lang={siteLanguage} />
-            <meta name="description" content={seo.description} />
-            <meta name="image" content={seo.image} />
-            <meta name="apple-mobile-web-app-title" content={shortName} />
-            <meta name="application-name" content={shortName} />
-            <script type="application/ld+json">
-              {JSON.stringify(schemaOrgJSONLD)}
-            </script>
-            {/* OpenGraph  */}
-            <meta property="og:url" content={seo.url} />
-            <meta property="og:type" content={article ? 'article' : null} />
-            <meta property="og:title" content={seo.title} />
-            <meta property="og:description" content={seo.description} />
-            <meta property="og:image" content={seo.image} />
-            {/* Twitter Card */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={twitter} />
-            <meta name="twitter:title" content={seo.title} />
-            <meta name="twitter:description" content={seo.description} />
-            <meta name="twitter:image" content={seo.image} />
-            <meta charset="utf-8" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1.0, user-scalable=yes"
-            />
-          </Helmet>
-        </>
+        <Helmet title={seo.title}>
+          <html lang={siteLanguage} />
+          <meta name="description" content={seo.description} />
+          <meta name="image" content={seo.image} />
+          <meta name="apple-mobile-web-app-title" content={shortName} />
+          <meta name="application-name" content={shortName} />
+          <link rel="canonical" href={seo.url} />
+          <script type="application/ld+json">
+            {JSON.stringify(schemaOrgJSONLD)}
+          </script>
+          {/* OpenGraph  */}
+          <meta property="og:url" content={seo.url} />
+          <meta property="og:type" content={article ? 'article' : null} />
+          <meta property="og:title" content={seo.title} />
+          <meta property="og:description" content={seo.description} />
+          <meta property="og:image" content={seo.image} />
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content={twitter} />
+          <meta name="twitter:title" content={seo.title} />
+          <meta name="twitter:description" content={seo.description} />
+          <meta name="twitter:image" content={seo.image} />
+          <meta charset="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+          />
+          <link rel="shortcut icon" href="/images/content/4/favicon.ico" />
+        </Helmet>
       );
     }}
   />
