@@ -1,32 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { SEO, Head, Nav, SideLinks, Footer } from '../components';
+import { ContentLayout, Content } from '../layouts';
 
 const TextPage = ({ data }) => {
   const page = data.markdownRemark;
   return (
-    <html lang="en" dir="ltr">
-      <Head />
-      <SEO title={page.frontmatter.title} />
-      <body>
-        <header className="NonHomePage">
-          <Nav index_page={false} />
-        </header>
-        <SideLinks />
-
-        <section className="slice_system_page">
-          <div className="container system_content">
-            <div
-              className="systemPageContent"
-              dangerouslySetInnerHTML={{ __html: page.html }}
-            />
-          </div>
-        </section>
-
-        <Footer />
-      </body>
-    </html>
+    <ContentLayout title={page.frontmatter.title}>
+      <section className="slice_system_page">
+        <div className="container system_content">
+          <Content className="systemPageContent" input={page.html} />
+        </div>
+      </section>
+    </ContentLayout>
   );
 };
 

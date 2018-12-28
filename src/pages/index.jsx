@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, SEO, Nav, SideLinks, Footer } from '../components';
+import { Head, Nav, SideLinks } from '../components';
 import { Slide } from '../templates';
+import { Layout } from '../layouts';
 
 const Index = ({ data }) => (
-  <Fragment>
+  <Layout title="The C3 Church">
     <Head index_page={true} />
-    <SEO title="The C3 Church" />
     <header>
       <section className="slice_VideoWrapper">
         <div>
@@ -49,9 +49,7 @@ const Index = ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id} dangerouslySetInnerHTML={{ __html: node.html }} />
     ))}
-
-    <Footer />
-  </Fragment>
+  </Layout>
 );
 
 export default Index;

@@ -1,40 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import {
-  SideNav,
-  SideGallery,
-  Head,
-  SEO,
-  Nav,
-  SideLinks,
-  Footer,
-  Hero,
-} from '../components';
+import { SideNav, SideGallery } from '../components';
+import { HeroLayout, Content } from '../layouts';
 
 const ContentPage = ({ data }) => {
   const page = data.markdownRemark;
   return (
-    <Fragment>
-      <SEO title={page.frontmatter.title} />
-      <Head />
-      <header className="NonHomePage">
-        <Nav index_page={false} />
-      </header>
-
-      <SideLinks index_page={false} />
-      <Hero
-        title={page.frontmatter.title}
-        imageUrl={page.frontmatter.heroImage}
-      />
-
+    <HeroLayout
+      title={page.frontmatter.title}
+      heroImage={page.frontmatter.heroImage}
+    >
       <section className="slice_content_page">
         <div className="container">
           <div className="main-content">
-            <div
-              className="ArticleBody"
-              dangerouslySetInnerHTML={{ __html: page.html }}
-            />
+            <Content className="ArticleBody" input={page.html} />
           </div>
 
           <aside className="sidebar">
@@ -51,9 +31,7 @@ const ContentPage = ({ data }) => {
           </aside>
         </div>
       </section>
-
-      <Footer />
-    </Fragment>
+    </HeroLayout>
   );
 };
 
