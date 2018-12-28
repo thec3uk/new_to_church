@@ -35,7 +35,7 @@ const Index = ({ data }) => (
       <section className="slice_WelcomeSlides_L">
         {/* The below should be pulled in as content*/}
         <div className="bannerSlides">
-          <ul id="ctl00_ctl00_cphBody_ctl04_gallery_ul" className="gallery_ul">
+          <ul className="gallery_ul">
             <Slide
               title="Our Bury St. Edmunds site is coming soon*Find out how to get involved here!"
               slideImage="/Images/Content/4/910611.jpg"

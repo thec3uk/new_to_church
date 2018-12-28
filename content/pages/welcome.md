@@ -22,29 +22,29 @@ order: 1
 <section class="slice_WelcomeArticles">
   <div class="container">
     <div class="article_cards">
-        <div id='ctl00_ctl00_cphBody_ctl07_ctl00_ctl00_ctl00'>
-            <div class="articleListImage"><a id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl00_ctl02_hlItem" href="/Articles/510266/Got_Questions.aspx"><img src="/Publisher/GetResizedImage.aspx?size=4&amp;url=/Images/Content/4/916437.jpeg" alt="" /></a>
+        <div>
+            <div class="articleListImage"><a href="/newtochurch/gotquestions/"><img src="/Images/Content/4/916437.jpeg" alt="" /></a>
             </div>
-            <div class="articleListTitle"><a id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl00_ctl03_hlTitle" href="/Articles/510266/Got_Questions.aspx">Got Questions?</a>
+            <div class="articleListTitle"><a href="/newtochurch/gotquestions/">Got Questions?</a>
             </div>
-            <div class="articleListSummary"><span id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl00_ctl04_lblSummary">We would love to invite you to a Sunday service this week. If you have questions, you can find out about what to expect on your first visit here</span></div>
+            <div class="articleListSummary"><span>We would love to invite you to a Sunday service this week. If you have questions, you can find out about what to expect on your first visit here</span></div>
             <div class="articleListLink">More details</div>
         </div>
-        <div id='ctl00_ctl00_cphBody_ctl07_ctl00_ctl01_ctl00'>
-            <div class="articleListImage"><a id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl01_ctl02_hlItem" href="/Articles/509881/C3_Cambridge.aspx"><img src="/Publisher/GetResizedImage.aspx?size=4&amp;url=/Images/Content/4/916434.jpeg" alt="" /></a>
+        <div>
+            <div class="articleListImage"><a href="/newtochurch/c3cambridge/"><img src="/Images/Content/4/916434.jpeg" alt="" /></a>
             </div>
-            <div class="articleListTitle"><a id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl01_ctl03_hlTitle" href="/Articles/509881/C3_Cambridge.aspx">C3 Cambridge</a>
+            <div class="articleListTitle"><a href="/newtochurch/c3cambridge/">C3 Cambridge</a>
             </div>
-            <div class="articleListSummary"><span id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl01_ctl04_lblSummary">We meet on Sundays,
+            <div class="articleListSummary"><span>We meet on Sundays,
                     9:30am, 11:30am and 5:30pm at the C3 Centre, Cambridge, CB1 3HR.</span></div>
             <div class="articleListLink">More details</div>
         </div>
-        <div id='ctl00_ctl00_cphBody_ctl07_ctl00_ctl02_ctl00'>
-            <div class="articleListImage"><a id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl02_ctl02_hlItem" href="/Articles/529859/C3_Bury_St.aspx"><img src="/Publisher/GetResizedImage.aspx?size=4&amp;url=/Images/Content/4/916436.jpeg" alt="" /></a>
+        <div>
+            <div class="articleListImage"><a href="/newtochurch/c3burystedmunds/"><img src="/Images/Content/4/916436.jpeg" alt="" /></a>
             </div>
-            <div class="articleListTitle"><a id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl02_ctl03_hlTitle" href="/Articles/529859/C3_Bury_St.aspx">C3 Bury St Edmunds</a>
+            <div class="articleListTitle"><a href="/newtochurch/c3burystedmunds/">C3 Bury St Edmunds</a>
             </div>
-            <div class="articleListSummary"><span id="ctl00_ctl00_cphBody_ctl07_ctl00_ctl02_ctl04_lblSummary">Register your interest to find out more about upcoming events and how to get involved with our new Bury St. Edmunds site here.</span></div>
+            <div class="articleListSummary"><span>Register your interest to find out more about upcoming events and how to get involved with our new Bury St. Edmunds site here.</span></div>
             <div class="articleListLink">More details</div>
         </div>
     </div>
