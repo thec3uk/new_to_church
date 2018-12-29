@@ -9,10 +9,10 @@
 - Get Current sitemap - https://docs.google.com/spreadsheets/d/1Nfs0e5vQvg_Jj7VVBndUkoOaQ4mS88sQrT2dDYXCAKo/edit#gid=0
 - Get new sitemap finalised - speak with JC/SG/AH
 - add content to markdown files to replicate current site.
-- Fix local JS - works with production build!!!!
 - top nav & footer to be data driven
 - https://www.gatsbyjs.org/packages/gatsby-plugin-netlify/
 - Redirect config in markdown
+- Fix local JS - works with production build?!?!
 
 # Functionality to rebuild
 
@@ -24,7 +24,9 @@
 - [ ] refactor CSS into components -> go back to the starter repo for examples of how todo css/styling/themes
 - [ ] facebook pixel integration
 
-* [ ] Locations section on the home page.
+## New content
+
+- [ ] Locations section on the home page.
 
 # Frontmatter example
 
