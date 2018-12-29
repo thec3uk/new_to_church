@@ -4,18 +4,23 @@ module.exports = {
   titleAlt: 'The C3 Church', // Title for JSONLD
   description:
     'The C3 Church is an evangelical, charismatic Christian church based in Cambridge and Bury St Edmunds, England.',
-  url: 'https://thec3.uk', // Domain of your site. No trailing slash!
-  siteUrl: 'https://gatsby-tutorial-starter.netlify.com', // url + pathPrefix
+  url: 'https://new.thec3.uk', // Domain of your site. No trailing slash!
+  siteUrl: 'https://new.thec3.uk/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'static/logo/LogoWhite.png', // Used for SEO
   banner: 'static/logo/BackgroundGrey.png',
   // JSONLD / Manifest
   favicon: 'static/logo/favicon.png', // Used for manifest favicon generation
-  shortName: 'GatsbyTut', // shortname for manifest. MUST be shorter than 12 characters
+  shortName: 'theC3', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Justin', // Author for schemaORGJSONLD
   themeColor: '#3e7bf2',
   backgroundColor: '#d3e0ff',
   twitter: '@the_c3church', // Twitter Username
+  facebook_slug: 'thec3uk',
+  instagram_slug: 'the_c3church',
+  twitter_slug: 'the_c3church',
+  phoneNumber: '01223 844415',
+  emailContact: 'hello@thec3.uk',
   topNav: [
     { slug: '/newtochurch/', title: 'New to Church' },
     { slug: '/nextsteps/', title: 'Next Steps' },
@@ -24,9 +29,9 @@ module.exports = {
     { slug: '/giving/', title: 'Giving' },
   ],
   footerLinks: [
-    { slug: '/copyright', title: 'Copyright' },
-    { slug: '/terms', title: 'T&Cs' },
-    { slug: '/privacy', title: 'Privacy' },
-    { slug: '/help', title: 'Help' },
+    { id: 'footer_copyright', slug: '/copyright', title: 'Copyright' },
+    { id: 'footer_tc', slug: '/terms', title: 'T&Cs' },
+    { id: 'footer_privacy', slug: '/privacy', title: 'Privacy' },
+    { id: 'footer_help', slug: '/help', title: 'Help' },
   ],
 };
