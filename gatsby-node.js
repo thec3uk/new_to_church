@@ -156,6 +156,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const contentTemplate = path.resolve('src/templates/content_page.jsx');
     const landingTemplate = path.resolve('src/templates/landing_page.jsx');
+    const homepageTemplate = path.resolve('src/templates/homepage.jsx');
     const text = path.resolve('src/templates/text.jsx');
     graphql(`
       {
@@ -187,6 +188,9 @@ exports.createPages = ({ graphql, actions }) => {
             break;
           case 'text':
             templateFile = text;
+            break;
+          case 'index':
+            templateFile = homepageTemplate;
             break;
           default:
             console.error(

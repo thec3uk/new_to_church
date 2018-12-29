@@ -1,11 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, Nav, SideLinks } from '../components';
-import { Slide } from '../templates';
+import { Head, Nav, SideLinks, SideGallery } from '../components';
 import { Layout } from '../layouts';
 
-const Index = ({ data }) => (
+const HomePage = ({ data }) => (
   <Layout title="The C3 Church">
     <Head index_page={true} />
     <header>
@@ -36,13 +35,7 @@ const Index = ({ data }) => (
       <section className="slice_WelcomeSlides_L">
         {/* The below should be pulled in as content*/}
         <div className="bannerSlides">
-          <ul className="gallery_ul">
-            <Slide
-              title="Our Bury St. Edmunds site is coming soon*Find out how to get involved here!"
-              slideImage="/Images/Content/4/910611.jpg"
-              url="/Publisher/Article.aspx?ID=529859"
-            />
-          </ul>
+          <SideGallery images={data.markdownRemark.frontmatter.slideshow} />
         </div>
       </section>
     </header>
@@ -53,14 +46,14 @@ const Index = ({ data }) => (
   </Layout>
 );
 
-export default Index;
+export default HomePage;
 
-Index.propTypes = {
+HomePage.propTypes = {
   data: PropTypes.object,
 };
 
 export const query = graphql`
-  query {
+  query($slug: String!) {
     allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___order] }
       filter: { frontmatter: { page: { eq: "index" } } }
@@ -72,6 +65,16 @@ export const query = graphql`
           frontmatter {
             title
           }
+        }
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        slideshow {
+          title
+          url
+          slug
         }
       }
     }
