@@ -151,7 +151,7 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   return new Promise((resolve, reject) => {
     const contentTemplate = path.resolve('src/templates/content_page.jsx');
@@ -169,13 +169,13 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 template
+                locationSlug
               }
             }
           }
         }
       }
     `).then(result => {
-      // console.log(JSON.stringify(result, null, 4));
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         const template = node.frontmatter.template;
         var templateFile = '';
@@ -192,6 +192,14 @@ exports.createPages = ({ graphql, actions }) => {
           case 'index':
             templateFile = homepageTemplate;
             break;
+          case 'redirect':
+            createRedirect({
+              fromPath: node.fields.slug,
+              isPermanent: true,
+              toPath: node.frontmatter.locationSlug,
+              redirectInBrowser: true,
+            });
+            return;
           default:
             console.error(
               `${
