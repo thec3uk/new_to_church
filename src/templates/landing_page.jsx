@@ -6,6 +6,24 @@ import { HeroLayout, Content } from '../layouts';
 
 const LandingPage = ({ data }) => {
   const page = data.markdownRemark;
+  const cardWidth = cardList => {
+    switch (cardList.length) {
+      case 1:
+      case 2:
+        return '47%';
+      case 3:
+      case 5:
+      case 6:
+        return '30.5%';
+      case 4:
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+      default:
+        return '';
+    }
+  };
   return (
     <HeroLayout
       title={page.frontmatter.title}
@@ -29,6 +47,7 @@ const LandingPage = ({ data }) => {
                   slug={card.slug}
                   image={card.image}
                   cta={card.cta}
+                  width={cardWidth(page.fields.cardNodeList)}
                 />
               ))}
           </div>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const Card = ({ title, description, slug, image, cta }) => (
-  <div>
+const Card = ({ title, description, slug, image, cta, width }) => (
+  <div style={width ? { width: width } : {}}>
     <div className="articleListImage">
       <Link to={slug}>
         <img src={image} alt={title} />
@@ -29,4 +29,5 @@ Card.propTypes = {
   slug: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   cta: PropTypes.string.isRequired,
+  width: PropTypes.string,
 };
