@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Nav, SideLinks, SideGallery } from '../components';
-import { Layout } from '../layouts';
+import { Layout, Content } from '../layouts';
 
 const HomePage = ({ data }) => (
   <Layout title="The C3 Church">
@@ -41,7 +41,7 @@ const HomePage = ({ data }) => (
     </header>
 
     {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id} dangerouslySetInnerHTML={{ __html: node.html }} />
+      <Content key={node.id} input={node.html} />
     ))}
   </Layout>
 );
