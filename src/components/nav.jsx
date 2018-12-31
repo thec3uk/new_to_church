@@ -52,9 +52,7 @@ const Nav = ({ index_page }) => {
             <div className="nav-menu">
               <ul className="root_menu">
                 {topNav.map(menuItem => {
-                  if (index_page && menuItem.slug !== '/newtochurch/') {
-                    return <MenuItem key={menuItem.slug} menuItem={menuItem} />;
-                  }
+                  return <MenuItem key={menuItem.slug} menuItem={menuItem} />;
                 })}
               </ul>
             </div>

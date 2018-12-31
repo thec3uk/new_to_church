@@ -4,8 +4,8 @@ module.exports = {
   titleAlt: 'The C3 Church', // Title for JSONLD
   description:
     'The C3 Church is an evangelical, charismatic Christian church based in Cambridge and Bury St Edmunds, England.',
-  url: 'https://new.thec3.uk', // Domain of your site. No trailing slash!
-  siteUrl: 'https://new.thec3.uk/', // url + pathPrefix
+  url: process.env.DEPLOY_PRIME_URL || 'http://localhost:8000', // Domain of your site. No trailing slash!
+  siteUrl: `${process.env.DEPLOY_PRIME_URL}/` || 'http://localhost:8000/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'static/logo/LogoWhite.png', // Used for SEO
   banner: 'static/logo/BackgroundGrey.png',
@@ -22,7 +22,6 @@ module.exports = {
   phoneNumber: '01223 844415',
   emailContact: 'hello@thec3.uk',
   topNav: [
-    { slug: '/newtochurch/', title: 'New to Church' },
     { slug: '/nextsteps/', title: 'Next Steps' },
     { slug: '/outreach/', title: 'Outreach' },
     { slug: '/resources/', title: 'Resources' },

@@ -23,7 +23,7 @@ const Head = ({ index_page }) => (
         media="screen"
       />
       <script type="text/javascript">
-        {'$e(document).ready(ClearQSTokens);'}
+        {'$(document).ready(ClearQSTokens);'}
       </script>
       <script
         type="text/javascript"
