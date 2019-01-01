@@ -1,13 +1,24 @@
 ---
-title: Young Adults
-heroImage: /Images/Content/4/867563.jpeg
+title: Coldhams Coffee
+heroImage: /Images/Content/4/868532.jpeg
 template: content
 card:
-  title: Young Adults
+  title: Coldhams Coffee
   cta: More Details
-  description: If you're between the ages of 18-30 then C3 Young Adults is for you! In addition to regular socials and special events, we meet every Wednesday during term time.
-  image: /Images/Content/4/916429.jpeg
+  description: A comfortable community space serving hot and cold drinks, sandwiches and desserts
+  image: /Images/Content/4/868533.jpeg
 gallery:
   - /nextsteps/c3groups/
   - /nextsteps/growthpath/
 ---
+
+<h1>
+But first, coffee...</h1>
+<br/>
+Coldhams Coffee is located in the C3 Centre and offers cold and hot drinks made from the highest quality ethically sourced, locally roasted coffee beans. In addition to providing a wide range of coffees, Coldhams has a selection of cold drinks, sandwiches, snacks and locally made desserts.<br/>
+<br/>
+We have a large, open child friendly space, free wifi access and on-site parking.<br/>
+<br/>
+Coldhams are open to serve the community from 9:00 to 15:00, Tuesday to Thursday and 9:00 to 15:00 Friday as part of the C3 <a href="/Articles/510506/Community_Hub.aspx">Community Hub</a>.<br/>
+<br/>
+<br/>
