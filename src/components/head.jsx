@@ -61,6 +61,12 @@ const Head = ({ index_page }) => (
 
       <script src="/Images/Content/4/Templates/49141/js/slicknav.V1.0.10.js" />
       <script defer src="/Images/Content/4/Templates/49141/js/script.js" />
+      {/* Chrome, Firefox OS and Opera */}
+      <meta name="theme-color" content="#202945" />
+      {/* Windows Phone */}
+      <meta name="msapplication-navbutton-color" content="#202945" />
+      {/* iOS Safari */}
+      <meta name="apple-mobile-web-app-status-bar-style" content="#202945" />
     </Helmet>
     {index_page ? (
       <Helmet>
