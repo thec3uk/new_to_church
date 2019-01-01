@@ -8,15 +8,12 @@
 
 - Get Current sitemap - https://docs.google.com/spreadsheets/d/1Nfs0e5vQvg_Jj7VVBndUkoOaQ4mS88sQrT2dDYXCAKo/edit#gid=0
 - Get new sitemap finalised - speak with JC/SG/AH
-- add content to markdown files to replicate current site.
-- https://www.gatsbyjs.org/packages/gatsby-plugin-netlify/
-- Redirect config in markdown
 - Fix local JS - works with production build?!?!
 
 # Functionality to rebuild
 
 - [ ] facebook pixel integration
-- [ ] Card sizes/options (large, small, no image etc.)
+- [ ] Card sizes/options (no image etc.)
 - [ ] Site search
 - [ ] Stripe integration for Giving page(s) - use react/gatsby plugins
 - [ ] Use gatsby image plugin to optimise Images

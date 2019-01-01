@@ -9,6 +9,7 @@ const LandingPage = ({ data }) => {
   const cardWidth = cardList => {
     switch (cardList.length) {
       case 1:
+        return '97%';
       case 2:
         return '47%';
       case 3:
@@ -31,7 +32,9 @@ const LandingPage = ({ data }) => {
     >
       <section className="slice_LandingMainArticle">
         <div className="container">
-          <Content className="ArticleBody" input={page.html} />
+          <div className="ArticleBody">
+            <Content input={page.html} />
+          </div>
         </div>
       </section>
 
