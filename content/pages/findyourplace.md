@@ -11,7 +11,8 @@ order: 6
                 <h1>
                     Find your place</h1>
                 <div class="info_header_text">
-                    At The C3 Church our desire is to be a life giving community where people can connect with others and God, experiencing His presence and power in a real way. It is our desire to see everyone find their place within the C3 family by finding life-changing relationships that inspire growth.</div>
+                    At The C3 Church our desire is to be a life giving community where people can connect with others and God, experiencing His presence and power in a real way. It is our desire to see everyone find their place within the C3 family by finding life-changing relationships that inspire growth.
+                </div>
             </div>
         </div>
         <div class="article_cards">
