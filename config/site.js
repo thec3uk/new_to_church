@@ -10,10 +10,10 @@ module.exports = {
   logo: 'static/logo/LogoWhite.png', // Used for SEO
   banner: 'static/logo/BackgroundGrey.png',
   // JSONLD / Manifest
-  favicon: 'static/logo/favicon.png', // Used for manifest favicon generation
+  favicon: 'static/logo/LogoWhite.png', // Used for manifest favicon generation
   shortName: 'theC3', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Justin', // Author for schemaORGJSONLD
-  themeColor: '#3e7bf2',
+  themeColor: '#202945',
   backgroundColor: '#d3e0ff',
   twitter: '@the_c3church', // Twitter Username
   facebook_slug: 'thec3uk',
