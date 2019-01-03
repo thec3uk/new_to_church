@@ -27,7 +27,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
       const seo = {
         title: title || defaultTitle,
         description: defaultDescription || desc,
-        image: `${siteUrl}${banner || defaultBanner}`,
+        image: `${siteUrl}/${banner || defaultBanner}`,
         url: `${siteUrl}${pathname || '/'}`,
       };
       const realPrefix = pathPrefix === '/' ? '' : pathPrefix;
@@ -79,7 +79,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
         ];
       }
       return (
-        <Helmet title={seo.title}>
+        <Helmet title={defaultTitle + ' : ' + seo.title}>
           <html lang={siteLanguage} />
           <meta name="description" content={seo.description} />
           <meta name="image" content={seo.image} />
