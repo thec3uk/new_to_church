@@ -10,11 +10,11 @@ module.exports = {
   logo: 'static/logo/LogoWhite.png', // Used for SEO
   banner: 'static/logo/BackgroundGrey.png',
   // JSONLD / Manifest
-  favicon: 'static/logo/LogoWhite.png', // Used for manifest favicon generation
-  shortName: 'theC3', // shortname for manifest. MUST be shorter than 12 characters
-  author: 'Justin', // Author for schemaORGJSONLD
+  favicon: 'static/logo/c3Logo.png', // Used for manifest favicon generation
+  shortName: 'The C3', // shortname for manifest. MUST be shorter than 12 characters
+  author: 'Andrew', // Author for schemaORGJSONLD
   themeColor: '#202945',
-  backgroundColor: '#202945',
+  backgroundColor: '#f05356',
   twitter: '@the_c3church', // Twitter Username
   facebook_slug: 'thec3uk',
   instagram_slug: 'the_c3church',
