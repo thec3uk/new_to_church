@@ -16,7 +16,7 @@ gallery:
 
 If you are new to the city and have visited C3 in the last few weeks or know someone who you think would like to attend, there are lots of <a href="/Calendar/Month.aspx">upcoming events</a> and groups designed to help you connect and make you feel at home.
 
-If you would like to find out more about us, read through our <a href="/Articles/510266/New_to_Church.aspx">New to Church</a> common questions and consider attending our <a href="/Articles/522218/Discovery_Track.aspx">Discovery Track</a> to help you understand our vision and values and connect with other members.
+If you would like to find out more about us, read through our [New to Church](/newtochurch/gotquestions/) common questions and consider attending our [Discovery Track](/nextsteps/growthpath/discoverytrack/) to help you understand our vision and values and connect with other members.
 
 Our [Young Adults](/030s/youngadults/) group meets every&nbsp;Wednesday during term time for stripped-back worship, thought-provoking message and Bible-based discussion groups.
 

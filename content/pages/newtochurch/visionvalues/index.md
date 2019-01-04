@@ -37,4 +37,4 @@ We seek to honour all people<br/>
 We aim to show grace to everyone.<br/>
 Community is important and having fun is contagious<br/>
 <br/>
-To learn out more about our purpose as a church, and how your gifts can fit in to our mission; consider attending our <a href="/Articles/522218/Discovery_Track.aspx">Discovery Track</a> course, part of the C3 <a href="/Articles/510324/Growth_Path.aspx">Growth Path</a>.<br/>
+To learn out more about our purpose as a church, and how your gifts can fit in to our mission; consider attending our <a href="/nextsteps/growthpath/discoverytrack/">Discovery Track</a> course, part of the C3 <a href="/nextsteps/growthpath/">Growth Path</a>.<br/>

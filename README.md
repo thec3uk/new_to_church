@@ -12,7 +12,6 @@
 
 # Functionality to rebuild
 
-- [ ] facebook pixel integration
 - [ ] Card sizes/options (no image etc.)
 - [ ] Site search
 - [ ] Stripe integration for Giving page(s) - use react/gatsby plugins

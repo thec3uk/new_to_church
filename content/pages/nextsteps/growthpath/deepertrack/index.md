@@ -15,13 +15,13 @@ gallery:
 <h1>
 Growth Path Step 2: Deeper Track</h1>
 <br/>
-Deeper Track is the second step in the C3 <a href="/Articles/510324/Growth_Path.aspx">Growth Path</a> and follows the <a href="/Articles/522218/Discovery_Track.aspx">Discovery Track</a>.<br/>
+Deeper Track is the second step in the C3 <a href="/nextsteps/growthpath/">Growth Path</a> and follows the <a href="/nextsteps/growthpath/discoverytrack/">Discovery Track</a>.<br/>
 <br/>
 Deeper focuses on our personal spiritual practices and how we can go become more rooted in our relationship with God. Our devotions are one of the triggers that cause the greatest growth in our spiritual life. The course interactively spends four weeks looking at practical ways we can grow in these disciplines.<br/>
 <br/>
 The topics covered are:<br/>
 <br/>
-Week 1 -  Silence and solitude<br/>
+Week 1 - Silence and solitude<br/>
 Week 2 - Prayer and fasting<br/>
 Week 3 - Reflection on scripture<br/>
 Week 4 - Worship<br/>

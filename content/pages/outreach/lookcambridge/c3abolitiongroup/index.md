@@ -12,36 +12,31 @@ gallery:
   - /nextsteps/growthpath/
 ---
 
-<h1>
-	Turning Compassion into Action</h1>
+# Turning Compassion into Action
 
 <div style="text-align: justify;">
 	<br>
-	As an Abolition group, we exist to support the work of <a href="/Articles/510531/Hope_for_Justice.aspx">Hope for Justice</a> as they seek to end modern slavery by preventing exploitation, rescuing victims, restoring lives and reforming society.<br>
+	As an Abolition group, we exist to support the work of <a href="/outreach/globalmission/hopeforjustice/">Hope for Justice</a> as they seek to end modern slavery by preventing exploitation, rescuing victims, restoring lives and reforming society.<br>
 	<br>
 	<em>“Never doubt that a small group of thoughtful, committed citizens can change the world, it’s the only thing that ever has.”</em></div>
 
-<div style="text-align: right;">
-	Margaret Mead</div>
+<div style="text-align: right;">Margaret Mead</div>
 
-<h3 style="text-align: justify;">
-	We Educate</h3>
+<h3 style="text-align: justify;">We Educate</h3>
 
 <div style="text-align: justify;">
 	<br>
 	By developing our own understanding of human trafficking and raising awareness in our community and beyond.<br>
 	&nbsp;</div>
 
-<h3 style="text-align: justify;">
-	We Fund</h3>
+<h3 style="text-align: justify;">We Fund</h3>
 
 <div style="text-align: justify;">
 	<br>
 	More resources mean more freedom! The money we raise helps to fund rescues and after care to those who have suffered brutal exploitation.<br>
 	&nbsp;</div>
 
-<h3 style="text-align: justify;">
-	We Act</h3>
+<h3 style="text-align: justify;">We Act</h3>
 <br>
 Prayer is powerful, we pray for the work of Hope for Justice and for victims and survivors. We contribute to campaigns to raise awareness and reform society.
 <div style="text-align: justify;">

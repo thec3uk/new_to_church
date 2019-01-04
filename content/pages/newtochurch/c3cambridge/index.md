@@ -32,7 +32,7 @@ Sunday - 9:30, 11:30 and 17:30</div>
 
 <div>
  <br/>
-You can <a href="/Articles/509880/Parking_and_Transport.aspx">find us</a> on the roundabout between Coldhams Lane, Barnwell Road and Brooks Road.</div>
+You can <a href="/newtochurch/parkingtransport/">find us</a> on the roundabout between Coldhams Lane, Barnwell Road and Brooks Road.</div>
  <div>
 <div id="ctl00_ctl00_cphBody_ctl04_ctl01_map_divMap" style="width:100%; height:300px;"/>
 <script type="text/javascript">
@@ -132,16 +132,7 @@ font-size: 12px;
 
 </div>
 <p>
-There is <a href="http://thec3.uk/parking">parking available onsite</a> for new visitors and a <a href="/Articles/509880/Parking_and_Transport.aspx">free minibus</a> available for our 11:30 services.</p>
+There is <a href="http://thec3.uk/parking">parking available onsite</a> for new visitors and a <a href="/newtochurch/parkingtransport/">free minibus</a> available for our 11:30 services.</p>
 
 <p style="text-align: center;">
 <span style="text-align: center; font-size: 1.8rem;">Our new location in Bury St. Edmunds is coming soon. </span><a href="/Articles/529859/Bury_St_Edmunds.aspx" style="text-align: center; background-color: white; font-size: 1.8rem;">Find out more HERE</a><span style="text-align: center; font-size: 1.8rem;">.</span></p>
-
-<table class="pagebox" id="tbStyleWrapperTable" style="display: none;">
-<tbody>
-<tr>
-  <td class="body" id="tdStyleWrapperCell">
-     </td>
-</tr>
-</tbody>
-</table>

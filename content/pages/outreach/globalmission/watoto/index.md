@@ -17,7 +17,7 @@ Transforming lives in Africa</h1>
 <br/>
 Watoto is raising transformational leaders, who will impact positively every sphere of society, reforming Uganda and serving as a model for the rest of Africa. C3 support Watoto in rescuing vulnerable women and abandoned children.<br/>
 <br/>
-C3 have been honoured to welcome Watoto Children's Choir to our services as part of their annual tours and recently founder Marilyn Skinner visited as guest speaker for our <a href="/Articles/510339/Breathe_Ministry.aspx">Breathe</a> Banquet event. To keep up to date with Watoto, you can find them on <a href="https://www.facebook.com/watoto/">Facebook</a> and <a href="https://twitter.com/watoto">Twitter</a> or visit their <a href="https://www.watoto.com/">website</a> to find out more about sponsoring.<br/>
+C3 have been honoured to welcome Watoto Children's Choir to our services as part of their annual tours and recently founder Marilyn Skinner visited as guest speaker for our <a href="/nextsteps/c3ministries/breathe/">Breathe</a> Banquet event. To keep up to date with Watoto, you can find them on <a href="https://www.facebook.com/watoto/">Facebook</a> and <a href="https://twitter.com/watoto">Twitter</a> or visit their <a href="https://www.watoto.com/">website</a> to find out more about sponsoring.<br/>
 <br/>
 <strong>Watoto Children's Choir recently visited C3. Please take a look at the video below from them:</strong><br/>
 <div>

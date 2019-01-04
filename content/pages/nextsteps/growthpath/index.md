@@ -27,11 +27,11 @@ The C3 Church Growth Path guides you to find a place to belong and take the next
 <br/>
 The Growth Path is made up of three steps<br/>
  <br/>
-<strong>Step 1</strong> <a href="/Articles/522218/Discovery_Track.aspx">Discovery Track</a><br/>
+<strong>Step 1</strong> <a href="/nextsteps/growthpath/discoverytrack/">Discovery Track</a><br/>
 Understand our values and find your place at C3<br/>
 <br/>
-<strong>Step 2</strong> <a href="/Articles/510343/Deeper_Track.aspx">Deeper Track</a><br/>
+<strong>Step 2</strong> <a href="/nextsteps/growthpath/deepertrack/">Deeper Track</a><br/>
 Devote yourself by deepening your personal relationship with God<br/>
 <br/>
-<strong>Step 3</strong> <a href="/Articles/510344/Leadership_Track.aspx">Leadership Track</a><br/>
+<strong>Step 3</strong> <a href="/nextsteps/growthpath/leadershiptrack/">Leadership Track</a><br/>
 Develop your leadership in your area of gifting
