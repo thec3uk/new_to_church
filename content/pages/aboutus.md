@@ -8,7 +8,7 @@ order: 3
     <div class="container">
         <h1 class="section-title">
             About Us</h1>
-        <img src="/Images/Content/4/Templates/49141/images/PicAboutUs.jpg" />
+        <img src="/Images/Content/4/Templates/49141/images/PicAboutUs.jpg" alt="About us banner"/>
         <div>
             <div class="ArticleBody">
                 <br />
