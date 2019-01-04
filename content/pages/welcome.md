@@ -11,7 +11,7 @@ order: 1
       <div class="form_text">
         <div>
             <div class="ArticleBody">
-                No matter where you are in life, you are very welcome at The C3 Church. We are committed to helping you become the person God intended you to be. We would love to invite you to attend <a href="/Articles/510266/New_to_Church.aspx">one of our services</a>, <a href="/Articles/510326/C3_Groups.aspx">get connected</a> and <a href="/Articles/510324/Growth_Path.aspx">grow with us</a>. You can keep in touch with our upcoming events by <a href="http://thec3.uk/calendar">checking our calendar</a>.
+                No matter where you are in life, you are very welcome at The C3 Church. We are committed to helping you become the person God intended you to be. We would love to invite you to attend <a href="/newtochurch/">one of our services</a>, <a href="/nextsteps/c3groups/">get connected</a> and <a href="/nextsteps/growthpath/">grow with us</a>. You can keep in touch with our upcoming events by <a href="http://thec3.uk/calendar">checking our calendar</a>.
             </div>
         </div>
       </div>

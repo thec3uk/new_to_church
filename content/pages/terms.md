@@ -7,7 +7,7 @@ template: text
   <tr>
   <td>
     <h1>Terms and Conditions</h1>
-    <p>Please read these terms of use carefully before you use this website.  You should also be familiar with our <a href="/User/PrivacyPolicy.aspx">Privacy Policy</a></p>
+    <p>Please read these terms of use carefully before you use this website.  You should also be familiar with our <a href="/privacy/">Privacy Policy</a></p>
     <table cellpadding="0" cellspacing="0" style=" width: 100%;">
       <tr>
       <td style="text-align: center;">
@@ -143,6 +143,7 @@ CHURCHINSIGHT, Unit 3, Burr Elm Court, Main Street, Caldecote, Cambridge CB23 7N
 
 C3, C3 Centre, Coldhams Lane, Cambridge, CB1 3HR, UK
 </textarea>
+
 </td>
 </tr>
 <tr>

@@ -24,7 +24,7 @@ Text TIVE 10 and your chosen amount of 1, 5 or 10 pounds to 70070 (ex.TIVE 10 10
 <br />
 Other ways to Give</h4>
 <br />
-You can give in person at any of our Sunday services or set up a standing order with your bank. Standing Order forms can be downloaded and printed for <a href="/Publisher/File.aspx?ID=199802">Tithe</a> and <a href="/Publisher/File.aspx?ID=199769">Vision Offering</a>; completed forms can be handed in to C3 reception for processing<br />
+You can give in person at any of our Sunday services or set up a standing order with your bank. Standing Order forms can be downloaded and printed for <a href="/giving/tithesandofferings/">Tithe</a> and <a href="/giving/vision/">Vision Offering</a>; completed forms can be handed in to C3 reception for processing<br />
 <br />
 At C3, we believe fundraising should be open, honest and accountable so we are registered with the <a href="https://www.fundraisingregulator.org.uk/">Fundraising Regulator</a>.<br />
 &nbsp;

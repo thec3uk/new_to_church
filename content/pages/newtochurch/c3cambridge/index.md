@@ -135,4 +135,4 @@ font-size: 12px;
 There is <a href="http://thec3.uk/parking">parking available onsite</a> for new visitors and a <a href="/newtochurch/parkingtransport/">free minibus</a> available for our 11:30 services.</p>
 
 <p style="text-align: center;">
-<span style="text-align: center; font-size: 1.8rem;">Our new location in Bury St. Edmunds is coming soon. </span><a href="/Articles/529859/Bury_St_Edmunds.aspx" style="text-align: center; background-color: white; font-size: 1.8rem;">Find out more HERE</a><span style="text-align: center; font-size: 1.8rem;">.</span></p>
+<span style="text-align: center; font-size: 1.8rem;">Our new location in Bury St. Edmunds is coming soon. </span><a href="/newtochurch/burystedmunds/" style="text-align: center; background-color: white; font-size: 1.8rem;">Find out more HERE</a><span style="text-align: center; font-size: 1.8rem;">.</span></p>
