@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Helmet from 'react-helmet';
-import { Layout } from 'layouts';
+import { ContentLayout } from 'layouts';
 
 const ErrorPage = () => (
-  <Layout>
-    <Helmet title={'404'} />
-
-    <h1>Woops, something went wrong.</h1>
-    <h3>This page does not exist or is no longer reachable.</h3>
-    <h3>
-      You can return to the <Link to="/">Homepage</Link>.
-    </h3>
-  </Layout>
+  <ContentLayout title={'404'}>
+    <section className="slice_system_page">
+      <div className="container system_content">
+        <div className="systemPageContent">
+          <h1>Sorry</h1>
+          <p>The page you requested could not be found.</p>
+          <Link to="/">Go to the The C3 Church homepage.</Link>.
+        </div>
+      </div>
+    </section>
+  </ContentLayout>
 );
 
 export default ErrorPage;
