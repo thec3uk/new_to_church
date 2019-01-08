@@ -43,7 +43,10 @@ ContentPage.propTypes = {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(
+      fields: { slug: { eq: $slug } }
+      frontmatter: { template: { eq: "content" } }
+    ) {
       html
       frontmatter {
         title
