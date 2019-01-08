@@ -76,6 +76,11 @@ const Head = ({ index_page }) => (
         />`}
       </noscript>
       {/* End Facebook Pixel Code */}
+      <noscript>
+        {
+          '<h1>Welcome</h1><p>This site requires javascript to operate fully, please enable javascript in your settings</p>'
+        }
+      </noscript>
     </Helmet>
     {index_page ? (
       <Helmet>
