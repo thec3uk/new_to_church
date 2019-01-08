@@ -1,42 +1,39 @@
 ---
 title: Watch Online
-page: index
+hideTitle: true
 order: 2
+template: section
+cssClasses:
+  - slice_WatchOnline
 ---
 
-<section class="slice_WatchOnline">
-  <div class="container">
-    <div class="ArticleBody">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <img
-                src="/Images/Content/4/Templates/49141/images/IconPlay.png"
-                alt="Play icon"
-              />
-            </td>
-            <td>
-              <h1 class="section-title">Watch Online</h1>
-              See our latest media here
-              <br />
-              <a
-                class="button"
-                href="javascript:ActivateLightBox(true);">
-                Watch now
-              </a>
-              <a class="button2" href="/teachingseries">
-                Teaching Series
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <img
+          src="/Images/Content/4/Templates/49141/images/IconPlay.png"
+          alt="Play icon"
+        />
+      </td>
+      <td>
+        <h1 class="section-title">Watch Online</h1>
+        See our latest media here
+        <br />
+        <a
+          class="button"
+          href="javascript:ActivateLightBox(true);">
+          Watch now
+        </a>
+        <a class="button2" href="/teachingseries">
+          Teaching Series
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<section class="slice_FilmLightBox">
+<!-- <section class="slice_FilmLightBox">
   <div class="AmazonS3Reference">
     <div>
         <div class="ArticleBody">
@@ -45,10 +42,12 @@ order: 2
                 <!--
   Only update the video ID in the line below - or else it will probably not work. Do NOT just paste in a vimeo URL.
   -->
-                <div class="VideoFileReference">https://player.vimeo.com/video/294572549?title=0&amp;byline=0&amp;portrait=0</div>
+
+<!--  <div class="VideoFileReference">https://player.vimeo.com/video/294572549?title=0&amp;byline=0&amp;portrait=0</div>
             </div>
         </div>
     </div>
+
   </div>
 
   <div class="FlexWrapper">
@@ -71,4 +70,4 @@ order: 2
     </div>
 
   </div>
-</section>
+</section> -->

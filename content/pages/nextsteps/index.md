@@ -9,6 +9,11 @@ cardList:
   - /nextsteps/c3courses/
   - /nextsteps/c3ministries/
   - /nextsteps/c3events/
+card:
+  title: Next Steps
+  cta: More Details
+  image: /Images/Content/4/916431.jpeg
+  description: It is our heart to empower you to take the take the next step. We want you to be able to go further in your relationship with God and become a leader in your sphere.
 ---
 
 # Next Steps

@@ -157,10 +157,19 @@ exports.createPages = ({ graphql, actions }) => {
     const contentTemplate = path.resolve('src/templates/content_page.jsx');
     const landingTemplate = path.resolve('src/templates/landing_page.jsx');
     const homepageTemplate = path.resolve('src/templates/homepage.jsx');
+    const sectionTemplate = path.resolve('src/templates/sections.jsx');
     const text = path.resolve('src/templates/text.jsx');
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(
+          filter: {
+            frontmatter: {
+              template: {
+                in: ["landing", "content", "text", "index", "redirect"]
+              }
+            }
+          }
+        ) {
           edges {
             node {
               fileAbsolutePath
@@ -170,6 +179,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 template
                 locationSlug
+                sections
               }
             }
           }
@@ -177,6 +187,50 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const sections = node.frontmatter.sections;
+        if (Array.isArray(sections) && sections.length) {
+          // node has a sections defined
+          graphql(
+            `
+              query($sections: [String!]!) {
+                allMarkdownRemark(
+                  sort: { order: ASC, fields: [frontmatter___order] }
+                  filter: {
+                    frontmatter: { template: { eq: "section" } }
+                    fields: { slug: { in: $sections } }
+                  }
+                ) {
+                  edges {
+                    node {
+                      id
+                      fields {
+                        slug
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            {
+              sections: sections,
+            }
+          ).then(sectionResult => {
+            var sectionIdList = new Array();
+            sectionResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
+              sectionIdList.push(node.id);
+              createPage({
+                path: node.fields.slug,
+                component: sectionTemplate,
+                context: {
+                  // Data passed to context is available
+                  // in page queries as GraphQL variables.
+                  slug: node.fields.slug,
+                  sections: sections,
+                },
+              });
+            });
+          });
+        }
         const template = node.frontmatter.template;
         var templateFile = '';
         switch (template) {
@@ -215,6 +269,7 @@ exports.createPages = ({ graphql, actions }) => {
             // Data passed to context is available
             // in page queries as GraphQL variables.
             slug: node.fields.slug,
+            sections: node.frontmatter.sections,
           },
         });
       });

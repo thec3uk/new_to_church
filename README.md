@@ -7,12 +7,12 @@
 # TODO
 
 - Get Current sitemap - https://docs.google.com/spreadsheets/d/1Nfs0e5vQvg_Jj7VVBndUkoOaQ4mS88sQrT2dDYXCAKo/edit#gid=0
-- Get new sitemap finalised - speak with JC/SG/AH
+- Get new sitemap finalised - speak with JC/SG
 - Fix local JS - works with production build?!?!
 
 # Functionality to rebuild
 
-- [ ] Card sizes/options (no image etc.)
+- [ ] Card options (no image etc.)
 - [ ] Site search
 - [ ] Stripe integration for Giving page(s) - use react/gatsby plugins
 - [ ] Use gatsby image plugin to optimise Images

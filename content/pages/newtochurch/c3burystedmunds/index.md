@@ -6,7 +6,7 @@ card:
   title: C3 Bury St Edmunds
   cta: More Details
   description: Register your interest to find out more about upcoming events and how to get involved with our new Bury St. Edmunds site here.
-  image: /Images/Content/4/916434.jpeg
+  image: /Images/Content/4/916436.jpeg
 gallery:
   - /nextsteps/growthpath/
   - /newtochurch/gotquestions/

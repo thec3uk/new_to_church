@@ -1,13 +1,13 @@
 ---
 title: The C3 Church
 sections:
-  - welcome
-  - watchonline
-  - aboutus
-  - kidsyouth
-  - yastudents
-  - findyourplace
-  - lifeatc3
+  - /welcome/
+  - /watchonline/
+  - /aboutus/
+  - /kidsyouth/
+  - /yastudents/
+  - /findyourplace/
+  - /lifeatc3/
 template: index
 slideshow:
   - title: Our Bury St. Edmunds site is coming soon*Find out how to get involved here!

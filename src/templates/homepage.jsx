@@ -2,7 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Nav, SideLinks, SideGallery } from '../components';
-import { Layout, Content } from '../layouts';
+import { Layout } from '../layouts';
+import Sections from './sections';
 
 const HomePage = ({ data }) => (
   <Layout title="The C3 Church">
@@ -33,16 +34,12 @@ const HomePage = ({ data }) => (
       <SideLinks index_page={true} />
 
       <section className="slice_WelcomeSlides_L">
-        {/* The below should be pulled in as content*/}
         <div className="bannerSlides">
           <SideGallery images={data.markdownRemark.frontmatter.slideshow} />
         </div>
       </section>
     </header>
-
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <Content key={node.id} input={node.html} />
-    ))}
+    <Sections data={data} />
   </Layout>
 );
 
@@ -53,24 +50,12 @@ HomePage.propTypes = {
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___order] }
-      filter: { frontmatter: { page: { eq: "index" } } }
-    ) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
+  query($slug: String!, $sections: [String!]!) {
+    ...sectionsQuery
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        sections
         slideshow {
           title
           url

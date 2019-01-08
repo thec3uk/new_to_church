@@ -19,8 +19,7 @@ cardList:
   - /nextsteps/growthpath/thec3academy/
 ---
 
-<h1>
-Where are you in your journey?</h1>
+# Where are you in your journey?
 
 <br/>
 The C3 Church Growth Path guides you to find a place to belong and take the next step into God’s purpose for your life.<br/>
