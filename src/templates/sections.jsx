@@ -65,9 +65,10 @@ Section.propTypes = {
 
 const Sections = ({ data }) => (
   <Fragment>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <Section key={node.id} data={node} />
-    ))}
+    {data &&
+      data.allMarkdownRemark.edges.map(({ node }) => (
+        <Section key={node.id} data={node} />
+      ))}
   </Fragment>
 );
 
