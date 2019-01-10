@@ -25,6 +25,7 @@ const LandingPage = ({ data }) => {
         return '';
     }
   };
+  console.log(data);
   return (
     <HeroLayout
       title={page.frontmatter.title}
@@ -48,7 +49,7 @@ const LandingPage = ({ data }) => {
                   title={card.title}
                   description={card.description}
                   slug={card.slug}
-                  image={card.image}
+                  image={data.cardImage.childImageSharp.fluid}
                   cta={card.cta}
                   width={cardWidth(page.fields.cardNodeList)}
                 />
@@ -67,7 +68,8 @@ LandingPage.propTypes = {
 };
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $imageFile: String) {
+    ...fluidCardImage
     markdownRemark(
       fields: { slug: { eq: $slug } }
       frontmatter: { template: { eq: "landing" } }

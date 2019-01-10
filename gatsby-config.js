@@ -5,11 +5,19 @@ module.exports = {
     ...config,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/images`,
+        name: 'images',
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-brotli',
     'gatsby-plugin-catch-links',
     'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

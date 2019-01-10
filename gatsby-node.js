@@ -180,6 +180,9 @@ exports.createPages = ({ graphql, actions }) => {
                 template
                 locationSlug
                 sections
+                card {
+                  image
+                }
               }
             }
           }
@@ -262,15 +265,19 @@ exports.createPages = ({ graphql, actions }) => {
             );
             return;
         }
+        var context = {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.fields.slug,
+          sections: node.frontmatter.sections,
+        };
+        if (node.frontmatter.card !== null) {
+          context['imageFile'] = node.frontmatter.card.image;
+        }
         createPage({
           path: node.fields.slug,
           component: templateFile,
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-            sections: node.frontmatter.sections,
-          },
+          context: context,
         });
       });
       resolve();
