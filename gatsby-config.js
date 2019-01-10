@@ -5,6 +5,13 @@ module.exports = {
     ...config,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=7443c2e349',
+      },
+    },
     'gatsby-plugin-brotli',
     'gatsby-plugin-catch-links',
     'gatsby-remark-source-name',
