@@ -72,25 +72,6 @@ const Nav = ({ index_page }) => {
                 </Link>{' '}
               </span>
             </div>
-            <div className="logo-MyC3">
-              <Link to="/MyC3">
-                <img
-                  alt=""
-                  className="LogoMyC3White"
-                  src="/Images/Content/4/Templates/49141/images/LogoMyC3White.png"
-                />{' '}
-                <img
-                  alt=""
-                  className="LogoMyC3Grey"
-                  src="/Images/Content/4/Templates/49141/images/LogoMyC3Grey.png"
-                />{' '}
-                <img
-                  alt=""
-                  className="LogoMyC3Red"
-                  src="/Images/Content/4/Templates/49141/images/LogoMyC3Red.png"
-                />{' '}
-              </Link>
-            </div>
           </section>
         );
       }}

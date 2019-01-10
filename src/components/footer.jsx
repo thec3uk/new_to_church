@@ -117,13 +117,6 @@ const Footer = () => (
                 a <strong>Church</strong>
                 Insight site
               </a>
-              <a
-                id="footer_mobile"
-                href="/Mobile/default.aspx?home=yes"
-                title="High Accessibility Version"
-              >
-                Low Graphics
-              </a>
               {data.site.siteMetadata.footerLinks.map(item => (
                 <Link
                   id={item.id}
