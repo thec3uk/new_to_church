@@ -12,7 +12,6 @@
 
 # Functionality to rebuild
 
-- [ ] Card options (no image etc.)
 - [ ] Site search
 - [ ] Stripe integration for Giving page(s) - use react/gatsby plugins
 - [ ] Use gatsby image plugin to optimise Images

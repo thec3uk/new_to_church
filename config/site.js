@@ -5,7 +5,7 @@ module.exports = {
   description:
     'The C3 Church is an evangelical, charismatic Christian church based in Cambridge and Bury St Edmunds, England.',
   url: process.env.URL || 'http://localhost:8000', // Domain of your site. No trailing slash!
-  siteUrl: `${process.env.URL}/` || 'http://localhost:8000/', // url + pathPrefix
+  siteUrl: `${process.env.URL}` || 'http://localhost:8000/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'static/logo/LogoWhite.png', // Used for SEO
   banner: 'static/logo/BackgroundGrey.png',
