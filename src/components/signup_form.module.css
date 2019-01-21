@@ -1,0 +1,48 @@
+.NewsLetterSignUp {
+  line-height: 1.2;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.NewsLetterSignUp label {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.NewsLetterSignUp label span {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.NewsLetterSignUp input[type='email'] {
+  border: 1px solid #ea535a;
+  padding: 17px 0 17px 17px;
+  background-color: #585563;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.NewsLetterSignUp input[type='email']::placeholder {
+  color: #ddd;
+}
+
+.NewsLetterGO {
+  display: block;
+  color: white;
+  height: 55px;
+  background-color: #ea535a;
+  padding: 17px;
+  font-weight: 600;
+  border: 0;
+  font-size: 16px;
+  align-self: flex-end;
+}
+
+.NewsLetterGO:hover {
+  color: #ea535a;
+  background-color: white;
+}
