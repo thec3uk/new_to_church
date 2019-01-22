@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
+import NewsLetterSignUp from './signup_form';
 
 const Footer = () => (
   <StaticQuery
@@ -43,20 +44,7 @@ const Footer = () => (
                 </div>
               </div>
 
-              <div className="NewsLetterSignUp">
-                <img
-                  src="/Images/Content/4/Templates/49141/images/IconMail.png"
-                  alt="Newsletter Signup"
-                />
-                <div>Sign up to the C3 Newsletter</div>
-                <Link
-                  className="NewsLetterGO"
-                  to="/Groups/308211/NewsLetterSignUp.aspx"
-                >
-                  {' '}
-                  GO
-                </Link>
-              </div>
+              <NewsLetterSignUp />
 
               <div className="footer-column footer-column-1">
                 <div className="ArticleBody">
