@@ -47,7 +47,8 @@ class NewsLetterSignUp extends Component {
       },
       // setState callback (subscribe email to MC)
       this._postEmailToMailchimp(this.state.email, {
-        pathname: document.location.pathname,
+        SIGNUPURL: document.location.pathname,
+        SOURCE: 'website signup',
       })
     );
   };
