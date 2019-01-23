@@ -9,7 +9,9 @@ module.exports = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint:
-          'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=7443c2e349',
+          process.env.NODE_ENV !== 'production'
+            ? 'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=7443c2e349ff'
+            : 'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=6958ad32ad',
       },
     },
     'gatsby-plugin-brotli',
