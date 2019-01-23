@@ -18,12 +18,14 @@ gallery:
 
 C3 Groups have a simple purpose, bringing people closer to God and each other. We believe God created us to live in community, only then can we experience the full life He intends for us.
 
-<h3 style="text-align: center;">
-    <a href="https://thec3.churchsuite.co.uk/embed/smallgroups/list">The C3 Groups Directory is now LIVE</a>
-</h3><br/>
+<h2 style="text-align: center;">
+  The C3 Groups Directory is now LIVE
+</h2>
+<br/>
+<h3 style="text-align: center; color: #3e4545;">
+  View a <a href="https://thec3.churchsuite.co.uk/embed/smallgroups/list?preview=true">list</a>
+  or on a <a href="https://thec3.churchsuite.co.uk/embed/smallgroups/map?preview=true">map</a>
+</h3>
+<br/>
 
-The <a href="https://thec3.churchsuite.co.uk/embed/smallgroups/list">directory</a> is easy to use. If you are already a member of C3, you can log in to your account with us by clicking on the padlock icon to the left of your screen from anywhere on the site - when you apply for a group, your details will be filled in for you based on your member account.
-
-If you don&#39;t have a member account with us, <a href="/User/NewUserRegistration.aspx">you can register for one</a>. Approval of new accounts takes up to 48 hours at busy times, but once your account is confirmed you can log in and apply for your group.
-
-If you want to lead a group in the upcoming terms at C3 we would love to hear your ideas! Full training and support is given, if you have an idea you would like to develop, then why not attend one of our group leader training sessions to realise your potential. <a href="/Articles/508659/C3_Group_Leader.aspx">You can&nbsp;register your interest using the C3 Group leader application form</a>.
+If you want to lead a group in the upcoming terms at C3 we would love to hear your ideas! Full training and support is given, if you have an idea you would like to develop, then why not attend one of our group leader training sessions to realise your potential. [You can&nbsp;register your interest using the C3 Group leader application form](https://thec3church.typeform.com/to/Du2iFZ).
