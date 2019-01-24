@@ -10,7 +10,6 @@ card:
 galleryImage:
   url: /Images/Content/4/868601.jpg
 cardList:
-  - /outreach/lookcambridge/communityhub/contributions/
   - /outreach/lookcambridge/communityhub/coldhamscoffee/
   - /outreach/lookcambridge/communityhub/lunchclub/
   - /outreach/lookcambridge/communityhub/openlunch/

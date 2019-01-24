@@ -12,20 +12,14 @@ gallery:
   - /nextsteps/growthpath/
 ---
 
-<h1>
-<span>Tithes &amp; Offerings&nbsp;</span></h1>
+# Tithes &amp; Offerings
 
-<p>
-<em>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver</em></p>
+_Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver_
 
-<p style="text-align: right;">
-<span style="font-size: 1.8rem; text-align: right;">2 Corinthians 9:7 (NIV)</span></p>
+<p style="font-size: 1.8rem; text-align: right;">2 Corinthians 9:7 (NIV)</p>
 
-<p>
-The Bible teaches us that we worship the Lord with our tithe, which is ten percent of our income contributed to the church on a regular basis. When we feel called to give over and above our tithe, we do so as an offering.</p>
-<div>
+The Bible teaches us that we worship the Lord with our tithe, which is ten percent of our income contributed to the church on a regular basis. When we feel called to give over and above our tithe, we do so as an offering.
 
-<img class="giv-loading" src="/Admin/Images/Icons/loading.gif" />
-<iframe src="/PaymentGroup/Registration.aspx?embed=true&group_id=298424&preview_layout_id=50858&sec=18c4fd5cd79d0b442b083f95c33a23eb" frameborder="0" scrolling="no" style="width: 100%;" onload="$e(this).iFrameResize(); $('img.giv-loading').remove();"></iframe>
+### [Make your Tithe offering here](https://thec3.churchsuite.co.uk/donate)
 
-</div><img alt="FRRegLogoLR" height="58" src="/Images/content/4/888345.jpg" width="135" />
+<img alt="FRRegLogoLR" height="58" src="/Images/content/4/888345.jpg" width="135" />
