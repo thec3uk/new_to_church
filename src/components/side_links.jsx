@@ -3,7 +3,8 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Search from './search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faFacebookf } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 const SideLinks = ({ index_page }) => (
   <Fragment>
@@ -16,7 +17,7 @@ const SideLinks = ({ index_page }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faFacebookf} />
+              <FontAwesomeIcon icon={faFacebookF} />
             </a>
             <a
               href="https://twitter.com/the_c3church/"
