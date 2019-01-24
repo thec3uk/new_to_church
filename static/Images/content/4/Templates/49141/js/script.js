@@ -470,45 +470,6 @@ $(document).ready(function() {
     }
   }
 
-  function ActivateLandingArticles(SliceName) {
-    /* this code does an intelligent layout change for a article list, depending on the number of articles */
-    if (SectionTagExists(SliceName)) {
-      // check if slice exists, and load into SectionTag if it does
-      var rMarginWidth = 1.28866 * 2.0,
-        rCleverWidth;
-      var Articles = SectionTag.find('div.article_cards > div');
-      var iArticles = Articles.length;
-      switch (iArticles) {
-        case 1:
-          rCleverWidth = 100.0 - rMarginWidth;
-          break;
-        case 2:
-          rCleverWidth = 50.0 - rMarginWidth;
-          break;
-        case 3:
-        case 5:
-        case 6:
-        case 9:
-          rCleverWidth = 33.33333 - rMarginWidth;
-          break;
-        case 4:
-        case 7:
-        case 8:
-        case 10:
-        case 11:
-        case 12:
-          rCleverWidth = 25.0 - rMarginWidth;
-          break;
-        //case 5:
-        //rCleverWidth = 20.0 - rMarginWidth; break;
-        default:
-          rCleverWidth = 25.0 - rMarginWidth;
-          break;
-      }
-      Articles.css('width', rCleverWidth + '%');
-    }
-  }
-
   function ActivateCalendarFeed(SliceName, bRestructure) {
     if (SectionTagExists(SliceName)) {
       // check if slice exists, and load into SectionTag if it does

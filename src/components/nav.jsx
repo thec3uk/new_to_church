@@ -30,6 +30,9 @@ const Nav = ({ index_page }) => {
     <StaticQuery
       query={graphql`
         query HeadingQuery {
+          siteSearchIndex {
+            index
+          }
           site {
             siteMetadata {
               topNav {
