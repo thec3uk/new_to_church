@@ -5,9 +5,14 @@
   grid-template-columns: 300px 60px;
   align-items: end;
   margin-bottom: 40px;
-  width: 35%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 922px) {
+  .NewsLetterSignUp {
+    width: 35%;
+  }
 }
 
 .NewsLetterSignUp label {
