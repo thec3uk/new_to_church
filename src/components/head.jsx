@@ -29,10 +29,6 @@ const Head = ({ index_page }) => (
         type="text/javascript"
         src="/Modules/FrontPage/Search/SearchFunctions.js?SV=V113T"
       />
-      <script type="text/javascript">{`
-          var strValidEmailRegex = "^[A-Za-z0-9!#$%&'*+/=?^_\`{|}~-]+(\\.[A-Za-z0-9!#$%&'*+/=?^_\`{|}~-]+)*\\@[\\w\\-]+(\\.[\\w\\-]+)*\\.[a-zA-Z]{2,}$";
-          var intMobileGroupID = 0;
-      `}</script>
       <link
         type="text/css"
         rel="stylesheet"

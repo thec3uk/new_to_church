@@ -1,35 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Index } from 'elasticlunr';
+import PropTypes from 'prop-types';
 
-const Search = () => (
-  <div className="search-overlay">
-    <a className="search-close" href="#">
-      &thinsp;
-    </a>
-    <div>
-      <div
-        className="search_div"
-        // onKeyDown="if(event.keyCode==13){document.getElementById('ctl00_ctl00_cphBody_ctl00_searchSiteGo').click();return false}else{return true}"
-      >
-        <input
-          type="text"
-          id="ctl00_ctl00_cphBody_ctl00_searchSite"
-          name="searchSite"
-          size="22"
-          defaultValue="Search the Site"
-          // onBlur={() => (if(this.value==''){this.value='Search the Site';})}
-          // onFocus="if(this.value=='Search the Site'){this.value='';}"
-          className="text"
-        />
+// Search component
+class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: '',
+      results: [],
+    };
+  }
+
+  render() {
+    return (
+      <div className="search-overlay">
+        <a className="search-close" href="#">
+          &thinsp;
+        </a>
+        <div>
+          <div className="search_div">
+            <input
+              type="text"
+              name="searchSite"
+              size="22"
+              placeholder="Search the Site"
+              value={this.state.query}
+              onChange={this.search}
+              className="text"
+            />
+          </div>
+          <input type="button" value="Go" className="button" />
+        </div>
       </div>
-      <input
-        type="button"
-        id="ctl00_ctl00_cphBody_ctl00_searchSiteGo"
-        value="Go"
-        className="button"
-        // onClick="doSiteSearch(this.id,'Search the Site',false,null,null);"
-      />
-    </div>
-  </div>
-);
+    );
+  }
+
+  getOrCreateIndex = () =>
+    this.index
+      ? this.index
+      : // Create an elastic lunr index and hydrate with graphql query results
+        Index.load(this.props.searchIndex);
+
+  search = evt => {
+    const query = evt.target.value;
+    this.index = this.getOrCreateIndex();
+    this.setState({
+      query,
+      // Query the index with search string to get an [] of IDs
+      results: this.index
+        .search(query)
+        // Map over each ID and return the full document
+        .map(({ ref }) => this.index.documentStore.getDoc(ref)),
+    });
+  };
+}
+
+Search.propTypes = {
+  searchIndex: PropTypes.object,
+};
 
 export default Search;

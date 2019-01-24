@@ -6,6 +6,23 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: '@gatsby-contrib/gatsby-plugin-elasticlunr-search',
+      options: {
+        // Fields to index
+        fields: ['title', 'cardDesc', 'content'],
+        // How to resolve each field's value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields' values
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            cardDesc: node =>
+              node.frontmatter.card && node.frontmatter.card.description,
+            content: node => node.rawMarkdownBody,
+          },
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint:
