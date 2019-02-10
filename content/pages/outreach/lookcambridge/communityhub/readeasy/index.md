@@ -10,6 +10,9 @@ card:
 gallery:
   - /nextsteps/c3groups/
   - /nextsteps/growthpath/
+contactForm:
+  email: sarah.gilbert@thec3.uk
+  active: true
 ---
 
 # Easing the struggle of learning to read

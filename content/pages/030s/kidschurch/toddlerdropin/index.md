@@ -10,6 +10,9 @@ card:
 gallery:
   - /nextsteps/c3groups/
   - /nextsteps/growthpath/
+contactForm:
+  email: josie.prina@thec3.uk
+  active: true
 ---
 
 <h1>

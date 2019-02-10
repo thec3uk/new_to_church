@@ -9,10 +9,12 @@ card:
   cta: More Details
   description: We would love to invite you to a Sunday service this week. If you have questions, you can find out about what to expect on your first visit here
   image: /Images/Content/4/916437.jpeg
+contactForm:
+  email: sarah.gilbert@thec3.uk
+  active: true
 ---
 
-<div id="ctl00_ctl00_cphBody_ctl04_elFormContents"><h1 class="section-title">
-Common Questions</h1>
+<h1 class="section-title">Common Questions</h1>
 
 <h5>
 <br/>

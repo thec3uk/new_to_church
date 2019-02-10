@@ -10,10 +10,12 @@ card:
 gallery:
   - /nextsteps/c3groups/
   - /nextsteps/growthpath/
+contactForm:
+  email: sarah.gilbert@thec3.uk
+  active: true
 ---
 
-<div id="ctl00_ctl00_cphBody_ctl04_elFormContents"><h1>
-	Inspiring and Equipping</h1>
+<h1>Inspiring and Equipping</h1>
 &nbsp;
 
 <div style="text-align: justify;">
