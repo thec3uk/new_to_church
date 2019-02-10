@@ -22,7 +22,7 @@ class BaseForm extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': this.props.formName,
-        recipient: this.props.toEmail,
+        toEmail: this.props.toEmail,
         ...this.props.data,
       }),
     })
