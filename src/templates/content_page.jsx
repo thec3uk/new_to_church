@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { SideNav, SideGallery } from '../components';
+import { SideNav, SideGallery, ContactForm } from '../components';
 import { HeroLayout, Content } from '../layouts';
 
 const ContentPage = ({ data }) => {
@@ -15,6 +15,13 @@ const ContentPage = ({ data }) => {
         <div className="container">
           <div className="main-content">
             <Content className="ArticleBody" input={page.html} />
+            {page.frontmatter.contactForm &&
+              page.frontmatter.contactForm.active === true && (
+                <ContactForm
+                  title={page.frontmatter.title}
+                  toEmail={page.frontmatter.contactForm.email}
+                />
+              )}
           </div>
 
           <aside className="sidebar">
@@ -51,6 +58,10 @@ export const query = graphql`
       frontmatter {
         title
         heroImage
+        contactForm {
+          email
+          active
+        }
       }
       fields {
         slug
