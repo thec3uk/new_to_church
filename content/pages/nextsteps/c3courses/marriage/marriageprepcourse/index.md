@@ -18,4 +18,7 @@ The C3 Marriage courses are based on material developed by Nicky and Sila Lee, a
 <br/>
 This course is run by host couples in their own home, times can be arranged to suit your individual schedules.  Each evening will begin with a meal followed by practical DVD presentations and a times for private discussion between you and your partner. You are never asked share anything private about your relationship with anyone other than your partner, but your host couple will be available for advice and to share stories from their experiences. <br/>
 <br/>
-If you are interested in attending the Marraige Preparation Course, please let us know by filling in the form below. One of our team will be in touch.<br/>
+
+If you are interested in attending the Marriage Preparation Course, please let us know by signing up at the link below.<br/>
+
+[Sign up here](https://thec3.churchsuite.co.uk/groups/xjkqfivh)
