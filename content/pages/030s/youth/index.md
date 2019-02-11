@@ -8,6 +8,9 @@ card:
 gallery:
   - /nextsteps/c3groups/
   - /nextsteps/growthpath/
+contactForm:
+  email: josh.drury@thec3.uk
+  active: true
 ---
 
 # Welcome to C3 Youth!

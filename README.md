@@ -13,7 +13,6 @@
 # Functionality to rebuild
 
 - [ ] Site search
-- [ ] Stripe integration for Giving page(s) - use react/gatsby plugins
 - [ ] Use gatsby image plugin to optimise Images
 - [ ] refactor CSS into components -> go back to the starter repo for examples of how todo css/styling/themes
 

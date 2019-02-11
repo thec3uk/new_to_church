@@ -15,6 +15,9 @@ cardList:
   - /outreach/lookcambridge/communityhub/openlunch/
   - /outreach/lookcambridge/communityhub/foodbank/
   - /outreach/lookcambridge/communityhub/readeasy/
+contactForm:
+  email: sarah.gilbert@thec3.uk
+  active: true
 ---
 
 # Fridays at the C3 Centre are Community Hub day!

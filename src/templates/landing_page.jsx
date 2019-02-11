@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Card } from '../components';
+import { Card, ContactForm } from '../components';
 import { HeroLayout, Content } from '../layouts';
 
 const LandingPage = ({ data }) => {
@@ -34,6 +34,13 @@ const LandingPage = ({ data }) => {
         <div className="container">
           <div className="ArticleBody">
             <Content input={page.html} />
+            {page.frontmatter.contactForm &&
+              page.frontmatter.contactForm.active === true && (
+                <ContactForm
+                  title={page.frontmatter.title}
+                  toEmail={page.frontmatter.contactForm.email}
+                />
+              )}
           </div>
         </div>
       </section>
@@ -76,6 +83,10 @@ export const query = graphql`
       frontmatter {
         title
         heroImage
+        contactForm {
+          email
+          active
+        }
       }
       fields {
         cardNodeList {

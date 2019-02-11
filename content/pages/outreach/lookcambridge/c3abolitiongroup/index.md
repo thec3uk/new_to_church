@@ -49,5 +49,5 @@ Prayer is powerful, we pray for the work of Hope for Justice and for victims and
 	&nbsp;<br>
 	We meet on Monday evenings, once a month at The C3 Centre 19:30 - 21:00. We also host events, check back here for more information on upcoming events. Our last event (a Quiz Night) raised <strong>over £1,700 for Hope for Justice</strong>! Thank you to everyone involved, we're ending slavery together!<br>
 	&nbsp;<br>
-	If you are interested in finding out more about the Abolition Group at C3 we would love to hear from you. Please fill in the form below, one of the team will be in touch:<br>
-	&nbsp;</div>
+	If you are interested in finding out more about the Abolition Group at C3 we would love to hear from you. Please get in contact with the <a href="https://thec3.churchsuite.co.uk/groups/vkgbu4xg">group here</a>.
+</div>

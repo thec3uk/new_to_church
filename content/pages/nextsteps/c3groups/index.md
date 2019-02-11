@@ -28,8 +28,6 @@ C3 Groups have a simple purpose, bringing people closer to God and each other. W
 </h3>
 <br/>
 
-<!-- If you want to lead a group in the upcoming terms at C3 we would love to hear your ideas! Full training and support is given, if you have an idea you would like to develop, then why not attend one of our group leader training sessions to realise your potential. [You can&nbsp;register your interest using the C3 Group leader application form](https://thec3church.typeform.com/to/Du2iFZ). -->
-
 #### C3 Group Leader Interest Form
 
 <p style="text-align: justify;">

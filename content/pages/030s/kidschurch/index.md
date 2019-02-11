@@ -8,6 +8,9 @@ card:
 cardList:
   - /030s/kidschurch/kidsconference/
   - /030s/kidschurch/toddlerdropin/
+contactForm:
+  email: josie.prina@thec3.uk
+  active: true
 ---
 
 # Empowering the younger generation
