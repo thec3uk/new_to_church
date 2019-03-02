@@ -1,7 +1,6 @@
 # Questions
 
 - How do we want to do videos? - Where will they be hosted? lity for lightbox? - podcasting app = less work for josh
-- Which Content Management system do we want? #1
 - What do we want to pull from CS? #1
 
 # TODO
