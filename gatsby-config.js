@@ -34,7 +34,7 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different link resolver logic for each field if necessary.
         // See: https://prismic.io/docs/javascript/query-the-api/link-resolving
-        linkResolver: ({ node, key, value }) => doc => linkResolver,
+        linkResolver: ({ node, key, value }) => linkResolver,
 
         // Set a list of links to fetch and be made available in your link
         // resolver function.
