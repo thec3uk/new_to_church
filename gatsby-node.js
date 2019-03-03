@@ -309,6 +309,12 @@ exports.createPages = ({ graphql, actions }) => {
           slug: result.data.prismicHomepage.uid,
         },
       });
+      createRedirect({
+        fromPath: '/' + result.data.prismicHomepage.uid,
+        isPermanent: true,
+        toPath: '/',
+        redirectInBrowser: true,
+      });
       resolve();
     });
 
