@@ -73,7 +73,6 @@ Section.propTypes = {
 
 const Sections = ({ data }) => (
   <Fragment>
-    {console.log(data)}
     {data && data.body.map(node => <Section key={node.id} data={node} />)}
   </Fragment>
 );

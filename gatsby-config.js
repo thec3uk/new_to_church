@@ -1,5 +1,12 @@
 const config = require('./config/site');
 
+const prismicRepositoryName = 'thec3';
+
+const linkResolver = function(doc) {
+  // Fallback for other types, in case new custom types get created
+  return '/' + doc.uid;
+};
+
 module.exports = {
   siteMetadata: {
     ...config,
@@ -11,7 +18,7 @@ module.exports = {
         // The name of your prismic.io repository. This is required.
         // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
         // is 'gatsby-source-prismic-test-site.prismic.io'.
-        repositoryName: 'thec3',
+        repositoryName: prismicRepositoryName,
 
         // An API access token to your prismic.io repository. This is required.
         // You can generate an access token in the "API & Security" section of
@@ -27,9 +34,7 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different link resolver logic for each field if necessary.
         // See: https://prismic.io/docs/javascript/query-the-api/link-resolving
-        linkResolver: ({ node, key, value }) => doc => {
-          // Your link resolver
-        },
+        linkResolver: ({ node, key, value }) => doc => linkResolver,
 
         // Set a list of links to fetch and be made available in your link
         // resolver function.
