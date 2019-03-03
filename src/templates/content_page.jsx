@@ -136,6 +136,50 @@ export const query = graphql`
             ... on PrismicHomepage {
               data {
                 page_title
+                child_pages {
+                  child_page {
+                    uid
+                    document {
+                      ... on PrismicContentPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicLandingPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicRedirect {
+                        data {
+                          page_title
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on PrismicRedirect {
+              data {
+                page_title
+                child_pages {
+                  child_page {
+                    uid
+                    document {
+                      ... on PrismicContentPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicLandingPage {
+                        data {
+                          page_title
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }

@@ -46,6 +46,9 @@ const LandingPage = ({ data }) => {
           <div className="article_cards">
             {page.child_pages &&
               page.child_pages.map(({ child_page }) => {
+                if (child_page === null) {
+                  return;
+                }
                 const { uid, document } = child_page;
                 const doc = document[0];
                 return (
