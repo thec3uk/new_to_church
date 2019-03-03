@@ -61,6 +61,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-prismic-preview',
+      options: {
+        repositoryName: 'gatsby-source-prismic-test-site',
+        linkResolver: require('./src/linkResolver'),
+        path: '/preview',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-90682079-2',

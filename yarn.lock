@@ -5098,6 +5098,16 @@ gatsby-plugin-page-creator@^2.0.5:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
+gatsby-plugin-prismic-preview@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-prismic-preview/-/gatsby-plugin-prismic-preview-2.0.0.tgz#c2e8d746deded2739a400dcb7e561ab6606ddabb"
+  integrity sha512-6hsAzQx386zuAS8ujDQIELNm1sfa5PCjg+ZI+3k+Aol/FBsgVXzWb5TozITvnJvdrho6tKtOm3w1nd/TsWMs9g==
+  dependencies:
+    lodash "4.17.11"
+    prismic-javascript "1.5.0"
+    react "^16.5.2"
+    traverse "0.6.6"
+
 gatsby-plugin-react-helmet@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.4.tgz#07811c8ccc626ecfea40554ccc5f946db705409d"
@@ -7259,13 +7269,13 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
+lodash@4.17.11, lodash@^4.15.0, lodash@^4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
 lodash@^4.11.1, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
-
-lodash@^4.15.0, lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 log-symbols@^2.1.0:
   version "2.2.0"
@@ -9143,6 +9153,14 @@ prismic-helpers@^1.0.0:
   resolved "https://registry.yarnpkg.com/prismic-helpers/-/prismic-helpers-1.0.0.tgz#8337420cf187f55fb7b7a8be755523c8696fc329"
   integrity sha1-gzdCDPGH9V+3t6i+dVUjyGlvwyk=
 
+prismic-javascript@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-1.5.0.tgz#d11a3489c73a643e9f5f6c1d9c6b552091d67656"
+  integrity sha512-S6Ng6PocjBC7FrhfmkrlOsHWPL3011rhsrHbBedVK6iHqYljFiAegh1Bti0eqGwXh3rhkVFGURrQlubidNOEsg==
+  dependencies:
+    cross-fetch "^2.2.0"
+    promise-polyfill "8.0.0"
+
 prismic-javascript@^1.1.5:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-1.5.1.tgz#0f9da4e58a094ca0fb0b68e2e458e1a6c33a52ce"
@@ -9509,6 +9527,16 @@ react@^16.5.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.11.2"
+
+react@^16.5.2:
+  version "16.8.3"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.3.tgz#c6f988a2ce895375de216edcfaedd6b9a76451d9"
+  integrity sha512-3UoSIsEq8yTJuSu0luO1QQWYbgGEILm+eJl2QN/VLDi7hL+EN18M3q3oVZwmVzzBJ3DkM7RMdRwBmZZ+b4IzSA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.13.3"
 
 read-chunk@^1.0.1:
   version "1.0.1"
@@ -10072,6 +10100,14 @@ sax@>=0.6.0, sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
 scheduler@^0.11.2:
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.11.3.tgz#b5769b90cf8b1464f3f3cfcafe8e3cd7555a2d6b"
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.3.tgz#bed3c5850f62ea9c716a4d781f9daeb9b2a58896"
+  integrity sha512-UxN5QRYWtpR1egNWzJcVLk8jlegxAugswQc984lD3kU7NuobsO37/sRfbpTdBjtnD5TBNFA2Q2oLV5+UmPSmEQ==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11157,6 +11193,11 @@ tough-cookie@~2.4.3:
   dependencies:
     psl "^1.1.24"
     punycode "^1.4.1"
+
+traverse@0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
+  integrity sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=
 
 trim-lines@^1.0.0:
   version "1.1.1"
