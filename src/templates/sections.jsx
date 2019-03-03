@@ -26,12 +26,21 @@ const Section = ({ data }) => {
           ''
         )}
         {/* banner image */}
-        {/*section.frontmatter.bannerImage && (
+        {section.primary.banner_image && (
           <img
-            src={section.frontmatter.bannerImage.url}
-            alt={section.frontmatter.bannerImage.title}
+            srcSet={
+              section.primary.banner_image.localFile.childImageSharp.fluid
+                .srcSetWebp
+            }
+            sizes={
+              section.primary.banner_image.localFile.childImageSharp.fluid.sizes
+            }
+            alt={section.primary.banner_image.alt}
           />
-        )*/}
+        )}
+        {section.primary.text && (
+          <Content className="ArticleBody" input={section.primary.text.text} />
+        )}
         {section.primary.html && (
           <Content className="ArticleBody" input={section.primary.html.text} />
         )}
