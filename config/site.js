@@ -22,10 +22,11 @@ module.exports = {
   phoneNumber: '01223 844415',
   emailContact: 'hello@thec3.uk',
   topNav: [
-    { slug: '/nextsteps/', title: 'Next Steps' },
+    { slug: '/next-steps/', title: 'Next Steps' },
     { slug: '/outreach/', title: 'Outreach' },
-    { slug: '/resources/', title: 'Resources' },
+    // { slug: '/resources/', title: 'Resources' },
     { slug: '/giving/', title: 'Giving' },
+    { slug: '/myc3/', title: 'My Area' },
   ],
   footerLinks: [
     { id: 'footer_copyright', slug: '/copyright', title: 'Copyright' },

@@ -1,12 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const Card = ({ title, description, slug, image, cta, width }) => (
   <div style={width ? { width: width } : {}}>
     <div className="articleListImage">
       <Link to={slug}>
-        <img src={image} alt={title} />
+        <img
+          srcSet={image.localFile.childImageSharp.fluid.srcSetWebp}
+          sizes={image.localFile.childImageSharp.fluid.sizes}
+          alt={image.alt}
+        />
       </Link>
     </div>
     <div className="articleListTitle">
@@ -27,7 +31,7 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   cta: PropTypes.string.isRequired,
   width: PropTypes.string,
 };
