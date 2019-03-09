@@ -4,6 +4,9 @@ const prismicRepositoryName = 'thec3';
 
 const linkResolver = function(doc) {
   // Fallback for other types, in case new custom types get created
+  if (doc.type === 'homepage') {
+    return '/';
+  }
   return '/' + doc.uid;
 };
 
@@ -63,7 +66,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-prismic-preview',
       options: {
-        repositoryName: 'gatsby-source-prismic-test-site',
+        repositoryName: prismicRepositoryName,
         linkResolver: linkResolver,
         path: '/preview',
       },
