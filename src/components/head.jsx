@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 const Head = ({ index_page }) => (
   <Fragment>
     <Helmet>
+      <link rel="stylesheet" type="text/css" href="/prismic-styles.css" />
       <link
         rel="stylesheet"
         type="text/css"
