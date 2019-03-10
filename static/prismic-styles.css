@@ -1,11 +1,14 @@
 .right-align {
   text-align: right;
+  display: block;
 }
 .center-align {
   text-align: center;
+  display: block;
 }
 .justify-align {
   text-align: justify;
+  display: block;
 }
 .red {
   color: #f05356;
@@ -20,14 +23,14 @@
   color: #202945;
 }
 .bg-red {
-  color: #f05356;
+  background-color: #f05356;
 }
 .bg-yellow {
-  color: #f8c23d;
+  background-color: #f8c23d;
 }
 .bg-aqua {
-  color: #00919f;
+  background-color: #00919f;
 }
 .bg-purple {
-  color: #202945;
+  background-color: #202945;
 }
