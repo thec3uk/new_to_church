@@ -90,6 +90,29 @@ export const query = graphql`
           }
         }
         body {
+          ... on PrismicHomepageBodyText1 {
+            id
+            primary {
+              css_classes
+              title_of_section {
+                text
+              }
+              text {
+                text
+              }
+              banner_image {
+                alt
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      srcSetWebp
+                      sizes
+                    }
+                  }
+                }
+              }
+            }
+          }
           ... on PrismicHomepageBodyListOfArticles {
             id
             primary {
