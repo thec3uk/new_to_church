@@ -4,37 +4,60 @@ import { graphql } from 'gatsby';
 import { SideNav, SideGallery, ContactForm } from '../components';
 import { HeroLayout, Content } from '../layouts';
 
+const shapeGalleryData = gallery_list => {
+  return gallery_list.map(({ gallery_node }) => ({
+    id: gallery_node.id,
+    url: gallery_node.document[0].data.gallery_image.url,
+    slug: gallery_node.uid,
+    title: gallery_node.document[0].data.gallery_image.alt,
+  }));
+};
+
+const shapeNavItem = item => ({
+  slug: item.uid,
+  title: item.document[0].data.page_title,
+});
+
+const shapeSiblingData = child_pages => {
+  return child_pages.map(({ child_page }) => shapeNavItem(child_page));
+};
+
 const ContentPage = ({ data }) => {
-  const page = data.markdownRemark;
+  const page = data.prismicContentPage.data;
+  const uid = data.prismicContentPage.uid;
   return (
-    <HeroLayout
-      title={page.frontmatter.title}
-      heroImage={page.frontmatter.heroImage}
-    >
+    <HeroLayout title={page.page_title} heroImage={page.heroimage.url}>
       <section className="slice_content_page">
         <div className="container">
           <div className="main-content">
-            <Content className="ArticleBody" input={page.html} />
-            {page.frontmatter.contactForm &&
-              page.frontmatter.contactForm.active === true && (
-                <ContactForm
-                  title={page.frontmatter.title}
-                  toEmail={page.frontmatter.contactForm.email}
-                />
-              )}
+            <Content
+              className="ArticleBody"
+              input={page.body && page.body[0].primary.text.html}
+            />
+            {page.contactForm === 'yes' && (
+              <ContactForm
+                title={page.page_title}
+                toEmail={page.contact_form_to_email_address}
+              />
+            )}
           </div>
 
           <aside className="sidebar">
             <nav>
               <SideNav
-                currentSlug={page.fields.slug}
-                parent={page.fields.parentNav}
-                siblings={page.fields.siblingNav}
+                currentSlug={uid}
+                parent={shapeNavItem(page.parent_page)}
+                siblings={
+                  page.parent_page.document[0].data.child_pages &&
+                  shapeSiblingData(
+                    page.parent_page.document[0].data.child_pages
+                  )
+                }
               >
-                {page.fields.childNav}
+                {page.data}
               </SideNav>
             </nav>
-            <SideGallery images={page.fields.galleryImageNodeList} />
+            <SideGallery images={shapeGalleryData(page.gallery_list)} />
           </aside>
         </div>
       </section>
@@ -50,45 +73,123 @@ ContentPage.propTypes = {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(
-      fields: { slug: { eq: $slug } }
-      frontmatter: { template: { eq: "content" } }
-    ) {
-      html
-      frontmatter {
-        title
-        heroImage
-        contactForm {
-          email
-          active
-        }
-      }
-      fields {
-        slug
-        cardNodeList {
-          slug
-          image
-          title
-          description
-          cta
-          id
-        }
-        galleryImageNodeList {
-          id
-          slug
+    prismicContentPage(uid: { eq: $slug }) {
+      uid
+      data {
+        page_title
+        contact_form
+        contact_form_to_email_address
+        heroimage {
+          alt
+          copyright
           url
         }
-        parentNav {
-          slug
-          title
+        gallery_list {
+          gallery_node {
+            uid
+            id
+            document {
+              ... on PrismicContentPage {
+                data {
+                  gallery_image {
+                    url
+                    alt
+                  }
+                }
+              }
+              ... on PrismicLandingPage {
+                data {
+                  gallery_image {
+                    url
+                    alt
+                  }
+                }
+              }
+            }
+          }
         }
-        siblingNav {
-          title
-          slug
+        parent_page {
+          uid
+          document {
+            ... on PrismicLandingPage {
+              data {
+                page_title
+                child_pages {
+                  child_page {
+                    uid
+                    document {
+                      ... on PrismicContentPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicLandingPage {
+                        data {
+                          page_title
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on PrismicHomepage {
+              data {
+                page_title
+                child_pages {
+                  child_page {
+                    uid
+                    document {
+                      ... on PrismicContentPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicLandingPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicRedirect {
+                        data {
+                          page_title
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on PrismicRedirect {
+              data {
+                page_title
+                child_pages {
+                  child_page {
+                    uid
+                    document {
+                      ... on PrismicContentPage {
+                        data {
+                          page_title
+                        }
+                      }
+                      ... on PrismicLandingPage {
+                        data {
+                          page_title
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-        childNav {
-          title
-          slug
+        body {
+          primary {
+            text {
+              html
+            }
+          }
         }
       }
     }

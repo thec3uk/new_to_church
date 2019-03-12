@@ -5,6 +5,15 @@ import { Head, Nav, SideLinks, SideGallery } from '../components';
 import { Layout } from '../layouts';
 import Sections from './sections';
 
+const shapeSlideshowData = slideshow => {
+  return slideshow.map(({ slide }) => ({
+    id: slide.id,
+    url: slide.document[0].data.slide_image.url,
+    slug: slide.uid,
+    title: slide.document[0].data.slide_title,
+  }));
+};
+
 const HomePage = ({ data }) => (
   <Layout title="The C3 Church">
     <Head index_page={true} />
@@ -35,11 +44,13 @@ const HomePage = ({ data }) => (
 
       <section className="slice_WelcomeSlides_L">
         <div className="bannerSlides">
-          <SideGallery images={data.markdownRemark.frontmatter.slideshow} />
+          <SideGallery
+            images={shapeSlideshowData(data.prismicHomepage.data.slideshow)}
+          />
         </div>
       </section>
     </header>
-    <Sections data={data} />
+    <Sections data={data.prismicHomepage.data} />
   </Layout>
 );
 
@@ -50,16 +61,167 @@ HomePage.propTypes = {
 };
 
 export const query = graphql`
-  query($slug: String!, $sections: [String!]!) {
-    ...sectionsQuery
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        sections
+  query($slug: String!) {
+    prismicHomepage(uid: { eq: $slug }) {
+      uid
+      data {
+        page_title
         slideshow {
-          title
-          url
-          slug
+          slide {
+            id
+            uid
+            document {
+              data {
+                slide_title
+                slide_image {
+                  alt
+                  url
+                  # localFile {
+                  #   childImageSharp {
+                  #     fluid {
+                  #       sizes
+                  #       srcSetWebp
+                  #     }
+                  #   }
+                  # }
+                }
+              }
+            }
+          }
+        }
+        body {
+          ... on PrismicHomepageBodyText1 {
+            id
+            primary {
+              css_classes
+              title_of_section {
+                text
+              }
+              text {
+                text
+              }
+              banner_image {
+                alt
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      srcSetWebp
+                      sizes
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ... on PrismicHomepageBodyListOfArticles {
+            id
+            primary {
+              css_classes
+              title_of_section {
+                text
+              }
+            }
+            items {
+              articles_to_link {
+                uid
+                document {
+                  data {
+                    card_title
+                    card_cta
+                    card_description
+                    card_image {
+                      alt
+                      copyright
+                      localFile {
+                        childImageSharp {
+                          fluid {
+                            srcSetWebp
+                            sizes
+                            presentationWidth
+                            presentationHeight
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ... on PrismicHomepageBodyTextAndArticleList {
+            id
+            primary {
+              title_of_section {
+                text
+              }
+              css_classes
+              preamble {
+                text
+              }
+            }
+            items {
+              articles_to_link {
+                uid
+                document {
+                  ... on PrismicContentPage {
+                    data {
+                      card_title
+                      card_cta
+                      card_description
+                      card_image {
+                        alt
+                        copyright
+                        localFile {
+                          childImageSharp {
+                            fluid {
+                              srcSetWebp
+                              sizes
+                              presentationWidth
+                              presentationHeight
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  ... on PrismicLandingPage {
+                    data {
+                      card_title
+                      card_cta
+                      card_description
+                      card_image {
+                        alt
+                        copyright
+                        localFile {
+                          childImageSharp {
+                            fluid {
+                              srcSetWebp
+                              sizes
+                              presentationWidth
+                              presentationHeight
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ... on PrismicHomepageBodyRawHtml {
+            id
+            primary {
+              title_of_section {
+                text
+              }
+              css_classes
+              section_title_icon
+              html {
+                text
+              }
+            }
+          }
         }
       }
     }

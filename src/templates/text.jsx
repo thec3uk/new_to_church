@@ -4,12 +4,15 @@ import { graphql } from 'gatsby';
 import { ContentLayout, Content } from '../layouts';
 
 const TextPage = ({ data }) => {
-  const page = data.markdownRemark;
+  const page = data.prismicTextPage;
   return (
-    <ContentLayout title={page.frontmatter.title}>
+    <ContentLayout title={page.data.page_title}>
       <section className="slice_system_page">
         <div className="container system_content">
-          <Content className="systemPageContent" input={page.html} />
+          <Content
+            className="systemPageContent"
+            input={page.data.body[0].primary.text.html}
+          />
         </div>
       </section>
     </ContentLayout>
@@ -23,11 +26,18 @@ TextPage.propTypes = {
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
+  query text($slug: String!) {
+    prismicTextPage(uid: { eq: $slug }) {
+      uid
+      data {
+        page_title
+        body {
+          primary {
+            text {
+              html
+            }
+          }
+        }
       }
     }
   }

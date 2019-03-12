@@ -46,6 +46,3 @@ The church we see has a <strong>Music &amp; Worship Academy and a leadership tr
 The church we see partners with and <strong>influences government, education, business and commerce</strong>. Its size, excellence, integrity and actions demonstrate credibility and a willingness to make a difference.<br/>
 <br/>
 The church we see has a leadership team pulling in the same direction. It’s an <strong>empowering leadership</strong>, hallmarked by serving and self sacrifice and committed to seeing people live great lives.<br/>
- 
-<h4>
- </h4>

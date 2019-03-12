@@ -18,10 +18,10 @@ const SiblingNav = ({ title, slug, selected, children }) => {
   return (
     <div className={selected ? 'group_nav_selected' : 'group_nav_sibling'}>
       <Link to={slug}>{title}</Link>
-      {selected &&
+      {/*selected &&
         children.map(child => (
           <ChildNav key={child.slug} title={child.title} slug={child.slug} />
-        ))}
+        ))*/}
     </div>
   );
 };

@@ -1,10 +1,65 @@
 const config = require('./config/site');
 
+const prismicRepositoryName = 'thec3';
+
+const linkResolver = function(doc) {
+  // Fallback for other types, in case new custom types get created
+  return '/' + doc.uid;
+};
+
 module.exports = {
   siteMetadata: {
     ...config,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        // The name of your prismic.io repository. This is required.
+        // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
+        // is 'gatsby-source-prismic-test-site.prismic.io'.
+        repositoryName: prismicRepositoryName,
+
+        // An API access token to your prismic.io repository. This is required.
+        // You can generate an access token in the "API & Security" section of
+        // your repository settings. Setting a "Callback URL" is not necessary.
+        // The token will be listed under "Permanent access tokens".
+        accessToken:
+          'MC5YR003WEJBQUFDTUFPYllz.77-9eU5n77-977-9aO-_ve-_ve-_vXk377-9Q--_vWcp77-9P--_vX7vv71M77-977-9JO-_ve-_ve-_vWNtGA',
+
+        // Set a link resolver function used to process links in your content.
+        // Fields with rich text formatting or links to internal content use this
+        // function to generate the correct link URL.
+        // The document node, field key (i.e. API ID), and field value are
+        // provided to the function, as seen below. This allows you to use
+        // different link resolver logic for each field if necessary.
+        // See: https://prismic.io/docs/javascript/query-the-api/link-resolving
+        linkResolver: ({ node, key, value }) => linkResolver,
+
+        // Set a list of links to fetch and be made available in your link
+        // resolver function.
+        // See: https://prismic.io/docs/javascript/query-the-api/fetch-linked-document-fields
+        fetchLinks: [
+          // Your list of links
+        ],
+
+        // Set an HTML serializer function used to process formatted content.
+        // Fields with rich text formatting use this function to generate the
+        // correct HTML.
+        // The document node, field key (i.e. API ID), and field value are
+        // provided to the function, as seen below. This allows you to use
+        // different HTML serializer logic for each field if necessary.
+        // See: https://prismic.io/docs/nodejs/beyond-the-api/html-serializer
+        htmlSerializer: ({ node, key, value }) => (
+          type,
+          element,
+          content,
+          children
+        ) => {
+          // Your HTML serializer
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

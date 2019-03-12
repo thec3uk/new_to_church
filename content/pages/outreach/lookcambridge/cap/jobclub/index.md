@@ -1,5 +1,5 @@
 ---
-title: Young Adults
+title: Job Club
 heroImage: /Images/Content/4/868477.jpeg
 template: content
 card:

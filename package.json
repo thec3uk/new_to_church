@@ -44,6 +44,7 @@
     "gatsby-remark-prismjs": "^3.0.2",
     "gatsby-remark-source-name": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.5",
+    "gatsby-source-prismic": "^2.2.0",
     "gatsby-transformer-remark": "^2.1.8",
     "gatsby-transformer-sharp": "^2.1.5",
     "jquery": "^3.3.1",

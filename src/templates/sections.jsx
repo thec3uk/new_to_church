@@ -6,54 +6,71 @@ import { Card } from '../components';
 
 const Section = ({ data }) => {
   const section = data;
-  const hideTitle = section.frontmatter.hideTitle || false;
+  const showTitle = Boolean(section.primary.title_of_section.text) || false;
   return (
-    <section className={section.frontmatter.cssClasses.join(' ')}>
+    <section className={section.primary.css_classes}>
       <div className="container">
-        {!hideTitle ? (
+        {showTitle ? (
           <h1 className="section-title">
-            {section.frontmatter.titleIconClassesBefore !== null ? (
+            {section.primary.section_title_icon !== null ? (
               <Fragment>
-                <i
-                  className={section.frontmatter.titleIconClassesBefore.join(
-                    ' '
-                  )}
-                >
-                  &nbsp;
-                </i>
+                <i className={section.primary.section_title_icon}>&nbsp;</i>
                 &nbsp;
               </Fragment>
             ) : (
               ''
             )}
-            {section.frontmatter.title}
+            {section.primary.title_of_section.text}
           </h1>
         ) : (
           ''
         )}
         {/* banner image */}
-        {section.frontmatter.bannerImage && (
+        {section.primary.banner_image && (
           <img
-            src={section.frontmatter.bannerImage.url}
-            alt={section.frontmatter.bannerImage.title}
+            srcSet={
+              section.primary.banner_image.localFile.childImageSharp.fluid
+                .srcSetWebp
+            }
+            sizes={
+              section.primary.banner_image.localFile.childImageSharp.fluid.sizes
+            }
+            alt={section.primary.banner_image.alt}
           />
         )}
-        <Content className="ArticleBody" input={section.html} />
-        {/* card list */}
-        <div className="article_cards">
-          {section.fields.cardNodeList &&
-            section.fields.cardNodeList.map(card => (
-              <Card
-                key={card.id}
-                title={card.title}
-                description={card.description}
-                slug={card.slug}
-                image={card.image}
-                cta={card.cta}
-                width={'30.5%'}
-              />
-            ))}
-        </div>
+        {section.primary.text && (
+          <Content className="ArticleBody" input={section.primary.text.text} />
+        )}
+        {section.primary.html && (
+          <Content className="ArticleBody" input={section.primary.html.text} />
+        )}
+        {section.primary.preamble && (
+          <Content
+            className="ArticleBody"
+            input={section.primary.preamble.text}
+          />
+        )}
+        {/* article list */}
+        {
+          <div className="article_cards">
+            {section.items &&
+              section.items.map(({ articles_to_link }) => {
+                const { document, uid } = articles_to_link;
+                const doc = document[0];
+                return (
+                  <Card
+                    key={uid}
+                    title={doc.data.card_title}
+                    description={doc.data.card_description}
+                    slug={uid}
+                    image={doc.data.card_image}
+                    cta={doc.data.card_cta}
+                    width={'30.5%'}
+                  />
+                );
+              })}
+          </div>
+        }
       </div>
     </section>
   );
@@ -65,10 +82,7 @@ Section.propTypes = {
 
 const Sections = ({ data }) => (
   <Fragment>
-    {data &&
-      data.allMarkdownRemark.edges.map(({ node }) => (
-        <Section key={node.id} data={node} />
-      ))}
+    {data && data.body.map(node => <Section key={node.id} data={node} />)}
   </Fragment>
 );
 
@@ -77,42 +91,3 @@ export default Sections;
 Sections.propTypes = {
   data: PropTypes.object,
 };
-
-export const query = graphql`
-  fragment sectionsQuery on Query {
-    allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___order] }
-      filter: {
-        frontmatter: { template: { eq: "section" } }
-        fields: { slug: { in: $sections } }
-      }
-    ) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            title
-            cssClasses
-            bannerImage {
-              url
-              title
-            }
-            hideTitle
-            titleIconClassesBefore
-          }
-          fields {
-            cardNodeList {
-              slug
-              image
-              title
-              description
-              cta
-              id
-            }
-          }
-        }
-      }
-    }
-  }
-`;

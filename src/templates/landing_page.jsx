@@ -5,7 +5,7 @@ import { Card, ContactForm } from '../components';
 import { HeroLayout, Content } from '../layouts';
 
 const LandingPage = ({ data }) => {
-  const page = data.markdownRemark;
+  const page = data.prismicLandingPage.data;
   const cardWidth = cardList => {
     switch (cardList.length) {
       case 1:
@@ -26,21 +26,17 @@ const LandingPage = ({ data }) => {
     }
   };
   return (
-    <HeroLayout
-      title={page.frontmatter.title}
-      heroImage={page.frontmatter.heroImage}
-    >
+    <HeroLayout title={page.page_title} heroImage={page.hero_image.url}>
       <section className="slice_LandingMainArticle">
         <div className="container">
           <div className="ArticleBody">
-            <Content input={page.html} />
-            {page.frontmatter.contactForm &&
-              page.frontmatter.contactForm.active === true && (
-                <ContactForm
-                  title={page.frontmatter.title}
-                  toEmail={page.frontmatter.contactForm.email}
-                />
-              )}
+            <Content input={page.body[0].primary.text.html} />
+            {page.contact_form.active === 'yes' && (
+              <ContactForm
+                title={page.page_title}
+                toEmail={page.contact_form_to_email_address}
+              />
+            )}
           </div>
         </div>
       </section>
@@ -48,18 +44,25 @@ const LandingPage = ({ data }) => {
       <section className="slice_LandingArticles">
         <div className="container">
           <div className="article_cards">
-            {page.fields.cardNodeList &&
-              page.fields.cardNodeList.map(card => (
-                <Card
-                  key={card.id}
-                  title={card.title}
-                  description={card.description}
-                  slug={card.slug}
-                  image={card.image}
-                  cta={card.cta}
-                  width={cardWidth(page.fields.cardNodeList)}
-                />
-              ))}
+            {page.child_pages &&
+              page.child_pages.map(({ child_page }) => {
+                if (child_page === null) {
+                  return;
+                }
+                const { uid, document } = child_page;
+                const doc = document[0];
+                return (
+                  <Card
+                    key={uid}
+                    title={doc.data.card_title}
+                    description={doc.data.card_description}
+                    slug={uid}
+                    image={doc.data.card_image}
+                    cta={doc.data.card_cta}
+                    width={cardWidth(page.child_pages)}
+                  />
+                );
+              })}
           </div>
         </div>
       </section>
@@ -75,27 +78,72 @@ LandingPage.propTypes = {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(
-      fields: { slug: { eq: $slug } }
-      frontmatter: { template: { eq: "landing" } }
-    ) {
-      html
-      frontmatter {
-        title
-        heroImage
-        contactForm {
-          email
-          active
+    prismicLandingPage(uid: { eq: $slug }) {
+      uid
+      data {
+        page_title
+        contact_form
+        contact_form_to_email_address
+        hero_image {
+          alt
+          copyright
+          url
         }
-      }
-      fields {
-        cardNodeList {
-          slug
-          image
-          title
-          description
-          cta
-          id
+        child_pages {
+          child_page {
+            uid
+            document {
+              ... on PrismicContentPage {
+                data {
+                  card_title
+                  card_cta
+                  card_description
+                  card_image {
+                    alt
+                    copyright
+                    localFile {
+                      childImageSharp {
+                        fluid {
+                          srcSetWebp
+                          sizes
+                          presentationWidth
+                          presentationHeight
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              ... on PrismicLandingPage {
+                data {
+                  card_title
+                  card_cta
+                  card_description
+                  card_image {
+                    alt
+                    copyright
+                    localFile {
+                      childImageSharp {
+                        fluid {
+                          srcSetWebp
+                          sizes
+                          presentationWidth
+                          presentationHeight
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        body {
+          primary {
+            text {
+              html
+            }
+          }
         }
       }
     }

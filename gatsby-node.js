@@ -150,130 +150,204 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
   }
 };
 
+const getDestination = async (graphql, node) => {
+  const data = node.data;
+  var dest = '';
+  switch (data.destination.link_type) {
+    case 'Document':
+      return graphql(
+        `
+          query($uid: String!) {
+            prismicRedirect(uid: { eq: $uid }) {
+              uid
+              data {
+                destination {
+                  uid
+                }
+              }
+            }
+          }
+        `,
+        { uid: node.uid }
+      ).then(({ data }) => {
+        return '/' + data.prismicRedirect.data.destination.uid;
+      });
+    case 'Media':
+      return graphql(
+        `
+          query($uid: String!) {
+            prismicRedirect(uid: { eq: $uid }) {
+              uid
+              data {
+                destination {
+                  url
+                }
+              }
+            }
+          }
+        `,
+        { uid: node.uid }
+      ).then(({ data }) => {
+        return data.prismicRedirect.data.destination.url;
+      });
+    case 'Web':
+      return graphql(
+        `
+          query($uid: String!) {
+            prismicRedirect(uid: { eq: $uid }) {
+              uid
+              data {
+                destination {
+                  url
+                }
+              }
+            }
+          }
+        `,
+        { uid: node.uid }
+      ).then(({ data }) => {
+        return data.prismicRedirect.data.destination.url;
+      });
+    default:
+      console.error('Unknown link_type: ' + data.destination.link_type);
+  }
+  return dest;
+};
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
   return new Promise((resolve, reject) => {
-    const contentTemplate = path.resolve('src/templates/content_page.jsx');
-    const landingTemplate = path.resolve('src/templates/landing_page.jsx');
-    const homepageTemplate = path.resolve('src/templates/homepage.jsx');
-    const sectionTemplate = path.resolve('src/templates/sections.jsx');
-    const text = path.resolve('src/templates/text.jsx');
     graphql(`
       {
-        allMarkdownRemark(
-          filter: {
-            frontmatter: {
-              template: {
-                in: ["landing", "content", "text", "index", "redirect"]
-              }
-            }
-          }
-        ) {
+        allPrismicLandingPage {
           edges {
             node {
-              fileAbsolutePath
-              fields {
-                slug
-              }
-              frontmatter {
-                template
-                locationSlug
-                sections
+              uid
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allPrismicLandingPage.edges.forEach(({ node }) =>
+        createPage({
+          path: node.uid,
+          component: path.resolve('src/templates/landing_page.jsx'),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.uid,
+          },
+        })
+      );
+      resolve();
+    });
+
+    graphql(`
+      {
+        allPrismicContentPage {
+          edges {
+            node {
+              uid
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allPrismicContentPage.edges.forEach(({ node }) =>
+        createPage({
+          path: node.uid,
+          component: path.resolve('src/templates/content_page.jsx'),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.uid,
+          },
+        })
+      );
+      resolve();
+    });
+
+    graphql(`
+      {
+        allPrismicTextPage {
+          edges {
+            node {
+              uid
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allPrismicTextPage.edges.forEach(({ node }) =>
+        createPage({
+          path: node.uid,
+          component: path.resolve('src/templates/text.jsx'),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.uid,
+          },
+        })
+      );
+      resolve();
+    });
+
+    graphql(`
+      {
+        prismicHomepage {
+          uid
+        }
+      }
+    `).then(result => {
+      createPage({
+        path: '/',
+        component: path.resolve('src/templates/homepage.jsx'),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: result.data.prismicHomepage.uid,
+        },
+      });
+      createRedirect({
+        fromPath: '/' + result.data.prismicHomepage.uid,
+        isPermanent: true,
+        toPath: '/',
+        redirectInBrowser: true,
+      });
+      resolve();
+    });
+
+    graphql(`
+      {
+        allPrismicRedirect {
+          edges {
+            node {
+              uid
+              data {
+                destination {
+                  link_type
+                }
               }
             }
           }
         }
       }
     `).then(result => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const sections = node.frontmatter.sections;
-        if (Array.isArray(sections) && sections.length) {
-          // node has a sections defined
-          graphql(
-            `
-              query($sections: [String!]!) {
-                allMarkdownRemark(
-                  sort: { order: ASC, fields: [frontmatter___order] }
-                  filter: {
-                    frontmatter: { template: { eq: "section" } }
-                    fields: { slug: { in: $sections } }
-                  }
-                ) {
-                  edges {
-                    node {
-                      id
-                      fields {
-                        slug
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            {
-              sections: sections,
-            }
-          ).then(sectionResult => {
-            var sectionIdList = new Array();
-            sectionResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
-              sectionIdList.push(node.id);
-              createPage({
-                path: node.fields.slug,
-                component: sectionTemplate,
-                context: {
-                  // Data passed to context is available
-                  // in page queries as GraphQL variables.
-                  slug: node.fields.slug,
-                  sections: sections,
-                },
+      {
+        result.data &&
+          result.data.allPrismicRedirect.edges.forEach(({ node }) => {
+            getDestination(graphql, node).then(url => {
+              createRedirect({
+                fromPath: '/' + node.uid,
+                isPermanent: true,
+                toPath: url,
+                redirectInBrowser: true,
               });
             });
           });
-        }
-        const template = node.frontmatter.template;
-        var templateFile = '';
-        switch (template) {
-          case 'content':
-            templateFile = contentTemplate;
-            break;
-          case 'landing':
-            templateFile = landingTemplate;
-            break;
-          case 'text':
-            templateFile = text;
-            break;
-          case 'index':
-            templateFile = homepageTemplate;
-            break;
-          case 'redirect':
-            createRedirect({
-              fromPath: node.fields.slug,
-              isPermanent: true,
-              toPath: node.frontmatter.locationSlug,
-              redirectInBrowser: true,
-            });
-            return;
-          default:
-            console.error(
-              `${
-                node.fileAbsolutePath
-              } is missing a template declaration in the frontmatter of the file`
-            );
-            return;
-        }
-        createPage({
-          path: node.fields.slug,
-          component: templateFile,
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-            sections: node.frontmatter.sections,
-          },
-        });
-      });
-      resolve();
+        resolve();
+      }
     });
   });
 };

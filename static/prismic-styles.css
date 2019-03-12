@@ -1,0 +1,36 @@
+.right-align {
+  text-align: right;
+  display: block;
+}
+.center-align {
+  text-align: center;
+  display: block;
+}
+.justify-align {
+  text-align: justify;
+  display: block;
+}
+.red {
+  color: #f05356;
+}
+.yellow {
+  color: #f8c23d;
+}
+.aqua {
+  color: #00919f;
+}
+.purple {
+  color: #202945;
+}
+.bg-red {
+  background-color: #f05356;
+}
+.bg-yellow {
+  background-color: #f8c23d;
+}
+.bg-aqua {
+  background-color: #00919f;
+}
+.bg-purple {
+  background-color: #202945;
+}
