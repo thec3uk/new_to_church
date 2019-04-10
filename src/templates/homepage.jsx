@@ -1,22 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, Nav, SideLinks, SideGallery } from '../components';
+import { Head, Nav, SideLinks } from '../components';
 import { Layout } from '../layouts';
 import Sections from './sections';
 
-const shapeSlideshowData = slideshow => {
-  return slideshow.map(({ slide }) => ({
-    id: slide.id,
-    url: slide.document[0].data.slide_image.url,
-    slug: slide.uid,
-    title: slide.document[0].data.slide_title,
-  }));
-};
-
 const HomePage = ({ data }) => (
   <Layout title="The C3 Church">
-    <Head index_page={true} />
+    <Head />
     <header>
       <section className="slice_VideoWrapper">
         <div>
@@ -41,14 +32,6 @@ const HomePage = ({ data }) => (
       </section>
 
       <SideLinks index_page={true} />
-
-      <section className="slice_WelcomeSlides_L">
-        <div className="bannerSlides">
-          <SideGallery
-            images={shapeSlideshowData(data.prismicHomepage.data.slideshow)}
-          />
-        </div>
-      </section>
     </header>
     <Sections data={data.prismicHomepage.data} />
   </Layout>
