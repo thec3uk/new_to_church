@@ -30,16 +30,16 @@ const SideLinks = ({ index_page }) => (
             >
               <i className="icomoon-icon-instagram">&thinsp;</i>
             </a>
-            <a className="search-link">
+            {/*  <a className="search-link">
               &thinsp;
               <i className="journey-icon-search">&thinsp;</i>
-            </a>
+            </a>*/}
           </Fragment>
         ) : (
-          <a className="search-link">
-            {' '}
+          <span />
+          /*<a className="search-link">
             <i className="journey-icon-search">&thinsp;</i>
-          </a>
+          </a>*/
         )}
 
         <div className="search-overlay_fixed-link">
