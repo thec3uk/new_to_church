@@ -47,7 +47,6 @@
     "gatsby-source-prismic": "^2.2.0",
     "gatsby-transformer-remark": "^2.1.8",
     "gatsby-transformer-sharp": "^2.1.5",
-    "jquery": "^3.3.1",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
@@ -55,6 +54,7 @@
     "react-emotion": "^9.2.12",
     "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
+    "react-notification-bar": "^1.0.6",
     "react-typography": "^0.16.18",
     "typeface-candal": "0.0.54",
     "typeface-open-sans": "0.0.54",
@@ -74,11 +74,6 @@
     "prettier": "^1.14.3"
   },
   "keywords": [
-    "justin formentin",
-    "personal blog",
-    "tutorial",
-    "gatsby",
-    "gatsby",
-    "emotion"
+    "gatsby"
   ]
 }
