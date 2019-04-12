@@ -359,16 +359,16 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
   });
-  if (stage === 'build-html') {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /react-notification-bar/,
-            use: [loaders.null()],
-          },
-        ],
-      },
-    });
-  }
+  // if (stage === 'build-html') {
+  //   actions.setWebpackConfig({
+  //     module: {
+  //       rules: [
+  //         {
+  //           test: /react-notification-bar/,
+  //           use: [loaders.null()],
+  //         },
+  //       ],
+  //     },
+  //   });
+  // }
 };
