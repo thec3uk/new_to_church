@@ -9,7 +9,6 @@ const Head = () => (
       type="text/css"
       href="/Common/Styles/base.min.css?SV=V113T"
     />
-    <script src="/jquery-and-plugins.min.js" />
     <link
       type="text/css"
       rel="stylesheet"
