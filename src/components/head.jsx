@@ -30,7 +30,6 @@ const Head = () => (
       rel="stylesheet"
       href="/Images/Content/4/Templates/49141/css/SideLinks.css"
     />
-    <script defer src="/Images/Content/4/Templates/49141/js/script.js" />
     <script src="https://lightwidget.com/widgets/lightwidget.js" />
     {/* Facebook Pixel Code */}
     <script type="text/javascript">
