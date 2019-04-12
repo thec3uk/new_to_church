@@ -53,23 +53,6 @@ export const query = graphql`
           slide {
             id
             uid
-            document {
-              data {
-                slide_title
-                slide_image {
-                  alt
-                  url
-                  # localFile {
-                  #   childImageSharp {
-                  #     fluid {
-                  #       sizes
-                  #       srcSetWebp
-                  #     }
-                  #   }
-                  # }
-                }
-              }
-            }
           }
         }
         body {
