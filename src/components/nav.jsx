@@ -150,18 +150,20 @@ class Nav extends React.Component {
               ).join(' ')}`}
               ref={c => (this.nav = c)}
             >
-              {NotificationBar && notification.active === 'yes' && (
-                <NotificationBar
-                  closeIconStyles={{
-                    width: 12,
-                    height: 12,
-                  }}
-                  sound={false}
-                  message={`<a href=${notification.url.url} target=${
-                    notification.url.target
-                  }>${notification.content}</a>`}
-                />
-              )}
+              {typeof window !== 'undefined' &&
+                NotificationBar &&
+                notification.active === 'yes' && (
+                  <NotificationBar
+                    closeIconStyles={{
+                      width: 12,
+                      height: 12,
+                    }}
+                    sound={false}
+                    message={`<a href=${notification.url.url} target=${
+                      notification.url.target
+                    }>${notification.content}</a>`}
+                  />
+                )}
               <div className={styles.nav_menu}>
                 <div className="logo-container">
                   <span className="logo-icon">
