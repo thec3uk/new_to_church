@@ -7,10 +7,10 @@ module.exports = {
   url: process.env.URL || 'http://localhost:8000', // Domain of your site. No trailing slash!
   siteUrl: `${process.env.URL}` || 'http://localhost:8000/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: 'static/logo/LogoWhite.png', // Used for SEO
-  banner: 'static/logo/BackgroundGrey.png',
+  logo: 'static/images/LogoWhite.png', // Used for SEO
+  banner: 'static/images/BackgroundGrey.png',
   // JSONLD / Manifest
-  favicon: 'static/logo/c3Logo.png', // Used for manifest favicon generation
+  favicon: 'static/images/c3Logo.png', // Used for manifest favicon generation
   shortName: 'The C3', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Andrew', // Author for schemaORGJSONLD
   themeColor: '#202945',

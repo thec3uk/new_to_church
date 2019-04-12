@@ -84,10 +84,7 @@ const Footer = () => (
                     <i className="icomoon-icon-instagram">&nbsp;</i>{' '}
                   </a>
                 </div>
-                <img
-                  src="/Images/Content/4/Templates/49141/images/FR_Logo.png"
-                  alt=""
-                />
+                <img src="/images/FR_Logo.png" alt="" />
               </div>
             </div>
           </div>

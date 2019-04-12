@@ -3,32 +3,12 @@ import Helmet from 'react-helmet';
 
 const Head = () => (
   <Helmet>
-    <link rel="stylesheet" type="text/css" href="/prismic-styles.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/Common/Styles/base.min.css?SV=V113T"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/Images/Content/4/Templates/49141/css/normalize.V5.0.0.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/Images/Content/4/Templates/49141/css/font-icons.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/Images/Content/4/Templates/49141/css/style.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/Images/Content/4/Templates/49141/css/SideLinks.css"
-    />
+    <link rel="stylesheet" type="text/css" href="/css/prismic-styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/base.min.css?SV=V113T" />
+    <link type="text/css" rel="stylesheet" href="/css/normalize.V5.0.0.css" />
+    <link type="text/css" rel="stylesheet" href="/css/font-icons.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="/css/SideLinks.css" />
     <script src="https://lightwidget.com/widgets/lightwidget.js" />
     {/* Facebook Pixel Code */}
     <script type="text/javascript">

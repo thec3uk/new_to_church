@@ -169,15 +169,9 @@ class Nav extends React.Component {
                   <span className="logo-icon">
                     <Link className={styles.logo_link} to="/">
                       {this.state.nav_class.has(styles.HeaderWhite) ? (
-                        <img
-                          alt=""
-                          src="/Images/Content/4/Templates/49141/images/LogoGrey.png"
-                        />
+                        <img alt="" src="/images/LogoGrey.png" />
                       ) : (
-                        <img
-                          alt=""
-                          src="/Images/Content/4/Templates/49141/images/LogoWhite.png"
-                        />
+                        <img alt="" src="/images/LogoWhite.png" />
                       )}
                     </Link>{' '}
                   </span>
