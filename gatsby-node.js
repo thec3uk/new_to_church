@@ -365,7 +365,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         rules: [
           {
             test: /react-notification-bar/,
-            use: loaders.null(),
+            use: [loaders.null()],
           },
         ],
       },

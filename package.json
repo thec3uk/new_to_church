@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
-  "title": "Gatsby V2 Tutorial Starter",
-  "description": "My Blog",
-  "homepage": "https://gatsby-tutorial-starter.netlify.com",
+  "name": "newtochurch",
+  "author": "Andrew Miller",
+  "title": "New to Church site (thec3.uk)",
+  "description": "The frontend of thec3.uk for those new to church",
+  "homepage": "https://newtochurch.netlify.com",
   "license": "MIT",
   "version": "0.0.7",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
+    "url": "https://github.com/thec3uk/newtochurch"
   },
   "scripts": {
     "develop": "gatsby develop",
