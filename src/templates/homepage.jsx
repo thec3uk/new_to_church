@@ -49,12 +49,6 @@ export const query = graphql`
       uid
       data {
         page_title
-        slideshow {
-          slide {
-            id
-            uid
-          }
-        }
         body {
           ... on PrismicHomepageBodyText1 {
             id
