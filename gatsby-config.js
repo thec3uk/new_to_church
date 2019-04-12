@@ -121,20 +121,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-emotion',
-      options: {
-        autoLabel: process.env.NODE_ENV !== 'production',
-        // eslint-disable-next-line
-        labelFormat: `[filename]--[local]`,
-      },
-    },
-    // {
-    //   resolve: 'gatsby-plugin-typography',
-    //   options: {
-    //     pathToConfigModule: 'config/typography.js',
-    //   },
-    // },
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     {

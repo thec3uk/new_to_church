@@ -1,0 +1,119 @@
+.nav_menu {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  transition: all 500ms;
+  padding-right: 0px;
+}
+
+.root_menu {
+  display: inline-block;
+  padding-left: 0;
+  margin: auto;
+  margin-right: 20px;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  vertical-align: middle;
+}
+
+.more_menu_item,
+.menu_item {
+  float: left;
+  margin-top: 0;
+  position: relative;
+  list-style-type: none;
+  font-family: Montserrat, sans-serif;
+}
+
+.vertical_root_menu {
+  display: block;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 3rem;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out;
+  padding-left: 3px;
+  padding-bottom: 3px;
+  padding-right: 3px;
+}
+
+.vertical_menu_item {
+  margin-top: 0;
+  position: relative;
+  list-style-type: none;
+}
+
+.more_menu_item .menu_link::after {
+  display: inline-block;
+  margin-left: 0.355em;
+  vertical-align: 0.255em;
+  content: '';
+  border-top: 0.4em solid;
+  border-right: 0.4em solid #fff0;
+  border-bottom: 0;
+  border-left: 0.4em solid #fff0;
+}
+
+.menu_link:hover,
+.menu_item:hover,
+.vertical_menu_item:hover,
+.more_menu_item .menu_link:hover {
+  color: #f05356;
+}
+
+.active .menu_link::after {
+  border-bottom: 0.4em solid;
+  border-top: 0;
+}
+
+@media (min-width: 992px) {
+  .menu_link {
+    padding: 17px 20px;
+  }
+  .more_menu_item {
+    display: none;
+  }
+}
+
+.menu_link {
+  padding: 3px 10px;
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  display: block;
+  transition: all 500ms;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.logo_link {
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  display: block;
+  transition: all 500ms;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Code for the change in header on scroll */
+.HeaderWhite {
+  background-color: white;
+}
+.HeaderWhite .vertical_root_menu {
+  background-color: white;
+}
+.HeaderWhite ul a,
+.HeaderWhite ul span {
+  color: #3e4545;
+}

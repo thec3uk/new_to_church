@@ -106,7 +106,10 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=yes"
           />
-          <link rel="shortcut icon" href="/images/content/4/favicon.ico" />
+          <link
+            rel="shortcut icon"
+            href="/images/content/4/Templates/49141/images/favicon.ico"
+          />
         </Helmet>
       );
     }}

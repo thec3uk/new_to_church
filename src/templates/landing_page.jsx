@@ -29,15 +29,16 @@ const LandingPage = ({ data }) => {
     <HeroLayout title={page.page_title} heroImage={page.hero_image.url}>
       <section className="slice_LandingMainArticle">
         <div className="container">
-          <div className="ArticleBody">
-            <Content input={page.body[0].primary.text.html} />
-            {page.contact_form.active === 'yes' && (
-              <ContactForm
-                title={page.page_title}
-                toEmail={page.contact_form_to_email_address}
-              />
-            )}
-          </div>
+          <Content
+            className="ArticleBody"
+            input={page.body[0].primary.text.html}
+          />
+          {page.contact_form.active === 'yes' && (
+            <ContactForm
+              title={page.page_title}
+              toEmail={page.contact_form_to_email_address}
+            />
+          )}
         </div>
       </section>
 
