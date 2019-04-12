@@ -150,7 +150,7 @@ class Nav extends React.Component {
               ).join(' ')}`}
               ref={c => (this.nav = c)}
             >
-              {notification.active === 'yes' && (
+              {NotificationBar && notification.active === 'yes' && (
                 <NotificationBar
                   closeIconStyles={{
                     width: 12,

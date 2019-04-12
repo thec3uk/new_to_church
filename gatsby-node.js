@@ -354,24 +354,25 @@ exports.createPages = ({ graphql, actions }) => {
 
 /* Allows named imports */
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
-  });
-  // if (stage === 'build-html') {
-  //   actions.setWebpackConfig({
-  //     resolve: {
-  //       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-  //     },
-  //     module: {
-  //       rules: [
-  //         {
-  //           test: /react-notification-bar/,
-  //           use: [loaders.null()],
-  //         },
-  //       ],
-  //     },
-  //   });
-  // }
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      resolve: {
+        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      },
+      module: {
+        rules: [
+          {
+            test: /react-notification-bar/,
+            use: [loaders.null()],
+          },
+        ],
+      },
+    });
+  } else {
+    actions.setWebpackConfig({
+      resolve: {
+        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      },
+    });
+  }
 };
