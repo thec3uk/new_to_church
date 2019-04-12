@@ -13,8 +13,8 @@ const ErrorPage = () => (
             recently updated our website and unfortately some old URLs have
             broken.
           </p>
-          <Link to="/">Go to our homepage.</Link>.
-          <Link to="/online">Check out Church Online.</Link>.
+          <Link to="/">Go to our homepage.</Link> <br />
+          <Link to="/online">Check out Church Online.</Link> <br />
           <Link to="/bury">
             Find out about our latest location in Bury St Edmunds.
           </Link>
