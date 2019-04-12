@@ -16,7 +16,7 @@ const HomePage = ({ data }) => (
             loop="loop"
             autoPlay="autoplay"
             playinline="playinline"
-            poster="/Images/Content/4/867706.jpg"
+            poster="/Images/Content/4/Templates/49141/images/867706.jpg"
           >
             <source
               type="video/mp4"
