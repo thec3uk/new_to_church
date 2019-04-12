@@ -97,13 +97,6 @@ module.exports = {
     'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/content/pages`,
-      },
-    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
