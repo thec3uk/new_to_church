@@ -1,9 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import Search from './search';
-import NotificationBar from 'react-notification-bar';
 import styles from './nav.module.css';
+import NotificationBar from 'react-notification-bar';
 
 const MenuItem = ({ menuItem, ...props }) => {
   const { title, slug } = menuItem;
@@ -31,7 +30,7 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.index_page = props.index_page;
-    var mobileNav = { open: false, splitIdx: this.splitTopNav() };
+    var mobileNav = { open: false, splitIdx: 5 };
     this.state = {
       squashNav: false,
       mobileNav: mobileNav,
@@ -45,6 +44,7 @@ class Nav extends React.Component {
     requestAnimationFrame(this.squashNav);
     window.addEventListener('scroll', this._onScrollHandler);
     window.addEventListener('resize', this._onResizeHandler);
+    this._onResizeHandler();
   }
 
   componentWillUnmount() {

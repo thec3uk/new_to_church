@@ -353,10 +353,22 @@ exports.createPages = ({ graphql, actions }) => {
 };
 
 /* Allows named imports */
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
   });
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-notification-bar/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
 };
