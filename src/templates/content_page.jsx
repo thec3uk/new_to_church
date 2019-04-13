@@ -40,7 +40,7 @@ const ContentPage = ({ data }) => {
                   : page.body[0].primary.text.html
               }
             />
-            {page.contactForm === 'yes' && (
+            {page.contact_form === 'yes' && (
               <ContactForm
                 title={page.page_title}
                 toEmail={page.contact_form_to_email_address}
