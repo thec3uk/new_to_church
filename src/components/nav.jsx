@@ -41,7 +41,9 @@ class Nav extends React.Component {
   }
 
   componentDidMount() {
-    requestAnimationFrame(this.squashNav);
+    if (!this._frameId) {
+      this._frameId = requestAnimationFrame(this.squashNav);
+    }
     window.addEventListener('scroll', this._onScrollHandler);
     window.addEventListener('resize', this._onResizeHandler);
     this._onResizeHandler();
@@ -50,13 +52,14 @@ class Nav extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScrollHandler);
     window.removeEventListener('resize', this._onResizeHandler);
+    window.cancelAnimationFrame(this._frameId);
   }
 
   _onScrollHandler = () => {
     this.setState({
       squashNav: window.scrollY > 200,
     });
-    requestAnimationFrame(this.squashNav);
+    this._frameId = requestAnimationFrame(this.squashNav);
   };
 
   _onResizeHandler = () => {
@@ -96,7 +99,9 @@ class Nav extends React.Component {
       }
     }
     this.setState({ nav_class: navClass });
-    requestAnimationFrame(this.squashNav);
+    if (!this._frameId) {
+      this._frameId = requestAnimationFrame(this.squashNav);
+    }
   };
 
   handleMoreClick = () => {
