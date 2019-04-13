@@ -32,7 +32,12 @@ const ContentPage = ({ data }) => {
           <div className="main-content">
             <Content
               className="ArticleBody"
-              input={page.body && page.body[0].primary.text.html}
+              input={
+                page.body &&
+                page.body[0].primary.text.html.startsWith('<pre>&lt;')
+                  ? page.body[0].primary.text.text
+                  : page.body[0].primary.text.html
+              }
             />
             {page.contactForm === 'yes' && (
               <ContactForm
@@ -188,6 +193,7 @@ export const query = graphql`
           primary {
             text {
               html
+              text
             }
           }
         }
