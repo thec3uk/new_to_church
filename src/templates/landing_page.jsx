@@ -34,12 +34,13 @@ const LandingPage = ({ data }) => {
             className="ArticleBody"
             input={page.body[0].primary.text.html}
           />
-          {console.log(page)}
           {page.contact_form === 'yes' && (
-            <ContactForm
-              title={page.page_title}
-              toEmail={page.contact_form_to_email_address}
-            />
+            <div className="ArticleBody">
+              <ContactForm
+                title={page.page_title}
+                toEmail={page.contact_form_to_email_address}
+              />
+            </div>
           )}
         </div>
       </section>
