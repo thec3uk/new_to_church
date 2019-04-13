@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const SideLinks = ({ index_page }) => (
   <StaticQuery
     query={graphql`
-      query FooterQuery {
+      query SideLinkQuery {
         site {
           siteMetadata {
             footerLinks {
