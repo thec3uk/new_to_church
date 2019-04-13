@@ -7,6 +7,7 @@ import { HeroLayout, Content } from '../layouts';
 const LandingPage = ({ data }) => {
   const page = data.prismicLandingPage.data;
   const cardWidth = cardList => {
+    // This function should be purely in CSS!
     switch (cardList.length) {
       case 1:
         return '97%';

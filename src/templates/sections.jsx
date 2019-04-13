@@ -65,7 +65,6 @@ const Section = ({ data }) => {
                     slug={uid}
                     image={doc.data.card_image}
                     cta={doc.data.card_cta}
-                    width={'30.5%'}
                   />
                 );
               })}
