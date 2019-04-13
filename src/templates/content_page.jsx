@@ -30,6 +30,7 @@ const ContentPage = ({ data }) => {
       <section className="slice_content_page">
         <div className="container">
           <div className="main-content">
+            {/* HACK below for CS embeds */}
             <Content
               className="ArticleBody"
               input={
