@@ -15,10 +15,10 @@ module.exports = {
   author: 'Andrew', // Author for schemaORGJSONLD
   themeColor: '#202945',
   backgroundColor: '#f05356',
-  twitter: '@the_c3church', // Twitter Username
+  twitter: '@thec3_church', // Twitter Username
   facebook_slug: 'thec3uk',
   instagram_slug: 'thec3_church',
-  twitter_slug: 'the_c3church',
+  twitter_slug: 'thec3_church',
   phoneNumber: '01223 844415',
   emailContact: 'hello@thec3.uk',
   topNav: [
