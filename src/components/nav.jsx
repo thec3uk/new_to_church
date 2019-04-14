@@ -167,7 +167,9 @@ class Nav extends React.Component {
                     message={`<a href=${notification.url.url} target=${
                       notification.url.target
                     }>${notification.content}</a>`}
-                  />
+                  >
+                    <div />
+                  </NotificationBar>
                 )}
               <div className={styles.nav_menu}>
                 <div className="logo-container">
