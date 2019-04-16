@@ -130,7 +130,7 @@ module.exports = {
         legacy: true,
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-netlify',
   ],
 };
