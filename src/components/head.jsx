@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 const Head = () => (
   <Helmet>
     <link rel="stylesheet" type="text/css" href="/css/prismic-styles.css" />
-    <link rel="stylesheet" type="text/css" href="/css/base.min.css?SV=V113T" />
     <link type="text/css" rel="stylesheet" href="/css/normalize.V5.0.0.css" />
     <link type="text/css" rel="stylesheet" href="/css/font-icons.css" />
     <link type="text/css" rel="stylesheet" href="/css/style.css" />
