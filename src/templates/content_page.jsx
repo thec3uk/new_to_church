@@ -136,6 +136,11 @@ export const query = graphql`
                           page_title
                         }
                       }
+                      ... on PrismicRedirect {
+                        data {
+                          page_title
+                        }
+                      }
                     }
                   }
                 }
