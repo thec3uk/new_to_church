@@ -19,7 +19,9 @@ const shapeNavItem = item => ({
 });
 
 const shapeSiblingData = child_pages => {
-  return child_pages.map(({ child_page }) => shapeNavItem(child_page));
+  return child_pages
+    .filter(({ child_page }) => child_page !== null)
+    .map(({ child_page }) => shapeNavItem(child_page));
 };
 
 const ContentPage = ({ data }) => {
