@@ -7,7 +7,7 @@ const Card = ({ title, description, slug, image, cta, width }) => (
     <div className="articleListImage">
       <Link to={slug}>
         <img
-          srcSet={image.localFile.childImageSharp.fluid.srcSetWebp}
+          srcSet={image.localFile.childImageSharp.fluid.srcSet}
           sizes={image.localFile.childImageSharp.fluid.sizes}
           alt={image.alt}
         />

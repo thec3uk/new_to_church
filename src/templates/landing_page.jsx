@@ -108,10 +108,8 @@ export const query = graphql`
                     localFile {
                       childImageSharp {
                         fluid {
-                          srcSetWebp
+                          srcSet
                           sizes
-                          presentationWidth
-                          presentationHeight
                         }
                       }
                     }
@@ -129,10 +127,8 @@ export const query = graphql`
                     localFile {
                       childImageSharp {
                         fluid {
-                          srcSetWebp
+                          srcSet
                           sizes
-                          presentationWidth
-                          presentationHeight
                         }
                       }
                     }
@@ -150,10 +146,8 @@ export const query = graphql`
                     localFile {
                       childImageSharp {
                         fluid {
-                          srcSetWebp
+                          srcSet
                           sizes
-                          presentationWidth
-                          presentationHeight
                         }
                       }
                     }

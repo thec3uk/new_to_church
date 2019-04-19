@@ -30,7 +30,7 @@ const Section = ({ data }) => {
           <img
             srcSet={
               section.primary.banner_image.localFile.childImageSharp.fluid
-                .srcSetWebp
+                .srcSet
             }
             sizes={
               section.primary.banner_image.localFile.childImageSharp.fluid.sizes
