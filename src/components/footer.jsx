@@ -42,6 +42,8 @@ const Footer = () => (
                 <div className="Email">
                   Email: {data.site.siteMetadata.emailContact}
                 </div>
+                <br />
+                <span id="footer_charity">Registered Charity 1132699</span>
               </div>
 
               <NewsLetterSignUp />
@@ -93,15 +95,6 @@ const Footer = () => (
         <section className="slice_Footer_D">
           <div className="container">
             <div className="footerbar">
-              <a
-                className="footer"
-                href="http://www.churchinsight.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                a <strong>Church</strong>
-                Insight site
-              </a>
               {data.site.siteMetadata.footerLinks.map(item => (
                 <Link
                   id={item.id}
@@ -112,8 +105,6 @@ const Footer = () => (
                   {item.title}
                 </Link>
               ))}
-
-              <span id="footer_charity">Registered Charity 1132699</span>
             </div>
           </div>
         </section>

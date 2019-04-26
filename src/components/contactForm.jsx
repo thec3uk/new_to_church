@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import BaseForm from './form';
 import styles from './contactForm.module.css';
 
-const SubmitButton = ({ valid, children }) => (
+const SubmitButton = ({ isValid, children }) => (
   <button
-    className={valid ? styles.button : styles.disabledButton}
-    disabled={!valid}
+    className={isValid ? styles.button : styles.disabledButton}
+    disabled={!isValid}
   >
     {children}
   </button>
 );
 
 SubmitButton.propTypes = {
-  valid: PropTypes.boolean,
+  isValid: PropTypes.bool,
   children: PropTypes.string,
 };
 
@@ -71,7 +71,7 @@ class ContactForm extends React.Component {
           id="message"
           onChange={this.handleChange}
         />
-        <SubmitButton valid={this.state.valid}>SEND</SubmitButton>
+        <SubmitButton isValid={this.state.valid}>SEND</SubmitButton>
       </BaseForm>
     );
   }

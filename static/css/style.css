@@ -2119,18 +2119,6 @@ section.slice_WatchOnline a.button2 {
 .slice_Footer_D .footerbar a:hover {
   color: #f05356;
 }
-.slice_Footer_D .footerbar a.footer {
-  float: left;
-  width: 100%;
-  border: none;
-  color: transparent;
-  background-image: url(../images/ChurchInsightLogoD.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  height: 38px;
-  margin-bottom: 15px;
-}
 .slice_Footer_D .footerbar a.footer:hover {
   opacity: 0.7;
 }
@@ -2153,7 +2141,7 @@ section.slice_WatchOnline a.button2 {
 }
 @media (min-width: 992px) {
   .slice_Footer_D .footerbar {
-    padding: 35px 0 10px;
+    padding: 25px 0;
   }
   .slice_Footer_D .footerbar a.footer {
     position: relative;
