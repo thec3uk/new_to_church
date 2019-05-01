@@ -3,9 +3,9 @@
   "author": "Andrew Miller",
   "title": "New to Church site (thec3.uk)",
   "description": "The frontend of thec3.uk for those new to church",
-  "homepage": "https://newtochurch.netlify.com",
+  "homepage": "https://www.thec3.uk",
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/thec3uk/newtochurch"
