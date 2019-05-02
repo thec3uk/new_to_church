@@ -51,6 +51,7 @@ export const query = graphql`
         page_title
         body {
           ... on PrismicHomepageBodyText1 {
+            slice_type
             id
             primary {
               css_classes
@@ -74,6 +75,7 @@ export const query = graphql`
             }
           }
           ... on PrismicHomepageBodyListOfArticles {
+            slice_type
             id
             primary {
               css_classes
@@ -107,6 +109,7 @@ export const query = graphql`
             }
           }
           ... on PrismicHomepageBodyTextAndArticleList {
+            slice_type
             id
             primary {
               title_of_section {
@@ -164,6 +167,7 @@ export const query = graphql`
             }
           }
           ... on PrismicHomepageBodyRawHtml {
+            slice_type
             id
             primary {
               title_of_section {

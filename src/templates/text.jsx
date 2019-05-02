@@ -9,10 +9,7 @@ const TextPage = ({ data }) => {
     <ContentLayout title={page.data.page_title}>
       <section className="slice_system_page">
         <div className="container system_content">
-          <Content
-            className="systemPageContent"
-            input={page.data.body[0].primary.text.html}
-          />
+          <Content className="systemPageContent" input={page.data.body} />
         </div>
       </section>
     </ContentLayout>
@@ -32,6 +29,8 @@ export const query = graphql`
       data {
         page_title
         body {
+          id
+          slice_type
           primary {
             text {
               html
