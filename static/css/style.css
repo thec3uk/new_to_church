@@ -1982,7 +1982,8 @@ section.slice_Children::before {
   font-size: 16px;
   line-height: 1;
   font-weight: 700;
-  margin: 0 15px;
+  margin-right: 5px;
+  margin-top: 10px;
   text-transform: uppercase;
   text-align: center;
   transition: color 500ms linear, border-color 500ms linear,
@@ -1992,6 +1993,7 @@ section.slice_Children::before {
   .slice_WatchOnline a.button,
   .slice_WatchOnline a.button2 {
     min-width: 180px;
+    margin: 0 15px;
   }
 }
 .slice_WatchOnline a.button:hover,
@@ -2050,7 +2052,6 @@ section.slice_WatchOnline img {
 }
 section.slice_WatchOnline h1 {
   line-height: 1;
-  min-width: 410px;
 }
 section.slice_WatchOnline .row {
   display: flex;
@@ -2064,12 +2065,13 @@ section.slice_WatchOnline .row div {
   text-align: left;
   align-self: center;
 }
-section.slice_WatchOnline .row div:last-child {
+section.slice_WatchOnline .row div:nth-last-child(2) {
   margin-right: 5px;
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
 }
+
 section.slice_WatchOnline a.button2 {
   margin-left: 0;
   margin-right: 0;
@@ -2085,6 +2087,21 @@ section.slice_WatchOnline a.button2 {
   }
   section.slice_WatchOnline a {
     font-size: 14px !important;
+  }
+}
+@media (max-width: 467px) {
+  section.slice_WatchOnline h1 {
+    min-width: 80vw;
+  }
+  section.slice_WatchOnline .row {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  section.slice_WatchOnline .row div:nth-last-child(2) {
+    margin: 0;
+  }
+  section.slice_WatchOnline .row div:first-child {
+    display: none;
   }
 }
 
