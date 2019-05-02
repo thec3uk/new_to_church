@@ -32,16 +32,7 @@ const ContentPage = ({ data }) => {
       <section className="slice_content_page">
         <div className="container">
           <div className="main-content">
-            {/* HACK below for CS embeds */}
-            <Content
-              className="ArticleBody"
-              input={
-                page.body &&
-                page.body[0].primary.text.html.startsWith('<pre>&lt;')
-                  ? page.body[0].primary.text.text
-                  : page.body[0].primary.text.html
-              }
-            />
+            <Content className="ArticleBody" input={page.body} />
             {page.contact_form === 'yes' && (
               <ContactForm
                 title={page.page_title}
@@ -198,11 +189,33 @@ export const query = graphql`
           }
         }
         body {
-          primary {
-            text {
-              html
-              text
+          ... on PrismicContentPageBodyText {
+            primary {
+              text {
+                html
+                text
+              }
             }
+            slice_type
+          }
+          ... on PrismicContentPageBodyTable {
+            primary {
+              column_header_1 {
+                text
+              }
+              column_header_2 {
+                text
+              }
+            }
+            items {
+              column_1 {
+                text
+              }
+              column_2 {
+                text
+              }
+            }
+            slice_type
           }
         }
       }

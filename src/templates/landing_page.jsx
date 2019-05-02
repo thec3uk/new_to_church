@@ -30,10 +30,7 @@ const LandingPage = ({ data }) => {
     <HeroLayout title={page.page_title} heroImage={page.hero_image.url}>
       <section className="slice_LandingMainArticle">
         <div className="container">
-          <Content
-            className="ArticleBody"
-            input={page.body[0].primary.text.html}
-          />
+          <Content className="ArticleBody" input={page.body} />
           {page.contact_form === 'yes' && (
             <div className="ArticleBody">
               <ContactForm
@@ -158,6 +155,8 @@ export const query = graphql`
           }
         }
         body {
+          id
+          slice_type
           primary {
             text {
               html

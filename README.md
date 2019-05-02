@@ -23,5 +23,3 @@
 # Table
 
 - Add in the query for parking
-- Update query for content page.
-- Update template/create a component for it

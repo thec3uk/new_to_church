@@ -39,16 +39,13 @@ const Section = ({ data }) => {
           />
         )}
         {section.primary.text && (
-          <Content className="ArticleBody" input={section.primary.text.text} />
+          <Content className="ArticleBody" input={[section]} />
         )}
         {section.primary.html && (
-          <Content className="ArticleBody" input={section.primary.html.text} />
+          <Content className="ArticleBody" input={[section]} />
         )}
         {section.primary.preamble && (
-          <Content
-            className="ArticleBody"
-            input={section.primary.preamble.text}
-          />
+          <Content className="ArticleBody" input={[section]} />
         )}
         {/* article list */}
         {
