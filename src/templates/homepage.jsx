@@ -87,18 +87,41 @@ export const query = graphql`
               articles_to_link {
                 uid
                 document {
-                  data {
-                    card_title
-                    card_cta
-                    card_description
-                    card_image {
-                      alt
-                      copyright
-                      localFile {
-                        childImageSharp {
-                          fluid {
-                            srcSet
-                            sizes
+                  ... on PrismicContentPage {
+                    id
+                    data {
+                      card_title
+                      card_cta
+                      card_description
+                      card_image {
+                        alt
+                        copyright
+                        localFile {
+                          childImageSharp {
+                            fluid {
+                              srcSet
+                              sizes
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  ... on PrismicLandingPage {
+                    id
+                    data {
+                      card_title
+                      card_cta
+                      card_description
+                      card_image {
+                        alt
+                        copyright
+                        localFile {
+                          childImageSharp {
+                            fluid {
+                              srcSet
+                              sizes
+                            }
                           }
                         }
                       }
