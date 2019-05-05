@@ -3,6 +3,32 @@ import Helmet from 'react-helmet';
 
 const Head = () => (
   <Helmet>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js" />
+    <script>
+      {`window.addEventListener("load", function()
+      {window.cookieconsent.initialise({
+        palette: {
+          popup: {
+            background: '#393643',
+            text: '#ffffff',
+          },
+          button: {
+            background: '#f05356',
+            text: '#ffffff',
+          },
+        },
+        position: 'bottom-right',
+        content: {
+          href: 'www.thec3.uk/privacy',
+        },
+      })}
+      );`}
+    </script>
     <link rel="stylesheet" type="text/css" href="/css/prismic-styles.css" />
     <link type="text/css" rel="stylesheet" href="/css/normalize.V5.0.0.css" />
     <link type="text/css" rel="stylesheet" href="/css/font-icons.css" />
