@@ -34,6 +34,7 @@ export const query = graphql`
           primary {
             text {
               html
+              text
             }
           }
         }
