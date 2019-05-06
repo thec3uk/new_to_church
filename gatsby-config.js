@@ -13,6 +13,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: 'YOUR_SENTRY_DSN_URL',
+        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ['production', 'develop'].indexOf(process.env.NODE_ENV) !== -1)(),
+      },
+    },
+    {
       resolve: 'gatsby-source-prismic',
       options: {
         // The name of your prismic.io repository. This is required.
