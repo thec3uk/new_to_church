@@ -2612,7 +2612,7 @@ body.system_popup a.system_toggle_advanced:hover,
 }
 
 .systemPageContent {
-  display: table-cell;
+  display: block;
   padding: 0 25px 25px;
 }
 @media (max-width: 700px) {

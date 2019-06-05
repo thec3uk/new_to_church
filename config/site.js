@@ -31,7 +31,7 @@ module.exports = {
   footerLinks: [
     { id: 'footer_vacanies', slug: '/vacancies', title: 'Work with us' },
     { id: 'footer_copyright', slug: '/copyright', title: 'Copyright' },
-    { id: 'footer_tc', slug: '/terms', title: 'T&Cs' },
+    // { id: 'footer_tc', slug: '/terms', title: 'T&Cs' },
     { id: 'footer_privacy', slug: '/privacy', title: 'Privacy' },
     { id: 'footer_help', slug: '/help', title: 'Help' },
   ],
