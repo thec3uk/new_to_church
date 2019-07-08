@@ -3,6 +3,15 @@ import Helmet from 'react-helmet';
 
 const Head = () => (
   <Helmet>
+    <script>
+      {`window.prismic = {
+      endpoint: 'https://thec3.cdn.prismic.io/api/v2'
+    };`}
+    </script>
+    <script
+      type="text/javascript"
+      src="https://static.cdn.prismic.io/prismic.min.js"
+    />
     <link
       rel="stylesheet"
       type="text/css"
