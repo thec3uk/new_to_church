@@ -14,10 +14,8 @@ const TeachingSeriesPage = () => (
           <p>Look out for improvements to this page in the near future.</p>
           <p>
             You can still get the latest preaches from our podcast feed hosted{' '}
-            <a href="https://endis.thec3.uk/Media/MediaXML.xml?fid=2302">
-              here
-            </a>{' '}
-            or subscribe on Apple Podcasts.
+            <a href="https://feeds.transistor.fm/the-c3-podcast">here</a> or
+            subscribe on Apple Podcasts.
           </p>
           <a href="https://podcasts.apple.com/bs/podcast/c3-church/id260611944?mt=2">
             <svg
