@@ -22,12 +22,12 @@ const TeachingSeriesPage = () => (
           <ul>
             <li>
               <a href="https://www.youtube.com/channel/UCHXr4-EV0nF5rhlhJmDhIWQ">
-                <FontAwesomeIcon icon={faYoutube} listItem /> YouTube
+                <FontAwesomeIcon icon={faYoutube} fixedWidth /> YouTube
               </a>
             </li>
             <li>
               <a href="https://feeds.transistor.fm/the-c3-podcast">
-                <FontAwesomeIcon icon={faRssSquare} listItem /> Podcast Feed
+                <FontAwesomeIcon icon={faRssSquare} fixedWidth /> Podcast Feed
               </a>
             </li>
           </ul>
