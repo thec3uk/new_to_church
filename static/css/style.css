@@ -2257,6 +2257,16 @@ section.slice_WatchOnline a.button2 {
   top: -1px;
   color: #f05356;
 }
+.slice_content_page .teaching-series ul:not([id$='_gallery_ul']) li::before {
+  content: '' !important;
+  display: none;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -15px;
+  top: -1px;
+  color: #f05356;
+}
 .slice_content_page .main-content ul[id$='_gallery_ul'] {
   list-style-type: none;
 }
