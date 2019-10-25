@@ -9,28 +9,28 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
     render={({
       site: {
         buildTime,
-        siteMetadata: {
+        siteMetadata: { siteUrl, pathPrefix },
+      },
+      prismicSiteConfig: {
+        data: {
           defaultTitle,
-          titleAlt,
-          shortName,
           author,
-          siteLanguage,
+          alt_title,
+          short_title,
           logo,
-          siteUrl,
-          pathPrefix,
           defaultDescription,
           defaultBanner,
-          twitter,
+          twitter_username,
         },
+        lang,
       },
     }) => {
       const seo = {
         title: title || defaultTitle,
         description: defaultDescription || desc,
-        image: `${siteUrl}/${banner || defaultBanner}`,
+        image: `${defaultBanner.url}`,
         url: `${siteUrl}${pathname || '/'}`,
       };
-      const realPrefix = pathPrefix === '/' ? '' : pathPrefix;
       let schemaOrgJSONLD = [
         {
           '@context': 'http://schema.org',
@@ -38,7 +38,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
           '@id': siteUrl,
           url: siteUrl,
           name: defaultTitle,
-          alternateName: titleAlt || '',
+          alternateName: alt_title || '',
         },
       ];
       if (article) {
@@ -49,7 +49,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             '@id': seo.url,
             url: seo.url,
             name: title,
-            alternateName: titleAlt || '',
+            alternateName: alt_title || '',
             headline: title,
             image: {
               '@type': 'ImageObject',
@@ -67,7 +67,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
               name: author,
               logo: {
                 '@type': 'ImageObject',
-                url: siteUrl + realPrefix + logo,
+                url: logo.url,
               },
             },
             isPartOf: siteUrl,
@@ -80,11 +80,11 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
       }
       return (
         <Helmet title={defaultTitle + ' : ' + seo.title}>
-          <html lang={siteLanguage} />
+          <html lang={lang} />
           <meta name="description" content={seo.description} />
           <meta name="image" content={seo.image} />
-          <meta name="apple-mobile-web-app-title" content={shortName} />
-          <meta name="application-name" content={shortName} />
+          <meta name="apple-mobile-web-app-title" content={short_title} />
+          <meta name="application-name" content={short_title} />
           <link rel="canonical" href={seo.url} />
           <script type="application/ld+json">
             {JSON.stringify(schemaOrgJSONLD)}
@@ -97,7 +97,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
           <meta property="og:image" content={seo.image} />
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content={twitter} />
+          <meta name="twitter:creator" content={twitter_username} />
           <meta name="twitter:title" content={seo.title} />
           <meta name="twitter:description" content={seo.description} />
           <meta name="twitter:image" content={seo.image} />
@@ -138,18 +138,26 @@ const query = graphql`
     site {
       buildTime(formatString: "YYYY-MM-DD")
       siteMetadata {
-        defaultTitle: title
-        titleAlt
-        shortName
-        author
-        siteLanguage
-        logo
         siteUrl: url
         pathPrefix
-        defaultDescription: description
-        defaultBanner: banner
-        twitter
       }
+    }
+    prismicSiteConfig {
+      data {
+        defaultTitle: title
+        alt_title
+        author
+        short_title
+        defaultDescription: description
+        logo {
+          url
+        }
+        defaultBanner: banner {
+          url
+        }
+        twitter_username
+      }
+      lang
     }
   }
 `;
