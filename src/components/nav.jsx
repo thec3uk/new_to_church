@@ -5,11 +5,13 @@ import styles from './nav.module.css';
 import NotificationBar from 'react-notification-bar';
 
 const MenuItem = ({ menuItem, ...props }) => {
-  const { title, slug } = menuItem;
+  const { document, url } = menuItem;
+  const title =
+    document !== undefined ? document[0].data.card_title : menuItem.title;
   return (
     <li className={styles.menu_item} {...props}>
-      {slug ? (
-        <Link className={styles.menu_link} to={slug}>
+      {url ? (
+        <Link className={styles.menu_link} to={url}>
           {title}
         </Link>
       ) : (
@@ -21,8 +23,15 @@ const MenuItem = ({ menuItem, ...props }) => {
 
 MenuItem.propTypes = {
   menuItem: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    slug: PropTypes.string,
+    document: PropTypes.arrayOf(
+      PropTypes.shape({
+        data: PropTypes.shape({
+          card_title: PropTypes.string,
+        }),
+      })
+    ),
+    url: PropTypes.string,
+    title: PropTypes.string,
   }),
 };
 
@@ -118,11 +127,28 @@ class Nav extends React.Component {
       <StaticQuery
         query={graphql`
           query HeadingQuery {
-            site {
-              siteMetadata {
-                topNav {
-                  title
-                  slug
+            prismicSiteConfig {
+              data {
+                top_navigation {
+                  navigation_link {
+                    id
+                    url
+                    target
+                    document {
+                      ... on PrismicLandingPage {
+                        uid
+                        data {
+                          card_title
+                        }
+                      }
+                      ... on PrismicRedirect {
+                        uid
+                        data {
+                          card_title
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -141,7 +167,7 @@ class Nav extends React.Component {
           }
         `}
         render={data => {
-          const nav = data.site.siteMetadata.topNav;
+          const nav = data.prismicSiteConfig.data.top_navigation;
           const notification = data.prismicNotificationBanner.data;
           const topNav = nav.slice(0, this.state.mobileNav.splitIdx);
           const verticalNav = nav.slice(
@@ -165,9 +191,7 @@ class Nav extends React.Component {
                         height: 12,
                       }}
                       sound={false}
-                      message={`<a href=${notification.url.url} target=${
-                        notification.url.target
-                      }>${notification.content}</a>`}
+                      message={`<a href=${notification.url.url} target=${notification.url.target}>${notification.content}</a>`}
                     />
                   )}
               </div>
@@ -185,7 +209,12 @@ class Nav extends React.Component {
                 </div>
                 <ul className={styles.root_menu}>
                   {topNav.map(menuItem => {
-                    return <MenuItem key={menuItem.slug} menuItem={menuItem} />;
+                    return (
+                      <MenuItem
+                        key={menuItem.navigation_link.id}
+                        menuItem={menuItem.navigation_link}
+                      />
+                    );
                   })}
                   <MenuItem
                     className={
@@ -205,8 +234,8 @@ class Nav extends React.Component {
                       return (
                         <MenuItem
                           className={styles.vertical_menu_item}
-                          key={menuItem.slug}
-                          menuItem={menuItem}
+                          key={menuItem.navigation_link.id}
+                          menuItem={menuItem.navigation_link}
                         />
                       );
                     })}
