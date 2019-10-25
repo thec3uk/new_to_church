@@ -5,7 +5,7 @@
   "description": "The frontend of thec3.uk for those new to church",
   "homepage": "https://www.thec3.uk",
   "license": "MIT",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/thec3uk/newtochurch"
