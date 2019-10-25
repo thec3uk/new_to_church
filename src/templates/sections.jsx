@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
 import { Content } from '../layouts';
 import { Card } from '../components';
 
@@ -52,14 +51,14 @@ const Section = ({ data }) => {
           <div className="article_cards">
             {section.items &&
               section.items.map(({ articles_to_link }) => {
-                const { document, uid } = articles_to_link;
+                const { document, uid, url } = articles_to_link;
                 const doc = document[0];
                 return (
                   <Card
                     key={uid}
                     title={doc.data.card_title}
                     description={doc.data.card_description}
-                    slug={uid}
+                    slug={url}
                     image={doc.data.card_image}
                     cta={doc.data.card_cta}
                   />
