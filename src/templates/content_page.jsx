@@ -13,10 +13,12 @@ const shapeGalleryData = gallery_list => {
   }));
 };
 
-const shapeNavItem = item => ({
-  slug: item.uid,
-  title: item.document[0].data.page_title,
-});
+const shapeNavItem = item => {
+  return {
+    slug: item.uid,
+    title: item.document[0].data.page_title,
+  };
+};
 
 const shapeSiblingData = child_pages => {
   return child_pages
@@ -128,6 +130,23 @@ export const query = graphql`
                         }
                       }
                       ... on PrismicRedirect {
+                        data {
+                          page_title
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on PrismicContentPage {
+              data {
+                page_title
+                child_pages {
+                  child_page {
+                    uid
+                    document {
+                      ... on PrismicContentPage {
                         data {
                           page_title
                         }
