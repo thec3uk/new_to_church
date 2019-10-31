@@ -86,6 +86,7 @@ export const query = graphql`
             items {
               articles_to_link {
                 uid
+                url
                 document {
                   ... on PrismicContentPage {
                     id
@@ -146,6 +147,7 @@ export const query = graphql`
             items {
               articles_to_link {
                 uid
+                url
                 document {
                   ... on PrismicContentPage {
                     data {

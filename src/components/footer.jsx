@@ -6,18 +6,42 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query FooterQuery {
-        site {
-          siteMetadata {
-            footerLinks {
-              title
-              slug
-              id
+        prismicSiteConfig {
+          data {
+            footer_navigation {
+              footer_link {
+                url
+                id
+                document {
+                  ... on PrismicContentPage {
+                    data {
+                      card_title
+                      footer_id
+                    }
+                  }
+                  ... on PrismicTextPage {
+                    data {
+                      card_title
+                      footer_id
+                    }
+                  }
+                }
+              }
             }
-            facebook_slug
-            instagram_slug
-            twitter_slug
-            phoneNumber
-            emailContact
+            facebook {
+              url
+              target
+            }
+            instagram {
+              url
+              target
+            }
+            twitter {
+              url
+              target
+            }
+            phone_number
+            contact_email
           }
         }
       }
@@ -34,13 +58,13 @@ const Footer = () => (
                 <div className="PhoneNumber">
                   <a
                     style={{ color: '#fff' }}
-                    href={'tel:' + data.site.siteMetadata.phoneNumber}
+                    href={'tel:' + data.prismicSiteConfig.data.phone_number}
                   >
-                    Tel: {data.site.siteMetadata.phoneNumber}
+                    Tel: {data.prismicSiteConfig.data.phone_number}
                   </a>
                 </div>
                 <div className="Email">
-                  Email: {data.site.siteMetadata.emailContact}
+                  Email: {data.prismicSiteConfig.data.contact_email}
                 </div>
                 <br />
                 <span id="footer_charity">Registered Charity 1132699</span>
@@ -52,22 +76,16 @@ const Footer = () => (
                 <div className="ArticleBody">
                   <a
                     className="footer_icon_block facebook"
-                    href={
-                      'https://www.facebook.com/' +
-                      data.site.siteMetadata.facebook_slug
-                    }
-                    target="_blank"
+                    href={data.prismicSiteConfig.data.facebook.url}
+                    target={data.prismicSiteConfig.data.facebook.target}
                     rel="noopener noreferrer"
                   >
                     <i className="icomoon-icon-facebook">&nbsp;</i>{' '}
                   </a>{' '}
                   <a
                     className="footer_icon_block twitter"
-                    href={
-                      'https://twitter.com/' +
-                      data.site.siteMetadata.twitter_slug
-                    }
-                    target="_blank"
+                    href={data.prismicSiteConfig.data.twitter.url}
+                    target={data.prismicSiteConfig.data.twitter.target}
                     rel="noopener noreferrer"
                   >
                     {' '}
@@ -75,11 +93,8 @@ const Footer = () => (
                   </a>{' '}
                   <a
                     className="footer_icon_block instagram"
-                    href={
-                      'https://www.instagram.com/' +
-                      data.site.siteMetadata.instagram_slug
-                    }
-                    target="_blank"
+                    href={data.prismicSiteConfig.data.instagram.url}
+                    target={data.prismicSiteConfig.data.instagram.target}
                     rel="noopener noreferrer"
                   >
                     {' '}
@@ -95,16 +110,21 @@ const Footer = () => (
         <section className="slice_Footer_D">
           <div className="container">
             <div className="footerbar">
-              {data.site.siteMetadata.footerLinks.map(item => (
-                <Link
-                  id={item.id}
-                  key={item.slug}
-                  to={item.slug}
-                  title={item.title}
-                >
-                  {item.title}
-                </Link>
-              ))}
+              {data.prismicSiteConfig.data.footer_navigation.map(
+                ({ footer_link }) => {
+                  const page_data = footer_link.document[0].data;
+                  return (
+                    <Link
+                      id={page_data.footer_id}
+                      key={footer_link.id}
+                      to={footer_link.url}
+                      title={page_data.card_title}
+                    >
+                      {page_data.card_title}
+                    </Link>
+                  );
+                }
+              )}
             </div>
           </div>
         </section>

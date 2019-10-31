@@ -6,18 +6,23 @@ const SideLinks = ({ index_page }) => (
   <StaticQuery
     query={graphql`
       query SideLinkQuery {
-        site {
-          siteMetadata {
-            footerLinks {
-              title
-              slug
-              id
+        prismicSiteConfig {
+          data {
+            facebook {
+              target
+              url
+              link_type
             }
-            facebook_slug
-            instagram_slug
-            twitter_slug
-            phoneNumber
-            emailContact
+            instagram {
+              target
+              url
+              link_type
+            }
+            twitter {
+              target
+              url
+              link_type
+            }
           }
         }
       }
@@ -29,30 +34,22 @@ const SideLinks = ({ index_page }) => (
             {!index_page ? (
               <Fragment>
                 <a
-                  href={
-                    'https://www.facebook.com/' +
-                    data.site.siteMetadata.facebook_slug
-                  }
-                  target="_blank"
+                  href={data.prismicSiteConfig.data.facebook.url}
+                  target={data.prismicSiteConfig.data.facebook.target}
                   rel="noopener noreferrer"
                 >
                   <i className="icomoon-icon-facebook">&thinsp;</i>
                 </a>
                 <a
-                  href={
-                    'https://twitter.com/' + data.site.siteMetadata.twitter_slug
-                  }
-                  target="_blank"
+                  href={data.prismicSiteConfig.data.twitter.url}
+                  target={data.prismicSiteConfig.data.twitter.target}
                   rel="noopener noreferrer"
                 >
                   <i className="icomoon-icon-twitter">&thinsp;</i>
                 </a>
                 <a
-                  href={
-                    'https://www.instagram.com/' +
-                    data.site.siteMetadata.instagram_slug
-                  }
-                  target="_blank"
+                  href={data.prismicSiteConfig.data.instagram.url}
+                  target={data.prismicSiteConfig.data.instagram.target}
                   rel="noopener noreferrer"
                 >
                   <i className="icomoon-icon-instagram">&thinsp;</i>
@@ -112,30 +109,22 @@ const SideLinks = ({ index_page }) => (
             ) : (
               <Fragment>
                 <a
-                  href={
-                    'https://www.facebook.com/' +
-                    data.site.siteMetadata.facebook_slug
-                  }
-                  target="_blank"
+                  href={data.prismicSiteConfig.data.facebook.url}
+                  target={data.prismicSiteConfig.data.facebook.target}
                   rel="noopener noreferrer"
                 >
                   <i className="icomoon-icon-facebook">&thinsp;</i>
                 </a>
                 <a
-                  href={
-                    'https://twitter.com/' + data.site.siteMetadata.twitter_slug
-                  }
-                  target="_blank"
+                  href={data.prismicSiteConfig.data.twitter.url}
+                  target={data.prismicSiteConfig.data.twitter.target}
                   rel="noopener noreferrer"
                 >
                   <i className="icomoon-icon-twitter">&thinsp;</i>
                 </a>
                 <a
-                  href={
-                    'https://www.instagram.com/' +
-                    data.site.siteMetadata.instagram_slug
-                  }
-                  target="_blank"
+                  href={data.prismicSiteConfig.data.instagram.url}
+                  target={data.prismicSiteConfig.data.instagram.target}
                   rel="noopener noreferrer"
                 >
                   <i className="icomoon-icon-instagram">&thinsp;</i>
