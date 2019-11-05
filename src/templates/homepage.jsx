@@ -128,26 +128,6 @@ export const query = graphql`
                       }
                     }
                   }
-                  ... on PrismicRedirect {
-                    id
-                    data {
-                      card_title
-                      card_cta
-                      card_description
-                      card_image {
-                        alt
-                        copyright
-                        localFile {
-                          childImageSharp {
-                            fluid {
-                              srcSet
-                              sizes
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
             }
@@ -170,6 +150,25 @@ export const query = graphql`
                 url
                 document {
                   ... on PrismicContentPage {
+                    data {
+                      card_title
+                      card_cta
+                      card_description
+                      card_image {
+                        alt
+                        copyright
+                        localFile {
+                          childImageSharp {
+                            fluid {
+                              srcSet
+                              sizes
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  ... on PrismicRedirect {
                     data {
                       card_title
                       card_cta
