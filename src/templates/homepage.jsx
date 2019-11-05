@@ -128,6 +128,26 @@ export const query = graphql`
                       }
                     }
                   }
+                  ... on PrismicRedirect {
+                    id
+                    data {
+                      card_title
+                      card_cta
+                      card_description
+                      card_image {
+                        alt
+                        copyright
+                        localFile {
+                          childImageSharp {
+                            fluid {
+                              srcSet
+                              sizes
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
