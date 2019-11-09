@@ -94,63 +94,7 @@ export const query = graphql`
           child_page {
             uid
             document {
-              ... on PrismicContentPage {
-                data {
-                  card_title
-                  card_cta
-                  card_description
-                  card_image {
-                    alt
-                    copyright
-                    localFile {
-                      childImageSharp {
-                        fluid {
-                          srcSet
-                          sizes
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              ... on PrismicLandingPage {
-                data {
-                  card_title
-                  card_cta
-                  card_description
-                  card_image {
-                    alt
-                    copyright
-                    localFile {
-                      childImageSharp {
-                        fluid {
-                          srcSet
-                          sizes
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              ... on PrismicRedirect {
-                data {
-                  card_title
-                  card_cta
-                  card_description
-                  card_image {
-                    alt
-                    copyright
-                    localFile {
-                      childImageSharp {
-                        fluid {
-                          srcSet
-                          sizes
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              ...cardContent
             }
           }
         }

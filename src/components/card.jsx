@@ -35,3 +35,65 @@ Card.propTypes = {
   cta: PropTypes.string.isRequired,
   width: PropTypes.string,
 };
+
+export const query = graphql`
+  fragment cardContent on PrismicContentPagePrismicLandingPagePrismicRedirectUnion {
+    ... on PrismicContentPage {
+      data {
+        card_title
+        card_cta
+        card_description
+        card_image {
+          alt
+          copyright
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 300) {
+                srcSet
+                sizes
+              }
+            }
+          }
+        }
+      }
+    }
+    ... on PrismicLandingPage {
+      data {
+        card_title
+        card_cta
+        card_description
+        card_image {
+          alt
+          copyright
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 300) {
+                srcSet
+                sizes
+              }
+            }
+          }
+        }
+      }
+    }
+    ... on PrismicRedirect {
+      data {
+        card_title
+        card_cta
+        card_description
+        card_image {
+          alt
+          copyright
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 300) {
+                srcSet
+                sizes
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

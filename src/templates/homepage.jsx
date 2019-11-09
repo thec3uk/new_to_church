@@ -88,65 +88,7 @@ export const query = graphql`
                 uid
                 url
                 document {
-                  ... on PrismicContentPage {
-                    id
-                    data {
-                      card_title
-                      card_cta
-                      card_description
-                      card_image {
-                        alt
-                        copyright
-                        localFile {
-                          childImageSharp {
-                            fluid {
-                              srcSet
-                              sizes
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  ... on PrismicRedirect {
-                    data {
-                      card_title
-                      card_cta
-                      card_description
-                      card_image {
-                        alt
-                        copyright
-                        localFile {
-                          childImageSharp {
-                            fluid {
-                              srcSet
-                              sizes
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  ... on PrismicLandingPage {
-                    id
-                    data {
-                      card_title
-                      card_cta
-                      card_description
-                      card_image {
-                        alt
-                        copyright
-                        localFile {
-                          childImageSharp {
-                            fluid {
-                              srcSet
-                              sizes
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  ...cardContent
                 }
               }
             }
@@ -168,44 +110,7 @@ export const query = graphql`
                 uid
                 url
                 document {
-                  ... on PrismicContentPage {
-                    data {
-                      card_title
-                      card_cta
-                      card_description
-                      card_image {
-                        alt
-                        copyright
-                        localFile {
-                          childImageSharp {
-                            fluid {
-                              srcSet
-                              sizes
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  ... on PrismicLandingPage {
-                    data {
-                      card_title
-                      card_cta
-                      card_description
-                      card_image {
-                        alt
-                        copyright
-                        localFile {
-                          childImageSharp {
-                            fluid {
-                              srcSet
-                              sizes
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  ...cardContent
                 }
               }
             }
