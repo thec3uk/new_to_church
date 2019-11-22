@@ -320,6 +320,12 @@ input:not([type='checkbox']):not([type='radio']):not([type='button']) {
   outline: none;
   box-shadow: 0 0 4px rgba(49, 167, 222, 0.8);
 }
+
+@media (max-width: 768px) {
+  .ArticleBody img {
+    width: 100%;
+  }
+}
 /*
 ##################
 # Start of Slice #

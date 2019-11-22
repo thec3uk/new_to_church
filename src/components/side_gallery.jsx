@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const GalleryImage = ({ image, url, title }) => (
   <li className="gallery_li">
-    <Link to={url}>
+    <Link to={`/${url}`}>
       <img src={image} alt={title} title={title} />
     </Link>
   </li>

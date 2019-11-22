@@ -216,6 +216,7 @@ export const query = graphql`
               }
             }
             slice_type
+            id
           }
           ... on PrismicContentPageBodyTable {
             primary {
@@ -235,6 +236,7 @@ export const query = graphql`
               }
             }
             slice_type
+            id
           }
         }
       }

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Card = ({ title, description, slug, image, cta, width }) => (
   <div style={width ? { width: width } : {}}>
     <div className="articleListImage">
-      <Link to={slug}>
+      <Link to={`/${slug}`}>
         <img
           srcSet={image.localFile.childImageSharp.fluid.srcSet}
           sizes={image.localFile.childImageSharp.fluid.sizes}
@@ -14,13 +14,13 @@ const Card = ({ title, description, slug, image, cta, width }) => (
       </Link>
     </div>
     <div className="articleListTitle">
-      <Link to={slug}>{title}</Link>
+      <Link to={`/${slug}`}>{title}</Link>
     </div>
     <div className="articleListSummary">
       <span>{description}</span>
     </div>
     <div className="articleListLink">
-      <Link to={slug}>{cta}</Link>
+      <Link to={`/${slug}`}>{cta}</Link>
     </div>
   </div>
 );

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ChildNav = ({ title, slug }) => (
   <div className="group_nav_child">
-    <Link to={slug}>{title}</Link>
+    <Link to={`/${slug}`}>{title}</Link>
   </div>
 );
 
@@ -17,7 +17,7 @@ ChildNav.propTypes = {
 const SiblingNav = ({ title, slug, selected, children }) => {
   return (
     <div className={selected ? 'group_nav_selected' : 'group_nav_sibling'}>
-      <Link to={slug}>{title}</Link>
+      <Link to={`/${slug}`}>{title}</Link>
       {/*selected &&
         children.map(child => (
           <ChildNav key={child.slug} title={child.title} slug={child.slug} />
@@ -63,7 +63,7 @@ const SideNav = ({ currentSlug, parent, siblings, children }) => (
           </table>
           <div>
             <div className="group_nav_parent">
-              <Link to={parent.slug}>{parent.title}</Link>
+              <Link to={`/${parent.slug}`}>{parent.title}</Link>
 
               {siblings.map(sibling => (
                 <SiblingNav
