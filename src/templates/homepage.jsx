@@ -20,7 +20,7 @@ const HomePage = ({ data }) => (
           >
             <source
               type="video/mp4"
-              src="https://s3.amazonaws.com/media.cthree.org/9d4cc8be-ba5f-483d-b41a-a285e1866a4c.mp4"
+              src="https://thec3-public-media.s3.eu-west-2.amazonaws.com/9d4cc8be-ba5f-483d-b41a-a285e1866a4c.mp4"
             />
             <track default kind="captions" />
             <track kind="descriptions" />

@@ -2067,7 +2067,7 @@ section.slice_WatchOnline .row {
   padding: 1px;
 }
 section.slice_WatchOnline .row div {
-  padding: 5px;
+  padding: 15px 5px;
   text-align: left;
   align-self: center;
 }
