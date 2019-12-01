@@ -4,6 +4,7 @@ const prismicRepositoryName = 'thec3';
 
 const linkResolver = function(doc) {
   // Fallback for other types, in case new custom types get created
+  console.log(doc, doc.id, doc.uid);
   return '/' + doc.uid;
 };
 
