@@ -2,11 +2,6 @@ const config = require('./config/site');
 
 const prismicRepositoryName = 'thec3';
 
-const linkResolver = function(doc) {
-  // Fallback for other types, in case new custom types get created
-  return '/' + doc.uid;
-};
-
 module.exports = {
   siteMetadata: {
     ...config,
@@ -34,7 +29,8 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different link resolver logic for each field if necessary.
         // See: https://prismic.io/docs/javascript/query-the-api/link-resolving
-        linkResolver: ({ node, key, value }) => linkResolver,
+        linkResolver: ({ node, key, value }) =>
+          require('./src/utils/linkResolver'),
 
         // Set a list of links to fetch and be made available in your link
         // resolver function.
@@ -58,6 +54,14 @@ module.exports = {
         ) => {
           // Your HTML serializer
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-prismic-preview',
+      options: {
+        repositoryName: prismicRepositoryName,
+        linkResolver: require('./src/utils/linkResolver'),
+        path: '/preview',
       },
     },
     {
