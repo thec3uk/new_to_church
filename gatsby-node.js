@@ -344,6 +344,12 @@ exports.createPages = ({ graphql, actions }) => {
                 toPath: url,
                 redirectInBrowser: true,
               });
+              createRedirect({
+                fromPath: '/' + node.uid.toUpperCase(),
+                isPermanent: true,
+                toPath: url,
+                redirectInBrowser: true,
+              });
             });
           });
         resolve();
