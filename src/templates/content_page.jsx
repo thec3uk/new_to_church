@@ -139,23 +139,6 @@ export const query = graphql`
                 }
               }
             }
-            ... on PrismicContentPage {
-              data {
-                page_title
-                child_pages {
-                  child_page {
-                    uid
-                    document {
-                      ... on PrismicContentPage {
-                        data {
-                          page_title
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
             ... on PrismicHomepage {
               data {
                 page_title
@@ -243,3 +226,22 @@ export const query = graphql`
     }
   }
 `;
+
+// This is a part of the query that was under parent_page
+// ... on PrismicContentPage {
+//   data {
+//     page_title
+//     child_pages {
+//       child_page {
+//         uid
+//         document {
+//           ... on PrismicContentPage {
+//             data {
+//               page_title
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
