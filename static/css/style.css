@@ -1946,7 +1946,7 @@ section.slice_Children::before {
 }
 @media (min-width: 992px) {
   .slice_WatchOnline {
-    padding: 7px 15px;
+    padding: 0 15px;
   }
 }
 .slice_WatchOnline h1 {
