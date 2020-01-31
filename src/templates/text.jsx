@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { ContentLayout, Content } from '../layouts';
+import { ContactForm } from '../components';
 
 const TextPage = ({ data }) => {
   const page = data.prismicTextPage;
@@ -10,6 +11,14 @@ const TextPage = ({ data }) => {
       <section className="slice_system_page">
         <div className="container system_content">
           <Content className="systemPageContent" input={page.data.body} />
+          {page.contact_form === 'yes' && (
+            <div className="ArticleBody">
+              <ContactForm
+                title={page.page_title}
+                toEmail={page.contact_form_to_email_address}
+              />
+            </div>
+          )}
         </div>
       </section>
     </ContentLayout>
@@ -28,6 +37,8 @@ export const query = graphql`
       uid
       data {
         page_title
+        contact_form
+        contact_form_to_email_address
         body {
           id
           slice_type
