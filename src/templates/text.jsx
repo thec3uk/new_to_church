@@ -5,12 +5,12 @@ import { ContentLayout, Content } from '../layouts';
 import { ContactForm } from '../components';
 
 const TextPage = ({ data }) => {
-  const page = data.prismicTextPage;
+  const page = data.prismicTextPage.data;
   return (
-    <ContentLayout title={page.data.page_title}>
+    <ContentLayout title={page.page_title}>
       <section className="slice_system_page">
         <div className="container system_content">
-          <Content className="systemPageContent" input={page.data.body} />
+          <Content className="systemPageContent" input={page.body} />
           {page.contact_form === 'yes' && (
             <div className="ArticleBody">
               <ContactForm
