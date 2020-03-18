@@ -34,6 +34,7 @@ const Head = () => (
     <link type="text/css" rel="stylesheet" href="/css/font-icons.css" />
     <link type="text/css" rel="stylesheet" href="/css/style.css" />
     <link type="text/css" rel="stylesheet" href="/css/SideLinks.css" />
+    <link type="text/css" rel="stylesheet" href="/css/covid19.css" />
     <script src="https://lightwidget.com/widgets/lightwidget.js" />
     {/* Facebook Pixel Code */}
     <script type="text/javascript">

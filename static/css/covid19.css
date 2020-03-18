@@ -1,0 +1,116 @@
+.video-overlay {
+  background-color: #202945;
+}
+.top-fold {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-screen {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.half-screen h3 {
+  padding: 1rem;
+  color: #fff;
+}
+
+.half-screen > div {
+  background-color: #202945aa;
+  padding: 10px;
+}
+
+.half-screen a {
+  color: #fff !important;
+}
+
+.half-screen a:hover {
+  color: #f05356 !important;
+  text-decoration: underline;
+}
+
+#love-your-neighbour {
+  background-image: url('/images/care.jpg');
+}
+
+#love-your-neighbour h2 {
+  font-size: 4rem;
+}
+
+#love-your-neighbour h3 {
+  font-size: 2rem;
+}
+
+#watchlive {
+  background-image: url('/images/live.jpg');
+}
+
+#watchlive h2 {
+  font-size: 6rem;
+}
+
+#watchlive h3 {
+  font-size: 3rem;
+}
+
+.half-screen .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  #love-your-neighbour h2 {
+    font-size: 5rem;
+  }
+
+  #love-your-neighbour h3 {
+    font-size: 3rem;
+  }
+  #watchlive h2 {
+    font-size: 6rem;
+  }
+
+  #watchlive h3 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-fold {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .half-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+  }
+
+  .half-screen .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
