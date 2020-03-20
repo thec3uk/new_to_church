@@ -5,7 +5,8 @@ import { Card } from '../components';
 
 const Section = ({ data }) => {
   const section = data;
-  const showTitle = Boolean(section.primary.title_of_section.text) || false;
+  // const showTitle = Boolean(section.primary.title_of_section.text) || false;
+  const showTitle = false;
   return (
     <section className={section.primary.css_classes}>
       <div className="container">
