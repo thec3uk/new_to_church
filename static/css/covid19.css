@@ -35,11 +35,12 @@
 
 .half-screen a {
   color: #fff !important;
+  text-decoration: underline;
 }
 
 .half-screen a:hover {
   color: #f05356 !important;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #love-your-neighbour {
