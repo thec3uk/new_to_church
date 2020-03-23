@@ -44,16 +44,19 @@ const HomePage = ({ data }) => (
                       09:30
                     </Link>
                   </h3>
+                  <h3 className="slash">/</h3>
                   <h3>
                     <Link to={data.prismicHomepage.data._11_30_service.url}>
                       11:30
                     </Link>
                   </h3>
+                  <h3 className="slash">/</h3>
                   <h3>
                     <Link to={data.prismicHomepage.data._14_30_service.url}>
                       14:30
                     </Link>
                   </h3>
+                  <h3 className="slash">/</h3>
                   <h3>
                     <Link to={data.prismicHomepage.data._17_30_service.url}>
                       17:30
@@ -72,9 +75,11 @@ const HomePage = ({ data }) => (
                   <h3>
                     <Link to="/get-help">Need Help</Link>
                   </h3>
+                  <h3 className="slash">/</h3>
                   <h3>
                     <Link to="/give-help">Give help</Link>
                   </h3>
+                  <h3 className="slash">/</h3>
                   <h3>
                     <Link to="/love-your-neighbour">Donate</Link>
                   </h3>

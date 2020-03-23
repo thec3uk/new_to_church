@@ -55,6 +55,10 @@
   font-size: 2rem;
 }
 
+h3.slash {
+  font-weight: 100;
+}
+
 #watchlive {
   background-image: url('/images/live.jpg');
 }
