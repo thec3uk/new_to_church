@@ -1,100 +1,129 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Nav, SideLinks } from '../components';
 import { Layout } from '../layouts';
 import Sections from './sections';
 
-const HomePage = ({ data }) => (
-  <Layout title="The C3 Church">
-    <Head />
-    <header>
-      <section
-        className="slice_VideoWrapper"
-        style={{
-          height: '100vh',
-        }}
-      >
-        <div className="video-overlay">
-          <Nav index_page={true} />
-          <div className="top-fold">
-            <div id="watchlive" className="half-screen">
-              <div>
-                <h2>
-                  <span
-                    style={{
-                      fontWeight: '100',
-                    }}
-                  >
-                    Watch
-                  </span>{' '}
-                  live{' '}
-                  <span
-                    style={{
-                      fontWeight: '100',
-                    }}
-                  >
-                    Sunday
-                  </span>
-                </h2>
-                <hr />
-                <div className="links">
-                  <h3>
-                    <Link to={data.prismicHomepage.data._9_30_service.url}>
+import ReactImageVideoLightbox from 'react-image-video-lightbox';
+
+const HomePage = ({ data }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const clickHandler = () => setIsOpen(true);
+
+  return (
+    <Layout title="The C3 Church">
+      <Head />
+      <header>
+        <section
+          className="slice_VideoWrapper"
+          style={{
+            height: '100vh',
+          }}
+        >
+          <div className="video-overlay">
+            <Nav index_page={true} />
+            <div className="top-fold">
+              <div id="watchlive" className="half-screen">
+                <div>
+                  <h2>
+                    <span
+                      style={{
+                        fontWeight: '100',
+                      }}
+                    >
+                      Watch
+                    </span>{' '}
+                    live{' '}
+                    <span
+                      style={{
+                        fontWeight: '100',
+                      }}
+                    >
+                      Sunday
+                    </span>
+                  </h2>
+                  <hr />
+                  <div className="links">
+                    <h3>
+                      {/*<Link to={data.prismicHomepage.data._9_30_service.url}>
                       09:30
-                    </Link>
-                  </h3>
-                  <h3 className="slash">/</h3>
-                  <h3>
-                    <Link to={data.prismicHomepage.data._11_30_service.url}>
-                      11:30
-                    </Link>
-                  </h3>
-                  <h3 className="slash">/</h3>
-                  <h3>
-                    <Link to={data.prismicHomepage.data._14_30_service.url}>
-                      14:30
-                    </Link>
-                  </h3>
-                  <h3 className="slash">/</h3>
-                  <h3>
-                    <Link to={data.prismicHomepage.data._17_30_service.url}>
-                      17:30
-                    </Link>
-                  </h3>
+                    </Link>*/}
+
+                      <button href="#" onClick={clickHandler}>
+                        09:30
+                      </button>
+                    </h3>
+                    <h3 className="slash">/</h3>
+                    <h3>
+                      <button href="#" onClick={clickHandler}>
+                        11:30
+                      </button>
+                    </h3>
+                    {/*<h3 className="slash">/</h3>
+                    <h3>
+                      <Link to={data.prismicHomepage.data._14_30_service.url}>
+                        14:30
+                      </Link>
+                    </h3>*/}
+                    <h3 className="slash">/</h3>
+                    <h3>
+                      <button href="#" onClick={clickHandler}>
+                        17:30
+                      </button>
+                    </h3>
+                  </div>
+                  {isOpen && (
+                    <div id="lightbox">
+                      <ReactImageVideoLightbox
+                        data={[
+                          {
+                            url:
+                              'https://embed.restream.io/player/index.html?token=9c8cfe650f8b4462016f9c026b724346',
+                            type: 'video',
+                            altTag: 'The C3 Church Live Stream',
+                          },
+                        ]}
+                        startIndex={0}
+                        showResourceCount={false}
+                        onCloseCallback={() => setIsOpen(false)}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
-            <div id="love-your-neighbour" className="half-screen">
-              <div>
-                <h2>
-                  love <span style={{ fontWeight: '100' }}>your</span> neighbour
-                </h2>
-                <hr />
-                <div className="links">
-                  <h3>
-                    <Link to="/get-help">Need Help</Link>
-                  </h3>
-                  <h3 className="slash">/</h3>
-                  <h3>
-                    <Link to="/give-help">Give help</Link>
-                  </h3>
-                  <h3 className="slash">/</h3>
-                  <h3>
-                    <Link to="/love-your-neighbour">Donate</Link>
-                  </h3>
+              <div id="love-your-neighbour" className="half-screen">
+                <div>
+                  <h2>
+                    love <span style={{ fontWeight: '100' }}>your</span>{' '}
+                    neighbour
+                  </h2>
+                  <hr />
+                  <div className="links">
+                    <h3>
+                      <Link to="/get-help">Need Help</Link>
+                    </h3>
+                    <h3 className="slash">/</h3>
+                    <h3>
+                      <Link to="/give-help">Give help</Link>
+                    </h3>
+                    <h3 className="slash">/</h3>
+                    <h3>
+                      <Link to="/love-your-neighbour">Donate</Link>
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <SideLinks index_page={true} />
-    </header>
-    <Sections data={data.prismicHomepage.data} />
-  </Layout>
-);
+        <SideLinks index_page={true} />
+      </header>
+      <Sections data={data.prismicHomepage.data} />
+    </Layout>
+  );
+};
 
 export default HomePage;
 

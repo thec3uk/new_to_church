@@ -38,9 +38,47 @@
   text-decoration: underline;
 }
 
-.half-screen a:hover {
+.half-screen a:hover,
+.half-screen button:hover {
   color: #f05356 !important;
   text-decoration: none;
+}
+
+.half-screen button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  color: #fff !important;
+  text-decoration: underline;
+
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+.half-screen button::-moz-focus-inner {
+  border: 000a;
+  padding: 0;
 }
 
 #love-your-neighbour {
@@ -118,4 +156,16 @@ h3.slash {
     flex-direction: row;
     justify-content: space-around;
   }
+}
+
+#lightbox > div {
+  z-index: 10;
+  background-color: #000a !important;
+}
+
+#lightbox > div > svg:nth-last-of-type(2n) {
+  display: none;
+}
+#lightbox > div > svg:last-of-type {
+  display: none;
 }
