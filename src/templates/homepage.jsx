@@ -79,9 +79,6 @@ export const query = graphql`
             id
             primary {
               css_classes
-              title_of_section {
-                text
-              }
             }
             items {
               articles_to_link {
@@ -93,28 +90,7 @@ export const query = graphql`
               }
             }
           }
-          ... on PrismicHomepageBodyTextAndArticleList {
-            slice_type
-            id
-            primary {
-              title_of_section {
-                text
-              }
-              css_classes
-              preamble {
-                text
-              }
-            }
-            items {
-              articles_to_link {
-                uid
-                url
-                document {
-                  ...cardContent
-                }
-              }
-            }
-          }
+
           ... on PrismicHomepageBodyRawHtml {
             slice_type
             id
@@ -134,3 +110,29 @@ export const query = graphql`
     }
   }
 `;
+
+// // title_of_section {
+// //   text
+// }
+// ... on PrismicHomepageBodyTextAndArticleList {
+//   slice_type
+//   id
+//   primary {
+//     title_of_section {
+//       text
+//     }
+//     css_classes
+//     preamble {
+//       text
+//     }
+//   }
+//   items {
+//     articles_to_link {
+//       uid
+//       url
+//       document {
+//         ...cardContent
+//       }
+//     }
+//   }
+// }
