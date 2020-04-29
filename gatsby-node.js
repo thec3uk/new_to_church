@@ -325,6 +325,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               uid
               data {
+                permanent
                 destination {
                   link_type
                 }
@@ -340,13 +341,13 @@ exports.createPages = ({ graphql, actions }) => {
             getDestination(graphql, node).then(url => {
               createRedirect({
                 fromPath: '/' + node.uid,
-                isPermanent: true,
+                isPermanent: node.uid.permanent || true,
                 toPath: url,
                 redirectInBrowser: true,
               });
               createRedirect({
                 fromPath: '/' + node.uid.toUpperCase(),
-                isPermanent: true,
+                isPermanent: node.uid.permanent || true,
                 toPath: url,
                 redirectInBrowser: true,
               });

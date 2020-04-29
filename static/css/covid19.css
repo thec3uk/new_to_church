@@ -1,0 +1,171 @@
+.video-overlay {
+  background-color: #202945;
+}
+.top-fold {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-screen {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.half-screen h3 {
+  padding: 1rem;
+  color: #fff;
+}
+
+.half-screen > div {
+  background-color: #202945aa;
+  padding: 10px;
+}
+
+.half-screen a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.half-screen a:hover,
+.half-screen button:hover {
+  color: #f05356 !important;
+  text-decoration: none;
+}
+
+.half-screen button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  color: #fff !important;
+  text-decoration: underline;
+
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+.half-screen button::-moz-focus-inner {
+  border: 000a;
+  padding: 0;
+}
+
+#love-your-neighbour {
+  background-image: url('/images/care.jpg');
+}
+
+#love-your-neighbour h2 {
+  font-size: 4rem;
+}
+
+#love-your-neighbour h3 {
+  font-size: 2rem;
+}
+
+h3.slash {
+  font-weight: 100;
+}
+
+#watchlive {
+  background-image: url('/images/EASTER_FACEBOOK.jpg');
+}
+
+#watchlive h2 {
+  font-size: 6rem;
+}
+
+#watchlive h3 {
+  font-size: 3rem;
+}
+
+.half-screen .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  #love-your-neighbour h2 {
+    font-size: 5rem;
+  }
+
+  #love-your-neighbour h3 {
+    font-size: 3rem;
+  }
+  #watchlive h2 {
+    font-size: 6rem;
+  }
+
+  #watchlive h3 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-fold {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .half-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+  }
+
+  .half-screen .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+#lightbox > div {
+  z-index: 10;
+  background-color: #000a !important;
+}
+
+#lightbox > div > svg:nth-last-of-type(2n) {
+  display: none;
+}
+#lightbox > div > svg:last-of-type {
+  display: none;
+}

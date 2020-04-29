@@ -68,6 +68,10 @@ const Footer = () => (
                 </div>
                 <br />
                 <span id="footer_charity">Registered Charity 1132699</span>
+                <br />
+                <span style={{ fontSize: '10pt', fontWeight: 'lighter' }}>
+                  Triodos Bank 16-58-10 20439032
+                </span>
               </div>
 
               <NewsLetterSignUp />

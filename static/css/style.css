@@ -2637,11 +2637,7 @@ body.system_popup a.system_toggle_advanced:hover,
     padding-right: 10px;
   }
 }
-.systemPageContent ul {
-  margin: 20px 0 0;
-  padding-left: 0;
-  list-style: none;
-}
+
 .systemPageContent ul ul li {
   margin-bottom: 12px;
 }
