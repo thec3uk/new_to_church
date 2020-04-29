@@ -79,6 +79,9 @@ export const query = graphql`
             id
             primary {
               css_classes
+              title_of_section {
+                text
+              }
             }
             items {
               articles_to_link {
@@ -111,9 +114,7 @@ export const query = graphql`
   }
 `;
 
-// // title_of_section {
-// //   text
-// }
+
 // ... on PrismicHomepageBodyTextAndArticleList {
 //   slice_type
 //   id
