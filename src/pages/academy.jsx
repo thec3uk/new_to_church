@@ -50,9 +50,9 @@ const AcademyPage = ({ data }) => {
         fluid={page.hero_image.localFile.childImageSharp.fluid}
         backgroundColor={'#040e18'}
       >
-        <div className="grid grid-cols-8 grid-rows-12 h-screen">
+        <div className="grid grid-cols-8 grid-rows-4 lg:grid-rows-12 h-screen">
           <HtmlHexagon
-            className="text-purple-trans stroke-purple fill-current col-start-3 col-end-7 row-start-2 row-end-5"
+            className="text-purple-trans stroke-purple fill-current col-start-1 col-end-9 row-start-2 row-end-5 lg:col-start-3 lg:col-end-7 lg:row-start-2 lg:row-end-5"
             containerClassName="text-center grid-rows-6 px-16 pt-16"
           >
             <img
@@ -60,11 +60,11 @@ const AcademyPage = ({ data }) => {
               alt="C3 Logo in White with text"
               className="w-12 mx-auto mt-8"
             />
-            <h1 className="text-5xl font-accent text-yellow subpixel-antialiased py-8">
+            <h1 className="text-5xl font-accent text-yellow subpixel-antialiased py-8 lg:py-12">
               <span className="font-title lowercase text-white">The C3</span>{' '}
               Academy
             </h1>
-            <div className="flex flex-col items-center px-8">
+            <div className="flex flex-col lg:items-center px-20 lg:px-8">
               {page.ctas.map((cta, idx) => {
                 const textColor = idx % 2 === 0 ? 'text-black' : 'text-white';
                 const bgColor = idx % 2 === 0 ? 'bg-yellow' : 'bg-purple';
@@ -74,7 +74,7 @@ const AcademyPage = ({ data }) => {
                   idx % 2 === 0 ? 'bg-yellow-200' : 'bg-purple-200';
                 return (
                   <a
-                    className={`${textColor} ${bgColor} hover:${hoverTextColor} hover:${hoverBgColor} px-4 pb-1 shadow font-title lowercase text-base m-2`}
+                    className={`${textColor} ${bgColor} hover:${hoverTextColor} hover:${hoverBgColor} px-4 pt-1 pb-2 lg:pt-0 lg:pb-1 shadow font-title lowercase text-2xl lg:text-base my-2 lg:m-2`}
                     href={cta.link.url}
                     key={idx}
                   >

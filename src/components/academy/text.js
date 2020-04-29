@@ -4,9 +4,9 @@ import { graphql } from 'gatsby';
 
 const Text = ({ data }) => {
   return (
-    <section className={'px-8 text-black mx-8'}>
-      <div className="grid grid-cols-2 grid-rows-1 col-gap-px">
-        <div className="w-screen h-screen -ml-2/5 sticky inset-y-0 z-0 -mt-20">
+    <section className={'lg:px-8 text-black lg:mx-8'}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 col-gap-px">
+        <div className="hidden lg:block w-screen h-screen lg:-ml-2/5 sticky inset-y-0 z-0 lg:-mt-20">
           <img
             className="object-cover"
             src={data.primary.image.url}
