@@ -1,0 +1,117 @@
+@tailwind base;
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../../../static/fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Gotcha;
+    src: url("../../../static/fonts/Gotcha-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Novecento Sans Wide';
+    font-weight: bold;
+    src: url("../../../static/fonts/Novecentosanswide-Bold.otf") format("opentype");
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+h3 {
+  @apply text-4xl;
+}
+
+.hex-section-title > h3 {
+  @apply text-5xl;
+}
+
+h4 {
+  @apply text-3xl;
+}
+
+h5 {
+  @apply text-2xl font-accent mt-8;
+}
+
+p {
+  @apply mb-2
+}
+/* .hexagon-wrapper {
+  text-align: center;
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+}
+
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+  z-index: -10;
+}
+
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg);
+  z-index: -10;
+} */
+
+.hexagon {
+  position: relative;
+  width: 200px;
+  height: 115.47px;
+  background-color: #64C7CC;
+  margin: 57.74px 0;
+  border-left: solid 5px #333333;
+  border-right: solid 5px #333333;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 141.42px;
+  height: 141.42px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 24.2893px;
+}
+
+.hexagon:before {
+  top: -70.7107px;
+  border-top: solid 7.0711px #333333;
+  border-right: solid 7.0711px #333333;
+}
+
+.hexagon:after {
+  bottom: -70.7107px;
+  border-bottom: solid 7.0711px #333333;
+  border-left: solid 7.0711px #333333;
+}
+
+@tailwind components;
+
+@tailwind utilities;

@@ -13,6 +13,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-background-image',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:',
+      },
+    },
+    `gatsby-plugin-postcss`,
+    {
       resolve: 'gatsby-source-prismic',
       options: {
         // The name of your prismic.io repository. This is required.
