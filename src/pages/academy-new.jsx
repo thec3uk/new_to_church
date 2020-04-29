@@ -31,7 +31,7 @@ const Slices = ({ slices }) => {
         return <div key={idx}></div>;
       }
       return (
-        <div key={idx} id={`${idx}`} className="py-12 md:py-32 bg-grey-100">
+        <div key={idx} id={`${idx}`} className="py-12 md:py-32">
           <Component key={idx} data={contentSlice} />
         </div>
       );
@@ -86,7 +86,7 @@ const AcademyPage = ({ data }) => {
           </HtmlHexagon>
         </div>
       </BackgroundImage>
-      <main>
+      <main className="bg-grey-100">
         <Slices slices={body} />
       </main>
     </div>

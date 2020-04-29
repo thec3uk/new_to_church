@@ -14,7 +14,7 @@ const Text = ({ data }) => {
           />
         </div>
         <div
-          className={`bg-${data.primary.background_text_colour} py-10 px-6 lowercase font-title z-10`}
+          className={`bg-${data.primary.background_text_colour} py-10 px-6 font-sans z-10`}
           dangerouslySetInnerHTML={{ __html: data.primary.text.html }}
         ></div>
 

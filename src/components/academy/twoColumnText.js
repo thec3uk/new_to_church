@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import HtmlHexagon from './HtmlHex';
 
 const TwoColumnText = ({ data }) => {
-  console.log(data);
   return (
     <section className={'px-8 lg:px-16 text-black grid grid-cols-8 font-title lowercase mb-32'}>
 

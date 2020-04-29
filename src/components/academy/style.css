@@ -21,7 +21,7 @@ ul {
 }
 
 h3 {
-  @apply text-4xl;
+  @apply text-4xl font-title lowercase;
 }
 
 .hex-section-title > h3 {
@@ -29,15 +29,15 @@ h3 {
 }
 
 h4 {
-  @apply text-3xl;
+  @apply text-3xl font-title lowercase;
 }
 
 h5 {
-  @apply text-2xl font-accent mt-8;
+  @apply text-2xl font-accent normal-case mt-8;
 }
 
 p {
-  @apply mb-2
+  @apply mb-2;
 }
 /* .hexagon-wrapper {
   text-align: center;
