@@ -76,6 +76,25 @@ export const query = graphql`
         }
       }
     }
+    ... on PrismicAcademyPage {
+      data {
+        card_title
+        card_cta
+        card_description
+        card_image {
+          alt
+          copyright
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 300) {
+                srcSet
+                sizes
+              }
+            }
+          }
+        }
+      }
+    }
     ... on PrismicRedirect {
       data {
         card_title
