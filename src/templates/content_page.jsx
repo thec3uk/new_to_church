@@ -134,6 +134,11 @@ export const query = graphql`
                           page_title
                         }
                       }
+                      ... on PrismicAcademyPage {
+                        data {
+                          page_title
+                        }
+                      }
                     }
                   }
                 }
