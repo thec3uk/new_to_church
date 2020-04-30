@@ -37,7 +37,7 @@ Card.propTypes = {
 };
 
 export const query = graphql`
-  fragment cardContent on PrismicContentPagePrismicLandingPagePrismicRedirectUnion {
+  fragment cardContent on PrismicAcademyPagePrismicContentPagePrismicLandingPagePrismicRedirectUnion {
     ... on PrismicContentPage {
       data {
         card_title
