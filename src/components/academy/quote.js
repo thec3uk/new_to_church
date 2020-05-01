@@ -26,10 +26,6 @@ export const query = graphql`
     id
     slice_type
     primary {
-      portrait_author {
-        url
-        alt
-      }
       quote {
         html
       }
