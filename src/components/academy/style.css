@@ -39,6 +39,14 @@ h5 {
 p {
   @apply mb-2;
 }
+
+a {
+  @apply underline text-purple;
+}
+
+a:hover {
+  @apply bg-purple text-yellow;
+}
 /* .hexagon-wrapper {
   text-align: center;
   margin: 20px;

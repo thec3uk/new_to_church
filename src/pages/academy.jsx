@@ -6,6 +6,7 @@ import Hexagon from 'react-hexagon';
 import '../components/academy/style.css';
 import Quote from '../components/academy/quote';
 import TwoColumnText from '../components/academy/twoColumnText';
+import TextWithImage from '../components/academy/textWithImage';
 import Text from '../components/academy/text';
 import Testimonial from '../components/academy/testimonial';
 import TextWithHexImage from '../components/academy/textHexImage';
@@ -14,13 +15,15 @@ import TextWithCTA from '../components/academy/textWithCtas';
 import HtmlHexagon from '../components/academy/HtmlHex';
 
 const Slices = ({ slices }) => {
+
   return (
     slices &&
     slices.map((contentSlice, idx) => {
       const componentListObj = {
         quote: Quote,
         '2_column_text': TwoColumnText,
-        text: Text,
+        text: TextWithImage,
+        text1: Text,
         team: Testimonial,
         hex_image_with_text: TextWithHexImage,
         text_with_ctas: TextWithCTA,
@@ -124,6 +127,7 @@ export const query = graphql`
           ...testimonialSlice
           ...textHexImageSlice
           ...ctaSlice
+          ...text1Slice
         }
       }
     }
