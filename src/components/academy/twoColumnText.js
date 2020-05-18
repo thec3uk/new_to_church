@@ -5,7 +5,7 @@ import Transition from '../Transition'
 
 // className="bg-purple-trans text-white px-24 lg:px-32 py-32 lg:py-20 text-xl"
 
-const HexModal = ({ title, content, setModalOpen, colourClasses }) => (
+const HexModal = ({ content, setModalOpen, colourClasses }) => (
   <div
     className={`${colourClasses} rounded px-4 pt-5 pb-4 mx-1 md:mx-8 max-h-full overflow-scroll shadow-xl transform transition-all max-w-full sm:w-full sm:p-6 `}
     onClick={() => setModalOpen(false)}
@@ -24,26 +24,26 @@ const HexModal = ({ title, content, setModalOpen, colourClasses }) => (
 
 const TwoColumnText = ({ data }) => {
   const [colourClasses, setColourClasses] = useState("")
+  const [fadeColourClass, setFadeColourClass] = useState("")
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState('');
-  const [modalTitle, setModalTitle] = useState('');
 
   const openPTModal = () => {
     setModalOpen(true);
-    setModalContent(data.primary.column_2.html);
-    setModalTitle('Part Time');
+    setModalContent(data.items[1].content.html);
     setColourClasses("bg-purple text-white")
+    setFadeColourClass("bg-yellow")
   };
   const openFTModal = () => {
     setModalOpen(true);
-    setModalContent(data.primary.column_1.html);
-    setModalTitle('Full Time');
+    setModalContent(data.items[0].content.html);
     setColourClasses("bg-yellow text-black")
+    setFadeColourClass("bg-purple")
   };
   return (
     <section
       className={
-        'px-8 lg:px-16 text-black grid grid-cols-1 grid-rows-3 lg:grid-rows-1 lg:grid-cols-8 row-gap-4 lg:row-gap-0 font-title lowercase mb-32 -mt-32 lg:mt-0'
+        'px-8 lg:px-16 text-black grid grid-cols-1 grid-rows-3 lg:grid-rows-5 lg:grid-cols-8 row-gap-4 lg:row-gap-0 font-title lowercase mb-32 -mt-32 lg:mt-8 lg:-mb-8 '
       }
     >
       {modalOpen && (
@@ -58,7 +58,7 @@ const TwoColumnText = ({ data }) => {
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 transition-opacity">
-              <div className="absolute inset-0 bg-gray-500 opacity-75" role="presentation" onClick={() => setModalOpen(false)}></div>
+              <div className={`absolute inset-0 ${fadeColourClass} opacity-75`} role="presentation" onClick={() => setModalOpen(false)}></div>
             </div>
           </Transition>
           <Transition
@@ -71,7 +71,6 @@ const TwoColumnText = ({ data }) => {
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <HexModal
-              title={modalTitle}
               content={modalContent}
               colourClasses={colourClasses}
               setModalOpen={setModalOpen}
@@ -80,26 +79,26 @@ const TwoColumnText = ({ data }) => {
         </div>
       )}
       <HtmlHexagon
-        className="stroke-current text-yellow fill-current row-start-2 row-end-3 lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-4"
+        className="stroke-current text-yellow fill-current row-start-2 row-end-3 lg:row-start-2 lg:row-end-5 lg:col-start-1 lg:col-end-4"
         containerClassName="flex flex-col justify-between content-center"
         onClick={() => openFTModal()}
       >
         <div className="text-black py-48 text-center cursor-pointer">
-          <h3 className="text-5xl">Full Time</h3>
-          <p>Core leadership Training + Stream</p>
+          <h3 className="text-5xl">{data.items[0].title}</h3>
+          <p>{data.items[0].sub_title}</p>
         </div>
       </HtmlHexagon>
-      <div className="text-black text-center -mx-8 lg:mx-auto mt-auto mb-8 lg:my-0 row-start-1 row-end-2 lg:col-start-4 lg:col-end-6">
+      <div className="text-black text-center -mx-8 lg:mx-auto mt-auto mb-8 lg:my-0 row-start-1 row-end-2 lg:row-start-2 lg:row-end-3 lg:col-start-4 lg:col-end-6">
         <h3 className="text-5xl">{data.primary.title}</h3>
       </div>
       <HtmlHexagon
-        className="stroke-current text-purple fill-current row-start-3 row-end-4 lg:row-start-1 lg:row-end-2 lg:col-start-6 lg:col-end-9"
+        className="stroke-current text-purple fill-current row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 lg:col-start-6 lg:col-end-9"
         containerClassName="flex flex-col justify-end h-full"
         onClick={() => openPTModal()}
       >
         <div className="text-white text-center py-48 cursor-pointer">
-          <h3 className="text-5xl">Part Time</h3>
-          <p>Core leadership Training</p>
+          <h3 className="text-5xl">{data.items[1].title}</h3>
+          <p>{data.items[1].sub_title}</p>
         </div>
       </HtmlHexagon>
     </section>
@@ -112,11 +111,13 @@ export const query = graphql`
     slice_type
     primary {
       title
-      column_1 {
+    }
+    items {
+      title
+      sub_title
+      content {
         html
-      }
-      column_2 {
-        html
+        text
       }
     }
   }
