@@ -5,7 +5,6 @@ import Hexagon from 'react-hexagon';
 const TextWithHexImage = ({ data }) => {
   const bgColour =
     data.primary.background_colour && `bg-${data.primary.background_colour}`;
-  console.log(bgColour);
   return (
     <section
       className={`lg:px-8 text-black ${bgColour} -my-16 lg:-my-32 py-32`}

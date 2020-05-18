@@ -5,7 +5,7 @@ import HtmlHexagon from './HtmlHex';
 
 const Quote = ({ data }) => {
   return (
-    <section className={'px-8 lg:px-16 text-black lg:mx-32 mt-8 lg:mt-0 -mb-8 '}>
+    <section className={'px-8 lg:px-16 text-black lg:mx-32 xl:mx-64 mt-8 lg:mt-0 -mb-8 '}>
       <div className="grid grid-cols-1 md:mx-20 xl:mx-48">
         <HtmlHexagon
           className="stroke-yellow fill-current text-purple"
