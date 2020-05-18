@@ -54,6 +54,7 @@ module.exports = {
       spacing: {
         '-2/5': '-41vw',
         '-1/2': '-50vw',
+        iframe: '56.25%',
       },
       gridTemplateRows: {
         '8': 'repeat(8, minmax(0, 1fr))',

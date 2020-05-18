@@ -3,8 +3,6 @@ import { graphql } from 'gatsby';
 import HtmlHexagon from './HtmlHex';
 import Transition from '../Transition'
 
-// className="bg-purple-trans text-white px-24 lg:px-32 py-32 lg:py-20 text-xl"
-
 const HexModal = ({ content, setModalOpen, colourClasses }) => (
   <div
     className={`${colourClasses} rounded px-4 pt-5 pb-4 mx-1 md:mx-8 max-h-full overflow-scroll shadow-xl transform transition-all max-w-full sm:w-full sm:p-6 `}
