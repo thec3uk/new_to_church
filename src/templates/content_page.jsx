@@ -7,16 +7,16 @@ import { HeroLayout, Content } from '../layouts';
 const shapeGalleryData = gallery_list => {
   return gallery_list.map(({ gallery_node }) => ({
     id: gallery_node.id,
-    url: gallery_node.document[0].data.gallery_image.url,
+    url: gallery_node.document.data.gallery_image.url,
     slug: gallery_node.uid,
-    title: gallery_node.document[0].data.gallery_image.alt,
+    title: gallery_node.document.data.gallery_image.alt,
   }));
 };
 
 const shapeNavItem = item => {
   return {
     slug: item.uid,
-    title: item.document[0].data.page_title,
+    title: item.document.data.page_title,
   };
 };
 
@@ -49,9 +49,9 @@ const ContentPage = ({ data }) => {
                 currentSlug={uid}
                 parent={shapeNavItem(page.parent_page)}
                 siblings={
-                  page.parent_page.document[0].data.child_pages &&
+                  page.parent_page.document.data.child_pages &&
                   shapeSiblingData(
-                    page.parent_page.document[0].data.child_pages
+                    page.parent_page.document.data.child_pages
                   )
                 }
               >

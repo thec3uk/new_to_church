@@ -46,20 +46,18 @@ const LandingPage = ({ data }) => {
         <div className="container">
           <div className="article_cards">
             {page.child_pages &&
-              page.child_pages.map(({ child_page }) => {
-                if (child_page === null) {
+              page.child_pages.map(({ child_page: { uid, document } }) => {
+                if (uid === null && document === null) {
                   return;
                 }
-                const { uid, document } = child_page;
-                const doc = document[0];
                 return (
                   <Card
                     key={uid}
-                    title={doc.data.card_title}
-                    description={doc.data.card_description}
+                    title={document.data.card_title}
+                    description={document.data.card_description}
                     slug={uid}
-                    image={doc.data.card_image}
-                    cta={doc.data.card_cta}
+                    image={document.data.card_image}
+                    cta={document.data.card_cta}
                     width={cardWidth(page.child_pages)}
                   />
                 );
