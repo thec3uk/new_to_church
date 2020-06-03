@@ -1,0 +1,26 @@
+{
+  "Main" : {
+    "content" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "content",
+        "useAsTitle" : true
+      }
+    },
+    "url" : {
+      "type" : "Link",
+      "config" : {
+        "allowTargetBlank" : true,
+        "label" : "url"
+      }
+    },
+    "active" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "no", "yes" ],
+        "default_value" : "no",
+        "label" : "active"
+      }
+    }
+  }
+}

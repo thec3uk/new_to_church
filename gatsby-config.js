@@ -50,7 +50,18 @@ module.exports = {
         fetchLinks: [
           // Your list of links
         ],
-
+        schemas: {
+          academy_page: require('./src/schemas/academy_page.json'),
+          content_page: require('./src/schemas/content_page.json'),
+          homepage: require('./src/schemas/homepage.json'),
+          landing_page: require('./src/schemas/landing_page.json'),
+          notification_banner: require('./src/schemas/notification_banner.json'),
+          redirect: require('./src/schemas/redirect.json'),
+          site_config: require('./src/schemas/site_config.json'),
+          text_page: require('./src/schemas/text_page.json'),
+        },
+        prismicToolbar: true,
+        shouldDownloadImage: () => true,
         // Set an HTML serializer function used to process formatted content.
         // Fields with rich text formatting use this function to generate the
         // correct HTML.

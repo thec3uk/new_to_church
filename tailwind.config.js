@@ -1,6 +1,7 @@
 const pseudoElements = ['before', 'after'];
 
 module.exports = {
+  purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     extend: {
       fontFamily: {

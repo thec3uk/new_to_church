@@ -116,7 +116,7 @@ const Footer = () => (
             <div className="footerbar">
               {data.prismicSiteConfig.data.footer_navigation.map(
                 ({ footer_link }) => {
-                  const page_data = footer_link.document[0].data;
+                  const page_data = footer_link.document.data;
                   return (
                     <Link
                       id={page_data.footer_id}

@@ -31,11 +31,10 @@ const Section = ({ data }) => {
         {section.primary.banner_image && (
           <img
             srcSet={
-              section.primary.banner_image.localFile.childImageSharp.fluid
-                .srcSet
+              section.primary.banner_image.fluid.srcSet
             }
             sizes={
-              section.primary.banner_image.localFile.childImageSharp.fluid.sizes
+              section.primary.banner_image.fluid.sizes
             }
             alt={section.primary.banner_image.alt}
           />
@@ -55,15 +54,14 @@ const Section = ({ data }) => {
             {section.items &&
               section.items.map(({ articles_to_link }) => {
                 const { document, uid, url } = articles_to_link;
-                const doc = document[0];
                 return (
                   <Card
                     key={uid}
-                    title={doc.data.card_title}
-                    description={doc.data.card_description}
+                    title={document.data.card_title}
+                    description={document.data.card_description}
                     slug={url}
-                    image={doc.data.card_image}
-                    cta={doc.data.card_cta}
+                    image={document.data.card_image}
+                    cta={document.data.card_cta}
                   />
                 );
               })}

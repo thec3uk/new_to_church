@@ -111,6 +111,9 @@ const HomePage = ({ data }) => {
                     <h3>
                       <Link to="/love-your-neighbour">Donate</Link>
                     </h3>
+                    <h3>
+                      <Link to="/need-reduced-income-hamper">Need a Reduced Income Hamper?</Link>
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -132,104 +135,86 @@ HomePage.propTypes = {
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    prismicHomepage(uid: { eq: $slug }) {
-      uid
-      data {
-        _9_30_service {
-          url
-        }
-        _11_30_service {
-          url
-        }
-        _14_30_service {
-          url
-        }
-        _17_30_service {
-          url
-        }
-        page_title
-        body {
-          ... on PrismicHomepageBodyText1 {
-            slice_type
-            id
-            primary {
-              css_classes
-              title_of_section {
-                text
-              }
-              text {
-                text
-              }
-              banner_image {
-                alt
-                localFile {
-                  childImageSharp {
-                    fluid {
-                      srcSet
-                      sizes
-                    }
-                  }
-                }
+query ($slug: String!) {
+  prismicHomepage(uid: {eq: $slug}) {
+    uid
+    data {
+      page_title
+      body {
+        ... on PrismicHomepageBodyText1 {
+          slice_type
+          id
+          primary {
+            css_classes
+            title_of_section {
+              text
+            }
+            text {
+              text
+            }
+            banner_image {
+              alt
+              fluid {
+                srcSet
+                sizes
               }
             }
           }
-          ... on PrismicHomepageBodyListOfArticles {
-            slice_type
-            id
-            primary {
-              css_classes
-            }
-            items {
-              articles_to_link {
-                uid
-                url
-                document {
-                  ...cardContent
-                }
-              }
+        }
+        ... on PrismicHomepageBodyListOfArticles {
+          slice_type
+          id
+          primary {
+            css_classes
+          }
+          items {
+            articles_to_link {
+              uid
+              url
+              ...cardContent
             }
           }
-          ... on PrismicHomepageBodyTextAndArticleList {
-            slice_type
-            id
-            primary {
-              title_of_section {
-                text
-              }
-              css_classes
-              preamble {
-                text
-              }
+        }
+        ... on PrismicHomepageBodyTextAndArticleList {
+          slice_type
+          id
+          primary {
+            title_of_section {
+              text
             }
-            items {
-              articles_to_link {
-                uid
-                url
-                document {
-                  ...cardContent
-                }
-              }
+            css_classes
+            preamble {
+              text
             }
           }
-          ... on PrismicHomepageBodyRawHtml {
-            slice_type
-            id
-            primary {
-              title_of_section {
-                text
-              }
-              css_classes
-              section_title_icon
-              html {
-                text
-              }
+          items {
+            articles_to_link {
+              uid
+              url
+              ...cardContent
+            }
+          }
+        }
+        ... on PrismicHomepageBodyRawHtml {
+          slice_type
+          id
+          primary {
+            title_of_section {
+              text
+            }
+            css_classes
+            section_title_icon
+            html {
+              text
             }
           }
         }
       }
     }
   }
+}
+
+
 `;
 
 // title_of_section {

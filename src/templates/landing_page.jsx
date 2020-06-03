@@ -93,18 +93,22 @@ export const query = graphql`
         child_pages {
           child_page {
             uid
-            document {
-              ...cardContent
-            }
+            ...cardContent
           }
         }
         body {
-          id
-          slice_type
-          primary {
-            text {
-              html
-              text
+          ... on Node {
+            id
+          }
+          ... on PrismicSliceType {
+            slice_type
+          }
+          ... on PrismicLandingPageBodyText {
+            primary {
+              text {
+                html
+                text
+              }
             }
           }
         }

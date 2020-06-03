@@ -50,7 +50,7 @@ const AcademyPage = ({ data }) => {
       <BackgroundImage
         Tag="header"
         className={'w-screen'}
-        fluid={page.hero_image.localFile.childImageSharp.fluid}
+        fluid={page.hero_image.fluid}
         backgroundColor={'#040e18'}
       >
         <div className="grid grid-cols-8 grid-rows-4 lg:grid-rows-12 h-screen">
@@ -105,19 +105,13 @@ export const query = graphql`
         ctas {
           text
           link {
-            kind
-            name
             url
             target
           }
         }
         hero_image {
-          localFile {
-            childImageSharp {
-              fluid(quality: 90, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
+          fluid(maxWidth: 1920) {
+            ...GatsbyPrismicImageFluid
           }
         }
         body {

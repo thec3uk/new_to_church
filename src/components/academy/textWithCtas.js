@@ -8,7 +8,7 @@ const TextWithCTA = ({ data }) => {
     <BackgroundImage
       Tag="section"
       className={'-my-32 py-24  bg-fixed'}
-      fluid={data.primary.background_image.localFile.childImageSharp.fluid}
+      fluid={data.primary.background_image.fluid}
       backgroundColor={'#040e18'}
       background-position={"top"}
     >
@@ -57,20 +57,14 @@ export const query = graphql`
       }
       background_image {
         alt
-        localFile {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+        fluid(maxWidth: 1920) {
+          ...GatsbyPrismicImageFluid
         }
       }
     }
     items {
       cta_text
       cta_link {
-        kind
-        name
         url
         target
       }

@@ -7,7 +7,7 @@ import NotificationBar from 'react-notification-bar';
 const MenuItem = ({ menuItem, ...props }) => {
   const { document, url } = menuItem;
   const title =
-    document !== undefined ? document[0].data.card_title : menuItem.title;
+    document !== undefined ? document.data.card_title : menuItem.title;
   return (
     <li className={styles.menu_item} {...props}>
       {url ? (
@@ -23,13 +23,12 @@ const MenuItem = ({ menuItem, ...props }) => {
 
 MenuItem.propTypes = {
   menuItem: PropTypes.shape({
-    document: PropTypes.arrayOf(
+    document:
       PropTypes.shape({
         data: PropTypes.shape({
           card_title: PropTypes.string,
         }),
-      })
-    ),
+      }),
     url: PropTypes.string,
     title: PropTypes.string,
   }),

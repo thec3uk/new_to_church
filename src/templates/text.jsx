@@ -40,12 +40,18 @@ export const query = graphql`
         contact_form
         contact_form_to_email_address
         body {
-          id
-          slice_type
-          primary {
-            text {
-              html
-              text
+          ... on Node {
+            id
+          }
+          ... on PrismicSliceType {
+            slice_type
+          }
+          ... on PrismicTextPageBodyText {
+            primary {
+              text {
+                html
+                text
+              }
             }
           }
         }

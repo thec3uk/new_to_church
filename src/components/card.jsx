@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const Card = ({ title, description, slug, image, cta, width }) => (
+const Card = ({ title, description, slug, image, cta, width }) => {
+  return (
   <div style={width ? { width: width } : {}}>
     <div className="articleListImage">
       <Link to={`/${slug}`}>
@@ -23,7 +24,7 @@ const Card = ({ title, description, slug, image, cta, width }) => (
       <Link to={`/${slug}`}>{cta}</Link>
     </div>
   </div>
-);
+)};
 
 export default Card;
 
@@ -37,9 +38,11 @@ Card.propTypes = {
 };
 
 export const query = graphql`
-  fragment cardContent on PrismicAcademyPagePrismicContentPagePrismicLandingPagePrismicRedirectUnion {
+fragment cardContent on PrismicLinkType {
+  document {
     ... on PrismicContentPage {
       data {
+        __typename
         card_title
         card_cta
         card_description
@@ -59,6 +62,7 @@ export const query = graphql`
     }
     ... on PrismicLandingPage {
       data {
+        __typename
         card_title
         card_cta
         card_description
@@ -78,6 +82,7 @@ export const query = graphql`
     }
     ... on PrismicAcademyPage {
       data {
+        __typename
         card_title
         card_cta
         card_description
@@ -97,6 +102,7 @@ export const query = graphql`
     }
     ... on PrismicRedirect {
       data {
+        __typename
         card_title
         card_cta
         card_description
@@ -115,4 +121,5 @@ export const query = graphql`
       }
     }
   }
+}
 `;
