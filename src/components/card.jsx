@@ -3,11 +3,11 @@ import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const Card = ({ title, description, slug, image, cta, width }) => {
-
+  const url = slug.startsWith('/') ? slug : `/${slug}`
   return (
   <div style={width ? { width: width } : {}}>
     <div className="articleListImage">
-      <Link to={`${slug}`}>
+      <Link to={`${url}`}>
         <img
           srcSet={image.localFile.childImageSharp.fluid.srcSet}
           sizes={image.localFile.childImageSharp.fluid.sizes}
@@ -16,13 +16,13 @@ const Card = ({ title, description, slug, image, cta, width }) => {
       </Link>
     </div>
     <div className="articleListTitle">
-      <Link to={`${slug}`}>{title}</Link>
+      <Link to={`${url}`}>{title}</Link>
     </div>
     <div className="articleListSummary">
       <span>{description}</span>
     </div>
     <div className="articleListLink">
-      <Link to={`${slug}`}>{cta}</Link>
+      <Link to={`${url}`}>{cta}</Link>
     </div>
   </div>
 )};
