@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Hexagon from 'react-hexagon';
 
-import '../components/academy/style.css';
+import '../components/academy/style.scoped.css';
 import Quote from '../components/academy/quote';
 import TwoColumnText from '../components/academy/twoColumnText';
 import TextWithImage from '../components/academy/textWithImage';
@@ -15,7 +15,6 @@ import TextWithCTA from '../components/academy/textWithCtas';
 import HtmlHexagon from '../components/academy/HtmlHex';
 
 const Slices = ({ slices }) => {
-
   return (
     slices &&
     slices.map((contentSlice, idx) => {

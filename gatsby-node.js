@@ -360,7 +360,10 @@ exports.createPages = ({ graphql, actions }) => {
 };
 
 /* Allows named imports */
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = (
+  { stage, loaders, actions },
+  { cssLoaderOptions = {}, postCssPlugins }
+) => {
   if (stage === 'build-html') {
     actions.setWebpackConfig({
       resolve: {
@@ -379,6 +382,19 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     actions.setWebpackConfig({
       resolve: {
         modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      },
+      module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: [
+              // loaders.miniCssExtract(),
+              // loaders.css({ ...cssLoaderOptions, importLoaders: 2 }),
+              // loaders.postcss({ plugins: postCssPlugins }),
+              { loader: 'scoped-css-loader' },
+            ],
+          },
+        ],
       },
     });
   }

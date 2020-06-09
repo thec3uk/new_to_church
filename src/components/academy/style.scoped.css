@@ -1,19 +1,15 @@
 @tailwind base;
 
 @font-face {
-    font-family: Montserrat;
-    src: url("../../../static/fonts/Montserrat-Regular.otf") format("opentype");
+  font-family: Gotcha;
+  src: url('../../../static/fonts/Gotcha-Regular.otf') format('opentype');
 }
 
 @font-face {
-    font-family: Gotcha;
-    src: url("../../../static/fonts/Gotcha-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Novecento Sans Wide';
-    font-weight: bold;
-    src: url("../../../static/fonts/Novecentosanswide-Bold.otf") format("opentype");
+  font-family: 'Novecento Sans Wide';
+  font-weight: bold;
+  src: url('../../../static/fonts/Novecentosanswide-Bold.otf')
+    format('opentype');
 }
 
 ul {

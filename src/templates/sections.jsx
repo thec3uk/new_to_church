@@ -30,12 +30,8 @@ const Section = ({ data }) => {
         {/* banner image */}
         {section.primary.banner_image && (
           <img
-            srcSet={
-              section.primary.banner_image.fluid.srcSet
-            }
-            sizes={
-              section.primary.banner_image.fluid.sizes
-            }
+            srcSet={section.primary.banner_image.fluid.srcSet}
+            sizes={section.primary.banner_image.fluid.sizes}
             alt={section.primary.banner_image.alt}
           />
         )}
@@ -54,6 +50,7 @@ const Section = ({ data }) => {
             {section.items &&
               section.items.map(({ articles_to_link }) => {
                 const { document, uid, url } = articles_to_link;
+                console.log(articles_to_link);
                 return (
                   <Card
                     key={uid}
