@@ -1,7 +1,17 @@
 const pseudoElements = ['before', 'after'];
 
 module.exports = {
-  purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
+  purge: {
+    content: [
+      './src/**/*.js',
+      './src/**/*.jsx',
+      './src/**/*.ts',
+      './src/**/*.tsx',
+    ],
+    options: {
+      whitelist: ['bg-purple-trans-30', 'bg-yellow-trans'],
+    },
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -37,7 +47,7 @@ module.exports = {
         'yellow-200': '#BB8E00',
         'yellow-trans': '#FAC52DB3',
         purple: '#2E293E',
-        "purple-200": '#5E586F',
+        'purple-200': '#5E586F',
         'purple-trans': '#2E293Eb3',
         'purple-trans-30': '#2E293E4d',
       },
