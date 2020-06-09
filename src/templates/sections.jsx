@@ -50,7 +50,6 @@ const Section = ({ data }) => {
             {section.items &&
               section.items.map(({ articles_to_link }) => {
                 const { document, uid, url } = articles_to_link;
-                console.log(articles_to_link);
                 return (
                   <Card
                     key={uid}
