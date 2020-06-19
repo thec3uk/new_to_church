@@ -13,6 +13,7 @@ import TextWithHexImage from '../components/academy/textHexImage';
 import TextWithCTA from '../components/academy/textWithCtas';
 
 import HtmlHexagon from '../components/academy/HtmlHex';
+import SEO from '../components/SEO';
 
 const Slices = ({ slices }) => {
   return (
@@ -44,8 +45,10 @@ const Slices = ({ slices }) => {
 const AcademyPage = ({ data }) => {
   const page = data.prismicAcademyPage.data;
   const body = page.body;
+
   return (
     <div>
+      <SEO title={page.page_title} />
       <BackgroundImage
         Tag="header"
         className={'w-screen'}
