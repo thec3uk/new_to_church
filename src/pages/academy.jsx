@@ -4,6 +4,7 @@ import BackgroundImage from 'gatsby-background-image';
 import Hexagon from 'react-hexagon';
 
 import '../components/academy/style.scoped.css';
+import '../components/academy/academy.css';
 import Quote from '../components/academy/quote';
 import TwoColumnText from '../components/academy/twoColumnText';
 import TextWithImage from '../components/academy/textWithImage';
@@ -47,7 +48,7 @@ const AcademyPage = ({ data }) => {
   const body = page.body;
 
   return (
-    <div>
+    <div id="academy">
       <SEO title={page.page_title} />
       <BackgroundImage
         Tag="header"
@@ -79,7 +80,7 @@ const AcademyPage = ({ data }) => {
                   idx % 2 === 0 ? 'bg-yellow-200' : 'bg-purple-200';
                 return (
                   <a
-                    className={`${textColor} ${bgColor} hover:${hoverTextColor} hover:${hoverBgColor} px-4 pt-1 pb-2 lg:pt-0 lg:pb-1 shadow font-title lowercase text-2xl lg:text-base my-2 lg:m-2`}
+                    className={`cta ${textColor} ${bgColor} hover:${hoverTextColor} hover:${hoverBgColor} px-4 pt-1 pb-2 lg:pt-0 lg:pb-1 shadow font-title lowercase text-2xl lg:text-base my-2 lg:m-2`}
                     href={cta.link.url}
                     key={idx}
                   >
