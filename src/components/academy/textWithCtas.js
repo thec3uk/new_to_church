@@ -12,7 +12,7 @@ const TextWithCTA = ({ data }) => {
       backgroundColor={'#040e18'}
       background-position={'top'}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3 mx-16 md:mx-0">
         <HtmlHexagon
           className="text-yellow-trans fill-current stroke-purple col-start-1 col-end-2 lg:col-start-2 lg:col-end-3"
           containerClassName="text-center flex flex-col justify-between my-auto px-20 py-20"

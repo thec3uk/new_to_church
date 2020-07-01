@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-
 const TextWithImage = ({ data }) => {
   return (
     <section className={'lg:px-8 text-black lg:mx-8'}>
@@ -14,10 +13,9 @@ const TextWithImage = ({ data }) => {
           />
         </div>
         <div
-          className={`bg-${data.primary.background_text_colour} py-10 px-6 font-sans z-10`}
+          className={`bg-${data.primary.background_text_colour} py-10 px-6 font-sans text-center flex flex-col justify-center z-10`}
           dangerouslySetInnerHTML={{ __html: data.primary.text.html }}
         ></div>
-
       </div>
     </section>
   );

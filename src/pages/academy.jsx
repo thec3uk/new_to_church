@@ -56,7 +56,7 @@ const AcademyPage = ({ data }) => {
         fluid={page.hero_image.fluid}
         backgroundColor={'#040e18'}
       >
-        <div className="grid grid-cols-8 grid-rows-4 lg:grid-rows-12 h-screen">
+        <div className="grid grid-cols-8 grid-rows-4 lg:grid-rows-12 h-screen mx-16 md:mx-0">
           <HtmlHexagon
             className="text-purple-trans stroke-purple fill-current col-start-1 col-end-9 row-start-2 row-end-5 lg:col-start-3 lg:col-end-7 lg:row-start-2 lg:row-end-5"
             containerClassName="text-center grid-rows-6 px-16 pt-16"

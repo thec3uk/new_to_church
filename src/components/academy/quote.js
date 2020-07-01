@@ -37,23 +37,32 @@ const Quote = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <section className={'px-2 md:px-8 text-black mt-8 lg:mt-0 -mb-8 '}>
-
-      <div className="grid grid-cols-5 grid-rows-5 md:grid-cols-7 md:grid-rows-4 ">
+      <div className="grid row-gap-4 md:row-gap-0 grid-cols-4 mx-16 md:mx-0 grid-rows-9 md:grid-cols-8 md:grid-rows-6 ">
         <HtmlHexagon
-          className="col-start-2 col-end-6 md:col-end-5 row-start-1 row-end-5 md:row-end-4 stroke-yellow fill-current text-purple"
+          className="col-start-1 col-end-5 md:col-start-5 md:col-end-8 row-start-1 row-end-4 md:row-end-4 stroke-yellow fill-current text-yellow"
+          containerClassName="flex flex-col justify-between content-center"
+        >
+          <div
+            className="px-20 py-24 my-6 text-black font-accent text-2xl text-center flex flex-col justify-center"
+            dangerouslySetInnerHTML={{ __html: data.primary.hex_2.html }}
+          ></div>
+        </HtmlHexagon>
+        <HtmlHexagon
+          className="col-start-1 col-end-5 md:col-end-5 row-start-4 row-end-7 md:col-start-2 md:row-start-3 md:row-end-6 stroke-purple fill-current text-purple"
           containerClassName="flex flex-col justify-between content-center"
         >
           <div
             className="px-20 py-32 my-4 text-white font-title lowercase text-2xl text-center flex flex-col justify-center"
-            dangerouslySetInnerHTML={{ __html: data.primary.quote.html }}
+            dangerouslySetInnerHTML={{ __html: data.primary.hex_1.html }}
           ></div>
         </HtmlHexagon>
+
         <HtmlHexagon
-          className="col-start-1 col-end-5 row-start-4 row-end-6 md:col-start-5 md:col-end-7 md:row-start-3 md:row-end-5 stroke-purple fill-current text-yellow"
+          className="col-start-1 col-end-5 row-start-7 row-end-10 md:col-start-5 md:col-end-7 md:row-start-5 md:row-end-7 stroke-purple fill-current text-yellow"
           containerClassName="flex flex-col justify-between content-center"
         >
           <div className="px-20 py-24 my-4 text-black font-title lowercase text-2xl text-center">
-            <p className="pb-8 text-3xl" >Watch the Promo</p>
+            <p className="pb-8 text-3xl">Watch the Promo</p>
             <button onClick={() => setModalOpen(true)}>
               <img
                 className="mx-auto"
@@ -76,9 +85,13 @@ const Quote = ({ data }) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-          <div className="fixed inset-0 transition-opacity ">
-            <div className={`absolute inset-0 bg-purple opacity-75 z-20`} role="presentation" onClick={() => setModalOpen(false)}></div>
-          </div>
+            <div className="fixed inset-0 transition-opacity ">
+              <div
+                className={'absolute inset-0 bg-purple opacity-75 z-20'}
+                role="presentation"
+                onClick={() => setModalOpen(false)}
+              ></div>
+            </div>
           </Transition>
           <Transition
             show={modalOpen}
@@ -107,7 +120,10 @@ export const query = graphql`
     id
     slice_type
     primary {
-      quote {
+      hex_1 {
+        html
+      }
+      hex_2 {
         html
       }
     }
