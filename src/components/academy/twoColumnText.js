@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import HtmlHexagon from './HtmlHex';
 import Transition from '../Transition';
 
+import { renderToString } from 'react-dom/server';
+
 const HexModal = ({ content, setModalOpen, colourClasses }) => (
   <div
     className={`${colourClasses} rounded px-4 pt-5 pb-4 mx-1 md:mx-8 max-h-full overflow-scroll shadow-xl transform transition-all max-w-full sm:w-full sm:p-6 z-40 `}
@@ -32,6 +34,86 @@ const HexModal = ({ content, setModalOpen, colourClasses }) => (
   </div>
 );
 
+const CompareTable = () => {
+  const options = [
+    ['Where?', 'C3 Centre', 'C3 Centre', 'Online'],
+    [
+      'Core Leadership training</br>(Bible & Leadership)',
+      '&#10004;',
+      '&#10004;',
+      '&#10004;',
+    ],
+    ['Streams', '&#10004;', '', ''],
+    ['Student-led chapel time', '&#10004;', '&#10004;', '&#10004;'],
+    ['Weekly Conference Call', '', '', '&#10004;'],
+    ['On Sunday team', '&#10004; &#10004;', '&#10004; &#10004;', '&#10004;'],
+    [
+      'Length of course:</br>(September to July)',
+      '&#10004;',
+      '&#10004;',
+      '&#10004;',
+    ],
+    [
+      'Time commitment</br>(study time not incl.)',
+      '4 days </br>2 services on Sunday Church events',
+      '1 day </br>2 Sundays a month Church events',
+      'Approx 3.5 hours a week </br>Two Sundays a month* </br>Church events*',
+    ],
+    [
+      'Assessments',
+      '4 Essays </br>1 Spoken Assignment </br>2 Book Precis </br>2 Book reviews </br>1 Book reflection',
+      '4 Essays </br>1 Spoken Assignment </br>2 Book Precis </br>2 Book reviews </br>1 Book reflection',
+      '4 Essays </br>2 Socratic seminars </br>1 Book Precis </br>1 Book reviews </br>1 Book reflection',
+    ],
+    ['Fees', '£1100', '£850', '£500'],
+  ];
+  return (
+    <>
+      <h3 className="mb-4 text-3xl">Compare Study Plans</h3>
+      <table className="border border-purple table-auto border-collapse">
+        <thead className="border-b border-purple">
+          <tr className="text-left">
+            <td className="px-2 py-1 border-r border-purple"></td>
+            <th className="px-2 py-1">Full-time</th>
+            <th className="px-2 py-1">Part-time</th>
+            <th className="px-2 py-1">Online</th>
+          </tr>
+        </thead>
+        <tbody>
+          {options.map((row, idx) => (
+            <tr
+              className={`hover:bg-purple hover:text-gray-100 align-top ${
+                idx % 2 === 0 ? '' : ''
+              }`}
+              key={idx}
+            >
+              <th
+                className="px-2 py-1 text-right border-r border-purple"
+                dangerouslySetInnerHTML={{ __html: row[0] }}
+              ></th>
+              <td
+                className="px-2 py-1 border-r border-purple"
+                dangerouslySetInnerHTML={{ __html: row[1] }}
+              ></td>
+              <td
+                className="px-2 py-1 border-r border-purple"
+                dangerouslySetInnerHTML={{ __html: row[2] }}
+              ></td>
+              <td
+                className="px-2 py-1"
+                dangerouslySetInnerHTML={{ __html: row[3] }}
+              ></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="mt-4">
+        <small>* if part of Cambridge or Bury St Edmunds location.</small>
+      </p>
+    </>
+  );
+};
+
 const TwoColumnText = ({ data }) => {
   const [colourClasses, setColourClasses] = useState('');
   const [fadeColourClass, setFadeColourClass] = useState('');
@@ -53,6 +135,12 @@ const TwoColumnText = ({ data }) => {
   const openOnlineModal = () => {
     setModalOpen(true);
     setModalContent(data.items[2].content.html);
+    setColourClasses('bg-yellow text-black');
+    setFadeColourClass('bg-purple');
+  };
+  const openCompareModal = () => {
+    setModalOpen(true);
+    setModalContent(renderToString(<CompareTable />));
     setColourClasses('bg-yellow text-black');
     setFadeColourClass('bg-purple');
   };
@@ -132,6 +220,14 @@ const TwoColumnText = ({ data }) => {
           <p className="text-xl">{data.items[2].sub_title}</p>
         </div>
       </HtmlHexagon>
+      <div className="row-start-5 row-end-6 lg:row-start-6 lg:row-end-7 lg:col-start-4 lg:col-end-6 m-auto">
+        <button
+          className="mt-24 lg:mt-4 font-sans px-10 py-6 text-xl lg:text-base lg:px-6 lg:py-2 border-purple border hover:bg-purple hover:text-yellow"
+          onClick={() => openCompareModal()}
+        >
+          Compare your options
+        </button>
+      </div>
     </section>
   );
 };
