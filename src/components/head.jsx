@@ -24,7 +24,7 @@ const Head = () => (
         },
         position: 'bottom-right',
         content: {
-          href: 'www.thec3.uk/privacy',
+          href: 'https://www.thec3.uk/privacy',
         },
       })}
       );`}
