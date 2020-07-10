@@ -67,15 +67,15 @@ const CompareTable = () => {
     ],
     [
       'Fees',
-      '£1100 in monthly instalments</br>£1000 if paid upfront',
-      '£855 in monthly instalments</br>£700 if paid upfront',
-      '£555 in monthly instalments</br>£500 if paid upfront',
+      '£1100 in 10 monthly instalments</br>£1000 if paid upfront',
+      '£855 in 10 monthly instalments</br>£700 if paid upfront',
+      '£555 in 10 monthly instalments</br>£500 if paid upfront',
     ],
   ];
   return (
     <>
       <h3 className="mb-4 text-3xl">Compare Study Plans</h3>
-      <table className="border border-purple table-auto border-collapse">
+      <table className="border border-purple table-auto border-collapse mx-auto">
         <thead className="border-b border-purple">
           <tr className="text-left">
             <td className="px-2 py-1 border-r border-purple"></td>
