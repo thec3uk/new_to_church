@@ -65,7 +65,12 @@ const CompareTable = () => {
       '4 Essays </br>1 Spoken Assignment </br>2 Book Precis </br>2 Book reviews </br>1 Book reflection',
       '4 Essays </br>2 Socratic seminars </br>1 Book Precis </br>1 Book reviews </br>1 Book reflection',
     ],
-    ['Fees', '£1100', '£850', '£500'],
+    [
+      'Fees',
+      '£1100 in monthly instalments</br>£1000 if paid upfront',
+      '£855 in monthly instalments</br>£700 if paid upfront',
+      '£555 in monthly instalments</br>£500 if paid upfront',
+    ],
   ];
   return (
     <>
