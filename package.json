@@ -48,7 +48,7 @@
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.9",
     "intersection-observer": "^0.10.0",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.21.0",
     "prop-types": "^15.6.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
