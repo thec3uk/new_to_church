@@ -113,12 +113,18 @@ const HomePage = ({ data }) => {
                     </h3>
                   </div>
                   <div className="links" style={{ justifyContent: 'center' }}>
-                    <h3>
-                      <Link to="/need-reduced-income-hamper">Furloughed hamper</Link>
+                    <h3 style={{ fontSize: '2.25rem' }}>
+                      <Link to="/need-reduced-income-hamper">Furloughed?</Link>
                     </h3>
                     <h3 className="slash">/</h3>
-                    <h3>
-                      <Link to="/need-reduced-income-hamper">Self-employed hamper</Link>
+                    <h3 style={{ fontSize: '2.25rem' }}>
+                      <Link to="/need-reduced-income-hamper">
+                        Self-employed?
+                      </Link>
+                    </h3>
+                    <h3 className="slash">/</h3>
+                    <h3 style={{ fontSize: '2.25rem' }}>
+                      <Link to="/need-reduced-income-hamper">Redundant?</Link>
                     </h3>
                   </div>
                 </div>
