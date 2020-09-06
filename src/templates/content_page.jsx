@@ -50,15 +50,15 @@ const ContentPage = ({ data }) => {
                 parent={shapeNavItem(page.parent_page)}
                 siblings={
                   page.parent_page.document.data.child_pages &&
-                  shapeSiblingData(
-                    page.parent_page.document.data.child_pages
-                  )
+                  shapeSiblingData(page.parent_page.document.data.child_pages)
                 }
               >
                 {page.data}
               </SideNav>
             </nav>
-            <SideGallery images={shapeGalleryData(page.gallery_list)} />
+            {page.gallery_list && (
+              <SideGallery images={shapeGalleryData(page.gallery_list)} />
+            )}
           </aside>
         </div>
       </section>
