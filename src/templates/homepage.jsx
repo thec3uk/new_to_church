@@ -52,8 +52,8 @@ const HomePage = ({ data }) => {
                     </h3>
                     <h3 className="slash">/</h3>
                     <h3>
-                      <Link to="/get-help">Cambridge</Link> or{' '}
-                      <Link to="/get-help">Bury</Link> @ noon
+                      <Link to="/cambridge-sunday-services">Cambridge</Link> or{' '}
+                      <Link to="/bury-sunday-services">Bury</Link> @ noon
                     </h3>
                     {/* <h3 className="slash">/</h3> */}
                     {/* <h3>
