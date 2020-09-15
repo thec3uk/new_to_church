@@ -98,7 +98,7 @@ h3.slash {
 }
 
 #watchlive {
-  background-image: url('/images/EASTER_FACEBOOK.jpg');
+  background-image: url('/images/live.jpg');
 }
 
 #watchlive h2 {
@@ -106,7 +106,7 @@ h3.slash {
 }
 
 #watchlive h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .half-screen .links {
@@ -129,7 +129,7 @@ h3.slash {
   }
 
   #watchlive h3 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 

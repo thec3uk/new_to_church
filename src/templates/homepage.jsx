@@ -46,32 +46,25 @@ const HomePage = ({ data }) => {
                   <hr />
                   <div className="links">
                     <h3>
-                      {/*<Link to={data.prismicHomepage.data._9_30_service.url}>
-                      09:30
-                    </Link>*/}
-
                       <button href="#" onClick={clickHandler}>
-                        09:30
+                        ONLINE 10:00
                       </button>
                     </h3>
                     <h3 className="slash">/</h3>
                     <h3>
-                      <button href="#" onClick={clickHandler}>
-                        11:30
-                      </button>
+                      <Link to="/get-help">Cambridge</Link> or{' '}
+                      <Link to="/get-help">Bury</Link> @ noon
                     </h3>
-                    {/*<h3 className="slash">/</h3>
-                    <h3>
-                      <Link to={data.prismicHomepage.data._14_30_service.url}>
-                        14:30
-                      </Link>
-                    </h3>*/}
-                    <h3 className="slash">/</h3>
+                    {/* <h3 className="slash">/</h3> */}
+                    {/* <h3>
+                      <Link to="/get-help"> noon</Link>
+                    </h3> */}
+                    {/* <h3 className="slash">/</h3>
                     <h3>
                       <button href="#" onClick={clickHandler}>
                         17:30
                       </button>
-                    </h3>
+                    </h3> */}
                   </div>
                   {isOpen && (
                     <div id="lightbox">
@@ -147,86 +140,84 @@ HomePage.propTypes = {
 };
 
 export const query = graphql`
-query ($slug: String!) {
-  prismicHomepage(uid: {eq: $slug}) {
-    uid
-    data {
-      page_title
-      body {
-        ... on PrismicHomepageBodyText1 {
-          slice_type
-          id
-          primary {
-            css_classes
-            title_of_section {
-              text
-            }
-            text {
-              text
-            }
-            banner_image {
-              alt
-              fluid {
-                srcSet
-                sizes
+  query($slug: String!) {
+    prismicHomepage(uid: { eq: $slug }) {
+      uid
+      data {
+        page_title
+        body {
+          ... on PrismicHomepageBodyText1 {
+            slice_type
+            id
+            primary {
+              css_classes
+              title_of_section {
+                text
+              }
+              text {
+                text
+              }
+              banner_image {
+                alt
+                fluid {
+                  srcSet
+                  sizes
+                }
               }
             }
           }
-        }
-        ... on PrismicHomepageBodyListOfArticles {
-          slice_type
-          id
-          primary {
-            css_classes
-          }
-          items {
-            articles_to_link {
-              uid
-              url
-              ...cardContent
+          ... on PrismicHomepageBodyListOfArticles {
+            slice_type
+            id
+            primary {
+              css_classes
+            }
+            items {
+              articles_to_link {
+                uid
+                url
+                ...cardContent
+              }
             }
           }
-        }
-        ... on PrismicHomepageBodyTextAndArticleList {
-          slice_type
-          id
-          primary {
-            title_of_section {
-              text
+          ... on PrismicHomepageBodyTextAndArticleList {
+            slice_type
+            id
+            primary {
+              title_of_section {
+                text
+              }
+              css_classes
+              preamble {
+                text
+              }
             }
-            css_classes
-            preamble {
-              text
+            items {
+              articles_to_link {
+                uid
+                url
+                ...cardContent
+              }
             }
           }
-          items {
-            articles_to_link {
-              uid
-              url
-              ...cardContent
-            }
-          }
-        }
-        ... on PrismicHomepageBodyRawHtml {
-          slice_type
-          id
-          primary {
-            title_of_section {
-              text
-            }
-            css_classes
-            section_title_icon
-            html {
-              text
+          ... on PrismicHomepageBodyRawHtml {
+            slice_type
+            id
+            primary {
+              title_of_section {
+                text
+              }
+              css_classes
+              section_title_icon
+              html {
+                text
+              }
             }
           }
         }
       }
     }
   }
-}
-
-
 `;
 
 // title_of_section {
