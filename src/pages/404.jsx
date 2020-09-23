@@ -9,15 +9,14 @@ const ErrorPage = () => (
         <div className="systemPageContent">
           <h1>404. Page not found.</h1>
           <p>
-            Sorry you cannot find the page you were looking for. We have
-            recently updated our website and unfortately some old URLs have
-            broken.
+            Thanks for visiting our website! We are sorry you've not found what
+            you are looking for yet. Here are some things places you might find
+            helpful to connect in with us:
           </p>
-          <Link to="/">Go to our homepage.</Link> <br />
-          <Link to="/online">Check out Church Online.</Link> <br />
-          <Link to="/bury">
-            Find out about our latest location in Bury St Edmunds.
-          </Link>
+          <Link to="/">Home Page</Link> <br />
+          <Link to="/sunday-services">Book in for Sunday Services</Link> <br />
+          <Link to="/events">What's happening at The C3 Church</Link> <br />
+          <Link to="/c3groups">Join a C3 Group</Link>
         </div>
       </div>
     </section>
