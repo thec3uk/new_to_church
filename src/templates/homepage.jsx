@@ -46,19 +46,20 @@ const HomePage = ({ data }) => {
                   <hr />
                   <div className="links">
                     <h3>
+                      10:00:{` `}
                       <button href="#" onClick={clickHandler}>
-                        10:00 ONLINE
+                        ONLINE
                       </button>
-                      {/* ,{` `}
+                      ,{` `}
                       <Link to="/cambridge-sunday-services">
                         Cambridge
-                      </Link>, <Link to="/bury-sunday-services">Bury</Link> */}
+                      </Link>, <Link to="/bury-sunday-services">Bury</Link>
                     </h3>
                     {/* <h3 className="slash">/</h3> */}
-                    {/* <h3>
+                    <h3>
                       Noon:{' '}
                       <Link to="/cambridge-sunday-services">Cambridge</Link>
-                    </h3> */}
+                    </h3>
                   </div>
                   {isOpen && (
                     <div id="lightbox">
