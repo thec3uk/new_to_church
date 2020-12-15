@@ -34,8 +34,8 @@ const HomePage = ({ data }) => {
                   <hr />
                   <div className="links">
                     <h3 className="col-1 row-1">20th December</h3>
-                    <h4 className="col-1 row-2"><Link to="/ohwhatwondercambridge">Cambridge: 10am, 12pm</Link></h4>
-                    <h4 className="col-1 row-3"><Link to="/ohwhatwonderbury">Bury St Edmunds: 10am</Link></h4>
+                    <h4 className="col-1 row-2"><Link to="/ohwhatwondercambridge">Cambridge</Link></h4>
+                    <h4 className="col-1 row-3"><Link to="/ohwhatwonderbury">Bury St Edmunds</Link></h4>
                     <h4 className="col-1 row-4">
                       <button href="#" onClick={clickHandler}>
                       Online: 10am, 12pm, 5pm, 8pm
