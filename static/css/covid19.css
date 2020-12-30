@@ -1,13 +1,3 @@
-@font-face {
-  font-family: 'Playlist Script';
-  src: url('../fonts/Playlist\ Script.otf') format('opentype');
-}
-
-@font-face {
-  font-family: Gotcha;
-  src: url('../fonts/Gotcha-Regular.otf') format('opentype');
-}
-
 .video-overlay {
   background-color: #202945;
 }
@@ -39,8 +29,7 @@
 }
 
 .half-screen h2 {
-  font-family: Gotcha;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .half-screen > div {
@@ -98,8 +87,7 @@
 }
 
 #love-your-neighbour {
-  /* background-image: url('/images/care.jpg'); */
-  background-image: url('/images/SHARE_OHWHAT_002b.jpg');
+  background-image: url('/images/care.jpg');
 }
 
 #love-your-neighbour h2 {
@@ -115,7 +103,7 @@ h3.slash {
 }
 
 #watchlive {
-  background-image: url('/images/wonder.jpg');
+  background-image: url('/images/live.jpg');
 }
 
 #watchlive h2 {
@@ -132,12 +120,12 @@ h3.slash {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+/*
 #watchlive .links {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(4, minmax(0, 1fr));
-}
+} */
 
 .col-1 {
   grid-column: span 1 / span 1;
@@ -168,16 +156,14 @@ h3.slash {
 
 @media (min-width: 768px) {
   #love-your-neighbour h2 {
-    font-size: 10rem;
-    line-height: 0.8;
+    font-size: 5rem;
   }
 
   #love-your-neighbour h3 {
     font-size: 3rem;
   }
   #watchlive h2 {
-    font-size: 10rem;
-    line-height: 0.8;
+    font-size: 5rem;
   }
 
   #watchlive h3 {

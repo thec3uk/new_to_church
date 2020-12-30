@@ -27,26 +27,24 @@ const HomePage = ({ data }) => {
               <div id="watchlive" className="half-screen">
                 <div>
                   <h2>
-                      <span style={{
-                        fontSize: '5rem',
-                      }}>Oh what</span><br/> Wonder
+                    <span
+                      style={{
+                        fontWeight: '100',
+                      }}
+                    >
+                      Watch
+                    </span>{' '}
+                    live{' '}
+                    <span
+                      style={{
+                        fontWeight: '100',
+                      }}
+                    >
+                      Sunday
+                    </span>
                   </h2>
                   <hr />
                   <div className="links">
-                    <h3 className="col-1 row-1">20th December</h3>
-                    <h4 className="col-1 row-2"><Link to="/ohwhatwondercambridge">Cambridge</Link></h4>
-                    <h4 className="col-1 row-3"><Link to="/ohwhatwonderbury">Bury St Edmunds</Link></h4>
-                    <h4 className="col-1 row-4">
-                      <button href="#" onClick={clickHandler}>
-                      Online: 10am, 12pm, 5pm, 8pm
-                      </button>
-                    </h4>
-
-                    <h3 className="col-2 row-1">Christmas Day</h3>
-                    <h4 className="col-2 row-2"><Link to="/c3christmasday">Cambridge: 10am</Link></h4>
-                    <h4 className="col-2 row-3"><button href="#" onClick={clickHandler}>Online: 10am</button></h4>
-                  </div>
-                  {/* <div className="links">
                     <h3>
                       10:00:{` `}
                       <button href="#" onClick={clickHandler}>
@@ -57,12 +55,13 @@ const HomePage = ({ data }) => {
                         Cambridge
                       </Link>, <Link to="/bury-sunday-services">Bury</Link>
                     </h3>
-
+                    {/* <h3 className="slash">/</h3> */}
                     <h3>
                       Noon:{' '}
                       <Link to="/cambridge-sunday-services">Cambridge</Link>
                     </h3>
-                  </div> */}
+                  </div>
+
                   {isOpen && (
                     <div id="lightbox">
                       <ReactImageVideoLightbox
@@ -85,31 +84,40 @@ const HomePage = ({ data }) => {
               <div id="love-your-neighbour" className="half-screen">
                 <div>
                   <h2>
-                    <span style={{
-                        fontSize: '5rem',
-                      }}
-                    >
-                      Share the
-                    </span>{' '}
-                    <br />
-                    Wonder
+                    love <span style={{ fontWeight: '100' }}>your</span>{' '}
+                    neighbour
                   </h2>
                   <hr />
                   <div className="links">
-                    <h3>Share the wonder this Christmas!</h3>
+                    <h3>
+                      <Link to="/get-help">Need Help</Link>
+                    </h3>
+                    <h3 className="slash">/</h3>
+                    <h3>
+                      <Link to="/give-help">Give help</Link>
+                    </h3>
+                    <h3 className="slash">/</h3>
+                    <h3>
+                      <Link to="/love-your-neighbour">Donate</Link>
+                    </h3>
                   </div>
-                  <div className="links">
+                  <div className="links" style={{ justifyContent: 'center' }}>
+                    {/* <h3 style={{ fontSize: '2.25rem' }}> */}
                     <h3>
-                      <Link to="/store">Sponsor a hamper</Link>
+                      <Link to="/need-reduced-income-hamper">
+                        Food Shop information
+                      </Link>
+                    </h3>
+                    {/* <h3 className="slash">/</h3>
+                    <h3 style={{ fontSize: '2.25rem' }}>
+                      <Link to="/need-reduced-income-hamper">
+                        Self-employed?
+                      </Link>
                     </h3>
                     <h3 className="slash">/</h3>
-                    <h3>
-                      <Link to="/sharethewonder">help pack</Link>
-                    </h3>
-                    <h3 className="slash">/</h3>
-                    <h3>
-                      <Link to="/sharethewonder">help deliver</Link>
-                    </h3>
+                    <h3 style={{ fontSize: '2.25rem' }}>
+                      <Link to="/need-reduced-income-hamper">Redundant?</Link>
+                    </h3> */}
                   </div>
                 </div>
               </div>
