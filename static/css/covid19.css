@@ -1,11 +1,34 @@
+@font-face {
+  font-family: 'ZefaniStencil';
+  src: url('/fonts/ZefaniStencil(uppercase)-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .video-overlay {
   background-color: #202945;
 }
+
 .top-fold {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.full-screen {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .half-screen {
@@ -37,13 +60,16 @@
   padding: 10px;
 }
 
-.half-screen a {
+.half-screen a,
+.full-screen a {
   color: #fff !important;
   text-decoration: underline;
 }
 
 .half-screen a:hover,
-.half-screen button:hover {
+.half-screen button:hover,
+.full-screen a:hover,
+.full-screen button:hover {
   color: #f05356 !important;
   text-decoration: none;
 }
@@ -206,4 +232,31 @@ h3.slash {
 }
 #lightbox > div > svg:last-of-type {
   display: none;
+}
+
+#breathe {
+  background-image: url('/images/breathe.jpg');
+  background-position: center center;
+}
+
+#breathe h2 {
+  font-size: 6rem;
+  font-family: 'ZefaniStencil';
+}
+
+#breathe h3 {
+  font-size: 4rem;
+}
+
+#breathe .links {
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+#breathe a {
+  color: #9ed0e1 !important;
+}
+
+#breathe a:hover {
+  color: #4a7c8b !important;
 }

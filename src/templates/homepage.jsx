@@ -24,100 +24,13 @@ const HomePage = ({ data }) => {
           <div className="video-overlay">
             <Nav index_page={true} />
             <div className="top-fold">
-              <div id="watchlive" className="half-screen">
+              <div className="full-screen" id="breathe">
                 <div>
-                  <h2>
-                    <span
-                      style={{
-                        fontWeight: '100',
-                      }}
-                    >
-                      Watch
-                    </span>{' '}
-                    live{' '}
-                    <span
-                      style={{
-                        fontWeight: '100',
-                      }}
-                    >
-                      Sunday
-                    </span>
-                  </h2>
-                  <hr />
+                  <h2>Breathe Conference</h2>
                   <div className="links">
                     <h3>
-                      10:00:{` `}
-                      <button href="#" onClick={clickHandler}>
-                        ONLINE
-                      </button>
-                      {/* ,{` `} */}
-                      {/* <Link to="/cambridge-sunday-services">
-                        Cambridge
-                      </Link>, <Link to="/bury-sunday-services">Bury</Link> */}
+                      <Link to="/need-reduced-income-hamper">Book in now</Link>
                     </h3>
-                    {/* <h3 className="slash">/</h3> */}
-                    {/* <h3>
-                      Noon:{' '}
-                      <Link to="/cambridge-sunday-services">Cambridge</Link>
-                    </h3> */}
-                  </div>
-
-                  {isOpen && (
-                    <div id="lightbox">
-                      <ReactImageVideoLightbox
-                        data={[
-                          {
-                            url:
-                              'https://embed.restream.io/player/index.html?token=9c8cfe650f8b4462016f9c026b724346',
-                            type: 'video',
-                            altTag: 'The C3 Church Live Stream',
-                          },
-                        ]}
-                        startIndex={0}
-                        showResourceCount={false}
-                        onCloseCallback={() => setIsOpen(false)}
-                      />
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div id="love-your-neighbour" className="half-screen">
-                <div>
-                  <h2>
-                    love <span style={{ fontWeight: '100' }}>your</span>{' '}
-                    neighbour
-                  </h2>
-                  <hr />
-                  <div className="links">
-                    <h3>
-                      <Link to="/get-help">Need Help</Link>
-                    </h3>
-                    <h3 className="slash">/</h3>
-                    <h3>
-                      <Link to="/give-help">Give help</Link>
-                    </h3>
-                    <h3 className="slash">/</h3>
-                    <h3>
-                      <Link to="/love-your-neighbour">Donate</Link>
-                    </h3>
-                  </div>
-                  <div className="links" style={{ justifyContent: 'center' }}>
-                    {/* <h3 style={{ fontSize: '2.25rem' }}> */}
-                    <h3>
-                      <Link to="/need-reduced-income-hamper">
-                        Food Shop information
-                      </Link>
-                    </h3>
-                    {/* <h3 className="slash">/</h3>
-                    <h3 style={{ fontSize: '2.25rem' }}>
-                      <Link to="/need-reduced-income-hamper">
-                        Self-employed?
-                      </Link>
-                    </h3>
-                    <h3 className="slash">/</h3>
-                    <h3 style={{ fontSize: '2.25rem' }}>
-                      <Link to="/need-reduced-income-hamper">Redundant?</Link>
-                    </h3> */}
                   </div>
                 </div>
               </div>
