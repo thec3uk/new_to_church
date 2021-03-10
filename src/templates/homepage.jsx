@@ -26,10 +26,11 @@ const HomePage = ({ data }) => {
             <div className="top-fold">
               <div className="full-screen" id="breathe">
                 <div>
-                  <h2>Breathe Conference</h2>
+                  <h2>Easter Services - Save the Date</h2>
                   <div className="links">
                     <h3>
-                      <Link to="/need-reduced-income-hamper">Book in now</Link>
+                      Good Friday - 2nd April - Colchester <br/>
+                      Easter Sunday - 4th April - Online, Bury St Edmunds, Cambridge
                     </h3>
                   </div>
                 </div>
