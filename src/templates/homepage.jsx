@@ -29,7 +29,7 @@ const HomePage = ({ data }) => {
                   <h2>Breathe Conference</h2>
                   <div className="links">
                     <h3>
-                      <Link to="/need-reduced-income-hamper">Book in now</Link>
+                      <Link to="https://breathe.thec3.uk/conference">Book in now</Link>
                     </h3>
                   </div>
                 </div>
