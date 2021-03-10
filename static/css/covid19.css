@@ -248,17 +248,18 @@ h3.slash {
 
 #breathe h2 {
   font-size: 6rem;
-  font-family: 'ZefaniStencil';
+  font-family: 'Gotcha';
   color: #202945;
+  text-transform: initial;
 }
 
 #breathe h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   /* color: white !important; */
 }
 
 #breathe .links {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 8rem;
 }
 
