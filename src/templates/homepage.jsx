@@ -33,6 +33,11 @@ const HomePage = ({ data }) => {
                       Easter Sunday - 4th April - Online, Bury St Edmunds, Cambridge
                     </h3>
                   </div>
+                  <div className="links">
+                    <h3>
+                      <Link to="/easter">Book in now</Link>
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
