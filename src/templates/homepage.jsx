@@ -26,16 +26,13 @@ const HomePage = ({ data }) => {
             <div className="top-fold">
               <div className="full-screen" id="breathe">
                 <div>
-                  <h2 style={{fontSize: '9rem', textTransform: 'uppercase'}}>Save the Date</h2>
+                  <h2 style={{fontSize: '9rem', textTransform: 'uppercase'}}>Sunday Services</h2>
                   <div className="links">
-                    <h3>
-                      Good Friday - 2nd April - Colchester <br/>
-                      Easter Sunday - 4th April - Online, Bury St Edmunds, Cambridge
-                    </h3>
+                    <h3>Online, Cambridge, Bury St Edmunds &amp; Colchester</h3>
                   </div>
                   <div className="links">
                     <h3>
-                      <Link to="/easter">Book in now</Link>
+                      <Link to="/brushfire">Book in now</Link>
                     </h3>
                   </div>
                 </div>
