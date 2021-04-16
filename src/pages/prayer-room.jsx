@@ -55,7 +55,7 @@ const PrayerRoomPage = () => {
       > */}
         <div className="absolute insert-0 h-screen w-screen font-serif flex flex-col justify-center items-center space-y-4">
           <h1 className="text-6xl">a time to pray</h1>
-          <p className="text-xl">Pick a time slot and invite some friends</p>
+          <p className="text-xl">Pick a duration and a time slot</p>
           <div className="space-x-6">
             <button onClick={openPrayerTime('https://calendly.com/thec3-prayer/15-minutes')} className="border py-4 px-8 hover:bg-black hover:text-gray-100">15 minutes</button>
             <button onClick={openPrayerTime('https://calendly.com/thec3-prayer/30-minutes')} className="border py-4 px-8 hover:bg-black hover:text-gray-100">30 minutes</button>
