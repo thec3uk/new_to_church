@@ -1,0 +1,22 @@
+@tailwind base;
+
+@font-face {
+  font-family: Gotcha;
+  src: url('../../static/fonts/Gotcha-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Novecento Sans Wide';
+  font-weight: bold;
+  src: url('../../static/fonts/Novecentosanswide-Bold.otf') format('opentype');
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply mb-4 !important;
+  }
+}

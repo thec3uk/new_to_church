@@ -9,7 +9,7 @@ module.exports = {
       './src/**/*.tsx',
     ],
     options: {
-      whitelist: ['bg-purple-trans-30', 'bg-yellow-trans'],
+      whitelist: ['bg-purple-trans-30', 'bg-yellow-trans', /col-start-/],
     },
   },
   theme: {
@@ -50,6 +50,8 @@ module.exports = {
         'purple-200': '#5E586F',
         'purple-trans': '#2E293Eb3',
         'purple-trans-30': '#2E293E4d',
+        blue: '#00919F',
+        red: '#F05356',
       },
       fontSize: {
         '7xl': '5rem',
@@ -66,10 +68,19 @@ module.exports = {
         '-2/5': '-41vw',
         '-1/2': '-50vw',
         iframe: '56.25%',
+        '72': '18rem',
+        '80': '20rem',
+        '88': '22rem',
+        '96': '24rem',
+        '104': '26rem',
+        '112': '28rem',
+        '120': '30rem',
+        '128': '32rem',
+        '136': '34rem',
       },
       gridTemplateRows: {
         '8': 'repeat(8, minmax(0, 1fr))',
-        '10': 'repeat(9, minmax(0, 1fr))',
+        '9': 'repeat(9, minmax(0, 1fr))',
         '10': 'repeat(10, minmax(0, 1fr))',
         '11': 'repeat(11, minmax(0, 1fr))',
         '12': 'repeat(12, minmax(0, 1fr))',
@@ -90,9 +101,14 @@ module.exports = {
         '12': '12',
         '13': '13',
       },
+      inset: {
+        '50': '50%',
+      },
       stroke: theme => ({
         yellow: theme('colors.yellow'),
         purple: theme('colors.purple'),
+        blue: theme('colors.blue'),
+        red: theme('colors.red'),
         current: 'currentColor',
       }),
     },

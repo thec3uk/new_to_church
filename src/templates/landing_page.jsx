@@ -109,6 +109,7 @@ export const query = graphql`
               }
             }
           }
+          ...HexGrid
         }
       }
     }
