@@ -8,8 +8,16 @@
   padding: 5px;
 }
 
-ol,
-ul {
-  list-style: initial;
+ol {
+  list-style: decimal;
   list-style-position: inside;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+ul {
+  list-style: disc;
+  list-style-position: inside;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
