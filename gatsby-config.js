@@ -61,7 +61,7 @@ module.exports = {
           text_page: require('./src/schemas/text_page.json'),
         },
         prismicToolbar: true,
-        shouldDownloadImage: () => false,
+        shouldDownloadImage: () => true,
         // Set an HTML serializer function used to process formatted content.
         // Fields with rich text formatting use this function to generate the
         // correct HTML.
