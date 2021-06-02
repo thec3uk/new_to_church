@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import { graphql } from 'gatsby';
 import HtmlHexagon from '../components/academy/HtmlHex';
 import './hexGrid.scoped.css';
@@ -67,7 +67,7 @@ const HexGrid = ({ data }) => {
           };
           const [showDesc, setShowDesc] = useState(false);
           return (
-            <div key={idx}>
+            <div className="contents" key={idx}>
               <HtmlHexagon
                 key={idx}
                 className={`fill-current h-full -m-16 row-span-2 w-2/3-screen md:w-1/3-screen lg:w-1/8-screen z-10  ${
