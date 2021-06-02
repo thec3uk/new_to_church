@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
-import styles from './signup_form.module.css';
+import * as styles from './signup_form.module.css';
 
 class NewsLetterSignUp extends Component {
   constructor(props) {

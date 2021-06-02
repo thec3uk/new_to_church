@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Content.module.css';
+import * as styles from './Content.module.css';
+import HexGrid from '../slices/hexGrid';
 
 const Content = ({ input, className }) => {
   return input.map(content => {
     switch (content.slice_type) {
+      case 'hex_grid':
+        return <HexGrid key={content.id} data={content} />;
       case 'text_and_article_list':
         return (
           <div

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import styles from './nav.module.css';
+import * as styles from './nav.module.css';
 import NotificationBar from 'react-notification-bar';
 
 const MenuItem = ({ menuItem, ...props }) => {
@@ -23,12 +23,11 @@ const MenuItem = ({ menuItem, ...props }) => {
 
 MenuItem.propTypes = {
   menuItem: PropTypes.shape({
-    document:
-      PropTypes.shape({
-        data: PropTypes.shape({
-          card_title: PropTypes.string,
-        }),
+    document: PropTypes.shape({
+      data: PropTypes.shape({
+        card_title: PropTypes.string,
       }),
+    }),
     url: PropTypes.string,
     title: PropTypes.string,
   }),

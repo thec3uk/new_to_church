@@ -1,8 +1,8 @@
 import React from 'react';
 import { HeroLayout } from 'layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRssSquare } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faRssSquare } from '@fortawesome/free-solid-svg-icons';
 
 const TeachingSeriesPage = () => (
   <HeroLayout title={'Teaching Series'} heroImage="/images/867552.jpeg">

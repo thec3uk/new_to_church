@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import Hexagon from 'react-hexagon';
 
 import '../components/academy/style.scoped.css';
 import '../components/academy/academy.css';

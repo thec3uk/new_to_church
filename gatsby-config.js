@@ -2,7 +2,7 @@ const config = require('./config/site');
 
 const prismicRepositoryName = 'thec3';
 
-const linkResolver = function(doc) {
+const linkResolver = function (doc) {
   // Fallback for other types, in case new custom types get created
   return '/' + doc.uid;
 };
@@ -61,7 +61,7 @@ module.exports = {
           text_page: require('./src/schemas/text_page.json'),
         },
         prismicToolbar: true,
-        shouldDownloadImage: () => true,
+        shouldDownloadImage: () => false,
         // Set an HTML serializer function used to process formatted content.
         // Fields with rich text formatting use this function to generate the
         // correct HTML.
@@ -69,14 +69,11 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different HTML serializer logic for each field if necessary.
         // See: https://prismic.io/docs/nodejs/beyond-the-api/html-serializer
-        htmlSerializer: ({ node, key, value }) => (
-          type,
-          element,
-          content,
-          children
-        ) => {
-          // Your HTML serializer
-        },
+        htmlSerializer:
+          ({ node, key, value }) =>
+          (type, element, content, children) => {
+            // Your HTML serializer
+          },
       },
     },
     {
@@ -113,7 +110,6 @@ module.exports = {
     },
     'gatsby-plugin-brotli',
     'gatsby-plugin-catch-links',
-    'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',

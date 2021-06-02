@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
 import { ContentLayout, Content } from '../layouts';
 import { ContactForm } from '../components';
+import { graphql } from 'gatsby';
 
 const TextPage = ({ data }) => {
   const page = data.prismicTextPage.data;
@@ -26,10 +25,6 @@ const TextPage = ({ data }) => {
 };
 
 export default TextPage;
-
-TextPage.propTypes = {
-  data: PropTypes.object,
-};
 
 export const query = graphql`
   query text($slug: String!) {

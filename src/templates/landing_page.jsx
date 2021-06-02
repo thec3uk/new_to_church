@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import { Card, ContactForm } from '../components';
 import { HeroLayout, Content } from '../layouts';
+import { ContactForm, Card } from '../components';
+import { graphql } from 'gatsby';
 
 const LandingPage = ({ data }) => {
   const page = data.prismicLandingPage.data;
-  const cardWidth = cardList => {
+  const cardWidth = (cardList) => {
     // This function should be purely in CSS!
     switch (cardList.length) {
       case 1:
@@ -71,12 +70,8 @@ const LandingPage = ({ data }) => {
 
 export default LandingPage;
 
-LandingPage.propTypes = {
-  data: PropTypes.object,
-};
-
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     prismicLandingPage(uid: { eq: $slug }) {
       uid
       data {
@@ -109,6 +104,7 @@ export const query = graphql`
               }
             }
           }
+          ...HexGrid
         }
       }
     }
