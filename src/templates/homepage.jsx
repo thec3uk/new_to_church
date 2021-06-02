@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { graphql, Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import { Head, Nav, SideLinks } from '../components';
+import React from 'react';
 import { Layout } from '../layouts';
+import { Head, Nav, SideLinks } from '../components';
+import { Link, graphql } from 'gatsby';
 import Sections from './sections';
 
-import ReactImageVideoLightbox from 'react-image-video-lightbox';
+// import ReactImageVideoLightbox from 'react-image-video-lightbox';
 
 const HomePage = ({ data }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const clickHandler = () => setIsOpen(true);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const clickHandler = () => setIsOpen(true);
 
   return (
     <Layout title="The C3 Church">
@@ -26,7 +25,9 @@ const HomePage = ({ data }) => {
             <div className="top-fold">
               <div className="full-screen" id="breathe">
                 <div>
-                  <h2 style={{fontSize: '9rem', textTransform: 'uppercase'}}>Sunday Services</h2>
+                  <h2 style={{ fontSize: '9rem', textTransform: 'uppercase' }}>
+                    Sunday Services
+                  </h2>
                   <div className="links">
                     <h3>Online, Cambridge, Bury St Edmunds &amp; Colchester</h3>
                   </div>
@@ -50,12 +51,8 @@ const HomePage = ({ data }) => {
 
 export default HomePage;
 
-HomePage.propTypes = {
-  data: PropTypes.object,
-};
-
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     prismicHomepage(uid: { eq: $slug }) {
       uid
       data {

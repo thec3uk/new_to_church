@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import { SideNav, SideGallery, ContactForm } from '../components';
 import { HeroLayout, Content } from '../layouts';
+import { ContactForm, SideNav, SideGallery } from '../components';
+import { graphql } from 'gatsby';
 
-const shapeGalleryData = gallery_list => {
+const shapeGalleryData = (gallery_list) => {
   return gallery_list.map(({ gallery_node }) => ({
     id: gallery_node.id,
     url: gallery_node.document.data.gallery_image.url,
@@ -13,14 +12,14 @@ const shapeGalleryData = gallery_list => {
   }));
 };
 
-const shapeNavItem = item => {
+const shapeNavItem = (item) => {
   return {
     slug: item.uid,
     title: item.document.data.page_title,
   };
 };
 
-const shapeSiblingData = child_pages => {
+const shapeSiblingData = (child_pages) => {
   return child_pages
     .filter(({ child_page }) => child_page !== null)
     .map(({ child_page }) => shapeNavItem(child_page));
@@ -68,12 +67,8 @@ const ContentPage = ({ data }) => {
 
 export default ContentPage;
 
-ContentPage.propTypes = {
-  data: PropTypes.object,
-};
-
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     prismicContentPage(uid: { eq: $slug }) {
       uid
       data {

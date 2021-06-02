@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { ContentLayout } from 'layouts';
+import { Link } from 'gatsby';
 
 const ErrorPage = () => (
   <ContentLayout title={'404'}>
