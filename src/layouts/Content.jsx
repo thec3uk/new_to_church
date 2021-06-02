@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Content.module.css';
+import * as styles from './Content.module.css';
 import HexGrid from '../slices/hexGrid';
 
 const Content = ({ input, className }) => {

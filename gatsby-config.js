@@ -35,6 +35,8 @@ module.exports = {
         accessToken:
           'MC5YR003WEJBQUFDTUFPYllz.77-9eU5n77-977-9aO-_ve-_ve-_vXk377-9Q--_vWcp77-9P--_vX7vv71M77-977-9JO-_ve-_ve-_vWNtGA',
 
+        releaseID: 'YJuTYhEAACEAO4q5',
+
         // Set a link resolver function used to process links in your content.
         // Fields with rich text formatting or links to internal content use this
         // function to generate the correct link URL.
@@ -61,7 +63,7 @@ module.exports = {
           text_page: require('./src/schemas/text_page.json'),
         },
         prismicToolbar: true,
-        shouldDownloadImage: () => true,
+        shouldDownloadImage: () => false,
         // Set an HTML serializer function used to process formatted content.
         // Fields with rich text formatting use this function to generate the
         // correct HTML.
@@ -113,7 +115,6 @@ module.exports = {
     },
     'gatsby-plugin-brotli',
     'gatsby-plugin-catch-links',
-    'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',

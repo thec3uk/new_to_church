@@ -67,44 +67,72 @@ module.exports = {
       spacing: {
         '-2/5': '-41vw',
         '-1/2': '-50vw',
+        '1/2-screen': '50vw',
         iframe: '56.25%',
-        '72': '18rem',
-        '80': '20rem',
-        '88': '22rem',
-        '96': '24rem',
-        '104': '26rem',
-        '112': '28rem',
-        '120': '30rem',
-        '128': '32rem',
-        '136': '34rem',
+        72: '18rem',
+        80: '20rem',
+        88: '22rem',
+        96: '24rem',
+        104: '26rem',
+        112: '28rem',
+        120: '30rem',
+        128: '32rem',
+        136: '34rem',
+      },
+      height: {
+        '1/2-screen': '50vh',
+      },
+      width: {
+        '1/3-screen': '33vw',
+        '2/3-screen': '66vw',
+        '1/4-screen': '25vw',
+        '1/6-screen': '16.666666vw',
+        '1/8-screen': '12.5vw',
+      },
+      gridAutoColumns: {
+        '50vw': '50vw',
+        '25vw': '25vw',
+        '12.5vw': '12.5vw',
+        '8.33vw': '8.33vw',
+      },
+      maxWidth: {
+        '1/3-screen': '33vw',
+      },
+      gridTemplateColumns: {
+        'screen-2': 'repeat(4, 50vw)',
+        'screen-4': 'repeat(4, 25vw)',
+        'screen-5': 'repeat(4, 20vw)',
+        'screen-6': 'repeat(4, 16.666666vw)',
+        'screen-8': 'repeat(4, 12.5vw)',
+        'screen-12': 'repeat(4, 8.3333333vw)',
       },
       gridTemplateRows: {
-        '8': 'repeat(8, minmax(0, 1fr))',
-        '9': 'repeat(9, minmax(0, 1fr))',
-        '10': 'repeat(10, minmax(0, 1fr))',
-        '11': 'repeat(11, minmax(0, 1fr))',
-        '12': 'repeat(12, minmax(0, 1fr))',
+        8: 'repeat(8, minmax(0, 1fr))',
+        9: 'repeat(9, minmax(0, 1fr))',
+        10: 'repeat(10, minmax(0, 1fr))',
+        11: 'repeat(11, minmax(0, 1fr))',
+        12: 'repeat(12, minmax(0, 1fr))',
       },
       gridRowStart: {
-        '8': '8',
-        '9': '9',
-        '10': '10',
-        '11': '11',
-        '12': '12',
-        '13': '13',
+        8: '8',
+        9: '9',
+        10: '10',
+        11: '11',
+        12: '12',
+        13: '13',
       },
       gridRowEnd: {
-        '8': '8',
-        '9': '9',
-        '10': '10',
-        '11': '11',
-        '12': '12',
-        '13': '13',
+        8: '8',
+        9: '9',
+        10: '10',
+        11: '11',
+        12: '12',
+        13: '13',
       },
       inset: {
-        '50': '50%',
+        50: '50%',
       },
-      stroke: theme => ({
+      stroke: (theme) => ({
         yellow: theme('colors.yellow'),
         purple: theme('colors.purple'),
         blue: theme('colors.blue'),
@@ -118,9 +146,9 @@ module.exports = {
     borderWidth: ['responsive', 'after', 'before'],
   },
   plugins: [
-    function({ addVariant, e }) {
-      const escape = e || (x => x);
-      pseudoElements.forEach(pseudo => {
+    function ({ addVariant, e }) {
+      const escape = e || ((x) => x);
+      pseudoElements.forEach((pseudo) => {
         addVariant(pseudo, ({ modifySelectors, separator }) => {
           modifySelectors(({ className }) => {
             return `.${escape(`${pseudo}${separator}${className}`)}:${pseudo}`;

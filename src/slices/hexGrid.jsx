@@ -5,7 +5,7 @@ import './hexGrid.scoped.css';
 
 const Modal = ({ children, setModalOpen, className }) => (
   <div
-    className="xl:-m-24 fixed h-full w-full md:flex md:justify-center"
+    className="fixed h-full w-full md:flex md:justify-center z-30"
     onClick={() => setModalOpen(false)}
     role="dialog"
     aria-modal="true"
@@ -13,7 +13,7 @@ const Modal = ({ children, setModalOpen, className }) => (
   >
     <div className="fixed inset-0 w-screen h-full opacity-50 bg-gray-800 z-40"></div>
     <div
-      className={`${className} z-50 rounded py-5 max-h-full overflow-scroll shadow-xl transform transition-all sm:max-w-3xl sm:w-full max-w-full fixed -mt-128 xl:absolute md:top-auto m-auto p-6 md:px-16 mx-4  my-auto`}
+      className={`${className} z-50 rounded py-5 max-h-full overflow-scroll shadow-xl transform transition-all sm:w-full max-w-full sm:max-w-3xl lg:max-w-1/3-screen fixed -mt-128 md:top-auto lg:top-3/4 lg:left-1/3 m-auto p-6 md:px-16 mx-4 lg:mx-auto my-auto`}
     >
       <div>
         <svg
@@ -34,92 +34,86 @@ const Modal = ({ children, setModalOpen, className }) => (
 
 const HexGrid = ({ data }) => {
   return (
-    <div className="w-screen -mx-4 md:-mx-6 xl:-mx-screen/2 xl:relative xl:left-50 xl:right-50 my-16 grid gap-x-16 md:gap-0 md:-space-y-18 grid-cols-2 md:grid-cols-3 xl:grid-cols-5 grid-rows-3 py-20 overflow-x-hidden xl:overflow-x-scroll">
-      {data.items.map((hex, idx) => {
-        const positionMapping = {
-          0: `row-start-${idx + 1} col-start-${(idx % 2) +
-            1} md:col-start-1 lg:col-start-${idx -
-            (Math.floor(idx / 3) - 1)} md:row-start-${2 * Math.floor(idx / 3) +
-            1} lg:row-start-1`,
-          1: `row-start-${idx + 1} col-start-${(idx % 2) +
-            1} md:col-start-3 lg:col-start-${idx -
-            Math.floor(idx / 3)} md:row-start-${2 * Math.floor(idx / 3) +
-            1} lg:row-start-3 lg:-mt-64`,
-          2: `row-start-${idx + 1} col-start-${(idx % 2) +
-            1} md:col-start-2 lg:col-start-${idx -
-            Math.floor(idx / 3)} md:row-start-${2 * Math.floor(idx / 3) +
-            2} lg:row-start-2 lg:-mt-40`,
+    <div className="lg:flex lg:flex-row lg:justify-center lg:mt-36 lg:mb-24 z-0">
+      <div className="h-screen md:h-1/2-screen items-center grid md:gap-4 xl:gap-8 grid-rows-4 grid-cols-screen-2 md:grid-cols-screen-4 lg:grid-cols-screen-12 auto-cols-50vw md:auto-cols-25vw lg:auto-cols-8.33vw py-16 mt-32 overflow-x-scroll -m-4 md:-m-8 xl:-mx-72 lg:px-20">
+        {data.items.map((hex, idx) => {
+          // prettier-ignore
+          const positionMapping = {
+          0: `row-start-1 col-start-${(Math.floor(idx / 3) * 2) + 1} `,
+          1: `row-start-2 col-start-${(Math.floor(idx / 3) * 2) + 2} `,
+          2: `row-start-3 col-start-${(Math.floor(idx / 3) * 2) + 1} `,
         };
-        const colourMapping = {
-          0: {
-            text: 'text-black',
-            bg: 'stroke-blue text-blue',
-            modalBg: 'bg-blue',
-          },
-          1: {
-            text: 'text-black',
-            bg: 'stroke-red text-red',
-            modalBg: 'bg-red',
-          },
-          2: {
-            text: 'text-white',
-            bg: 'stroke-purple text-purple',
-            modalBg: 'bg-purple',
-          },
-          3: {
-            text: 'text-black',
-            bg: 'stroke-yellow text-yellow',
-            modalBg: 'bg-yellow',
-          },
-        };
-        const [showDesc, setShowDesc] = useState(false);
-        return (
-          <>
-            <HtmlHexagon
-              key={idx}
-              className={`fill-current -m-16 ${colourMapping[idx % 4].bg} ${
-                positionMapping[idx % 3]
-              }`}
-              containerClassName="flex flex-col justify-center"
-              onClick={() => setShowDesc(!showDesc)}
-            >
-              <div className="px-32 py-16 text-black text-center flex flex-col justify-center absolute inset-0">
-                <h3
-                  className={`${
-                    colourMapping[idx % 4].text
-                  } text-7xl uppercase`}
-                >
-                  {hex.team_title}
-                </h3>
-              </div>
-            </HtmlHexagon>
-            {showDesc && (
-              <Modal
-                setModalOpen={setShowDesc}
-                className={`${colourMapping[idx % 4].text} ${
-                  colourMapping[idx % 4].modalBg
-                }`}
+          const colourMapping = {
+            0: {
+              text: 'text-black',
+              bg: 'stroke-blue text-blue',
+              modalBg: 'bg-blue',
+            },
+            1: {
+              text: 'text-black',
+              bg: 'stroke-red text-red',
+              modalBg: 'bg-red',
+            },
+            2: {
+              text: 'text-white',
+              bg: 'stroke-purple text-purple',
+              modalBg: 'bg-purple',
+            },
+            3: {
+              text: 'text-black',
+              bg: 'stroke-yellow text-yellow',
+              modalBg: 'bg-yellow',
+            },
+          };
+          const [showDesc, setShowDesc] = useState(false);
+          return (
+            <div key={idx}>
+              <HtmlHexagon
+                key={idx}
+                className={`fill-current h-full -m-16 row-span-2 w-2/3-screen md:w-1/3-screen lg:w-1/8-screen z-10  ${
+                  colourMapping[idx % 4].bg
+                } ${positionMapping[idx % 3]}`}
+                containerClassName="flex flex-col justify-center w-100"
+                onClick={() => setShowDesc(!showDesc)}
               >
-                <div className="text-left">
+                <div className="px-32 py-16 text-black text-center flex flex-col justify-center absolute inset-0">
                   <h3
                     className={`${
                       colourMapping[idx % 4].text
-                    } text-4xl uppercase mb-6`}
+                    } text-7xl uppercase z-20`}
                   >
                     {hex.team_title}
                   </h3>
-                  <div
-                    className={'text-lg mb-2'}
-                    dangerouslySetInnerHTML={{
-                      __html: hex.team_description.html,
-                    }}
-                  />
                 </div>
-              </Modal>
-            )}
-          </>
-        );
-      })}
+              </HtmlHexagon>
+              {showDesc && (
+                <Modal
+                  setModalOpen={setShowDesc}
+                  className={`${colourMapping[idx % 4].text} ${
+                    colourMapping[idx % 4].modalBg
+                  }`}
+                >
+                  <div className="text-left">
+                    <h3
+                      className={`${
+                        colourMapping[idx % 4].text
+                      } text-4xl uppercase mb-6`}
+                    >
+                      {hex.team_title}
+                    </h3>
+                    <div
+                      className={'text-lg mb-2'}
+                      dangerouslySetInnerHTML={{
+                        __html: hex.team_description.html,
+                      }}
+                    />
+                  </div>
+                </Modal>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

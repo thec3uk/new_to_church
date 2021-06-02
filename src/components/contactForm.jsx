@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseForm from './form';
-import styles from './contactForm.module.css';
+import * as styles from './contactForm.module.css';
 
 const SubmitButton = ({ isValid, children }) => (
   <button

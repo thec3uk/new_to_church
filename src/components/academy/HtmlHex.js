@@ -11,13 +11,13 @@ const HtmlHexagon = ({ children, containerClassName, onClick, ...props }) => {
       {...props}
     >
       <foreignObject
-        className={containerClassName}
         onClick={onClick}
         x="0%"
         y="2em"
         width="100%"
         height="100%"
         {...props}
+        className={containerClassName}
       >
         {children}
       </foreignObject>
