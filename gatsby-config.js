@@ -2,7 +2,7 @@ const config = require('./config/site');
 
 const prismicRepositoryName = 'thec3';
 
-const linkResolver = function(doc) {
+const linkResolver = function (doc) {
   // Fallback for other types, in case new custom types get created
   return '/' + doc.uid;
 };
@@ -34,8 +34,6 @@ module.exports = {
         // The token will be listed under "Permanent access tokens".
         accessToken:
           'MC5YR003WEJBQUFDTUFPYllz.77-9eU5n77-977-9aO-_ve-_ve-_vXk377-9Q--_vWcp77-9P--_vX7vv71M77-977-9JO-_ve-_ve-_vWNtGA',
-
-        releaseID: 'YJuTYhEAACEAO4q5',
 
         // Set a link resolver function used to process links in your content.
         // Fields with rich text formatting or links to internal content use this
@@ -71,14 +69,11 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different HTML serializer logic for each field if necessary.
         // See: https://prismic.io/docs/nodejs/beyond-the-api/html-serializer
-        htmlSerializer: ({ node, key, value }) => (
-          type,
-          element,
-          content,
-          children
-        ) => {
-          // Your HTML serializer
-        },
+        htmlSerializer:
+          ({ node, key, value }) =>
+          (type, element, content, children) => {
+            // Your HTML serializer
+          },
       },
     },
     {
