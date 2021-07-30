@@ -49,6 +49,7 @@ const Section = ({ data }) => {
           <div className="article_cards">
             {section.items &&
               section.items.map(({ articles_to_link }) => {
+                console.log(articles_to_link);
                 const { document, uid, url } = articles_to_link;
                 return (
                   <Card
@@ -74,7 +75,7 @@ Section.propTypes = {
 
 const Sections = ({ data }) => (
   <Fragment>
-    {data && data.body.map(node => <Section key={node.id} data={node} />)}
+    {data && data.body.map((node) => <Section key={node.id} data={node} />)}
   </Fragment>
 );
 

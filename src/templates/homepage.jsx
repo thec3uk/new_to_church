@@ -31,11 +31,6 @@ const HomePage = ({ data }) => {
                   <div className="links">
                     <h3>Online, Cambridge, Bury St Edmunds &amp; Colchester</h3>
                   </div>
-                  <div className="links">
-                    <h3>
-                      <Link to="/brushfire">Book in now</Link>
-                    </h3>
-                  </div>
                 </div>
               </div>
             </div>
