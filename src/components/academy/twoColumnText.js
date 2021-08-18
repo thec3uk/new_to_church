@@ -205,27 +205,27 @@ const TwoColumnText = ({ data }) => {
       <div className="text-black text-center -mx-8 lg:mx-auto mt-auto mb-8 lg:my-0 row-start-1 row-end-2 lg:row-start-2 lg:row-end-3 lg:col-start-4 lg:col-end-6">
         <h3>{data.primary.title}</h3>
       </div>
-      <HtmlHexagon
+      {/* <HtmlHexagon
         className="stroke-current text-purple fill-current row-start-4 row-end-5 lg:row-start-2 lg:row-end-5 lg:col-start-6 lg:col-end-9"
         containerClassName="flex flex-col justify-end h-full"
         onClick={() => openPTModal()}
       >
         <div className="text-white text-center py-48 cursor-pointer">
-          <h3>{data.items[0].title}</h3>
-          <p className="text-xl">{data.items[0].sub_title}</p>
+          <h3>{data.items[1].title}</h3>
+          <p className="text-xl">{data.items[1].sub_title}</p>
         </div>
-      </HtmlHexagon>
-      {/* <HtmlHexagon
+      </HtmlHexagon> */}
+      <HtmlHexagon
         className="stroke-current text-yellow fill-current row-start-3 row-end-4 lg:row-start-4 lg:row-end-7 lg:col-start-4 lg:col-end-6"
         containerClassName="flex flex-col justify-end h-full"
         onClick={() => openOnlineModal()}
       >
         <div className="text-black text-center py-48 cursor-pointer">
-          <h3>{data.items[2].title}</h3>
-          <p className="text-xl">{data.items[2].sub_title}</p>
+          <h3>{data.items[0].title}</h3>
+          <p className="text-xl">{data.items[0].sub_title}</p>
         </div>
       </HtmlHexagon>
-      <div className="row-start-5 row-end-6 lg:row-start-6 lg:row-end-7 lg:col-start-4 lg:col-end-6 m-auto">
+      {/* <div className="row-start-5 row-end-6 lg:row-start-6 lg:row-end-7 lg:col-start-4 lg:col-end-6 m-auto">
         <button
           className="mt-24 lg:mt-4 font-sans px-10 py-6 text-xl lg:text-base lg:px-6 lg:py-2 border-purple border hover:bg-purple hover:text-yellow"
           onClick={() => openCompareModal()}
