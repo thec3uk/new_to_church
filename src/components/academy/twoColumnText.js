@@ -192,7 +192,7 @@ const TwoColumnText = ({ data }) => {
           </Transition>
         </div>
       )}
-      <HtmlHexagon
+      {/* <HtmlHexagon
         className="stroke-current text-purple fill-current row-start-2 row-end-3 lg:row-start-2 lg:row-end-5 lg:col-start-1 lg:col-end-4"
         containerClassName="flex flex-col justify-between content-center"
         onClick={() => openFTModal()}
@@ -201,7 +201,7 @@ const TwoColumnText = ({ data }) => {
           <h3>{data.items[0].title}</h3>
           <p className="text-xl">{data.items[0].sub_title}</p>
         </div>
-      </HtmlHexagon>
+      </HtmlHexagon> */}
       <div className="text-black text-center -mx-8 lg:mx-auto mt-auto mb-8 lg:my-0 row-start-1 row-end-2 lg:row-start-2 lg:row-end-3 lg:col-start-4 lg:col-end-6">
         <h3>{data.primary.title}</h3>
       </div>
@@ -211,11 +211,11 @@ const TwoColumnText = ({ data }) => {
         onClick={() => openPTModal()}
       >
         <div className="text-white text-center py-48 cursor-pointer">
-          <h3>{data.items[1].title}</h3>
-          <p className="text-xl">{data.items[1].sub_title}</p>
+          <h3>{data.items[0].title}</h3>
+          <p className="text-xl">{data.items[0].sub_title}</p>
         </div>
       </HtmlHexagon>
-      <HtmlHexagon
+      {/* <HtmlHexagon
         className="stroke-current text-yellow fill-current row-start-3 row-end-4 lg:row-start-4 lg:row-end-7 lg:col-start-4 lg:col-end-6"
         containerClassName="flex flex-col justify-end h-full"
         onClick={() => openOnlineModal()}
@@ -232,7 +232,7 @@ const TwoColumnText = ({ data }) => {
         >
           Compare your options
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };
