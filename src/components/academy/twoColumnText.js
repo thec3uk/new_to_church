@@ -139,7 +139,7 @@ const TwoColumnText = ({ data }) => {
   };
   const openOnlineModal = () => {
     setModalOpen(true);
-    setModalContent(data.items[2].content.html);
+    setModalContent(data.items[0].content.html);
     setColourClasses('bg-yellow text-black');
     setFadeColourClass('bg-purple');
   };
