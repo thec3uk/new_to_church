@@ -8,9 +8,8 @@ module.exports = {
       './src/**/*.ts',
       './src/**/*.tsx',
     ],
-    options: {
-      whitelist: ['bg-purple-trans-30', 'bg-yellow-trans', /col-start-/],
-    },
+
+    safelist: ['bg-purple-trans-30', 'bg-yellow-trans', /col-start-/],
   },
   theme: {
     extend: {
