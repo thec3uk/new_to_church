@@ -105,7 +105,7 @@ module.exports = {
         endpoint:
           process.env.NODE_ENV !== 'production'
             ? 'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=7443c2e349ff'
-            : 'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=6958ad32ad',
+            : 'https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=d62f87b12a',
       },
     },
     'gatsby-plugin-brotli',
