@@ -1,3 +1,152 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  #section-1:nth-child(1) {
+    animation: section-1 8s both infinite;
+  }
+
+  @keyframes section-1 {
+    0%,
+    20%,
+    100% {
+      background: url('/home/1-rect.jpg') 10% 50%;
+      clip-path: polygon(23% 18%, 95% 13%, 100% 91%, 55% 87%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    25%,
+    45% {
+      background: url('/home/2-rect.jpg') 14% 35%;
+      clip-path: polygon(95% 10%, 100% 80%, 62% 77%, 45% 12%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    50%,
+    70% {
+      background: url('/home/3-rect.jpg') 0% 50%;
+      clip-path: polygon(100% 67%, 48% 63%, 28% 9%, 95% 3%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    75%,
+    95% {
+      background: url('/home/7.jpg') 0% 50%;
+      clip-path: polygon(38% 68%, 18% 34%, 95% 27%, 100% 73%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* background-position: center; */
+    }
+  }
+
+  #section-2:nth-child(2) {
+    animation: section-2 8s both infinite;
+  }
+
+  @keyframes section-2 {
+    0%,
+    20%,
+    100% {
+      background: url('/home/1-rect.jpg') 38% 40%;
+      clip-path: polygon(0% 7%, 100% 9%, 95% 93%, 5% 95%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    25%,
+    45% {
+      background: url('/home/2-rect.jpg') 38% 40%;
+      clip-path: polygon(100% 3%, 95% 95%, 5% 90%, 0% 5%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    50%,
+    70% {
+      background: url('/home/3-rect.jpg') 38% 40%;
+      clip-path: polygon(95% 83%, 5% 78%, 0% 6%, 100% 11%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    75%,
+    95% {
+      background: url('/home/7.jpg') 33% 45%;
+      clip-path: polygon(5% 79%, 0% 21%, 100% 16%, 95% 83%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  #section-3:nth-child(3) {
+    animation: section-3 8s both infinite;
+  }
+
+  @keyframes section-3 {
+    0%,
+    20%,
+    100% {
+      background: url('/home/1-rect.jpg') 58% 40%;
+      clip-path: polygon(5% 11%, 100% 14%, 95% 88%, 0% 91%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    25%,
+    45% {
+      background: url('/home/2-rect.jpg') 66.66666% 20%;
+      clip-path: polygon(100% 14%, 95% 84%, 0% 91%, 5% 7%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    50%,
+    70% {
+      background: url('/home/3-rect.jpg') 66.66666% 20%;
+      clip-path: polygon(95% 79%, 0% 86%, 5% 7%, 100% 3%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    75%,
+    95% {
+      background: url('/home/7.jpg') 66.66666% 55%;
+      clip-path: polygon(0% 85%, 5% 14%, 100% 3%, 95% 95%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* background-position: center; */
+    }
+  }
+
+  #section-4:nth-child(4) {
+    animation: section-4 8s both infinite;
+  }
+
+  @keyframes section-4 {
+    0%,
+    20%,
+    100% {
+      background: url('/home/1-rect.jpg') 88% 50%;
+      clip-path: polygon(5% 18%, 89% 21%, 62% 73%, 0% 83%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    25%,
+    45% {
+      background: url('/home/2-rect.jpg') 100% 50%;
+      clip-path: polygon(57% 31%, 45% 67%, 0% 77%, 5% 18%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    50%,
+    70% {
+      background: url('/home/3-rect.jpg') 100% 50%;
+      clip-path: polygon(45% 57%, 0% 67%, 5% 8%, 72% 12%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    75%,
+    95% {
+      background: url('/home/7.jpg') 100% 50%;
+      clip-path: polygon(0% 77%, 5% 18%, 57% 21%, 92% 67%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* background-position: center; */
+    }
+  }
+}
