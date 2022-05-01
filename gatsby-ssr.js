@@ -6,7 +6,7 @@ import {
 import { PrismicProvider } from '@prismicio/react'
 import { Link } from 'gatsby'
 
-import { linkResolver } from './src/utils/LinkResolver'
+import { linkResolver } from './src/utils/linkResolver'
 import HomeTemplate from './src/pages/index'
 import PageTemplate from './src/pages/page'
 
