@@ -149,7 +149,7 @@ const ContactForm = () => {
   return (
     <div className="max-w-lg px-0 sm:px-6 lg:mx-auto lg:max-w-none">
       {submitted ? (
-        <div className="grid grid-cols-1 grid-rows-3 my-auto">
+        <div className="grid grid-cols-1 my-auto lg:grid-rows-3">
           <div className="prose lg:row-start-2 prose-headings:mb-4 prose-h2:text-2xl prose-h3:text-xl">
             <PrismicRichText
               field={

@@ -1,3 +1,5 @@
+const config = require(`../config/site`)
+
 exports.linkResolver = (node) => {
   if (node.uid === 'another-test') {
     console.log(node)
@@ -20,6 +22,7 @@ exports.linkResolver = (node) => {
   if (node.type === 'page') {
     // console.log('Page without data')
     // console.log(node)
+    if (node.uid === config.domain) return '/'
     return `/${node.uid}`
   }
   if (node.type === 'redirect') {
