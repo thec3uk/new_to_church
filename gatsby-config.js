@@ -16,6 +16,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-background-image-es5',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:',
+      },
+    },
+    {
       resolve: `gatsby-plugin-typescript`,
       options: {
         // isTSX: true, // defaults to false
@@ -35,6 +42,7 @@ module.exports = {
       resolve: 'gatsby-plugin-prismic-previews',
       options: {
         repositoryName: prismicRepositoryName,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
     {
@@ -44,6 +52,19 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         linkResolver: linkResolver,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        // routes: [
+        //   {
+        //     type: 'page',
+        //     path: '/:parent_page?/:uid',
+        //     resolvers: {
+        //       parent_page: 'parent_page',
+        //     },
+        //   },
+        // ],
+        // graphQuery: `
+        //   {
+        //   }
+        // `,
       },
     },
     {

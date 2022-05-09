@@ -71,8 +71,7 @@ export const query = graphql`
     }
     items {
       linkUrl {
-        url
-        uid
+        ...Link
       }
       linkTitle
     }

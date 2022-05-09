@@ -1,6 +1,7 @@
 import * as React from 'react'
 import TitleCard from './title'
 import { FAQList } from '../faq'
+import { faqList } from '../faq/list'
 
 const FAQCard = ({
   title,
@@ -10,6 +11,7 @@ const FAQCard = ({
   cta,
   titleImage,
   faqs,
+  colour,
 }: {
   title: string
   subtitle: string
@@ -18,9 +20,15 @@ const FAQCard = ({
   cta?: string
   titleImage?: string
   faqs: faqList
+  colour?: string
 }) => {
   return (
-    <TitleCard title={title} subtitle={subtitle} titleImage={titleImage}>
+    <TitleCard
+      title={title}
+      subtitle={subtitle}
+      titleImage={titleImage}
+      colour={colour}
+    >
       <div className="mb-4">
         <FAQList faqs={faqs} />
       </div>

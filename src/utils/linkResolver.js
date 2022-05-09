@@ -1,6 +1,31 @@
-exports.linkResolver = (doc) => {
-  if (doc.type === 'page') {
-    return `/${doc.uid}`
+exports.linkResolver = (node) => {
+  if (node.uid === 'another-test') {
+    console.log(node)
+  }
+  if (node.uid === 'leafs') {
+    console.log(node)
+  }
+
+  // if (node.type === 'page' && node.data) {
+  //   console.log('Page with data')
+  //   console.log(node)
+  //   const fullPath =
+  //     node.data.parent_page.url === null
+  //       ? node.uid === 'home'
+  //         ? '/'
+  //         : `/${node.uid}`
+  //       : `${node.data.parent_page.uid}/${node.uid}`
+  //   return fullPath
+  // })
+  if (node.type === 'page') {
+    // console.log('Page without data')
+    // console.log(node)
+    return `/${node.uid}`
+  }
+  if (node.type === 'redirect') {
+    // console.log('Page without data')
+    // console.log(node)
+    return `/${node.uid}`
   }
 
   return '/'

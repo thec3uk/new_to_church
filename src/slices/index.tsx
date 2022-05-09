@@ -6,6 +6,7 @@ import ButtonSlice from './button'
 import QuickLinkSlice from './quicklinks'
 import SocialLinkSlice from './socialLinks'
 import HeaderSlice from './header'
+import { graphql } from 'gatsby'
 
 export const slices = {
   faq_section: FAQSlice,
@@ -17,3 +18,24 @@ export const slices = {
   social_links_block: SocialLinkSlice,
   header: HeaderSlice,
 }
+
+export const query = graphql`
+  fragment Link on PrismicLinkType {
+    url
+    type
+    uid
+    link_type
+    document {
+      ... on PrismicPage {
+        uid
+        type
+        url
+      }
+      ... on PrismicRedirect {
+        uid
+        url
+        type
+      }
+    }
+  }
+`

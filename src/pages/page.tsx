@@ -1,8 +1,9 @@
 // {PrismicPage.url}.js file
 
 import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import { SliceZone } from '@prismicio/react'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 import SEO from '../components/SEO'
 
@@ -18,24 +19,17 @@ const PageTemplate = ({ data }) => {
   return (
     <layout.Layout>
       <SEO title={page.data.body.slice_type} description={'SEO TEXT'} />
-      <SliceZone
-        slices={page.data.body}
-        components={slices}
-        context={{
-          quickLinks: page.data.quick_links_block,
-        }}
-      />
+      <SliceZone slices={page.data.body} components={slices} />
     </layout.Layout>
   )
 }
 
 export const query = graphql`
-  query PageQuery($id: String) {
-    prismicPage(id: { eq: $id }, tags: { eq: "domain:thec3.uk" }) {
+  query PageQuery($uid: String) {
+    prismicPage(uid: { eq: $uid }, tags: { eq: "domain:thec3.uk" }) {
+      _previewable
+      uid
       data {
-        quick_links_block {
-          ...QuickLinks
-        }
         body {
           ...FAQCard
           ...DefaultCard
@@ -69,4 +63,4 @@ export const query = graphql`
   }
 `
 
-export default PageTemplate
+export default withPrismicPreview(PageTemplate)

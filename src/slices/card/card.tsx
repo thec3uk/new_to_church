@@ -10,6 +10,8 @@ const DefaultCardSlice = (data) => {
       title={data.slice.primary.title}
       subtitle={data.slice.primary.subTitle}
       cta={data.slice.primary.ctaTitle}
+      to={data.slice.primary.ctaLink}
+      colour={data.slice.primary.colour}
     >
       <PrismicRichText field={data.slice.primary.content.richText} />
     </components.Card>
@@ -23,8 +25,9 @@ export const query = graphql`
     primary {
       ctaTitle
       ctaLink {
-        id
+        ...Link
       }
+      colour
       subtitle
       title
       content {

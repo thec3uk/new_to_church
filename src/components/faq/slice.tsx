@@ -13,9 +13,11 @@ export default function FAQs({ data }) {
                 {data.primary.eyebrow_headline.text}
               </h3>
             )}
-            <h2 className="mb-3 text-3xl font-extrabold text-left text-gray-900 sm:text-4xl">
-              {data.primary.faqTitle.text}
-            </h2>
+            {data.primary.faqTitle && (
+              <h2 className="mb-3 text-3xl font-extrabold text-left text-gray-900 sm:text-4xl">
+                {data.primary.faqTitle.text}
+              </h2>
+            )}
             <PrismicRichText field={data.primary.description.richText} />
           </div>
 

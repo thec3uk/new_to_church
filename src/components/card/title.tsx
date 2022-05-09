@@ -1,5 +1,6 @@
 import * as React from 'react'
 import BaseCard from './base'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const TitleCard = ({
   children,
@@ -12,15 +13,17 @@ const TitleCard = ({
   title?: string
   subtitle?: string
   colour?: string
-  titleImage?: string
+  titleImage?: any
 }) => {
+  const gImage = getImage(titleImage)
   return (
     <BaseCard colour={colour ? colour : 'teal'}>
-      {!!titleImage ? (
+      {!!gImage ? (
         <div className="flex flex-col justify-between col-span-5 md:col-span-11">
           <div className="relative rounded">
-            <img
-              src={titleImage}
+            <GatsbyImage
+              image={gImage}
+              alt={titleImage.alt || 'An Image needing an alt text'}
               className="object-cover w-full h-56 rounded"
             />
             <div className="absolute bottom-0 object-cover w-full h-56 rounded bg-gradient-to-t from-black to-transparent"></div>
@@ -46,7 +49,9 @@ const TitleCard = ({
           </h2>
         </div>
       )}
-      <div className="col-start-1 col-span-full md:col-span-11">{children}</div>
+      <div className="flex flex-col col-start-1 col-span-full md:col-span-11">
+        {children}
+      </div>
       <div className="hidden col-start-12 row-start-1 row-span-2 md:flex justify-center items-center [writing-mode:vertical-lr]">
         <h2 className="font-bold underline md:text-4xl lg:text-5xl text-gray-50 whitespace-nowrap">
           {title}

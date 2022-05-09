@@ -5,8 +5,8 @@ import { withPrismicPreviewResolver } from 'gatsby-plugin-prismic-previews'
 
 const PreviewPage = () => {
   return (
-    <div>
-      <h1>Loading preview…</h1>
+    <div className="m-20">
+      <h1 className="text-2xl">Loading preview…</h1>
     </div>
   )
 }

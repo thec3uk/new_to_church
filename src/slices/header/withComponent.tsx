@@ -5,6 +5,7 @@ import * as React from 'react'
 import { layout, components } from '../../components'
 import CarouselHero from './components/carousel'
 import Map from './components/map'
+import ContactForm from './components/contactForm'
 
 const commonLinkClasses =
   'bg-gradient-to-r bg-underline font-semibold bg-p-full bg-no-repeat w-max pl-0.5 pr-4 duration-300 hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero cursor-pointer transition-bg-position no-underline'
@@ -19,12 +20,17 @@ const heroWithCustomComponent = ({ slice }) => {
   const mapping: Record<string, React.ReactNode> = {
     map: Map,
     carousel: CarouselHero,
+    contact_form: ContactForm,
   }
   const Component = mapping[slice.primary.componentName]
   const fullbleed = slice.primary.componentName === 'map'
 
   return (
-    <layout.Hero background={<Component />} fullbleed={fullbleed}>
+    <layout.Hero
+      background={<Component />}
+      fullbleed={fullbleed}
+      hideOnMobile={slice.primary.componentName !== 'contact_form'}
+    >
       <h1 className="font-title font-bold text-5.5xl lowercase">
         {slice.primary.title}
       </h1>
@@ -66,8 +72,7 @@ export const query = graphql`
     }
     items {
       linkUrl {
-        url
-        uid
+        ...Link
       }
       linkTitle
     }

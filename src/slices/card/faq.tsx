@@ -9,7 +9,8 @@ export const FAQCardSlice = (data) => {
       title={data.slice.primary.title}
       subtitle={data.slice.primary.subTitle}
       faqs={data.slice.items}
-      text=""
+      colour={data.slice.primary.colour}
+      text={data.slice.primary.content.richText}
     />
   )
 }
@@ -20,6 +21,7 @@ export const query = graphql`
   fragment FAQCard on PrismicCardFaqCard {
     variation
     primary {
+      colour
       title
       content {
         richText

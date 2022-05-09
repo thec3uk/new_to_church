@@ -2,6 +2,8 @@ import { PrismicLink } from '@prismicio/react'
 import * as React from 'react'
 import FooterList from './footerList'
 
+import { linkResolver } from '../../utils/linkResolver'
+
 const Footer = ({ data }) => {
   const colours = [
     'hover:text-red-500',
@@ -20,6 +22,7 @@ const Footer = ({ data }) => {
                   key={link.link_title}
                   className={`transition-colors duration-300 ${colours[idx]}`}
                   field={link.link_url}
+                  linkResolver={linkResolver}
                 >
                   {link.link_title}
                 </PrismicLink>

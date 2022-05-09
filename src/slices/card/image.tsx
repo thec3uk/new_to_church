@@ -8,7 +8,8 @@ const ImageCardSlice = (data) => {
     <components.ImageCard
       title={data.slice.primary.title}
       subtitle={data.slice.primary.subTitle}
-      image="/live.jpg"
+      image={data.slice.primary.image}
+      link={data.slice.primary.ctaLink}
     />
   )
 }
@@ -19,6 +20,9 @@ export const query = graphql`
     primary {
       title
       subtitle
+      ctaLink {
+        ...Link
+      }
       image {
         alt
         copyright

@@ -7,15 +7,21 @@ const Hero = ({
   fullbleed = false,
   alignment,
   children,
+  hideOnMobile,
 }: {
   background: React.ReactNode
   fullbleed?: boolean
   alignment?: string
   children: React.ReactNode
+  hideOnMobile?: boolean
 }) => {
   const HeroComponent = fullbleed ? FullBleedHero : ContainedHero
   return (
-    <HeroComponent background={background} alignment={alignment}>
+    <HeroComponent
+      background={background}
+      alignment={alignment}
+      hideOnMobile={hideOnMobile}
+    >
       {children}
     </HeroComponent>
   )
