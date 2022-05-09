@@ -166,6 +166,7 @@ const ContactForm = () => {
         </div>
       ) : (
         <form
+          name={staticData.prismicContactForm.data.form_name}
           action="#"
           method="POST"
           className="grid grid-cols-1 gap-y-6"
