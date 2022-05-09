@@ -180,6 +180,7 @@ const ContactForm = () => {
               <input name="bot-field" onChange={handleChange} />
             </label>
           </p>
+
           <Input
             label={staticData.prismicContactForm.data.name_label}
             type={'text'}
@@ -200,7 +201,8 @@ const ContactForm = () => {
             <label htmlFor="category" className="sr-only">
               {staticData.prismicContactForm.data.category_label}
             </label>
-
+            <input type="hidden" name="email_recipient" />
+            <input type="hidden" name="category_name" />
             <CategorySelect
               categories={staticData.prismicContactForm.data.category}
               selected={selected}
