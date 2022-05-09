@@ -8,10 +8,11 @@ const TextCardSlice = (data) => {
     <components.TextCard
       title={data.slice.primary.title}
       subtitle={data.slice.primary.subTitle}
-      text={data.slice.primary.content.text}
+      text={data.slice.primary.content.richText}
       cta={data.slice.primary.ctaTitle}
       to={data.slice.primary.ctaLink}
-      titleImage="/card.jpg"
+      colour={data.slice.primary.colour}
+      titleImage={data.slice.primary.image}
     />
   )
 }
@@ -22,12 +23,13 @@ export const query = graphql`
     primary {
       ctaTitle
       ctaLink {
-        id
+        ...Link
       }
+      colour
       subtitle
       title
       content {
-        text
+        richText
       }
       image {
         alt

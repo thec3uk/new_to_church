@@ -41,11 +41,7 @@ export const query = graphql`
     primary {
       size
       linkUrl {
-        id
-        url
-        uid
-        link_type
-        tags
+        ...Link
       }
       linkTitle
       alignment
@@ -55,11 +51,7 @@ export const query = graphql`
     primary {
       size
       linkUrl {
-        id
-        url
-        uid
-        link_type
-        tags
+        ...Link
       }
       linkTitle
       alignment
@@ -69,11 +61,7 @@ export const query = graphql`
     primary {
       size
       linkUrl {
-        id
-        url
-        uid
-        link_type
-        tags
+        ...Link
       }
       linkTitle
       alignment
@@ -83,11 +71,7 @@ export const query = graphql`
     primary {
       size
       linkUrl {
-        id
-        url
-        uid
-        link_type
-        tags
+        ...Link
       }
       linkTitle
       alignment
@@ -97,11 +81,7 @@ export const query = graphql`
     primary {
       size
       linkUrl {
-        id
-        url
-        uid
-        link_type
-        tags
+        ...Link
       }
       linkTitle
       alignment

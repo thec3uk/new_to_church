@@ -6,11 +6,11 @@ const QuickLink = ({
   to,
 }: {
   children: React.ReactNode
-  to: string
+  to: any
 }) => (
   <PrismicLink
     className="transition duration-300 cursor-pointer text-gray-50 hover:text-purple-900 hover:underline"
-    href={to}
+    field={to}
   >
     {children}
   </PrismicLink>
@@ -27,7 +27,7 @@ const QuickLinks = ({ data }) => {
       <div className="flex flex-col justify-between col-start-1 row-start-1 space-y-1 text-4xl font-bold lg:row-start-2 md:space-y-4 lg:text-3xl xl:text-4xl 2xl:text-5xl">
         {data.slices.map((slice, idx) => {
           return (
-            <QuickLink key={idx} to={slice.primary.url.url}>
+            <QuickLink key={idx} to={slice.primary.url}>
               <PrismicRichText field={slice.primary.title.richText} />
             </QuickLink>
           )

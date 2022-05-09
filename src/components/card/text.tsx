@@ -1,4 +1,4 @@
-import { PrismicLink } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import * as React from 'react'
 import TitleCard from './title'
 
@@ -9,20 +9,29 @@ const TextCard = ({
   to,
   cta,
   titleImage,
+  colour,
 }: {
   title: string
   subtitle: string
-  text: string
-  to?: string
+  text: any
+  to?: any
   cta?: string
   titleImage?: string
+  colour?: string
 }) => {
   return (
-    <TitleCard title={title} subtitle={subtitle} titleImage={titleImage}>
-      <p className="mt-4 md:columns-2 text-gray-50">{text}</p>
+    <TitleCard
+      title={title}
+      subtitle={subtitle}
+      titleImage={titleImage}
+      colour={colour}
+    >
+      <div className="mt-4 prose md:columns-2 lg:prose-lg text-gray-50 prose-a:text-gray-100 hover:prose-a:text-teal-900">
+        <PrismicRichText field={text} />
+      </div>
       {to && cta && (
         <PrismicLink
-          href={to}
+          field={to}
           className="block w-full px-6 py-1 mt-4 text-xl font-bold text-center bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
         >
           {cta}

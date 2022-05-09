@@ -35,8 +35,7 @@ export const query = graphql`
                   richText
                 }
                 url {
-                  uid
-                  url
+                  ...Link
                 }
               }
             }

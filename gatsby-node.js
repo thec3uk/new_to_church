@@ -24,8 +24,17 @@ exports.createPages = async ({ actions, graphql }) => {
           nodes {
             id
             uid
+            url
             tags
             type
+            data {
+              parent_page {
+                url
+                uid
+                type
+                link_type
+              }
+            }
           }
         }
       }
@@ -35,8 +44,16 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Create pages for each Page in Prismic using the selected template.
   pages.data?.allPrismicPage.nodes.forEach((node) => {
+    // console.log('gatby-node', node.uid)
+    const url = linkResolver(node)
+    // const fullPath =
+    //   node.data.parent_page.uid === null
+    //     ? node.uid === 'home'
+    //       ? '/'
+    //       : `/${node.uid}`
+    //     : `/${node.data.parent_page.uid}/${node.uid}`
     createPage({
-      path: node.uid === 'home' ? '/' : `/${node.uid}`,
+      path: url,
       component: path.resolve(__dirname, 'src/pages/page.tsx'),
       context: {
         uid: node.uid,

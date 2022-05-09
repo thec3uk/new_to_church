@@ -8,9 +8,9 @@ const BaseCard = ({
   colour?: string
 }) => {
   const mapping: Record<string, string> = {
-    teal: 'bg-teal-500 text-white-50',
-    red: 'bg-red-500 text-white-50',
-    yellow: 'bg-red-500 text-black',
+    teal: 'bg-teal-500 text-white',
+    red: 'bg-red-500 text-white',
+    yellow: 'bg-yellow-300 text-black',
     transparent: 'bg-transparent',
   }
   return (

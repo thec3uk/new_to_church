@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { useMergePrismicPreviewData } from 'gatsby-plugin-prismic-previews'
 import './layout.css'
 
 import Footer from './footer'
@@ -7,45 +8,59 @@ import NavBar from './nav'
 import Announcement from './announcement'
 
 const Layout = ({ children }) => {
-  const { prismicNotificationBanner, prismicStaticFooter: footer } =
-    useStaticQuery(
-      graphql`
-        query HeaderQuery {
-          prismicNotificationBanner {
-            id
-            data {
-              content
-              active
-              url {
-                link_type
-                url
-                uid
-              }
+  const staticData = useStaticQuery(
+    graphql`
+      query HeaderQuery {
+        prismicNotificationBanner {
+          _previewable
+          id
+          data {
+            content
+            active
+            url {
+              ...Link
             }
           }
-          prismicStaticFooter(tags: { eq: "domain:thec3.uk" }) {
-            data {
-              body {
-                ... on PrismicStaticFooterDataBodyLinkList {
-                  slice_type
-                  primary {
-                    title
+        }
+        prismicStaticFooter(tags: { eq: "domain:thec3.uk" }) {
+          _previewable
+          data {
+            body {
+              ... on PrismicStaticFooterDataBodyLinkList {
+                slice_type
+                primary {
+                  title
+                }
+                items {
+                  link_url {
+                    ...Link
+                    # document {
+                    #   ... on PrismicPage {
+                    #     uid
+                    #     url
+                    #     data {
+                    #       parent_page {
+                    #         url
+                    #         uid
+                    #       }
+                    #     }
+                    #   }
+                    # }
                   }
-                  items {
-                    link_url {
-                      uid
-                      url
-                      link_type
-                    }
-                    link_title
-                  }
+                  link_title
                 }
               }
             }
           }
         }
-      `
-    )
+      }
+    `
+  )
+
+  const {
+    data: { prismicNotificationBanner, prismicStaticFooter: footer },
+    isPreview,
+  } = useMergePrismicPreviewData(staticData)
 
   return (
     <>

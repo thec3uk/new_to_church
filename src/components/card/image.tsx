@@ -1,20 +1,45 @@
 import * as React from 'react'
 import TitleCard from './title'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { convertToBgImage } from 'gbimage-bridge'
+import BackgroundImage from 'gatsby-background-image-es5'
+import { PrismicLink } from '@prismicio/react'
 
 const ImageCard = ({
   title,
   subtitle,
   image,
+  link,
 }: {
   title?: string
   image: string
   subtitle?: string
+  link?: any
 }) => {
-  return (
-    //   TODO: this needs to be configurable
-    <div className="bg-[url('/live.jpg')] bg-cover bg-center rounded h-56 md:h-72 lg:h-full lg:min-h-80">
+  const gImage = getImage(image)
+  const bgImage = convertToBgImage(gImage)
+
+  const Card = () => (
+    <BackgroundImage
+      Tag="div"
+      // Spread bgImage into BackgroundImage:
+      {...bgImage}
+      preserveStackingContext
+      className="h-56 bg-center bg-cover rounded md:h-72 lg:h-full lg:min-h-80"
+    >
       <TitleCard title={title} subtitle={subtitle} colour={'transparent'} />
-    </div>
+    </BackgroundImage>
+  )
+  return (
+    <>
+      {link ? (
+        <PrismicLink field={link}>
+          <Card />
+        </PrismicLink>
+      ) : (
+        <Card />
+      )}
+    </>
   )
 }
 

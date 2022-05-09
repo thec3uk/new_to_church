@@ -4,10 +4,12 @@ const ContainedHero = ({
   children,
   background,
   alignment,
+  hideOnMobile = true,
 }: {
   children: React.ReactNode
   background: React.ReactNode
   alignment?: string
+  hideOnMobile: boolean
 }) => {
   const margins = 'mb-32 mt-28 md:mt-40 lg:mb-32 lg:mt-40'
 
@@ -17,9 +19,11 @@ const ContainedHero = ({
     right: 'text-right lg:col-start-8',
   }
 
+  const hideClasses = hideOnMobile ? `hidden lg:flex` : 'flex'
+
   const bgAlignment = ['center', 'right'].includes(alignment as string)
     ? ''
-    : 'lg:flex'
+    : hideClasses
 
   return (
     <>
@@ -31,7 +35,7 @@ const ContainedHero = ({
         {children}
       </div>
       <div
-        className={`hidden lg:col-start-7 lg:col-span-5 justify-center items-center w-full ${margins} ${bgAlignment}`}
+        className={`lg:col-start-7 lg:col-span-5 justify-center items-center w-full ${margins} ${bgAlignment}`}
       >
         <div className="w-full h-full">{background}</div>
       </div>
