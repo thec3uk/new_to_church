@@ -7,7 +7,7 @@ const ImageCardSlice = (data) => {
   return (
     <components.ImageCard
       title={data.slice.primary.title}
-      subtitle={data.slice.primary.subTitle}
+      subtitle={data.slice.primary.subtitle}
       image={data.slice.primary.image}
       link={data.slice.primary.ctaLink}
     />

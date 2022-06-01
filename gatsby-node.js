@@ -104,3 +104,23 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 }
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  const { buildObjectType } = schema
+
+  // List known embed fields. Any unknown fields will still be inferred.
+  const PrismicEmbedType = buildObjectType({
+    name: 'PrismicEmbedType',
+    fields: {
+      height: 'Int',
+      embed_url: 'String',
+      thumbnail_url: 'String',
+      title: 'String',
+      type: 'String',
+      width: 'Int',
+    },
+  })
+
+  createTypes(PrismicEmbedType)
+}

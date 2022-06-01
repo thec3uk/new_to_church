@@ -13,7 +13,7 @@ const MediaSlice = ({ slice }) => {
   const Component = variations[slice.variation]
 
   return (
-    <layout.FullBleed>
+    <layout.FullBleed hash={slice.id}>
       <Component slice={slice} />
     </layout.FullBleed>
   )

@@ -14,7 +14,7 @@ const SocialIcon = ({
 }) => {
   return (
     <PrismicLink href={to} className="flex items-center space-x-2 group">
-      <Icon className="w-8 h-8 text-white transition-colors duration-300 cursor-pointer fill-current lg:h-6 lg:w-6 group-hover:text-red-500">
+      <Icon className="w-8 h-8 text-gray-900 transition-colors duration-300 cursor-pointer fill-current lg:h-6 lg:w-6 group-hover:text-red-500">
         <title>{title}</title>
         {children}
       </Icon>
@@ -27,11 +27,11 @@ const SocialIcon = ({
 
 const SocialLinks = ({ data }) => {
   return (
-    <div className="grid-cols-2 px-4 py-4 space-y-4 bg-purple-900 rounded ">
-      <h3 className="text-3xl font-extrabold text-center text-white underline">
+    <div className="grid-cols-2 px-4 py-4 space-y-4 bg-white rounded shadow-md">
+      <h3 className="text-3xl font-extrabold text-center text-gray-900 underline">
         socials
       </h3>
-      <div className="flex justify-around text-lg font-black text-white lg:flex-col lg:space-y-8 xl:font-bold 2xl:text-3xl">
+      <div className="flex justify-around text-lg font-black text-gray-900 lg:flex-col lg:space-y-8 xl:font-bold 2xl:text-3xl">
         <div className="flex items-center space-x-2">
           <SocialIcon to={data.facebookUrl.url} title="Facebook">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />

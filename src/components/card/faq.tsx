@@ -29,7 +29,7 @@ const FAQCard = ({
       titleImage={titleImage}
       colour={colour}
     >
-      <div className="mb-4">
+      <div className="mb-4 mr-2">
         <FAQList faqs={faqs} />
       </div>
     </TitleCard>

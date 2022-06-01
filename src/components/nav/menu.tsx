@@ -29,15 +29,15 @@ const Menu = ({ isMobile = true }: { isMobile?: boolean }) => {
 
   const hoverClassNames = [
     'from-red-500-full',
-    'from-teal-500-full',
-    'from-yellow-300-full',
+    // 'from-teal-500-full',
+    // 'from-yellow-300-full',
   ]
 
   return (
     <div
-      className={`h-full font-bold uppercase text-black text-2xl lg:text-lg my-auto lg:mt-0 md:col-start-2 lg:col-end-12 justify-center lg:justify-between ${displayClasses} cursor-pointer z-50`}
+      className={`h-full font-bold uppercase text-black text-2xl lg:text-lg my-auto lg:mt-0 lg:col-start-2 lg:col-end-12 justify-center lg:justify-between ${displayClasses} cursor-pointer z-50`}
     >
-      <div className="flex-row items-center justify-center hidden md:flex ">
+      <div className="flex-row items-center justify-center hidden lg:flex ">
         <PrismicLink href={'/'} className="w-16 h-16">
           <img src="/manifest-logo.png" />
         </PrismicLink>

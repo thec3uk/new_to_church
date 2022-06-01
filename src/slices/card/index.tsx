@@ -19,7 +19,7 @@ const CardSlice = ({ slice }) => {
   const Component = variations[slice.variation]
 
   return (
-    <layout.Main>
+    <layout.Main hash={slice.id}>
       <Component slice={slice} />
     </layout.Main>
   )

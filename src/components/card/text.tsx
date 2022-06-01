@@ -26,13 +26,13 @@ const TextCard = ({
       titleImage={titleImage}
       colour={colour}
     >
-      <div className="mt-4 prose md:columns-2 lg:prose-lg text-gray-50 prose-a:text-gray-100 hover:prose-a:text-teal-900">
+      <div className="prose md:columns-2 lg:prose-lg hover:prose-a:text-red-500">
         <PrismicRichText field={text} />
       </div>
       {to && cta && (
         <PrismicLink
           field={to}
-          className="block w-full px-6 py-1 mt-4 text-xl font-bold text-center bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
+          className="block w-full px-6 py-1 mt-4 text-xl font-bold text-center text-white transition-colors duration-300 bg-black rounded shadow hover:text-red-500 lg:py-3 lg:text-3xl"
         >
           {cta}
         </PrismicLink>

@@ -1,4 +1,3 @@
-import { PrismicRichText } from '@prismicio/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 
@@ -28,7 +27,7 @@ const ButtonSlice = ({ slice }) => {
   const Component = variations[slice.variation]
 
   return (
-    <layout.Main>
+    <layout.Main hash={slice.id}>
       <Component data={slice.primary} colourVariation={slice.variation} />
     </layout.Main>
   )

@@ -7,7 +7,7 @@ export const FAQCardSlice = (data) => {
   return (
     <components.FAQCard
       title={data.slice.primary.title}
-      subtitle={data.slice.primary.subTitle}
+      subtitle={data.slice.primary.subTitle || 'Subtitle'}
       faqs={data.slice.items}
       colour={data.slice.primary.colour}
       text={data.slice.primary.content.richText}

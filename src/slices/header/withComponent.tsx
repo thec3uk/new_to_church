@@ -1,4 +1,4 @@
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 
@@ -12,9 +12,9 @@ const commonLinkClasses =
 
 const heroWithCustomComponent = ({ slice }) => {
   const linkColours = [
-    'from-red-500-full to-yellow-300-full',
-    'from-teal-500-full to-red-500-full',
-    'from-yellow-300-full to-teal-500-full',
+    'from-red-500-full to-black-full',
+    // 'from-teal-500-full to-red-500-full',
+    // 'from-yellow-300-full to-teal-500-full',
   ]
 
   const mapping: Record<string, React.ReactNode> = {
@@ -43,13 +43,13 @@ const heroWithCustomComponent = ({ slice }) => {
       <div className="flex flex-col mt-8 space-y-4 text-2xl">
         {slice.items.map((link, idx) => {
           return (
-            <a
+            <PrismicLink
               key={idx}
-              href={link.linkUrl.url}
-              className={`${commonLinkClasses} ${linkColours[idx % 3]}`}
+              field={link.linkUrl}
+              className={`${commonLinkClasses} ${linkColours[0]}`}
             >
               {link.linkTitle}
-            </a>
+            </PrismicLink>
           )
         })}
       </div>

@@ -6,7 +6,7 @@ import Menu from './menu'
 
 const NavBar = () => {
   return (
-    <nav className="fixed bottom-0 h-16 -mx-2 md:relative shadow-top md:shadow-none md:h-20 md:bottom-auto md:pt-8 md:grid md:grid-cols-12 md:gap-x-4 md:px-4 md:w-screen">
+    <nav className="fixed bottom-0 h-16 -mx-2 lg:relative shadow-top lg:shadow-none lg:h-20 lg:bottom-auto lg:pt-8 lg:grid lg:grid-cols-12 lg:gap-x-4 lg:px-4 lg:w-screen">
       <Menu isMobile={false} />
       <Popover className="relative z-50 lg:hidden">
         {({ open }) => (

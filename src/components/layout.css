@@ -12,28 +12,28 @@
     20%,
     100% {
       background: url('/home/1-rect.jpg') 10% 50%;
-      clip-path: polygon(23% 18%, 95% 13%, 100% 91%, 55% 87%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     25%,
     45% {
       background: url('/home/2-rect.jpg') 14% 35%;
-      clip-path: polygon(95% 10%, 100% 80%, 62% 77%, 45% 12%);
+      clip-path: polygon(25% 100%, 0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     50%,
     70% {
       background: url('/home/3-rect.jpg') 0% 50%;
-      clip-path: polygon(100% 67%, 48% 63%, 28% 9%, 95% 3%);
+      clip-path: polygon(100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%, 75% 0%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     75%,
     95% {
       background: url('/home/7.jpg') 0% 50%;
-      clip-path: polygon(38% 68%, 18% 34%, 95% 27%, 100% 73%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
       /* background-position: center; */
@@ -49,28 +49,28 @@
     20%,
     100% {
       background: url('/home/1-rect.jpg') 38% 40%;
-      clip-path: polygon(0% 7%, 100% 9%, 95% 93%, 5% 95%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     25%,
     45% {
       background: url('/home/2-rect.jpg') 38% 40%;
-      clip-path: polygon(100% 3%, 95% 95%, 5% 90%, 0% 5%);
+      clip-path: polygon(25% 100%, 0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     50%,
     70% {
       background: url('/home/3-rect.jpg') 38% 40%;
-      clip-path: polygon(95% 83%, 5% 78%, 0% 6%, 100% 11%);
+      clip-path: polygon(100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%, 75% 0%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     75%,
     95% {
       background: url('/home/7.jpg') 33% 45%;
-      clip-path: polygon(5% 79%, 0% 21%, 100% 16%, 95% 83%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -85,28 +85,28 @@
     20%,
     100% {
       background: url('/home/1-rect.jpg') 58% 40%;
-      clip-path: polygon(5% 11%, 100% 14%, 95% 88%, 0% 91%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     25%,
     45% {
       background: url('/home/2-rect.jpg') 66.66666% 20%;
-      clip-path: polygon(100% 14%, 95% 84%, 0% 91%, 5% 7%);
+      clip-path: polygon(25% 100%, 0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     50%,
     70% {
       background: url('/home/3-rect.jpg') 66.66666% 20%;
-      clip-path: polygon(95% 79%, 0% 86%, 5% 7%, 100% 3%);
+      clip-path: polygon(100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%, 75% 0%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     75%,
     95% {
       background: url('/home/7.jpg') 66.66666% 55%;
-      clip-path: polygon(0% 85%, 5% 14%, 100% 3%, 95% 95%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
       /* background-position: center; */
@@ -122,28 +122,28 @@
     20%,
     100% {
       background: url('/home/1-rect.jpg') 88% 50%;
-      clip-path: polygon(5% 18%, 89% 21%, 62% 73%, 0% 83%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     25%,
     45% {
       background: url('/home/2-rect.jpg') 100% 50%;
-      clip-path: polygon(57% 31%, 45% 67%, 0% 77%, 5% 18%);
+      clip-path: polygon(75% 100%, 25% 100%, 0% 50%, 25% 0%, 75% 0%, 100% 50%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     50%,
     70% {
       background: url('/home/3-rect.jpg') 100% 50%;
-      clip-path: polygon(45% 57%, 0% 67%, 5% 8%, 72% 12%);
+      clip-path: polygon(100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%, 75% 0%);
       background-size: cover;
       background-repeat: no-repeat;
     }
     75%,
     95% {
       background: url('/home/7.jpg') 100% 50%;
-      clip-path: polygon(0% 77%, 5% 18%, 57% 21%, 92% 67%);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background-size: cover;
       background-repeat: no-repeat;
       /* background-position: center; */

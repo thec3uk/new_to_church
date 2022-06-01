@@ -10,17 +10,18 @@ const commonLinkClasses =
 
 const HeroWithImage = ({ slice }) => {
   const linkColours = [
-    'from-red-500-full to-yellow-300-full',
-    'from-teal-500-full to-red-500-full',
-    'from-yellow-300-full to-teal-500-full',
+    'from-red-500-full to-black-full',
+    // 'from-red-500-full to-yellow-300-full',
+    // 'from-teal-500-full to-red-500-full',
+    // 'from-yellow-300-full to-teal-500-full',
   ]
 
   const image = getImage(slice.primary.backgroundImage)
   const background = (
     <GatsbyImage
       image={image}
-      alt={slice.primary.backgroundImage.alt}
-      className="object-cover object-center w-screen h-full aspect-video"
+      alt={slice.primary.backgroundImage.alt || 'Needs an alt text'}
+      className="object-cover object-center w-full h-full aspect-video"
     />
   )
 
@@ -39,6 +40,7 @@ const HeroWithImage = ({ slice }) => {
         {slice.items.map((link, idx) => {
           return (
             <PrismicLink
+              key={`${idx}-${link.linkTitle}`}
               href={link.linkUrl}
               className={`${commonLinkClasses} ${linkColours[idx % 3]}`}
             >

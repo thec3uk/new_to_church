@@ -6,7 +6,7 @@ import { components, layout } from '../components'
 
 const TextSlice = ({ slice }) => {
   return (
-    <layout.Main>
+    <layout.Main hash={slice.id}>
       <components.Text>
         <PrismicRichText
           field={slice.primary.content.richText}

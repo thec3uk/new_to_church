@@ -50,11 +50,12 @@ export const query = graphql`
           ...HeroWithCustomComponent
           ...TextHero
           ... on PrismicSharedSliceType {
+            id
             variation
             slice_type
-            __typename
           }
           ... on PrismicSliceType {
+            id
             slice_type
           }
         }
