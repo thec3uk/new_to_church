@@ -8,11 +8,7 @@ const commonLinkClasses =
   'bg-gradient-to-r bg-underline font-semibold bg-p-full bg-no-repeat w-max pl-0.5 pr-4 duration-300 hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero cursor-pointer transition-bg-position no-underline'
 
 const TextHero = ({ slice }) => {
-  const linkColours = [
-    'from-red-500-full to-yellow-300-full',
-    'from-teal-500-full to-red-500-full',
-    'from-yellow-300-full to-teal-500-full',
-  ]
+  const linkColours = ['from-red-500-full to-black-full']
 
   const background = <div></div>
 
@@ -57,6 +53,3 @@ export const query = graphql`
     }
   }
 `
-
-// 5 center
-// 8 right

@@ -6,7 +6,7 @@ import { components, layout } from '../components'
 
 const FAQSlice = ({ slice }) => {
   return (
-    <layout.Main>
+    <layout.Main hash={slice.id}>
       <components.FAQs data={slice} />
     </layout.Main>
   )

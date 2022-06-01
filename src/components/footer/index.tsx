@@ -7,8 +7,8 @@ import { linkResolver } from '../../utils/linkResolver'
 const Footer = ({ data }) => {
   const colours = [
     'hover:text-red-500',
-    'hover:text-teal-500',
-    'hover:text-yellow-300',
+    // 'hover:text-teal-500',
+    // 'hover:text-yellow-300',
   ]
 
   return (
@@ -20,7 +20,7 @@ const Footer = ({ data }) => {
               {items.map((link) => (
                 <PrismicLink
                   key={link.link_title}
-                  className={`transition-colors duration-300 ${colours[idx]}`}
+                  className={`transition-colors duration-300 ${colours[0]}`}
                   field={link.link_url}
                   linkResolver={linkResolver}
                 >

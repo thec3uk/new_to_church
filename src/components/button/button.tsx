@@ -23,7 +23,7 @@ export default function Button({
       'bg-gray-900 hover:bg-gray-700  hover:text-white text-gray-50 ',
     redButton: 'bg-red-500 hover:bg-red-400  text-gray-50 ',
     yellowButton: 'bg-yellow-300 hover:bg-yellow-200  text-gray-900 ',
-    tealButton: 'bg-teal-500 hover:bg-teal-400   text-gray-50 ',
+    // tealButton: 'bg-teal-500 hover:bg-teal-400   text-gray-50 ',
     purpleButton: 'bg-purple-900 hover:bg-purple-800   text-gray-50 ',
   }
 

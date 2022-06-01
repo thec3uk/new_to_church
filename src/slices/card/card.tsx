@@ -4,16 +4,17 @@ import * as React from 'react'
 
 import { components } from '../../components'
 
-const DefaultCardSlice = (data) => {
+const DefaultCardSlice = ({ slice }) => {
   return (
     <components.Card
-      title={data.slice.primary.title}
-      subtitle={data.slice.primary.subTitle}
-      cta={data.slice.primary.ctaTitle}
-      to={data.slice.primary.ctaLink}
-      colour={data.slice.primary.colour}
+      title={slice.primary.title}
+      subtitle={slice.primary.subtitle}
+      cta={slice.primary.ctaTitle}
+      to={slice.primary.ctaLink}
+      colour={slice.primary.colour}
+      image={slice.primary.image}
     >
-      <PrismicRichText field={data.slice.primary.content.richText} />
+      <PrismicRichText field={slice.primary.content.richText} />
     </components.Card>
   )
 }

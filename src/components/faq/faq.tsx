@@ -9,12 +9,14 @@ function classNames(...classes: string[]) {
 
 const FAQ = ({ children }) => {
   return (
-    <Disclosure as="div" className="pt-6">
+    <Disclosure as="div" className="pt-6 group">
       {({ open }) => (
         <>
           <dt className="text-lg">
-            <Disclosure.Button className="flex items-start justify-between w-full text-left text-black ">
-              <span className="font-medium">{children.question}</span>
+            <Disclosure.Button className="flex items-start justify-between w-full text-left text-black transition-colors duration-150 group-hover:text-red-500">
+              <span className="font-medium transition-colors duration-150 group-hover:text-red-500">
+                {children.question}
+              </span>
               <span className="flex items-center ml-6 h-7">
                 <ChevronDownIcon
                   className={classNames(

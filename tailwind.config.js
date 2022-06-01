@@ -91,7 +91,7 @@ module.exports = {
         text: '200% auto',
       },
       backgroundPosition: {
-        'p-full': '100% 100%',
+        'p-full': '100% 130%',
         'p-zero': '0% 100%',
       },
       backgroundImage: {
@@ -143,6 +143,8 @@ module.exports = {
         'red-500-full': `${theme('colors.red.500')} 50%`,
         'teal-500-full': `${theme('colors.teal.500')} 50%`,
         'purple-900-full': `${theme('colors.purple.900')} 50%`,
+        'gray-50-full': `${theme('colors.gray.50')} 50%`,
+        'black-full': `${theme('colors.black')} 50%`,
       }),
       spacing: {
         128: '42rem',
