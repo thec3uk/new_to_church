@@ -6681,10 +6681,10 @@ gatsby-source-filesystem@^4.0.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-source-prismic@^v5.3.0:
-  version "5.2.6"
-  resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-5.2.6.tgz#e3f892b19538fd51a74743abb4f6699fcc9d24d0"
-  integrity sha512-OAJTkhZvIqpkYw88FoiKJDduFV0ivEQse1B6E8l5mn5WVtuVx6nh3Asq1VlY5OD0ChQWBcAJRe4OyrsUIzKLbA==
+gatsby-source-prismic@^v5.2.3:
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-5.2.7.tgz#3c8dcf0d0733c463a0e95bc4e18786d5660fd930"
+  integrity sha512-VFepKVVCnxGVIMicKl6JKwN/m/uONANzxzt31t+y7seVOYiEQGXZ08nHcm3wBFgwd8Ww7tuFCrqYEzMIMatOAg==
   dependencies:
     "@imgix/gatsby" "^1.7.5"
     "@prismicio/client" "^6.4.2"
@@ -6696,7 +6696,6 @@ gatsby-source-prismic@^v5.3.0:
     gatsby-node-helpers "^1.2.1"
     gatsby-source-filesystem "^4.0.0"
     node-fetch "^2.6.5"
-    tiny-hashes "^1.0.1"
 
 gatsby-telemetry@^3.14.0:
   version "3.14.0"
