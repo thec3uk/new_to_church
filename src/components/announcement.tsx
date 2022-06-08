@@ -76,7 +76,7 @@ const Announcement = ({
             </div>
           ) : (
             <PrismicLink
-              href={url}
+              field={url}
               className="absolute w-screen px-0 -mx-2 md:px-4 md:-mx-4 lg:w-full top-4 md:top-auto md:col-start-2 md:relative md:col-span-10 lg:mx-0 lg:px-0"
             >
               <div className="flex justify-between px-2 py-4 mx-2 space-x-2 transition-colors duration-300 bg-yellow-300 rounded md:py-4 md:px-3 md:text-xl lg:text-lg md:mx-0 flex-nowrap hover:bg-red-500">

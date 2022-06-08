@@ -27,7 +27,7 @@ const TextHero = ({ slice }) => {
         {slice.items.map((link, idx) => {
           return (
             <PrismicLink
-              href={link.linkUrl.url}
+              field={link.linkUrl.url}
               className={`${commonLinkClasses} ${linkColours[idx % 3]}`}
             >
               {link.linkTitle}
