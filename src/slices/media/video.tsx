@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import { components } from '../../components'
 
-const VideoMediaSlice = ({ slice }) =>
+const VideoMediaSlice = ({ slice }) => {
   return <components.VideoMedia data={slice.primary.video} />
 }
 
