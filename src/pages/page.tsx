@@ -49,6 +49,7 @@ export const query = graphql`
           ...HeroWithImage
           ...HeroWithCustomComponent
           ...TextHero
+          ...VideoMedia
           ... on PrismicSharedSliceType {
             id
             variation

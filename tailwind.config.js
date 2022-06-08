@@ -174,6 +174,16 @@ module.exports = {
         red: theme(`colors.red.500`),
         current: `currentColor`,
       }),
+      typography: {
+        DEFAULT: {
+          css: {
+            iframe: {
+              width: '100%',
+              height: '100%',
+            },
+          },
+        },
+      },
     },
   },
   variants: {
