@@ -3,10 +3,8 @@ import * as React from 'react'
 
 import { components } from '../../components'
 
-const VideoMediaSlice = ({ slice }) => {
-  // console.log(slice)
-
-  return <components.VideoMedia />
+const VideoMediaSlice = ({ slice }) =>
+  return <components.VideoMedia data={slice.primary.video} />
 }
 
 export default VideoMediaSlice
