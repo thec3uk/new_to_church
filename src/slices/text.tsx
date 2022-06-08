@@ -1,4 +1,4 @@
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 
