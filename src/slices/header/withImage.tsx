@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { layout, components } from '../../components'
 
 const commonLinkClasses =
-  'bg-gradient-to-r bg-underline font-semibold bg-p-full bg-no-repeat w-max pl-0.5 pr-4 duration-300 hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero cursor-pointer transition-bg-position no-underline'
+  'bg-gradient-to-r bg-underline font-semibold bg-p-full bg-no-repeat w-max pl-0.5 pr-1 duration-300 hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero cursor-pointer transition-bg-position no-underline'
 
 const HeroWithImage = ({ slice }) => {
   const linkColours = [

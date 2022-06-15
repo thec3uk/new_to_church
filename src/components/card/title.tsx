@@ -55,7 +55,7 @@ const TitleCard = ({
               {subtitle}
             </h2>
           </div>
-          <div className="flex flex-col col-start-1 row-span-5 mt-4 col-span-full md:col-span-11">
+          <div className="flex flex-col h-full col-start-1 row-span-5 mt-4 col-span-full md:col-span-11">
             {children}
           </div>
         </>
