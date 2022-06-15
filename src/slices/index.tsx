@@ -7,6 +7,7 @@ import QuickLinkSlice from './quicklinks'
 import SocialLinkSlice from './socialLinks'
 import HeaderSlice from './header'
 import { graphql } from 'gatsby'
+import NewsletterSlice from './card/newsletter'
 
 export const slices = {
   faq_section: FAQSlice,

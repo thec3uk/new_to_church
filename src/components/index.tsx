@@ -11,6 +11,7 @@ import { FAQs } from './faq'
 import { TextSlice } from './text'
 import { ButtonSlice } from './button'
 import { ImageMedia, VideoMedia } from './media'
+import NewsletterSignUp from './card/newsletter'
 
 export const layout = {
   Main,
@@ -33,4 +34,5 @@ export const components = {
   Button: ButtonSlice,
   ImageMedia,
   VideoMedia,
+  NewsletterSignUp,
 }
