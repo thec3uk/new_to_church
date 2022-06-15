@@ -1,5 +1,7 @@
 const config = require(`../config/site`)
 
+const domainPrefix = `${config.domain}_`
+
 exports.linkResolver = (node) => {
   if (node.uid === 'another-test') {
     console.log(node)
@@ -22,6 +24,10 @@ exports.linkResolver = (node) => {
   if (node.type === 'page') {
     // console.log('Page without data')
     // console.log(node)
+    if (node.uid.startsWith(domainPrefix)) {
+      const slug = node.uid.replace(domainPrefix, '')
+      return `/${slug}`
+    }
     if (node.uid === config.domain) return '/'
     return `/${node.uid}`
   }

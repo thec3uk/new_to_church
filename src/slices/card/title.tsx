@@ -8,7 +8,7 @@ const TitleCardSlice = (data) => {
   return (
     <components.TitleCard
       title={data.slice.primary.title}
-      subtitle={data.slice.primary.subTitle}
+      subtitle={data.slice.primary.subtitle}
       colour={data.slice.primary.colour}
       titleImage={data.slice.primary.image}
     >

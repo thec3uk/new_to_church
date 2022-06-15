@@ -7,7 +7,7 @@ const TextCardSlice = (data) => {
   return (
     <components.TextCard
       title={data.slice.primary.title}
-      subtitle={data.slice.primary.subTitle}
+      subtitle={data.slice.primary.subtitle}
       text={data.slice.primary.content.richText}
       cta={data.slice.primary.ctaTitle}
       to={data.slice.primary.ctaLink}
