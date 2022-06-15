@@ -50,6 +50,7 @@ export const query = graphql`
           ...HeroWithCustomComponent
           ...TextHero
           ...VideoMedia
+          ...NewsletterCard
           ... on PrismicSharedSliceType {
             id
             variation
