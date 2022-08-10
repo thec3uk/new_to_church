@@ -18,7 +18,12 @@ const PageTemplate = ({ data }) => {
 
   return (
     <layout.Layout>
-      <SEO title={page.data.body.slice_type} description={'SEO TEXT'} />
+      <SEO
+        title={page.data.seo_title}
+        description={page.data.seo_description}
+        url={page.url}
+        image={page.data.seo_image?.url}
+      />
       <SliceZone slices={page.data.body} components={slices} />
     </layout.Layout>
   )
@@ -29,7 +34,13 @@ export const query = graphql`
     prismicPage(uid: { eq: $uid }, tags: { eq: "domain:thec3.uk" }) {
       _previewable
       uid
+      url
       data {
+        seo_title
+        seo_description
+        seo_image {
+          url
+        }
         body {
           ...FAQCard
           ...DefaultCard
