@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+      font-family: 'Novecento Sans Wide';
+      font-weight: bold;
+      src: url('/static/fonts/Novecentosanswide-Bold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-weight: normal;
+      src: url('/static/fonts/Montserrat-Regular.otf') format('opentype');
+    }
+}
+
 @layer components {
   #section-1:nth-child(1) {
     animation: section-1 8s both infinite;
