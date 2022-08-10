@@ -58,6 +58,7 @@ export const query = graphql`
           ...QuickLinksSlice
           ...SocialLinksSlice
           ...HeroWithImage
+          ...HeroWithVideo
           ...HeroWithCustomComponent
           ...TextHero
           ...VideoMedia

@@ -14,6 +14,13 @@
       font-weight: normal;
       src: url('/fonts/Montserrat-Regular.otf') format('opentype');
     }
+
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 }
 
 @layer components {
