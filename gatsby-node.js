@@ -41,17 +41,10 @@ exports.createPages = async ({ actions, graphql }) => {
     `,
     { domainTag: domainTag }
   )
-
+  console.log('gatsby-node START !!!!!!!!!!!')
   // Create pages for each Page in Prismic using the selected template.
   pages.data?.allPrismicPage.nodes.forEach((node) => {
-    // console.log('gatby-node', node.uid)
     const url = linkResolver(node)
-    // const fullPath =
-    //   node.data.parent_page.uid === null
-    //     ? node.uid === 'home'
-    //       ? '/'
-    //       : `/${node.uid}`
-    //     : `/${node.data.parent_page.uid}/${node.uid}`
     createPage({
       path: url,
       component: path.resolve(__dirname, 'src/pages/page.tsx'),
@@ -62,6 +55,7 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
+  console.log('gatsby-node END !!!!!!!!!!!')
   const redirects = await graphql(
     `
       query Redirects($domainTag: String!) {

@@ -50,22 +50,20 @@ module.exports = {
       options: {
         repositoryName: prismicRepositoryName,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        linkResolver: linkResolver,
+        // linkResolver: linkResolver,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         releaseID: 'Ym7t2RAAAJ-48N99',
-        // routes: [
-        //   {
-        //     type: 'page',
-        //     path: '/:parent_page?/:uid',
-        //     resolvers: {
-        //       parent_page: 'parent_page',
-        //     },
-        //   },
-        // ],
-        // graphQuery: `
-        //   {
-        //   }
-        // `,
+        routes: [
+          {
+            type: 'page',
+            path: '/:parentpage?/:uid',
+            // path: '/:grandparent?/:parentpage?/:uid',
+            resolvers: {
+              parentpage: 'parent_page',
+              // grandparent: 'parent_page.parent_page',
+            },
+          },
+        ],
       },
     },
     {
