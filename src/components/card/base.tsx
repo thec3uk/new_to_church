@@ -28,7 +28,7 @@ const BaseCard = ({
   }
   return (
     <div
-      className={`grid grid-cols-5 ${rowsMap[row]} p-2 rounded shadow-md gap-x-4 md:grid-cols-12 h-full md:px-4 md:py-4 lg:py-6 ${mapping[colour]} min-h-max`}
+      className={`grid grid-cols-5 ${rowsMap[row]} p-2 rounded shadow-md gap-x-4 md:grid-cols-12 h-full md:px-4 md:py-4 lg:py-6 ${mapping[colour]} min-h-max max-h-80`}
     >
       {children}
     </div>
