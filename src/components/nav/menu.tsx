@@ -21,7 +21,7 @@ const Menu = ({ isMobile = true }: { isMobile?: boolean }) => {
     { title: 'Reaching', to: '/reaching' },
     { title: 'Shaping', to: '/shaping' },
     { title: 'About', to: '/about' },
-    { title: 'Give', to: '/give' },
+    { title: 'Give', to: '/giving' },
     { title: 'Locations', to: '/locations' },
     { title: 'Teaching', to: 'https://resources.thec3.uk' },
     { title: 'Prayer', to: 'https://prayer.thec3.uk' },
