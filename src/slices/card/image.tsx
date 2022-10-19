@@ -10,6 +10,7 @@ const ImageCardSlice = (data) => {
       subtitle={data.slice.primary.subtitle}
       image={data.slice.primary.image}
       link={data.slice.primary.ctaLink}
+      colour={data.slice.primary.colour}
     />
   )
 }
@@ -29,6 +30,7 @@ export const query = graphql`
         url
         gatsbyImageData
       }
+      colour
     }
   }
 `

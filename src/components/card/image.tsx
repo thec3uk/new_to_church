@@ -10,11 +10,13 @@ const ImageCard = ({
   subtitle,
   image,
   link,
+  colour = 'transparent',
 }: {
   title?: string
   image: string
   subtitle?: string
   link?: any
+  colour?: string
 }) => {
   const gImage = getImage(image)
   const bgImage = convertToBgImage(gImage)
@@ -29,7 +31,7 @@ const ImageCard = ({
       preserveStackingContext
       className="h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full lg:min-h-80"
     >
-      <TitleCard title={title} subtitle={subtitle} colour={'transparent'} />
+      <TitleCard title={title} subtitle={subtitle} colour={colour} />
     </BackgroundImage>
   )
   return (
