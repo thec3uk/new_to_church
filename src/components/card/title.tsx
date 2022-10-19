@@ -28,7 +28,7 @@ const TitleCard = ({
                 alt={titleImage.alt || 'An Image needing an alt text'}
                 className="object-cover w-full h-full rounded"
               />
-              <div className="absolute bottom-0 object-cover w-full h-56 rounded bg-gradient-to-t from-black lg:from-transparent"></div>
+              <div className="absolute bottom-0 object-cover w-full h-56 rounded bg-gradient-to-t from-black lg:from-white"></div>
               <h2 className="absolute bottom-0 p-2 text-4xl font-extrabold text-white rounded lg:text-5xl lg:text-black">
                 <span className="md:hidden">
                   {title}
