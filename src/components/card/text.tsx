@@ -26,7 +26,7 @@ const TextCard = ({
       titleImage={titleImage}
       colour={colour}
     >
-      <div className="prose md:columns-2 lg:prose-lg hover:prose-a:text-red-500">
+      <div className="min-w-full prose md:columns-3xs md:gap-x-16 lg:prose-lg hover:prose-a:text-red-500 md:text-justify">
         <PrismicRichText field={text} />
       </div>
       {to && cta && (
