@@ -28,13 +28,17 @@ const ImageCard = ({
       ? 'from-white'
       : ''
 
+  console.log(title, colour)
+
   const Card = () => (
     <BackgroundImage
       Tag="div"
       // Spread bgImage into BackgroundImage:
       {...bgImage}
       preserveStackingContext
-      className="h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full aspect-video"
+      className={`h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full ${
+        title === null ? 'aspect-video' : 'aspect-auto'
+      }`}
     >
       <div className={`${fromColour} bg-gradient-to-b`}>
         <TitleCard title={title} subtitle={subtitle} colour={colour} />
