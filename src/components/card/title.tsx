@@ -18,7 +18,7 @@ const TitleCard = ({
   const gImage = getImage(titleImage)
   const rowCount = !!gImage ? '2' : '6'
   return (
-    <BaseCard colour={colour ? colour : 'red'} row={rowCount}>
+    <BaseCard colour={colour} row={rowCount}>
       {!!gImage ? (
         <>
           <div className="flex flex-col justify-between col-span-5 row-span-2 md:col-span-11">
