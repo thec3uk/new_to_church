@@ -21,7 +21,12 @@ const ImageCard = ({
   const gImage = getImage(image)
   const bgImage = convertToBgImage(gImage)
 
-  const fromColour = colour === 'transparent' ? 'from-black' : 'from-white'
+  const fromColour =
+    colour === 'transparent'
+      ? 'from-black'
+      : colour === 'transparentBlack'
+      ? 'from-white'
+      : ''
 
   const Card = () => (
     <BackgroundImage
