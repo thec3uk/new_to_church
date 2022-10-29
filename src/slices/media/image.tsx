@@ -11,6 +11,7 @@ const ImageMediaSlice = ({ slice }) => {
       alt={
         slice.primary.image.alt || 'No Alt provided please email hello@thec3.uk'
       }
+      fullheight={slice.primary.fullheight}
     />
   )
 }
@@ -26,6 +27,7 @@ export const query = graphql`
         url
         gatsbyImageData
       }
+      fullheight
     }
   }
 `

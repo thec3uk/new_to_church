@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { ResponsiveVideo } from '../responsiveVideo'
 
-import FullBleedMedia, { containerClassNames } from './fullbleed'
+import FullBleedMedia from './fullbleed'
 
 const VideoMedia = ({ data }) => {
   console.log(data)
