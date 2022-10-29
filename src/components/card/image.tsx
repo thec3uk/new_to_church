@@ -28,8 +28,6 @@ const ImageCard = ({
       ? 'from-white'
       : ''
 
-  console.log(title, colour)
-
   const Card = () => (
     <BackgroundImage
       Tag="div"
@@ -40,7 +38,7 @@ const ImageCard = ({
         title === null ? 'aspect-video' : 'aspect-auto'
       }`}
     >
-      <div className={`${fromColour} bg-gradient-to-b`}>
+      <div className={`${fromColour} bg-gradient-to-b h-full`}>
         <TitleCard title={title} subtitle={subtitle} colour={colour} />
       </div>
     </BackgroundImage>
