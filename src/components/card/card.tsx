@@ -62,21 +62,29 @@ const Card = ({
         )}
       </div>
       <div className="h-full col-span-2 md:col-span-4 lg:col-span-4 row-span-full">
-        <PrismicLink
-          field={
-            to as
-              | EmptyLinkField<'Any'>
-              | FilledLinkToWebField
-              | FilledLinkToDocumentField<string, string, never>
-              | FilledLinkToMediaField
-          }
-        >
+        {to ? (
+          <PrismicLink
+            field={
+              to as
+                | EmptyLinkField<'Any'>
+                | FilledLinkToWebField
+                | FilledLinkToDocumentField<string, string, never>
+                | FilledLinkToMediaField
+            }
+          >
+            <GatsbyImage
+              image={gImage}
+              alt={image.alt || 'An Image needing an alt text'}
+              className="object-cover w-full h-full rounded-lg group-hover:text-red-500 "
+            />
+          </PrismicLink>
+        ) : (
           <GatsbyImage
             image={gImage}
             alt={image.alt || 'An Image needing an alt text'}
             className="object-cover w-full h-full rounded-lg group-hover:text-red-500 "
           />
-        </PrismicLink>
+        )}
       </div>
       <div className="hidden col-start-12 md:flex justify-start items-center [writing-mode:vertical-lr] row-span-full">
         <h2 className="font-bold underline md:text-4xl lg:text-5xl whitespace-nowrap">
