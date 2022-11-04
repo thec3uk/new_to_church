@@ -28,11 +28,13 @@ const Card = ({
 }) => {
   const gImage = getImage(image)
 
+  console.log(title, to)
+
   return (
     <BaseCard colour={colour ? colour : 'teal'}>
       <div className="flex flex-col justify-between col-span-3 md:col-span-7 row-span-full">
         <div className="space-y-4">
-          <h2 className="text-4xl font-extrabold lg:text-5xl">
+          <h2 className="text-4xl font-extrabold">
             <span className="md:hidden">
               {title}
               {title && subtitle && `:`}
@@ -41,7 +43,7 @@ const Card = ({
             {subtitle}
           </h2>
           {children && (
-            <div className="font-medium leading-snug tracking-wide line-clamp-5">
+            <div className="font-medium leading-snug tracking-wide prose line-clamp-6 prose-h4:text-xl">
               {children}
             </div>
           )}
@@ -62,7 +64,7 @@ const Card = ({
         )}
       </div>
       <div className="h-full col-span-2 md:col-span-4 lg:col-span-4 row-span-full">
-        {to ? (
+        {to && cta ? (
           <PrismicLink
             field={
               to as
