@@ -1,6 +1,6 @@
 import * as React from 'react'
 import TitleCard from './title'
-import { getImage } from 'gatsby-plugin-image'
+import { getImage, ImageDataLike } from 'gatsby-plugin-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import BackgroundImage from 'gatsby-background-image-es5'
 import { PrismicLink } from '@prismicio/react'
@@ -13,7 +13,7 @@ const ImageCard = ({
   colour = 'transparent',
 }: {
   title?: string
-  image: string
+  image: ImageDataLike
   subtitle?: string
   link?: any
   colour?: string
@@ -34,7 +34,7 @@ const ImageCard = ({
       // Spread bgImage into BackgroundImage:
       {...bgImage}
       preserveStackingContext
-      className={`h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full ${
+      className={`h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full min-h-[25rem] ${
         title === null ? 'aspect-video' : 'aspect-auto'
       }`}
     >
@@ -49,6 +49,10 @@ const ImageCard = ({
         <PrismicLink field={link} className="group">
           <Card />
         </PrismicLink>
+      ) : link.link_type === 'Web' ? (
+        <a href={link.url} className="group">
+          <Card />
+        </a>
       ) : (
         <Card />
       )}

@@ -6,7 +6,7 @@ const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 const MenuItem = ({ children, to, className }) => {
   const linkClasses =
-    'py-4 text-transparent no-underline duration-300 bg-no-repeat transition-bg-position bg-p-full bg-text bg-gradient-to-r bg-clip-text hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero hover:underline lg:mx-2 xl:mx-4 to-black-full'
+    'tracking-tight py-4 text-transparent no-underline duration-300 bg-no-repeat transition-bg-position bg-p-full bg-text bg-gradient-to-r bg-clip-text hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero hover:underline lg:mx-2 xl:mx-4 to-black-full'
   return (
     <PrismicLink href={to} className={`${linkClasses} ${className}`}>
       {children}
@@ -18,13 +18,13 @@ const Menu = ({ isMobile = true }: { isMobile?: boolean }) => {
   const displayClasses = isMobile ? 'flex flex-col lg:hidden' : 'hidden lg:flex'
 
   const menu_items = [
-    { title: 'Reaching', to: '/reaching' },
-    { title: 'Shaping', to: '/shaping' },
-    { title: 'About', to: '/about' },
-    { title: 'Give', to: '/giving' },
-    { title: 'Locations', to: '/locations' },
+    { title: 'New to Church', to: '/reaching' },
+    { title: 'Next Steps', to: '/shaping' },
+    { title: 'Our Locations', to: '/locations' },
+    { title: 'About Us', to: '/about' },
     // { title: 'Teaching', to: 'https://resources.thec3.uk' },
-    { title: 'Prayer', to: 'https://prayer.thec3.uk' },
+    { title: 'Get Prayer', to: 'https://prayer.thec3.uk' },
+    { title: 'Give', to: '/giving' },
   ]
 
   const hoverClassNames = [

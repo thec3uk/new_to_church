@@ -28,8 +28,6 @@ const Card = ({
 }) => {
   const gImage = getImage(image)
 
-  console.log(title, to)
-
   return (
     <BaseCard colour={colour ? colour : 'teal'}>
       <div className="flex flex-col justify-between col-span-3 md:col-span-7 row-span-full">
