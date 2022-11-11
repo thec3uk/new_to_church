@@ -1,159 +1,201 @@
-const pseudoElements = ['before', 'after'];
-
 module.exports = {
-  purge: {
-    content: [
-      './src/**/*.js',
-      './src/**/*.jsx',
-      './src/**/*.ts',
-      './src/**/*.tsx',
-    ],
+  content: [
+    `./src/**/*.js`,
+    `./src/**/*.jsx`,
+    `./src/**/*.ts`,
+    `./src/**/*.tsx`,
+  ],
 
-    safelist: ['bg-purple-trans-30', 'bg-yellow-trans', /col-start-/],
-  },
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: `#343434`,
+      white: `#fff`,
+      grayscale: {
+        50: '#f7f7f7',
+        100: '#efefef',
+        200: '#dfdfdf',
+        300: '#cacaca',
+        400: '#a8a8a8',
+        500: '#8a8a8a',
+        600: '#6d6d6d',
+        700: '#5f5f5f',
+        800: '#444444',
+        900: '#2a2a2a',
+      },
+      gray: {
+        50: '#f6f7f7',
+        100: '#edefef',
+        200: '#dce0e0',
+        300: '#c5cbcb',
+        400: '#a1aaaa',
+        500: '#808d8d',
+        600: '#646f6f',
+        700: '#576161',
+        800: '#3e4545', // brand
+        900: '#272b2b',
+      },
+      yellow: {
+        50: '#fef6e2',
+        100: '#fdeec8',
+        200: '#fbdc8e',
+        300: '#f8c23a', // brand
+        400: '#d99e08',
+        500: '#b38206',
+        600: '#8c6605',
+        700: '#7b5904',
+        800: '#584003',
+        900: '#372802',
+      },
+      teal: {
+        50: '#ddfcff',
+        100: '#b8f9ff',
+        200: '#64f2ff',
+        300: '#00def2',
+        400: '#00bacb',
+        500: '#00919F', // brand
+        600: '#007883',
+        700: '#006973',
+        800: '#004b52',
+        900: '#003034',
+      },
+      red: {
+        50: '#fef5f5',
+        100: '#fdeaea',
+        200: '#fbd6d7',
+        300: '#f9babb',
+        400: '#f5898b',
+        500: '#f05356', // brand
+        600: '#d81316',
+        700: '#be1113',
+        800: '#8a0c0e',
+        900: '#590809',
+      },
+      purple: {
+        50: '#f6f7fb',
+        100: '#eceff6',
+        200: '#dadfee',
+        300: '#c1c9e2',
+        400: '#9aa7d0',
+        500: '#7688bf',
+        600: '#536aaf',
+        700: '#475c9a',
+        800: '#33426e',
+        900: '#202945', // brand
+      },
+    },
     extend: {
+      backgroundSize: {
+        underline: '200% 0.75rem',
+        text: '200% auto',
+      },
+      backgroundPosition: {
+        'p-full': '100% 130%',
+        'p-zero': '0% 100%',
+      },
+      backgroundImage: {
+        live: "url('/live.jpg')",
+        live2: "url('/live2.jpg')",
+      },
+      transitionProperty: {
+        'bg-position': 'background-position',
+      },
       fontFamily: {
-        accent: ['Gotcha'],
-        title: ["'Novecento Sans Wide'"],
+        accent: [`Gotcha`],
+        title: [`'Novecento Sans Wide'`],
         sans: [
-          'Montserrat',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Arial',
-          'Noto Sans',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
+          `Montserrat`,
+          `system-ui`,
+          `-apple-system`,
+          `BlinkMacSystemFont`,
+          `Segoe UI`,
+          `Arial`,
+          `Noto Sans`,
+          `sans-serif`,
+          `Apple Color Emoji`,
+          `Segoe UI Emoji`,
+          `Segoe UI Symbol`,
+          `Noto Color Emoji`,
         ],
       },
-      colors: {
-        black: '#343434',
-        'black-trans': '#343434cc',
-        white: '#fff',
-        grey: {
-          100: '#EFEFEF',
-          200: '#D1D1D1',
-          300: '#6C6C6C',
-          400: '#4E4E4E',
-        },
-
-        yellow: '#FAC52D',
-        'yellow-200': '#BB8E00',
-        'yellow-trans': '#FAC52DB3',
-        purple: '#2E293E',
-        'purple-200': '#5E586F',
-        'purple-trans': '#2E293Eb3',
-        'purple-trans-30': '#2E293E4d',
-        blue: '#00919F',
-        red: '#F05356',
+      height: {
+        'screen-90': '90vh',
+      },
+      minHeight: {
+        80: '20rem',
+        90: '25rem',
       },
       fontSize: {
-        '7xl': '5rem',
-        '8xl': '6rem',
-        '9xl': '7rem',
-        '10xl': '8rem',
+        '5.5xl': [
+          '3.5rem',
+          {
+            lineHeight: '1',
+          },
+        ],
       },
-      borderWidth: {
-        10: '10px',
-        15: '15px',
-        20: '20px',
+      boxShadow: {
+        top: '0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 -1px 2px 0 rgba(0, 0, 0, 0.06)',
       },
+      gradientColorStops: (theme) => ({
+        ...theme('colors'),
+        'black-full': `${theme('colors.black')} 50%`,
+        'yellow-300-full': `${theme('colors.yellow.300')} 50%`,
+        'red-500-full': `${theme('colors.red.500')} 50%`,
+        'teal-500-full': `${theme('colors.teal.500')} 50%`,
+        'purple-900-full': `${theme('colors.purple.900')} 50%`,
+        'gray-50-full': `${theme('colors.gray.50')} 50%`,
+        'black-full': `${theme('colors.black')} 50%`,
+      }),
       spacing: {
-        '-2/5': '-41vw',
-        '-1/2': '-50vw',
-        '1/2-screen': '50vw',
-        iframe: '56.25%',
-        72: '18rem',
-        80: '20rem',
-        88: '22rem',
-        96: '24rem',
-        104: '26rem',
-        112: '28rem',
-        120: '30rem',
-        128: '32rem',
-        136: '34rem',
+        128: '42rem',
       },
-      height: {
-        '1/2-screen': '50vh',
+      colors: {
+        grey: {
+          100: `#EFEFEF`,
+          200: `#D1D1D1`,
+          300: `#6C6C6C`,
+          400: `#4E4E4E`,
+        },
       },
-      width: {
-        '1/3-screen': '33vw',
-        '2/3-screen': '66vw',
-        '1/4-screen': '25vw',
-        '1/6-screen': '16.666666vw',
-        '1/8-screen': '12.5vw',
+      keyframes: {
+        spinner: {
+          // '0%, 40%, 60%, 100%': { transform: 'rotate(0deg)' },
+          // '45%': { transform: 'rotate(180deg)' },
+          '90%': { transform: 'rotate(360deg)' },
+        },
       },
-      gridAutoColumns: {
-        '50vw': '50vw',
-        '25vw': '25vw',
-        '12.5vw': '12.5vw',
-        '8.33vw': '8.33vw',
-      },
-      maxWidth: {
-        '1/3-screen': '33vw',
-      },
-      gridTemplateColumns: {
-        'screen-2': 'repeat(4, 50vw)',
-        'screen-4': 'repeat(4, 25vw)',
-        'screen-5': 'repeat(4, 20vw)',
-        'screen-6': 'repeat(4, 16.666666vw)',
-        'screen-8': 'repeat(4, 12.5vw)',
-        'screen-12': 'repeat(4, 8.3333333vw)',
-      },
-      gridTemplateRows: {
-        8: 'repeat(8, minmax(0, 1fr))',
-        9: 'repeat(9, minmax(0, 1fr))',
-        10: 'repeat(10, minmax(0, 1fr))',
-        11: 'repeat(11, minmax(0, 1fr))',
-        12: 'repeat(12, minmax(0, 1fr))',
-      },
-      gridRowStart: {
-        8: '8',
-        9: '9',
-        10: '10',
-        11: '11',
-        12: '12',
-        13: '13',
-      },
-      gridRowEnd: {
-        8: '8',
-        9: '9',
-        10: '10',
-        11: '11',
-        12: '12',
-        13: '13',
-      },
-      inset: {
-        50: '50%',
+      animation: {
+        spinner: 'spinner 3s ease-in-out infinite',
       },
       stroke: (theme) => ({
-        yellow: theme('colors.yellow'),
-        purple: theme('colors.purple'),
-        blue: theme('colors.blue'),
-        red: theme('colors.red'),
-        current: 'currentColor',
+        yellow: theme(`colors.yellow.300`),
+        purple: theme(`colors.purple.900`),
+        teal: theme(`colors.teal.500`),
+        red: theme(`colors.red.500`),
+        current: `currentColor`,
       }),
+      typography: {
+        DEFAULT: {
+          css: {
+            iframe: {
+              width: '100%',
+              height: '100%',
+            },
+          },
+        },
+      },
     },
   },
   variants: {
-    borderColor: ['responsive', 'hover', 'focus', 'after', 'before'],
-    borderWidth: ['responsive', 'after', 'before'],
+    extend: {
+      backgroundPosition: ['hover-hover', 'pointer-fine'],
+    },
   },
   plugins: [
-    function ({ addVariant, e }) {
-      const escape = e || ((x) => x);
-      pseudoElements.forEach((pseudo) => {
-        addVariant(pseudo, ({ modifySelectors, separator }) => {
-          modifySelectors(({ className }) => {
-            return `.${escape(`${pseudo}${separator}${className}`)}:${pseudo}`;
-          });
-        });
-      });
-    },
+    require('tailwindcss-touch')(),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
   ],
-};
+}
