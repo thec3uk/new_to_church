@@ -29,7 +29,7 @@ const SocialLinks = ({ data }) => {
   return (
     <div className="grid-cols-2 px-4 py-4 space-y-4 bg-white rounded shadow-md">
       <h3 className="text-3xl font-extrabold text-center text-gray-900 underline">
-        socials
+        {data.title || 'Socials'}
       </h3>
       <div className="flex justify-around text-lg font-black text-gray-900 lg:flex-col lg:space-y-8 xl:font-bold 2xl:text-3xl">
         {data.facebookUrl.url && (

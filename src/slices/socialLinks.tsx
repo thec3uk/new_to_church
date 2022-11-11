@@ -25,6 +25,7 @@ export const query = graphql`
     document {
       ... on PrismicSocialLinks {
         data {
+          title
           youtubeUrl {
             url
           }
