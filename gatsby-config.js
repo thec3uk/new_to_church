@@ -52,7 +52,6 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         linkResolver: linkResolver,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
-        releaseID: 'Ym7t2RAAAJ-48N99',
         // routes: [
         //   {
         //     type: 'page',

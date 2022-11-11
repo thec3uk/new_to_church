@@ -20,6 +20,9 @@ const CardSlice = ({ slice }) => {
   }
   const Component = variations[slice.variation]
 
+  if (slice.variation === 'newsletterSlice') {
+    return <Component slice={slice} />
+  }
   return (
     <layout.Main hash={slice.id}>
       <Component slice={slice} />

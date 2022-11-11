@@ -33,9 +33,7 @@ const ImageCard = ({
       Tag="div"
       {...bgImage}
       preserveStackingContext
-      className={`h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full min-h-90 ${
-        title === null ? 'aspect-video' : 'aspect-auto'
-      }`}
+      className={`h-56 bg-center bg-cover before:shadow before:rounded before:content-none md:h-72 lg:h-full lg:min-h-90 aspect-auto`}
     >
       <div className={`${fromColour} bg-gradient-to-b h-full`}>
         <TitleCard title={title} subtitle={subtitle} colour={colour} />

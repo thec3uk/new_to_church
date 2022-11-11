@@ -5,7 +5,7 @@ import { components, layout } from '../../components'
 
 const NewsletterSlice = ({ slice }) => {
   return (
-    <layout.Main hash="">
+    <layout.Main>
       <components.NewsletterSignUp data={slice.primary} />
     </layout.Main>
   )

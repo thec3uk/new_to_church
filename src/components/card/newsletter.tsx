@@ -52,7 +52,7 @@ const NewsletterSignUp = ({ data }) => {
       titleImage={data.titleImage}
       colour={data.colour}
     >
-      <div className="flex flex-col justify-between h-full prose prose-p:lg:text-xl">
+      <div className="flex flex-col justify-between h-full -mt-4 prose prose-p:lg:text-xl">
         <PrismicRichText
           field={data.content.richText}
           fallback={<p>No content</p>}
@@ -63,29 +63,33 @@ const NewsletterSignUp = ({ data }) => {
             <div>{message}</div>
           ) : (
             <div className="h-full">
-              <div className="flex flex-col justify-between h-full space-y-4">
-                <label htmlFor="name" className="text-2xl font-bold grow">
-                  name
-                </label>
+              <div className="flex flex-col justify-between h-full space-y-3">
+                <div className="space-y-1">
+                  <label htmlFor="name" className="text-2xl font-bold grow">
+                    Name
+                  </label>
 
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Josh"
-                  onChange={(e) => setName(e.target.value)}
-                  className="p-4 text-3xl rounded grow"
-                />
-                <label htmlFor="email" className="text-2xl font-bold grow">
-                  email
-                </label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Josh"
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full p-3 text-2xl rounded lg:text-xl grow"
+                  />
+                </div>
 
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="hello@thec3.uk"
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="p-4 text-3xl rounded grow"
-                />
+                <div className="space-y-1">
+                  <label htmlFor="email" className="text-2xl font-bold grow">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="hello@thec3.uk"
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full p-3 text-2xl rounded grow lg:text-xl"
+                  />
+                </div>
                 <button
                   onClick={(e) =>
                     _handleSubmit(e, email, setStatus, setMessage)
