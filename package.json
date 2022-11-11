@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-software-crafts",
+  "name": "new-to-church",
   "private": true,
-  "description": "A blank Gatsby some the software crafts defaults",
-  "version": "0.1.0",
+  "description": "The C3 Church website",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
