@@ -30,7 +30,7 @@ const Card = ({
 
   return (
     <BaseCard colour={colour ? colour : 'teal'}>
-      <div className="flex flex-col justify-between col-span-3 md:col-span-7 row-span-full">
+      <div className="flex flex-col justify-between row-span-3 col-span-full sm:col-span-3 md:col-span-7 sm:row-span-full">
         <div className="space-y-4">
           <h2 className="text-4xl font-extrabold">
             <span className="md:hidden">
@@ -41,7 +41,7 @@ const Card = ({
             {subtitle}
           </h2>
           {children && (
-            <div className="font-medium leading-snug tracking-wide prose line-clamp-6 prose-h4:text-xl">
+            <div className="font-medium leading-snug tracking-wide prose prose-h4:text-xl">
               {children}
             </div>
           )}
@@ -55,13 +55,13 @@ const Card = ({
                 | FilledLinkToDocumentField<string, string, never>
                 | FilledLinkToMediaField
             }
-            className="w-full px-6 py-1 mt-2 text-xl font-bold text-center transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
+            className="w-full px-6 py-2 mt-2 text-xl font-bold text-center transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
           >
             {cta}
           </PrismicLink>
         )}
       </div>
-      <div className="h-full col-span-2 md:col-span-4 lg:col-span-4 row-span-full">
+      <div className="h-full row-span-3 row-start-1 col-span-full sm:col-span-2 md:col-span-4 lg:col-span-4 sm:row-span-full">
         {to && cta ? (
           <PrismicLink
             field={

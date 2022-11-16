@@ -30,7 +30,7 @@ const BaseCard = ({
     <div
       className={`grid grid-cols-5 ${rowsMap[row]} p-2 rounded ${
         colour !== null && 'shadow-md'
-      } gap-x-4 md:grid-cols-12 h-full md:px-4 md:py-4 lg:py-6 ${
+      } gap-4 md:grid-cols-12 h-full md:px-4 md:py-4 lg:py-6 ${
         mapping[colour]
       } min-h-min`}
     >
