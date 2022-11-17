@@ -29,7 +29,7 @@ const TitleCard = ({
                 className="object-cover w-full h-full rounded"
               />
               <div className="absolute bottom-0 object-cover w-full h-full rounded lg:h-56 bg-gradient-to-t from-black lg:from-white"></div>
-              <h2 className="absolute bottom-0 p-2 text-4xl font-extrabold text-white rounded lg:text-5xl lg:text-black">
+              <h2 className="absolute bottom-0 p-2 text-4xl font-extrabold text-white capitalize rounded lg:text-5xl lg:text-black">
                 <span className="md:hidden">
                   {title}
                   {title && subtitle && `:`}
@@ -46,7 +46,7 @@ const TitleCard = ({
       ) : (
         <>
           <div className="flex flex-col justify-between col-span-5 md:col-span-7">
-            <h2 className="text-4xl font-extrabold lg:text-5xl">
+            <h2 className="text-4xl font-extrabold capitalize lg:text-5xl">
               <span className="md:hidden">
                 {title}
                 {title && subtitle && `:`}
@@ -62,7 +62,7 @@ const TitleCard = ({
       )}
 
       <div className="hidden col-start-12 row-start-1 row-span-full md:flex justify-start items-center [writing-mode:vertical-lr]  group-hover:text-red-500 duration-300 transition-colors">
-        <h2 className="font-bold underline md:text-4xl lg:text-5xl whitespace-nowrap">
+        <h2 className="font-bold underline lowercase md:text-4xl lg:text-5xl whitespace-nowrap">
           {title}
         </h2>
       </div>

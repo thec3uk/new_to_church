@@ -32,7 +32,7 @@ const TextCard = ({
       {to && cta && (
         <PrismicLink
           field={to}
-          className="block w-full px-6 py-1 mt-4 text-xl font-bold text-center text-white transition-colors duration-300 bg-black rounded shadow hover:text-red-500 lg:py-3 lg:text-3xl"
+          className="block w-full px-6 py-1 mt-4 text-xl font-bold text-center text-white capitalize transition-colors duration-300 bg-black rounded shadow hover:text-red-500 lg:py-3 lg:text-3xl"
         >
           {cta}
         </PrismicLink>

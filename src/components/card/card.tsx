@@ -32,7 +32,7 @@ const Card = ({
     <BaseCard colour={colour ? colour : 'teal'}>
       <div className="flex flex-col justify-between row-span-3 col-span-full sm:col-span-3 md:col-span-7 sm:row-span-full">
         <div className="space-y-4">
-          <h2 className="text-4xl font-extrabold">
+          <h2 className="text-4xl font-extrabold capitalize">
             <span className="md:hidden">
               {title}
               {title && subtitle && `:`}
@@ -55,7 +55,7 @@ const Card = ({
                 | FilledLinkToDocumentField<string, string, never>
                 | FilledLinkToMediaField
             }
-            className="w-full px-6 py-2 mt-2 text-xl font-bold text-center transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
+            className="w-full px-6 py-2 mt-2 text-xl font-bold text-center capitalize transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
           >
             {cta}
           </PrismicLink>
@@ -87,7 +87,7 @@ const Card = ({
         )}
       </div>
       <div className="hidden col-start-12 md:flex justify-start items-center [writing-mode:vertical-lr] row-span-full">
-        <h2 className="font-bold underline md:text-4xl lg:text-5xl whitespace-nowrap">
+        <h2 className="font-bold underline lowercase md:text-4xl lg:text-5xl whitespace-nowrap">
           {title}
         </h2>
       </div>
