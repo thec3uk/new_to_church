@@ -2,7 +2,7 @@
   "name": "new-to-church",
   "private": true,
   "description": "The C3 Church website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

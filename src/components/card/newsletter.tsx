@@ -94,7 +94,7 @@ const NewsletterSignUp = ({ data }) => {
                   onClick={(e) =>
                     _handleSubmit(e, email, setStatus, setMessage)
                   }
-                  className="w-full px-6 py-3 mt-2 text-3xl font-bold text-center transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50 hover:text-red-500"
+                  className="w-full px-6 py-3 mt-2 text-3xl font-bold text-center capitalize transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50 hover:text-red-500"
                 >
                   Subscribe
                 </button>

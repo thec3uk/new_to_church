@@ -145,7 +145,8 @@ module.exports = {
         'teal-500-full': `${theme('colors.teal.500')} 50%`,
         'purple-900-full': `${theme('colors.purple.900')} 50%`,
         'gray-50-full': `${theme('colors.gray.50')} 50%`,
-        'black-full': `${theme('colors.black')} 50%`,
+        white: `${theme('colors.white')}c`,
+        black: `${theme('colors.black')}aa`,
       }),
       spacing: {
         128: '42rem',
