@@ -29,15 +29,26 @@ exports.linkResolver = (node) => {
       console.log(node.data)
       console.log(node)
     }
-    switch (node.data?.destination.link_type) {
-      case 'Document':
-        return `/${node.data.destination.uid}`
-      case 'Media':
-      case 'Web':
-        return node.data.destination.url
-      default:
-        console.error(`Unknown Redirect type ${node.uid}`)
-        return '/'
+    if (node.data) {
+      switch (node.data?.destination.link_type) {
+        case 'Document':
+          return `/${node.data.destination.uid}`
+        case 'Media':
+        case 'Web':
+          return node.data.destination.url
+        default:
+          console.error(`Unknown Redirect type ${node.uid}`)
+          return '/'
+      }
+    }
+    if (node.document) {
+      switch (node.document.type) {
+        case 'redirect':
+          return node.document.url
+        default:
+          console.error(`Unknown Redirect type ${node.uid}`)
+          return '/'
+      }
     }
   }
 
