@@ -3,13 +3,9 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
-  if (node.uid === 'another-test') {
+  if (node.type === 'redirect') {
     console.log(node)
   }
-  if (node.uid === 'leafs') {
-    console.log(node)
-  }
-
   // if (node.type === 'page' && node.data) {
   //   console.log('Page with data')
   //   console.log(node)
@@ -32,9 +28,16 @@ exports.linkResolver = (node) => {
     return `/${node.uid}`
   }
   if (node.type === 'redirect') {
-    // console.log('Page without data')
-    // console.log(node)
-    return `/${node.uid}`
+    switch (data.destination.link_type) {
+      case 'Document':
+        return `/${node.destination.uid}`
+      case 'Media':
+      case 'Web':
+        return node.destination.url
+      default:
+        console.error(`Unknown Redirect type ${data.destination.link_type}`)
+        return '/'
+    }
   }
 
   return '/'
