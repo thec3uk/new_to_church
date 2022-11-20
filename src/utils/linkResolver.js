@@ -3,9 +3,6 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
-  if (node.type === 'redirect') {
-    console.log(node)
-  }
   // if (node.type === 'page' && node.data) {
   //   console.log('Page with data')
   //   console.log(node)
