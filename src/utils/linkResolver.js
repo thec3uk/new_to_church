@@ -3,16 +3,6 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
-  if (node.uid === 'shop') {
-    console.log('Shop')
-    console.log(node)
-    console.log('Shop END')
-  }
-  if (node.uid === 'ascendcamp') {
-    console.log('ascendcamp')
-    console.log(node)
-    console.log('ascendcamp END')
-  }
   if (node.type === 'page') {
     if (node.uid.startsWith(domainPrefix)) {
       const slug = node.uid.replace(domainPrefix, '')
@@ -23,10 +13,6 @@ exports.linkResolver = (node) => {
   }
 
   if (node.type === 'redirect') {
-    if (node.data === undefined) {
-      console.log(node.data)
-      console.log(node)
-    }
     if (node.data) {
       switch (node.data?.destination.link_type) {
         case 'Document':
@@ -40,7 +26,6 @@ exports.linkResolver = (node) => {
       }
     }
     if (node.document) {
-      console.log(node)
       switch (node.document.type) {
         case 'redirect':
           return node.document.url
