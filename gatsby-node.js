@@ -103,6 +103,8 @@ exports.createPages = async ({ actions, graphql }) => {
         toPath: url,
         redirectInBrowser: true,
       })
+    } else {
+      console.error('node', node.uid)
     }
   })
 }

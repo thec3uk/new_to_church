@@ -1,5 +1,6 @@
 import { PrismicLink } from '@prismicio/react'
 import * as React from 'react'
+import { linkResolver } from '../../utils/linkResolver'
 
 /* This example requires Tailwind CSS v2.0+ */
 export default function Button({
@@ -41,6 +42,7 @@ export default function Button({
           variations[colourVariation]
         } ${commonClasses} ${isFull && `justify-center`}`}
         field={path}
+        linkResolver={linkResolver}
       >
         {children}
       </PrismicLink>
