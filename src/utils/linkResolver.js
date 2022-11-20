@@ -3,20 +3,12 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
-  // if (node.type === 'page' && node.data) {
-  //   console.log('Page with data')
-  //   console.log(node)
-  //   const fullPath =
-  //     node.data.parent_page.url === null
-  //       ? node.uid === 'home'
-  //         ? '/'
-  //         : `/${node.uid}`
-  //       : `${node.data.parent_page.uid}/${node.uid}`
-  //   return fullPath
-  // })
+  if (node.uid === 'hamper') {
+    console.log('Hamper')
+    console.log(node)
+    console.log('Hamper END')
+  }
   if (node.type === 'page') {
-    // console.log('Page without data')
-    // console.log(node)
     if (node.uid.startsWith(domainPrefix)) {
       const slug = node.uid.replace(domainPrefix, '')
       return `/${slug}`
@@ -24,6 +16,7 @@ exports.linkResolver = (node) => {
     if (node.uid === config.domain) return '/'
     return `/${node.uid}`
   }
+
   if (node.type === 'redirect') {
     if (node.data === undefined) {
       console.log(node.data)

@@ -88,10 +88,8 @@ exports.createPages = async ({ actions, graphql }) => {
   )
 
   redirects.data?.allPrismicRedirect.nodes.forEach((node) => {
-    console.log(node.uid, node.url)
     // if (node.data && node.data.destination) {
     // const url = linkResolver(node)
-
     createRedirect({
       fromPath: `/${node.uid}`,
       isPermanent: node.data.permanent || true,
