@@ -25,14 +25,18 @@ exports.linkResolver = (node) => {
     return `/${node.uid}`
   }
   if (node.type === 'redirect') {
-    switch (data.destination.link_type) {
+    if (node.data === undefined) {
+      console.log(node.data)
+      console.log(node)
+    }
+    switch (node.data?.destination.link_type) {
       case 'Document':
-        return `/${node.destination.uid}`
+        return `/${node.data.destination.uid}`
       case 'Media':
       case 'Web':
-        return node.destination.url
+        return node.data.destination.url
       default:
-        console.error(`Unknown Redirect type ${data.destination.link_type}`)
+        console.error(`Unknown Redirect type ${node.uid}`)
         return '/'
     }
   }
