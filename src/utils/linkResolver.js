@@ -25,7 +25,7 @@ exports.linkResolver = (node) => {
           return '/'
       }
     }
-    return node.document.url
+    console.log(node)
     // if (node.document) {
     //   switch (node.document.type) {
     //     case 'redirect':
