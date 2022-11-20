@@ -3,10 +3,15 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
-  if (node.uid === 'hamper') {
-    console.log('Hamper')
+  if (node.uid === 'shop') {
+    console.log('Shop')
     console.log(node)
-    console.log('Hamper END')
+    console.log('Shop END')
+  }
+  if (node.uid === 'ascendcamp') {
+    console.log('ascendcamp')
+    console.log(node)
+    console.log('ascendcamp END')
   }
   if (node.type === 'page') {
     if (node.uid.startsWith(domainPrefix)) {
