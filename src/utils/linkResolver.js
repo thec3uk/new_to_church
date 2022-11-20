@@ -40,6 +40,7 @@ exports.linkResolver = (node) => {
       }
     }
     if (node.document) {
+      console.log(node)
       switch (node.document.type) {
         case 'redirect':
           return node.document.url
