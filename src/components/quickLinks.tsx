@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { PrismicLink, PrismicRichText } from '@prismicio/react'
-import { linkResolver } from '../../utils/linkResolver'
+import { linkResolver } from '../utils/linkResolver'
 
 const QuickLink = ({
   children,

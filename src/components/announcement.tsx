@@ -3,7 +3,7 @@ import * as React from 'react'
 import { XIcon } from '@heroicons/react/solid'
 import { PrismicLink } from '@prismicio/react'
 
-import { linkResolver } from '../../utils/linkResolver'
+import { linkResolver } from '../utils/linkResolver'
 
 const Announcement = ({
   children,

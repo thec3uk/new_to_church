@@ -2,7 +2,7 @@ import { PrismicLink } from '@prismicio/react'
 import * as React from 'react'
 
 import Icon from './icon'
-import { linkResolver } from '../../utils/linkResolver'
+import { linkResolver } from '../utils/linkResolver'
 
 const SocialIcon = ({
   children,
