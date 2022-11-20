@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { PrismicLink, PrismicRichText } from '@prismicio/react'
+import { linkResolver } from '../../utils/linkResolver'
 
 const QuickLink = ({
   children,
@@ -11,6 +12,7 @@ const QuickLink = ({
   <PrismicLink
     className="transition duration-300 cursor-pointer text-black/70 hover:text-red-500 hover:underline"
     field={to}
+    linkResolver={linkResolver}
   >
     {children}
   </PrismicLink>

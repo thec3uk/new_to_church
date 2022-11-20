@@ -4,6 +4,7 @@ import { getImage, ImageDataLike } from 'gatsby-plugin-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import BackgroundImage from 'gatsby-background-image'
 import { PrismicLink } from '@prismicio/react'
+import { linkResolver } from '../../utils/linkResolver'
 
 const ImageCard = ({
   title,
@@ -43,7 +44,7 @@ const ImageCard = ({
   return (
     <>
       {link.type === 'page' ? (
-        <PrismicLink field={link} className="group">
+        <PrismicLink field={link} className="group" linkResolver={linkResolver}>
           <Card />
         </PrismicLink>
       ) : link.link_type === 'Web' ? (

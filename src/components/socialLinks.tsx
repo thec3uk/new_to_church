@@ -2,6 +2,7 @@ import { PrismicLink } from '@prismicio/react'
 import * as React from 'react'
 
 import Icon from './icon'
+import { linkResolver } from '../../utils/linkResolver'
 
 const SocialIcon = ({
   children,
@@ -13,7 +14,11 @@ const SocialIcon = ({
   title: string
 }) => {
   return (
-    <PrismicLink href={to} className="flex items-center space-x-2 group">
+    <PrismicLink
+      href={to}
+      className="flex items-center space-x-2 group"
+      linkResolver={linkResolver}
+    >
       <Icon className="w-8 h-8 text-gray-900 transition-colors duration-300 cursor-pointer fill-current lg:h-6 lg:w-6 group-hover:text-red-500">
         <title>{title}</title>
         {children}

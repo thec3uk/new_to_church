@@ -9,6 +9,8 @@ import {
 } from '@prismicio/types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
+import { linkResolver } from '../../utils/linkResolver'
+
 const Card = ({
   title,
   subtitle,
@@ -56,6 +58,7 @@ const Card = ({
                 | FilledLinkToMediaField
             }
             className="w-full px-6 py-2 mt-2 text-xl font-bold text-center capitalize transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50"
+            linkResolver={linkResolver}
           >
             {cta}
           </PrismicLink>
@@ -71,6 +74,7 @@ const Card = ({
                 | FilledLinkToDocumentField<string, string, never>
                 | FilledLinkToMediaField
             }
+            linkResolver={linkResolver}
           >
             <GatsbyImage
               image={gImage}

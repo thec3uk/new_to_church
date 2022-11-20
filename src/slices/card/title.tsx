@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import * as React from 'react'
 
 import { components } from '../../components'
+import { linkResolver } from '../../utils/linkResolver'
 
 const TitleCardSlice = (data) => {
   return (
@@ -17,6 +18,7 @@ const TitleCardSlice = (data) => {
           <PrismicLink
             field={data.slice.primary.ctaLink}
             className="block w-full px-6 py-1 text-xl font-bold text-center transition-colors duration-300 bg-black rounded shadow lg:py-3 lg:text-3xl text-gray-50 hover:text-red-500"
+            linkResolver={linkResolver}
           >
             {data.slice.primary.ctaTitle}
           </PrismicLink>

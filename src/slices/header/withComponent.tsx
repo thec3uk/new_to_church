@@ -7,6 +7,8 @@ import CarouselHero from './components/carousel'
 import Map from './components/map'
 import ContactForm from './components/contactForm'
 
+import { linkResolver } from '../../utils/linkResolver'
+
 const commonLinkClasses =
   'bg-gradient-to-r bg-underline font-semibold bg-p-full bg-no-repeat w-max pl-0.5 pr-4 duration-300 hover:bg-p-zero hover-hover:pointer-fine:hover:bg-p-zero cursor-pointer transition-bg-position no-underline'
 
@@ -47,6 +49,7 @@ const heroWithCustomComponent = ({ slice }) => {
               key={idx}
               field={link.linkUrl}
               className={`${commonLinkClasses} ${linkColours[0]}`}
+              linkResolver={linkResolver}
             >
               {link.linkTitle}
             </PrismicLink>

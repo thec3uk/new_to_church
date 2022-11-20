@@ -29,6 +29,7 @@ const TextHero = ({ slice }) => {
             <PrismicLink
               field={link.linkUrl.url}
               className={`${commonLinkClasses} ${linkColours[idx % 3]}`}
+              linkResolver={linkResolver}
             >
               {link.linkTitle}
             </PrismicLink>
