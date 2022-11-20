@@ -95,11 +95,13 @@ exports.createPages = async ({ actions, graphql }) => {
         fromPath: `/${node.uid}`,
         isPermanent: node.data.permanent || true,
         toPath: url,
+        redirectInBrowser: true,
       })
       createRedirect({
         fromPath: `/${node.uid.toUpperCase()}`,
         isPermanent: node.data.permanent || true,
         toPath: url,
+        redirectInBrowser: true,
       })
     }
   })
