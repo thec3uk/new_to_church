@@ -25,15 +25,16 @@ exports.linkResolver = (node) => {
           return '/'
       }
     }
-    if (node.document) {
-      switch (node.document.type) {
-        case 'redirect':
-          return node.document.url
-        default:
-          console.error(`Unknown Redirect type ${node.uid}`)
-          return '/'
-      }
-    }
+    return node.document.url
+    // if (node.document) {
+    //   switch (node.document.type) {
+    //     case 'redirect':
+    //       return node.document.url
+    //     default:
+    //       console.error(`Unknown Redirect type ${node.uid}`)
+    //       return '/'
+    //   }
+    // }
   }
 
   return '/'
