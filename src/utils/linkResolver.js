@@ -25,16 +25,9 @@ exports.linkResolver = (node) => {
           return '/'
       }
     }
+
     console.log('REDIRECT', node)
-    if (node.document) {
-      switch (node.document.type) {
-        case 'redirect':
-          return node.document.url
-        default:
-          console.error(`Unknown Redirect type ${node.uid}`)
-          return '/'
-      }
-    }
+    return `/${node.uid}`
   }
 
   return '/'
