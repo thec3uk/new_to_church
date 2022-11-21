@@ -36,6 +36,16 @@ export const query = graphql`
         uid
         url
         type
+        data {
+          page_title
+          permanent
+          destination {
+            link_type
+            url
+            type
+            uid
+          }
+        }
       }
     }
   }

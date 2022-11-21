@@ -4,8 +4,6 @@ import { ResponsiveVideo } from '../responsiveVideo'
 import FullBleedMedia from './fullbleed'
 
 const VideoMedia = ({ data }) => {
-  console.log(data)
-
   return (
     <FullBleedMedia>
       <div className="w-screen h-full">

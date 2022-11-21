@@ -43,8 +43,8 @@ const ImageCard = ({
   )
   return (
     <>
-      {link.type === 'page' ? (
-        <PrismicLink field={link} className="group" linkResolver={linkResolver}>
+      {link.type === 'page' || link.type === 'redirect' ? (
+        <PrismicLink field={link} className="group">
           <Card />
         </PrismicLink>
       ) : link.link_type === 'Web' ? (

@@ -3,20 +3,7 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
-  // if (node.type === 'page' && node.data) {
-  //   console.log('Page with data')
-  //   console.log(node)
-  //   const fullPath =
-  //     node.data.parent_page.url === null
-  //       ? node.uid === 'home'
-  //         ? '/'
-  //         : `/${node.uid}`
-  //       : `${node.data.parent_page.uid}/${node.uid}`
-  //   return fullPath
-  // })
   if (node.type === 'page') {
-    // console.log('Page without data')
-    // console.log(node)
     if (node.uid.startsWith(domainPrefix)) {
       const slug = node.uid.replace(domainPrefix, '')
       return `/${slug}`
@@ -24,11 +11,8 @@ exports.linkResolver = (node) => {
     if (node.uid === config.domain) return '/'
     return `/${node.uid}`
   }
+
   if (node.type === 'redirect') {
-    if (node.data === undefined) {
-      console.log(node.data)
-      console.log(node)
-    }
     if (node.data) {
       switch (node.data?.destination.link_type) {
         case 'Document':
@@ -41,15 +25,9 @@ exports.linkResolver = (node) => {
           return '/'
       }
     }
-    if (node.document) {
-      switch (node.document.type) {
-        case 'redirect':
-          return node.document.url
-        default:
-          console.error(`Unknown Redirect type ${node.uid}`)
-          return '/'
-      }
-    }
+
+    console.log('REDIRECT', node)
+    return `/${node.uid}`
   }
 
   return '/'
