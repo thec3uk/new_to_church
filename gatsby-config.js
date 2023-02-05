@@ -68,6 +68,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: 'ee3c430d-e2d2-4256-973e-7c0be0223d63',
+        srcUrl: 'https://analytics.myc3.life/umami.js',
+        includeInDevelopment: false,
+        autoTrack: true,
+        respectDoNotTrack: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-90682079-2`,
