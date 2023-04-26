@@ -82,7 +82,7 @@ module.exports = {
       options: {
         endpoint:
           process.env.NODE_ENV !== `production`
-            ? `https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=7443c2e349ff`
+            ? `https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=7443c2e349&amp;v_id=2850&amp;f_id=000191e0f0`
             : `https://thec3.us19.list-manage.com/subscribe/post?u=baac982817e7fb161022a1253&amp;id=d62f87b12a`,
       },
     },

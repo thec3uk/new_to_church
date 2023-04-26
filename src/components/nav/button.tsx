@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { Popover } from '@headlessui/react'
 
-import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/solid'
+// import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
 
 import Search from './search/index'
 import { PrismicLink } from '@prismicio/react'

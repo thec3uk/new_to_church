@@ -51,10 +51,10 @@ export const query = graphql`
           ...FAQSlice
           ...TextSlice
           ...ButtonSlice
-          ...RedButtonSlice
-          ...YellowButtonSlice
-          ...TealButtonSlice
-          ...PurpleButtonSlice
+          # ...RedButtonSlice
+          # ...YellowButtonSlice
+          # ...TealButtonSlice
+          # ...PurpleButtonSlice
           ...QuickLinksSlice
           ...SocialLinksSlice
           ...HeroWithImage
@@ -63,6 +63,7 @@ export const query = graphql`
           ...TextHero
           ...VideoMedia
           ...NewsletterCard
+          ...NewsletterLocationCard
           ... on PrismicSharedSliceType {
             id
             variation

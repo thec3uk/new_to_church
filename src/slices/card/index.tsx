@@ -8,6 +8,7 @@ import TextCardSlice from './text'
 import TitleCardSlice from './title'
 import ImageCardSlice from './image'
 import NewsletterSlice from './newsletter'
+import NewsletterLocationSlice from './newsletterWithLocations'
 
 const CardSlice = ({ slice }) => {
   const variations: Record<string, React.ReactNode> = {
@@ -17,6 +18,7 @@ const CardSlice = ({ slice }) => {
     titleCard: TitleCardSlice,
     imageCard: ImageCardSlice,
     newsletterSlice: NewsletterSlice,
+    newsletterLocationSlice: NewsletterLocationSlice,
   }
   const Component = variations[slice.variation]
 

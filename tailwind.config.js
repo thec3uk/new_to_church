@@ -197,6 +197,5 @@ module.exports = {
     require('tailwindcss-touch')(),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
   ],
 }

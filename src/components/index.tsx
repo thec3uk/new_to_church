@@ -12,6 +12,7 @@ import { TextSlice } from './text'
 import { ButtonSlice } from './button'
 import { ImageMedia, VideoMedia } from './media'
 import NewsletterSignUp from './card/newsletter'
+import NewsletterSignUpWithLocations from './card/newsletterWithLocations'
 
 export const layout = {
   Main,
@@ -35,4 +36,5 @@ export const components = {
   ImageMedia,
   VideoMedia,
   NewsletterSignUp,
+  NewsletterSignUpWithLocations,
 }

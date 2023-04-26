@@ -46,44 +46,44 @@ export const query = graphql`
       alignment
     }
   }
-  fragment RedButtonSlice on PrismicButtonRedButton {
-    primary {
-      size
-      linkUrl {
-        ...Link
-      }
-      linkTitle
-      alignment
-    }
-  }
-  fragment YellowButtonSlice on PrismicButtonYellowButton {
-    primary {
-      size
-      linkUrl {
-        ...Link
-      }
-      linkTitle
-      alignment
-    }
-  }
-  fragment TealButtonSlice on PrismicButtonTealButton {
-    primary {
-      size
-      linkUrl {
-        ...Link
-      }
-      linkTitle
-      alignment
-    }
-  }
-  fragment PurpleButtonSlice on PrismicButtonPurpleButton {
-    primary {
-      size
-      linkUrl {
-        ...Link
-      }
-      linkTitle
-      alignment
-    }
-  }
+  # fragment RedButtonSlice on PrismicButtonRedButton {
+  #   primary {
+  #     size
+  #     linkUrl {
+  #       ...Link
+  #     }
+  #     linkTitle
+  #     alignment
+  #   }
+  # }
+  # fragment YellowButtonSlice on PrismicButtonYellowButton {
+  #   primary {
+  #     size
+  #     linkUrl {
+  #       ...Link
+  #     }
+  #     linkTitle
+  #     alignment
+  #   }
+  # }
+  # fragment TealButtonSlice on PrismicButtonTealButton {
+  #   primary {
+  #     size
+  #     linkUrl {
+  #       ...Link
+  #     }
+  #     linkTitle
+  #     alignment
+  #   }
+  # }
+  # fragment PurpleButtonSlice on PrismicButtonPurpleButton {
+  #   primary {
+  #     size
+  #     linkUrl {
+  #       ...Link
+  #     }
+  #     linkTitle
+  #     alignment
+  #   }
+  # }
 `

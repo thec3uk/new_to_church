@@ -4,7 +4,6 @@ import { getImage, ImageDataLike } from 'gatsby-plugin-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import BackgroundImage from 'gatsby-background-image'
 import { PrismicLink } from '@prismicio/react'
-import { linkResolver } from '../../utils/linkResolver'
 
 const ImageCard = ({
   title,
