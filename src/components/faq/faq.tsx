@@ -1,6 +1,6 @@
 import React from 'react'
 import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { PrismicRichText } from '@prismicio/react'
 
 function classNames(...classes: string[]) {
