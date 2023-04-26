@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { XIcon } from '@heroicons/react/solid'
+import { XMarkIcon } from '@heroicons/react/24/solid'
 import { PrismicLink } from '@prismicio/react'
 
 import { linkResolver } from '../utils/linkResolver'
@@ -61,7 +61,7 @@ const Announcement = ({
       onClick={close}
       className="text-black hover:text-white hover:cursor-pointer"
     >
-      <XIcon className="w-6 h-6" />
+      <XMarkIcon className="w-6 h-6" />
     </a>
   )
   return (

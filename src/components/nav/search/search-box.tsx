@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { connectSearchBox } from 'react-instantsearch-dom'
 
-import { SearchIcon } from '@heroicons/react/solid'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import { Transition } from '@headlessui/react'
 
 const SearchBox = ({
@@ -46,7 +46,7 @@ const SearchBox = ({
           />
         </form>
       </Transition>
-      <SearchIcon
+      <MagnifyingGlassIcon
         className="w-8 h-8 cursor-pointer hover:text-gray-600 lg:w-6 lg:h-6 text-black"
         onClick={() => setShowSearch((showSearch) => !showSearch)}
       />

@@ -2,7 +2,7 @@
 import { Dispatch, SetStateAction, Fragment, useState } from 'react'
 import React from 'react'
 import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
+import { CheckIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -31,13 +31,12 @@ export default function CategorySelect({
           </Listbox.Label>
           <div className="relative mt-1">
             <Listbox.Button
-              className={`relative w-full py-2 pl-3 pr-10 text-left ${
-                !selected.hasOwnProperty('email_recipient') && 'text-gray-500'
-              } bg-white border border-gray-300 rounded-md shadow-sm cursor-default focus:outline-none focus:ring-1 focus:ring-purple-500 focus:border-purple-500 sm:text-sm`}
+              className={`relative w-full py-2 pl-3 pr-10 text-left ${!selected.hasOwnProperty('email_recipient') && 'text-gray-500'
+                } bg-white border border-gray-300 rounded-md shadow-sm cursor-default focus:outline-none focus:ring-1 focus:ring-purple-500 focus:border-purple-500 sm:text-sm`}
             >
               <span className="block truncate">{selected.category_name}</span>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                <SelectorIcon
+                <ChevronDownIcon
                   className="w-5 h-5 text-gray-400"
                   aria-hidden="true"
                 />
