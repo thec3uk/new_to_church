@@ -71,7 +71,7 @@ module.exports = {
       resolve: `gatsby-plugin-umami`,
       options: {
         websiteId: 'ee3c430d-e2d2-4256-973e-7c0be0223d63',
-        srcUrl: 'https://analytics.thec3.uk/umami.js',
+        srcUrl: 'https://analytics.thec3.uk/script.js',
         includeInDevelopment: false,
         autoTrack: true,
         respectDoNotTrack: true,
