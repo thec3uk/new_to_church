@@ -39,7 +39,7 @@ const NewsletterSignUpWithLocations = ({ data }) => {
           SIGNUPURL: document.location.pathname,
           SOURCE: 'website signup',
           FNAME: name,
-          TAGS: '"' + locations.join('", "') + '"',
+          LOCATION: '"' + locations.join('", "') + '"',
         },
         setStatus,
         setMessage
@@ -48,10 +48,10 @@ const NewsletterSignUpWithLocations = ({ data }) => {
   }, [status, message, email])
 
   const possible_locations = [
-    { id: 'BURWE', name: 'Bury St Edmunds' },
-    { id: 'CAMWE', name: 'Cambridge' },
-    { id: 'CHOWE', name: 'Online' },
-    { id: 'COLWE', name: 'Colchester' },
+    { id: 'BURY', name: 'Bury St Edmunds' },
+    { id: 'CAMBRIDGE', name: 'Cambridge' },
+    { id: 'ONLINE', name: 'Online' },
+    { id: 'COLCHESTER', name: 'Colchester' },
   ]
 
   return (
