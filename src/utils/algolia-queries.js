@@ -1,7 +1,7 @@
 const indexName = `Pages`
 
 const pageQuery = `{
-  pages: allPrismicLandingPage {
+  pages: allPrismicPage {
     edges {
       node {
         id
