@@ -37,7 +37,7 @@ const Error404Page = () => (
           Locations
         </Link>
         <Link
-          to="/next-steps"
+          to="/shaping"
           className={`${commonLinkClasses} ${linkColours[0]}`}
         >
           Next Steps
