@@ -10,6 +10,7 @@ module.exports = {
   siteMetadata: {
     ...config,
   },
+  trailingSlash: 'ignore',
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
