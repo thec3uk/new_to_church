@@ -35,7 +35,7 @@ export default function Button({
     lg: 'px-4 py-2 text-base rounded-md shadow-sm',
     xl: 'px-6 py-3 text-base rounded-md shadow-sm',
   }
-  console.log(path)
+  // console.log(path)
 
   return (
     <>

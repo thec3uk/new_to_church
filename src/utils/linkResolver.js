@@ -3,6 +3,9 @@ const config = require(`../config/site`)
 const domainPrefix = `${config.domain}_`
 
 exports.linkResolver = (node) => {
+  if (node.uid === 'step1') {
+    console.log('node', node)
+  }
   if (node.type === 'page') {
     if (node.uid.startsWith(domainPrefix)) {
       const slug = node.uid.replace(domainPrefix, '')
@@ -16,7 +19,7 @@ exports.linkResolver = (node) => {
     if (node.data) {
       switch (node.data?.destination.link_type) {
         case 'Document':
-          return `/${node.data.destination.uid}`
+          return `/${node.data.destination.uid}/`
         case 'Media':
         case 'Web':
           return node.data.destination.url
@@ -26,7 +29,7 @@ exports.linkResolver = (node) => {
       }
     }
 
-    console.log('REDIRECT', node)
+    // console.log('REDIRECT', node)
     return `/${node.uid}`
   }
 

@@ -25,8 +25,8 @@ const ImageCard = ({
     colour === 'transparent'
       ? 'from-black'
       : colour === 'transparentBlack'
-        ? 'from-white'
-        : ''
+      ? 'from-white'
+      : ''
 
   const Card = () => (
     <BackgroundImage
@@ -40,14 +40,14 @@ const ImageCard = ({
       </div>
     </BackgroundImage>
   )
-  console.log(link)
+
   return (
     <>
-      {link.type === 'page' || link.type === 'redirect' ? (
+      {link && (link.type === 'page' || link.type === 'redirect') ? (
         <PrismicLink field={link} className="group">
           <Card />
         </PrismicLink>
-      ) : link.link_type === 'Web' ? (
+      ) : link && link.link_type === 'Web' ? (
         <a href={link.url} className="group">
           <Card />
         </a>

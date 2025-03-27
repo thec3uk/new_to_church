@@ -1,9 +1,6 @@
 const React = require('react')
 
-const {
-  PrismicPreviewProvider,
-  componentResolverFromMap,
-} = require('gatsby-plugin-prismic-previews')
+const { PrismicPreviewProvider } = require('gatsby-plugin-prismic-previews')
 const PrismicProvider = require('@prismicio/react').PrismicProvider
 
 const GatsbyLink = require('gatsby').Link
@@ -29,9 +26,9 @@ exports.wrapRootElement = ({ element }) => (
         {
           repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
           linkResolver,
-          componentResolver: componentResolverFromMap({
+          componentResolver: {
             page: PageTemplate,
-          }),
+          },
         },
       ]}
     >

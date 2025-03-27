@@ -17,7 +17,7 @@ const ImageCardSlice = (data) => {
 export default ImageCardSlice
 
 export const query = graphql`
-  fragment ImageCard on PrismicCardImageCard {
+  fragment ImageCard on PrismicCardSliceImageCard {
     primary {
       title
       subtitle

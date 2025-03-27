@@ -19,7 +19,7 @@ const TextCardSlice = (data) => {
 export default TextCardSlice
 
 export const query = graphql`
-  fragment TextCard on PrismicCardTextCard {
+  fragment TextCard on PrismicCardSliceTextCard {
     primary {
       ctaTitle
       ctaLink {

@@ -57,10 +57,8 @@ const Layout = ({ children }) => {
     `
   )
 
-  const {
-    data: { prismicNotificationBanner, prismicStaticFooter: footer },
-    isPreview,
-  } = useMergePrismicPreviewData(staticData)
+  const { prismicNotificationBanner, prismicStaticFooter: footer } =
+    useMergePrismicPreviewData(staticData)
 
   return (
     <>

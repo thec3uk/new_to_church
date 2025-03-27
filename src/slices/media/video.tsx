@@ -10,7 +10,7 @@ const VideoMediaSlice = ({ slice }) => {
 export default VideoMediaSlice
 
 export const query = graphql`
-  fragment VideoMedia on PrismicMediaVideo {
+  fragment VideoMedia on PrismicMediaSliceVideo {
     primary {
       video {
         id
@@ -28,7 +28,6 @@ export const query = graphql`
         title
         version
         provider_name
-        prismicId
       }
     }
   }

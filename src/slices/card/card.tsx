@@ -22,7 +22,7 @@ const DefaultCardSlice = ({ slice }) => {
 export default DefaultCardSlice
 
 export const query = graphql`
-  fragment DefaultCard on PrismicCardDefault {
+  fragment DefaultCard on PrismicCardSliceDefault {
     primary {
       ctaTitle
       ctaLink {

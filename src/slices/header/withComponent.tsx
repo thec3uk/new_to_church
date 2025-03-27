@@ -63,7 +63,7 @@ const heroWithCustomComponent = ({ slice }) => {
 export default heroWithCustomComponent
 
 export const query = graphql`
-  fragment HeroWithCustomComponent on PrismicHeaderHeroWithCustomComponent {
+  fragment HeroWithCustomComponent on PrismicHeaderSliceHeroWithCustomComponent {
     primary {
       title
       callout

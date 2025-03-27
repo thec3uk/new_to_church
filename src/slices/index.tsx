@@ -21,7 +21,7 @@ export const slices = {
 }
 
 export const query = graphql`
-  fragment Link on PrismicLinkType {
+  fragment Link on PrismicLinkField {
     url
     type
     uid

@@ -14,7 +14,7 @@ const NewsletterLocationSlice = ({ slice }) => {
 export default NewsletterLocationSlice
 
 export const query = graphql`
-  fragment NewsletterLocationCard on PrismicCardNewsletterLocationSlice {
+  fragment NewsletterLocationCard on PrismicCardSliceNewsletterLocationSlice {
     primary {
       ctaTitle
       subtitle

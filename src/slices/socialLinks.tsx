@@ -21,7 +21,7 @@ export const query = graphql`
       }
     }
   }
-  fragment SocialLinks on PrismicLinkType {
+  fragment SocialLinks on PrismicLinkField {
     document {
       ... on PrismicSocialLinks {
         data {

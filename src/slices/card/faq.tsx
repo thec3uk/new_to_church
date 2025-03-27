@@ -18,7 +18,7 @@ export const FAQCardSlice = (data) => {
 export default FAQCardSlice
 
 export const query = graphql`
-  fragment FAQCard on PrismicCardFaqCard {
+  fragment FAQCard on PrismicCardSliceFaqCard {
     variation
     primary {
       colour

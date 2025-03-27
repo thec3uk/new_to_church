@@ -64,12 +64,12 @@ export const query = graphql`
           ...VideoMedia
           ...NewsletterCard
           ...NewsletterLocationCard
-          ... on PrismicSharedSliceType {
+          ... on PrismicSharedSlice {
             id
             variation
             slice_type
           }
-          ... on PrismicSliceType {
+          ... on PrismicSlice {
             id
             slice_type
           }

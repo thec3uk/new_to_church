@@ -43,7 +43,7 @@ const TextHero = ({ slice }) => {
 export default TextHero
 
 export const query = graphql`
-  fragment TextHero on PrismicHeaderTextOnlyHero {
+  fragment TextHero on PrismicHeaderSliceTextOnlyHero {
     primary {
       title
       callout

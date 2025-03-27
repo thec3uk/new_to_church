@@ -31,7 +31,7 @@ const TitleCardSlice = (data) => {
 export default TitleCardSlice
 
 export const query = graphql`
-  fragment TitleCard on PrismicCardTitleCard {
+  fragment TitleCard on PrismicCardSliceTitleCard {
     primary {
       ctaTitle
       subtitle

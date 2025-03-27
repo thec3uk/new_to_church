@@ -19,7 +19,7 @@ const ImageMediaSlice = ({ slice }) => {
 export default ImageMediaSlice
 
 export const query = graphql`
-  fragment DefaultMedia on PrismicMediaDefault {
+  fragment DefaultMedia on PrismicMediaSliceDefault {
     primary {
       image {
         alt

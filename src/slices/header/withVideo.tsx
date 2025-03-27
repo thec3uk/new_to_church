@@ -69,7 +69,7 @@ const HeroWithVideo = ({ slice }) => {
 export default HeroWithVideo
 
 export const query = graphql`
-  fragment HeroWithVideo on PrismicHeaderHeroWithVideo {
+  fragment HeroWithVideo on PrismicHeaderSliceHeroWithVideo {
     primary {
       title
       callout
@@ -93,7 +93,6 @@ export const query = graphql`
         title
         version
         provider_name
-        prismicId
       }
     }
     items {

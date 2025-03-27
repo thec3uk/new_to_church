@@ -36,7 +36,7 @@ const ButtonSlice = ({ slice }) => {
 export default ButtonSlice
 
 export const query = graphql`
-  fragment ButtonSlice on PrismicButtonDefaultSlice {
+  fragment ButtonSlice on PrismicButtonSliceDefaultSlice {
     primary {
       size
       linkUrl {

@@ -21,13 +21,13 @@ export const query = graphql`
       }
     }
   }
-  fragment QuickLinks on PrismicLinkType {
+  fragment QuickLinks on PrismicLinkField {
     document {
       ... on PrismicQuickLinks {
         data {
           title
           slices {
-            ... on PrismicLinkDefault {
+            ... on PrismicLinkSliceDefault {
               variation
               slice_type
               primary {
