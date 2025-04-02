@@ -112,7 +112,6 @@ module.exports = {
         legacy: true,
       },
     },
-    `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-algolia`,
