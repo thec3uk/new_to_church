@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { SliceZone } from '@prismicio/react'
-import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews-nano'
 
 import SEO from '../components/SEO'
 

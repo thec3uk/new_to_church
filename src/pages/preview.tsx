@@ -1,7 +1,7 @@
 // preview.js file
 
 import * as React from 'react'
-import { withPrismicPreviewResolver } from 'gatsby-plugin-prismic-previews'
+import { withPrismicPreviewResolver } from 'gatsby-plugin-prismic-previews-nano'
 
 const PreviewPage = () => {
   return (

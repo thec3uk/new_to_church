@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews'
+import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews-nano'
 import { linkResolver } from './src/utils/linkResolver'
 
 export const wrapRootElement = ({ element }) => (

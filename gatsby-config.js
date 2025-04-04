@@ -40,7 +40,7 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     {
-      resolve: 'gatsby-plugin-prismic-previews',
+      resolve: 'gatsby-plugin-prismic-previews-nano',
       options: {
         repositoryName: prismicRepositoryName,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,

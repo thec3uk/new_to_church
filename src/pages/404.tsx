@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { withPrismicUnpublishedPreview } from 'gatsby-plugin-prismic-previews'
+import { withPrismicUnpublishedPreview } from 'gatsby-plugin-prismic-previews-nano'
 import ContainedHero from '../components/hero/container'
 import { Link } from 'gatsby'
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { useMergePrismicPreviewData } from 'gatsby-plugin-prismic-previews'
+import { useMergePrismicPreviewData } from 'gatsby-plugin-prismic-previews-nano'
 import './layout.css'
 
 import Footer from './footer'
