@@ -38,7 +38,6 @@ const HeroWithImage = ({ slice }) => {
       </div>
       <div className="flex flex-col mt-8 space-y-4 text-2xl">
         {slice.items.map((link, idx) => {
-          console.log('withIMage', link.linkUrl)
           return (
             <PrismicLink
               key={`${idx}-${link.linkTitle}`}

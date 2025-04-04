@@ -12,7 +12,6 @@ import { layout } from '../components'
 import { slices } from '../slices'
 
 const PageTemplate = ({ data }: any) => {
-  console.log('!!!!!!!!!!!!!!!!!', data)
   if (!data) return null
   const page = data.prismicPage
   if (!page) return null
