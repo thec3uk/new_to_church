@@ -44,10 +44,20 @@ module.exports = {
       options: {
         repositoryName: prismicRepositoryName,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        routes: [
+          {
+            type: 'page',
+            path: '/:uid',
+          },
+          {
+            type: 'redirect',
+            path: '/:uid',
+          },
+        ],
       },
     },
     {
-      resolve: `gatsby-source-prismic`,
+      resolve: `gatsby-source-prismic-nano`,
       options: {
         repositoryName: prismicRepositoryName,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
@@ -62,6 +72,16 @@ module.exports = {
         //     },
         //   },
         // ],
+        routes: [
+          {
+            type: 'page',
+            path: '/:uid',
+          },
+          {
+            type: 'redirect',
+            path: '/:uid',
+          },
+        ],
         graphQuery: `
           {
             document {
